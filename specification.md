@@ -2,15 +2,15 @@
 
 The Data Provenance Standrd defines Metadata about a data set, so that the data provenance and lineage is understood. This set of metadata are necessary to enable proper dataset selection for AI Model Training.
 
-**Version 0.1** Draft
+**[Version 0.1](https://github.com/Data-and-Trust-Alliance/DPS)** Draft
 
 **Authors:**
 
-- Data and Trust Alliance
+- [Data and Trust Alliance](https://dataandtrustalliance.org/)
 - Kristina Podnar
 - John Moehrke
 
-**Comments
+**Comments** inquiries@dataandtrustalliance.org
 
 ## Abstract
 

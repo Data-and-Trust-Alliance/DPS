@@ -61,7 +61,7 @@ The following concepts are used throughout the specification
 
 introduce the general structure without specific details
 
-![Metadata Structure](./out/metadata.svg)
+![Metadata Structure](./out/ImageSource/metadata/metadata.svg)
 
 ### Detailed
 

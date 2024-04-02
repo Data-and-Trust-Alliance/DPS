@@ -1,0 +1,253 @@
+@startuml 
+title Data Provenance - August 2023
+
+entity Data
+
+abstract class Metadata {
+    identifier : String[1..1] - A unique label identifying the provenance metadata of the current dataset
+    lineage : WhereFrom[0..*] - Identifiers of pointers of metadata representing the data which comprise the current dataset
+    source : Source[1..1] Identifies the origin (person, organization, system, device, etc) of the current dataset
+    legalRights : LegalRights[0..*] - Identifies the legal or regulatory framework applicable to the current dataset, along with the required data attributions, associated copyright or trademark, and localization and processing requirements
+    privacyProtection : PrivacyProtection[0..*] - Identifies any types of sensitive data associated with the current dataset and any privacy enhancing techniques applied
+    generationData : dateTime[1..1] - Timestamp marking the creation of the current dataset
+    dataType : DataType[1..*] - Identifies the data type contained in the current set, and provides insights into how the data is organized, its potential use cases, and the challenges associated with handling and using it
+    generationMethod : GenerationMethod[1..*] - Identifies how the data was produced (data mining, machine-generated, IoT sensors, etc.)
+    intendedUseAndRestrictions : UseAndRestrictions[0..*] - Identifies the intended use of the data and which downstream audiences should not be allowed access to the current dataset
+}
+
+Metadata *-down- WhereFrom 
+Metadata *-down- Source 
+Metadata *-down- LegalRights 
+Metadata *-down- PrivacyProtection 
+Metadata *-down- DataType
+Metadata *-down- GenerationMethod
+Metadata *-down- UseAndRestrictions
+Metadata -left-> Data
+
+abstract class WhereFrom {
+    Identifiers of pointers of metadata representing the data which comprise the current dataset
+    ----
+    uniqueId : String[0..1] - Universal Provenance Metadata Unique Identifier
+    blockId : String[0..1] - Blockchain ledger ID
+    otherId : String[0..1] - Other ID
+}
+
+abstract class Source {
+    Identifies the origin (person, organization, system, device, etc) of the current dataset
+    ----
+    userName : String[0..1] - Username
+    organizationName : String[0..1] - Organization name
+    software : String[0..1] - Software name
+    system : String[0..1] - System name
+    machine : String[0..1] - Machine name
+    sensor : String[0..1] - Sensor/IoT device name
+    file : String[0..1] - Filename
+    ip : String[0..1] - Network name or IP address
+    other : String[0..1] - other 
+}
+
+abstract class LegalRights {
+    Identifies the legal or regulatory framework applicable to the current dataset, along with the required data attributions, associated copyright or trademark, and localization and processing requirements
+    ----
+    attributionRights : String[0..1] - Attribution rights
+    ipRights : String[0..1] - Copyrights or trademarks
+    locationRestriction : String[0..1] - Required data storage or processing geolocation
+    laws : LawsAndRegulations[0..1] - Applicable laws and regulations
+}
+
+LegalRights -down- LawsAndRegulations
+
+enum LawsAndRegulations {
+1() : Children’s Online Privacy Protection Act (COPPA)
+2() : Argentina: Personal Data Protection Act (PDPA)
+3() : Bahrain: Personal Data Protection Law (PDPL)
+4() : Brazil: Lei Geral de Proteção de Dados Pessoais (LGPD)
+5() : California Consumer Privacy Act (CCPA)
+6() : California Online Privacy Protection Act of 2003 (CalOPPA)
+7() : Canada: Personal Information Protection and Electronic Documents Act (PIPEDA)
+8() : China Next Generation Artificial Intelligence Development Plan
+9() : China: Shanghai Regulations on Promoting the Development of the AI Industry
+10() : Colorado Privacy Act (ColoPA)
+11() : Connecticut Data Privacy Act (CDPA)
+12() : European Union: General Data Protection Regulation (GDPR)
+13() : Gramm-Leach-Bliley Act (GLBA)
+14() : Health Insurance Portability and Accountability Act (HIPAA)
+15() : Israel: Privacy Protection (Data Security) Regulations
+16() : Japan: Act on the Protection of Personal Information (APPI)
+17() : Kenya: Data Protection Act
+18() : Mauritius: Data Protection Act, 2017 (DPA)
+19() : New Zealand: Privacy Act 2020
+20() : Nigeria Data Protection Regulation (NDPR)
+21() : Qatar: Law No. 13 of 2016
+22() : South Africa: Protection of Personal Information Act (POPIA)
+23() : South Korea: Personal Information Protection Act (PIPA)
+24() : Turkey: Law on Protection of Personal Data No. 6698
+25() : Uganda: Data Protection and Privacy Act, 2019
+26() : Uruguay: Data Protection Act
+27() : Utah Consumer Privacy Act (UCPA)
+28() : Virginia Consumer Data Protection Act (VCDPA)
+}
+
+abstract class PrivacyProtection {
+    Identifies any types of sensitive data associated with the current dataset and any privacy enhancing techniques applied
+    ----
+    protectedDataClassification : ProtectedDataClassification[0..1] 
+    appliedPrivacy : AppliedPrivacy[0..1]
+    otherPrivacy : String[0..1]
+}
+
+PrivacyProtection -down- ProtectedDataClassification
+PrivacyProtection -down- AppliedPrivacy
+
+enum ProtectedDataClassification {
+1() : Protected Health Information (PHI)
+2() : Personally Identifiable Information (PII)
+3() : Health Insurance Portability and Accountability Act (HIPAA)
+4() : Personal Financial Information     
+}
+
+enum AppliedPrivacy {
+1() : Data generation (synthetic)
+2() : Data anonymization
+3() : Data transformation (homomorphic encryption)    
+}
+
+abstract class DataType {
+    Identifies the data type contained in the current set, and provides insights into how the data is organized, its potential use cases, and the challenges associated with handling and using it
+    ----
+    structuredMediaType : MediaType[0..1] http://www.iana.org/assignments/media-types/
+    structuredOther : String[0..1] - structured types not defined by Media-Types
+    unStructuredMediaType : MediaType[0..1] http://www.iana.org/assignments/media-types/
+    unStructuredOther : String[0..1] - unstructured types not defined by Media-Types
+}
+
+
+
+abstract class GenerationMethod {
+    Identifies how the data was produced (data mining, machine-generated, IoT sensors, etc.)
+    ----
+    web : Web[0..1]
+    feeds : Feeds[0..1]
+    syndication : Syndication[0..1]
+    dataMining : DataMining[0..1]
+    machineGenerated : MachineGenerated[0..1]
+    sensor : Sensor[0..1]
+    socialMedia : SocialMedia[0..1]
+    userGenerated : UserGenerated[0..1]
+    primaryUserSourced : PrimaryUserSourced[0..1]
+    other : String[0..1] - Other method not coded
+}
+ 
+GenerationMethod -down- Web
+GenerationMethod -down- Feeds
+GenerationMethod -down- Syndication
+GenerationMethod -down- DataMining
+GenerationMethod -down- MachineGenerated
+GenerationMethod -down- Sensor
+GenerationMethod -down- SocialMedia
+GenerationMethod -down- UserGenerated
+GenerationMethod -down- PrimaryUserSourced
+
+
+enum Web {
+1() : Texual
+2() : Structured
+3() : Metadata
+4() : SocialMedia
+5() : News
+}
+enum Feeds {
+1() : RSS
+2() : API
+3() : RealTimeDatabaseInfo
+4() : IntervalTimedDatabaseInfo
+5() : FileFeedInfo
+}
+enum Syndication {
+1() : NewsFeed
+2() : FinancialFeed
+3() : SocialMedia
+4() : ProductCatalog
+}
+enum DataMining {
+1() : Association Rule
+2() : Classification
+3() : Clustering
+4() : Regression
+5() : Anomaly Detection
+6() : Sequencing
+}
+enum MachineGenerated {
+1() : Synthetic
+2() : Generative
+3() : Twin
+4() : Machine-2-Machine (M2M)
+5() : AI inferred
+6() : XR (AR,VR,MR)
+}
+enum Sensor {
+1() : Environmental
+2() : Motion & Location
+3() : Health
+4() : Biometric
+5() : Energy Consumption
+6() : Industral Sensor
+7() : Vehicle & Transportation
+8() : Security & Serveillance
+9() : Agriculture & Environment
+}
+enum SocialMedia {
+1() : Text Based
+2() : Multimedia
+3() : Reviews and Ratings
+4() : Updates
+5() : Q&As
+6() : Collaborative
+7() : Creative
+}
+enum UserGenerated {
+1() : Clickstream
+2() : Social Media
+3() : Behavior
+4() : Ratings & Reviews
+5() : Multimedia
+6() : Textual/Survey
+}
+enum PrimaryUserSourced {
+1() : Survey
+2() : Interview
+3() : Event
+}
+
+abstract class UseAndRestrictions {
+    Identifies the intended use of the data and which downstream 
+    audiences should not be allowed access to the current dataset
+    ----
+    intendedUse : IntendedUse[0..1]
+    otherIntendedUse : String[0..1] - Other Intended Use not coded
+    restrictedAudience : RestrictedAudience[0..1] 
+    otherRestrictedAudience : String[0..1] - Other Restricted Audience not coded
+}
+
+UseAndRestrictions -down- IntendedUse
+UseAndRestrictions -down- RestrictedAudience
+
+enum IntendedUse {
+1() : Machine Learning (ML)
+2() : Natural Language Processing (NLP)
+3() : Expert Systems
+4() : Vision
+5() : Speech
+6() : Planning
+7() : Robotics
+}
+enum RestrictedAudience {
+1() : Federal Government 
+2() : State Government 
+3() : Local Government
+4() : Not-for-profit / Charities
+5() : Academia / Research
+6() : Commercial / Business
+}
+
+@enduml

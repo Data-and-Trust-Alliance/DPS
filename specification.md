@@ -651,71 +651,70 @@ The Annex contain normative vocabulary to be used when it applies. These vocabul
 
 The following defined vocabulary are to be used for the "Method". The vocabulary to use is the whole 
 
-Method	Specific
-Web scraping/Crawling	Textual
-Web scraping/Crawling	Structured
-Web scraping/Crawling	Metadata
-Web scraping/Crawling	Social media
-Web scraping/Crawling	News & articles
-Web scraping/Crawling	Other
-Feeds	RSS source
-Feeds	API source
-Feeds	Real time database info
-Feeds	Interval timed database info
-Feeds	File feed info
-Feeds	Other
-Syndication	News feeds
-Syndication	Financial feeds
-Syndication	Social media
-Syndication	Product/service catalog
-Syndication	Other
-Data mining	Association rule
-Data mining	Classification
-Data mining	Clustering
-Data mining	Regression
-Data mining	Anomaly detection
-Data mining	Sequencing
-Data mining	Other
-Machine generated/MLOps	Synthetic
-Machine generated/MLOps	Generative
-Machine generated/MLOps	Twin
-Machine generated/MLOps	Machine-2-machine (M2M)
-Machine generated/MLOps	AI inferred
-Machine generated/MLOps	XR (AR, VR, MR)
-Machine generated/MLOps	Other
-Sensor and IoT output	Environmental
-Sensor and IoT output	Motion & location
-Sensor and IoT output	Health 
-Sensor and IoT output	Biometric
-Sensor and IoT output	Energy consumption
-Sensor and IoT output	Industrial sensor
-Sensor and IoT output	Vehicle & transportation
-Sensor and IoT output	Security & surveillance
-Sensor and IoT output	Agriculture & environment
-Sensor and IoT output	Other
-Social media	Text based
-Social media	Multimedia
-Social media	Reviews and ratings
-Social media	Updates
-Social media	Q&As
-Social media	Collaborative
-Social media	Creative
-Social media	Other
-User generated content	Clickstream
-User generated content	Social media
-User generated content	Behavior
-User generated content	Ratings & reviews
-User generated content	Multimedia
-User generated content	Other
-Primary user source	Survey/Questionnaire
-Primary user source	Interview
-Primary user source	Event
-Primary user source	Biometric
-Primary user source	Focus Group
-Primary user source	Other
-Data augmentation	N/A
-Transfer learning	N/A
-Simulations	N/A
-Other	N/A
+- Web scraping/Crawling	Textual
+- Web scraping/Crawling	Structured
+- Web scraping/Crawling	Metadata
+- Web scraping/Crawling	Social media
+- Web scraping/Crawling	News & articles
+- Web scraping/Crawling	Other
+- Feeds	RSS source
+- Feeds	API source
+- Feeds	Real time database info
+- Feeds	Interval timed database info
+- Feeds	File feed info
+- Feeds	Other
+- Syndication	News feeds
+- Syndication	Financial feeds
+- Syndication	Social media
+- Syndication	Product/service catalog
+- Syndication	Other
+- Data mining	Association rule
+- Data mining	Classification
+- Data mining	Clustering
+- Data mining	Regression
+- Data mining	Anomaly detection
+- Data mining	Sequencing
+- Data mining	Other
+- Machine generated/MLOps	Synthetic
+- Machine generated/MLOps	Generative
+- Machine generated/MLOps	Twin
+- Machine generated/MLOps	Machine-2-machine (M2M)
+- Machine generated/MLOps	AI inferred
+- Machine generated/MLOps	XR (AR, VR, MR)
+- Machine generated/MLOps	Other
+- Sensor and IoT output	Environmental
+- Sensor and IoT output	Motion & location
+- Sensor and IoT output	Health 
+- Sensor and IoT output	Biometric
+- Sensor and IoT output	Energy consumption
+- Sensor and IoT output	Industrial sensor
+- Sensor and IoT output	Vehicle & transportation
+- Sensor and IoT output	Security & surveillance
+- Sensor and IoT output	Agriculture & environment
+- Sensor and IoT output	Other
+- Social media	Text based
+- Social media	Multimedia
+- Social media	Reviews and ratings
+- Social media	Updates
+- Social media	Q&As
+- Social media	Collaborative
+- Social media	Creative
+- Social media	Other
+- User generated content	Clickstream
+- User generated content	Social media
+- User generated content	Behavior
+- User generated content	Ratings & reviews
+- User generated content	Multimedia
+- User generated content	Other
+- Primary user source	Survey/Questionnaire
+- Primary user source	Interview
+- Primary user source	Event
+- Primary user source	Biometric
+- Primary user source	Focus Group
+- Primary user source	Other
+- Data augmentation	N/A
+- Transfer learning	N/A
+- Simulations	N/A
+- Other	N/A
 
 ## Acknowledgements

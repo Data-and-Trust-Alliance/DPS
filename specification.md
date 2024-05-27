@@ -14,7 +14,7 @@ The Data Provenance Standard defines Metadata about a data set, so that the data
 
 **Comments** inquiries@dataandtrustalliance.org
 
-**License** [Apache 2.0](http://www.apache.org/licenses/)
+**License** [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ## Abstract
 

@@ -75,7 +75,15 @@ the detailed schema specification
 - element description, cardionality
 - required vocabulary
   
-Vocabulary registry? How are additions to the terms going to be managed?
+The D&TA Data Provenance Standards Working Group is responsible for the ongoing monitoring and periodic review of the terms in the registry. This includes:
+
+• Annual review of all terms to ensure continued relevance
+• Soliciting feedback from the community on the usage and applicability of terms
+• Making revisions to definitions as needed
+• Retiring terms that are no longer relevant or have become obsolete
+
+Management of D&TA’s Data Provenance Standards vocabulary registry is a collaborative and dynamic process. We welcome feedback from the broader community to ensure that the vocabulary remains a valuable and accurate resource for all.
+
 
 ## Security considerations
 

@@ -42,7 +42,7 @@ This specification adopts the normative words defined in IETF [Best Current Prac
 
 The following concepts are used throughout the specification
 
-- **AI**: <code style=color : green"> KP </code>
+- **AI**:  Computer systems that can perform tasks typically requiring human intelligence, such as understanding language, recognizing patterns, and making decisions.
 - **Dataset**: A collection of data.
 - **Metadata**: Structured description about a Dataset that enable the understanding of that Dataset.
 - **Dataset Identifier**: A unique label identifying the provenance metadata of the current dataset
@@ -333,6 +333,16 @@ Format:
 TODO: Likely need a bit more discussion and decisions on acceptable formats
 - Concepts defined for region Content and Country
 
+--> Intention is to use: 
+  
+ISO 3166-1: Codes for the names of countries and their subdivisions:
+Alpha-2: Two-letter country codes (e.g., US for the United States).
+Alpha-3: Three-letter country codes (e.g., USA for the United States).
+Numeric: Three-digit country codes (e.g., 840 for the United States).
+ISO 3166-2: Codes for the names of the principal subdivisions (e.g., states or provinces) of all countries coded in ISO 3166-1.
+
+Note Telecom not used.
+
 #### Dataset issue date
 
 Manditory: The date when the dataset was compiled or created, providing a temporal context for the data.
@@ -399,6 +409,8 @@ This group describes legal, use, and restrictions.
 
 TODO: This is not in the spreadsheet, but is in the usecase analysis.... so was it eliminated, or is my guess here correct.
 
+--> This was not eliminated and it appears in the spreadsheet as * Confidentiality classification. Note that the Use Cases are out of date compared to the latest spreadsheet youu have. So please use file MVP Master Standards with Definitions 04-24-24 v10eh as authoritative list of standards and metadata.
+
 Manditory: The organizational content classification. The level of sensitivity assigned to the dataset, such as personally identifiable information, which dictates how the dataset must be secured and who can access iEach classifier must be evaluated as true/false.
 
 ##### Public
@@ -426,6 +438,8 @@ Format: if not `false`, then describe the other applicable classifier.
 Manditory: Indicate if the dataset includes data falling into the confidentiality classification. Each classifier must be evaluated as true/false/unknown.
 
 TODO: Use-Case 1 was using the words "NOT ASSESSED" and "ASSESSED". I don't understand what that would mean. I could see an "unknown" as an indicate of a classification that was not done. But I don't understand what "ASSESSED" means, are data in the dataset or not?
+
+--> This field indicates the level of sensitivity assigned to the dataset, such as personally identifiable information, which dictates how the dataset must be secured and who can access it. The use cases indicate assessed or not assessed because those used to be the values we considered when the use cases were drafted. Since then, the Working Group moved on to requiring the name of the tool that was used to determine the presence of PII or other sensitive data (e.g., Apache NiFi, Google Cloud or others).
 
 #####  Personal Information (PI)/Demographic
 
@@ -464,11 +478,17 @@ TODO: unclear what is recorded here
 2. Is this an array of individual specific copies? Thus each consent ceremony (e.g. individual signed paper) is available?
 3. What formats are allowed? (is there a standard?) Is it a JPEG of the signature page?
 
+--> This is the location of the consent text that was used to obtain the consent from the user. Thus it could be a single or multiple URLs, a document path, or a pointer to a document (e.g., PDF) that documents the versioning history and changes to the consent found on a website.  
+
 TODO: How is N/A handled? 
+
+--> N/A is a permitted value here as there are data types that do not require consent.
 
 TODO: How is it handled when a consent is needed upon use of the dataset?
 
 Multiple: One entry for each Individual (TODO, is it one or more?)
+
+--> Multiple entries are allowed and ALL consents should be captured. For example, if there are 18 tables each depicting survey results from a 19 different people in different geographies with different data privacy laws, then all 19 would be listed here.
 
 ##### Individual identifier
 
@@ -540,6 +560,16 @@ Format: String, preference to use the following formats
 
 TODO: Likely need a bit more discussion and decisions on acceptable formats
 - Concepts defined for region Content and Country
+- 
+--> Intention is to use: 
+  
+ISO 3166-1: Codes for the names of countries and their subdivisions:
+Alpha-2: Two-letter country codes (e.g., US for the United States).
+Alpha-3: Three-letter country codes (e.g., USA for the United States).
+Numeric: Three-digit country codes (e.g., 840 for the United States).
+ISO 3166-2: Codes for the names of the principal subdivisions (e.g., states or provinces) of all countries coded in ISO 3166-1.
+
+
 
 #### Data storage geography
 
@@ -556,6 +586,9 @@ Format: String, preference to use the following formats
 
 TODO: Likely need a bit more discussion and decisions on acceptable formats
 - Concepts defined for region Content and Country
+
+--> Note that this list follows the same logic as processing geography, which follows the same logic as Origin.
+
 
 #### License to use
 

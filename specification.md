@@ -2,7 +2,7 @@
 
 The Data Provenance Standard defines Metadata about a data set, so that the data provenance and lineage is understood. This set of metadata are necessary to enable proper dataset selection for AI Model Training.
 
-**Version 0.1**
+**Version 1.1.0**
 
 **[Published](https://github.com/Data-and-Trust-Alliance/DPS)** Draft
 

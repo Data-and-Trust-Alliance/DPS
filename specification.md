@@ -536,6 +536,8 @@ Where: tool codes are:
 - T-closeness
 - Tokenization
 
+- --> Other?
+
 ##### Specify the parameters used (key value pairs)	
 
 Format: String (tool specific)

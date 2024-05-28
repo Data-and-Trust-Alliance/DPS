@@ -42,7 +42,7 @@ This specification adopts the normative words defined in IETF [Best Current Prac
 
 The following concepts are used throughout the specification
 
-- **AI**: todo
+- **AI**: <code style=color : green"> KP </code>
 - **Dataset**: A collection of data.
 - **Metadata**: Structured description about a Dataset that enable the understanding of that Dataset.
 - **Dataset Identifier**: A unique label identifying the provenance metadata of the current dataset

@@ -1144,14 +1144,30 @@ Indicates whether the dataset contains propritary information that is covered wi
 - Format: String
   - where the string `no` indicates no Trademark
 
-## Schema
+## Technical Encoding
 
-The detailed schema specification for JSON, XML, and YAML are published independently.
+The detailed schema specification for JSON, XML, and YAML are published independently in GIThub repositories. In these repositories the following are to be found:
 
-- canonical - the URL that defines the specification
-- element description, cardinality
-- required vocabulary
+- schema - technical encoding of the rules
+- required vocabulary in that encoding format
+- examples
   
+### Technical Schema
+
+#### JSON Metadata Encoding
+
+The technical coding and examples are available in GIThub for the [JSON Metadata encoding](https://github.com/Data-and-Trust-Alliance/json-metadata)
+
+#### XML Metadata Encoding
+
+The technical coding and examples are available in GIThub for the [XML Metadata encoding](https://github.com/Data-and-Trust-Alliance/xml-metadata)
+
+#### YAML Metadata Encoding
+
+The technical coding and examples are available in GIThub for the [YAML Metadata encoding](https://github.com/Data-and-Trust-Alliance/yaml-metadata)
+
+### Maintenance of the specification
+
 The D&TA Data Provenance Standards Working Group is responsible for the ongoing monitoring and periodic review of the terms in the registry. This includes:
 
 • Annual review of all terms to ensure continued relevance

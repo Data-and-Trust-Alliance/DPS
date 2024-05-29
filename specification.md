@@ -64,7 +64,7 @@ The following use-cases are examplar of the use-cases for which this standard ap
 3. Financial services customer product enablement
 4. Enhancing global logistics efficiency through AI-driven tariff harmonization
 
-#### Healthcare insurance data procurement
+#### Use-Case 1: Healthcare insurance data procurement
 
 Evaluating a new dataset that contains comprehensive patient and insurance payment information, for use in predictive analytics
 
@@ -210,23 +210,397 @@ and ethical standards. The benefits of having access to the dataset metadata
 - Suspect data processing and storage metadata resulted in increased legal scrutiny in advance of data acquisition, leading to the correction of inaccuracies in the metadata.
 - The metadata evaluation process, despite causing a brief delay, ultimately safeguarded the organization against potential legal and operational risks, ensuring the dataset’s strategic and compliant use.
 
-#### Media consumption pattern data set for consumer behavior insights
+#### Use-Case 2: Media consumption pattern data set for consumer behavior insights
 
 Curating a high-quality dataset that tracks media consumption habits across diverse platforms for content personalization
 
-TODO
+Jordan’s current project involves curating a dataset that tracks media consumption habits across diverse platforms. This dataset aims to empower media buyers and sellers in accurately targeting their audience segments, facilitating personalized content strategies for industries ranging from consumer goods to tourism.
 
-#### Financial services customer product enablement
+Goals
+
+- Ensure comprehensive coverage of media consumption patterns to provide actionable insights for diverse industries.
+- Maintain high standards of data transparency to build trust and encourage collaboration.
+- Enhance clients’ operational efficiency and compliance through strategic data integration.
+
+Challenges
+- Balancing data comprehensiveness with privacy and ethical considerations.
+- Keeping pace with rapid changes in media consumption behaviors and technology.
+- Ensuring data standards provide necessary transparency to data buyers and that the metadata is compatible with automated data procurement systems.
+
+##### Analysis
+
+###### Identification
+
+- Standards version used
+  - `1.1.0`
+  - Explains the  structure and specifications of the  datasets’ metadata, allowing for easy assessment by prospects and consumers.
+- Dataset title/name
+  - `March 2024 Global Media Consumption Trends`
+  - Communicates the dataset’s scope, timing, and focus, facilitating recognition and understanding what the dataset is about..
+- Unique metadata identifier
+  - `550e8400-e29b-41d4-a716-446655440000`
+  - Ensures precise tracking and referencing of the dataset within the data ecosystem, including customer’s  acquisitions databases.
+- Metadata unique URL
+  - `example.com/550e8400-e29b-41d4-a716-446655440000/metadata.html`
+  - Offers immediate, transparent access to the dataset’s detailed specifications, fostering trust and ease of use among data consumers.
+- Metadata location(s) for datasets feeding the current dataset
+  - Values
+    - `example.com/550e8400-e29b-41d4-a716-44665543902`
+    - `example.com/550e8400-e29b-41d4-a716-44665544732`
+    - `example.com/550e8400-e29b-41d4-a716-446655465722`
+  - Demonstrates the three sources of data that make up the existing data set, providing traceability into  the origins and lineage of the data.
+
+###### Provenance and creation
+
+- Creator
+  - Establishes the company as the authoritative source and responsible entity for the dataset, providing a clear point of accountability.
+
+1. Category | 2. Value
+|-----|-----|
+Organization name | AnalytiQuest Ventures
+
+- Source (if different from Creator)
+  - Indicates that the entity that is supplying the data is the same as the entity that created the dataset, not just a data reseller.
+
+1. Category | 2. Value
+|-----|-----|
+Organization name | AnalytiQuest Ventures
+
+- Data origin geography
+  - Conveys the regional specificity of the dataset, highlighting its focus on media consumption patterns within these diverse Floridian markets. This granularity not only aids in compliance with regional data laws but also enriches the dataset’s contextual relevance for analyses tailored to these geographic areas.
+
+1. Continent | 2. Country | 3. State | 4. City
+|-----|-----|-----|-----|
+North America | USA | Florida | Augusta
+North America | USA | Florida | Clearwater
+North America | USA | Florida | Ft. Lauderdale
+North America | USA | Florida | Jacksonville
+North America | USA | Florida | Miami
+North America | USA | Florida | Orlando
+North America | USA | Florida | Pensacola
+North America | USA | Florida | St. Petersburg; USA, FL
+North America | USA | Florida | Tampa
+
+- Dataset creation date
+  - `2024-01-10:T01:00:00`
+  - Provides a clear context for the dataset, indicating its recency and relevance for users seeking the most current insights into media consumption trends as of early 2024.
+- Range of dates for data generation
+  - Indicates that the dataset encompasses a full year’s worth of media consumption data, providing insights into trends and patterns over this period and ensuring the dataset’s relevance for analyses focused on the year 2023.
+
+1. Oldest component of data in dataset. | 2. Youngest component of data in dataset.
+|-----|-----|
+2023-01-01:T00:00:01 | 2023-12-31:T23:23:59
+
+- Date of prev. issued version of the dataset (if applicable)
+  - Not applicable
+  - Conveys the dataset’s foundation on real consumer behaviors and feedback, providing direct insight into media consumption patterns, which enhances the dataset’s reliability and validity for analyzing consumer engagement across various media platforms.
+- Method
+  - Signifies that users are accessing the inaugural edition of this dataset, setting expectations for its novelty and current relevance in understanding media consumption trends.
+
+1. Category | 2. Specific | 3. Specified ‘Other’ | 4. Values
+|-----|-----|-----|-----|
+User generated content | Other | Digital Interaction Tracking and Survey Responses
+
+- Data format
+  - Indicates that the dataset contains a mix of structured data (like spreadsheets and databases) and unstructured data (like text docs), offering a diverse range of information that caters to both quantitative analysis and qualitative insights. It also provides insight into the potential need for data cleanup.
+
+1. General type | 2. Specific type | 3. Specified ‘Other’
+|-----|-----|-----|
+Text | csv | xls
+Text | plain | .doc
+Application | SQL
+
+###### Legal, use and restrictions
+
+- Were privacy enhancing technologies (PETs) or tools applied to the dataset in order to remove, mask, or modify PI/SPI in the data?
+  - Highlights the dataset’s adherence to privacy standards by ensuring that personally identifiable information (PII) and sensitive personal information (SPI) have been responsibly managed to protect individual privacy, making the dataset ethically robust and compliant with data protection regulations.
+
+1. Yes/No | 2. Tool | 3. Technique
+|-----|-----|-----|
+TRUE | Adverity | Data Anonymization
+
+- Organizational content classification
+  - Describes the dataset access and handling requirements, indicating that it is designated for internal analytics and strategic planning purposes only, thus guiding downstream consumers on who can access and how to handle this dataset securely.
+
+Public | Internal | Restricted | Confidential (then go to the P’s) | Other (please specify)
+|-----|-----|-----|-----|------|
+FALSE | TRUE | FALSE | FALSE | FALSE
+
+- Confidentiality classification (only if no PETs applied)
+  - Personal information (PI)/Demographic
+  - Payment Card Industry (PCI)
+  - Personal Financial Information (PFI)
+  - Personally Identifiable Information (PII)
+  - Personal Health Information (PHI)
+  - Sensitive Personal Information (SPI)
+  - Other (please specify)
+- Consent location (only if confidential classification is completed and no PETs applied)
+- Data processing geography (inclusion/exclusion)
+
+1. In/exclude | 2. Continent | 3. Country | 4. State
+|-----|-----|-----|-----|
+- Data storage geography inclusion/exclusion
+
+1. In/exclude | 2. Continent | 3. Country | 4. State
+|-----|-----|-----|-----|
+
+- License to use
+  - Provides a clear pathway for understanding the legal framework and usage rights associated with the dataset, ensuring that potential users are aware of their obligations, restrictions, and permissions before leveraging the data for their purposes.
+
+Non-commercial | Public license | Commercial/Negotiated License
+|-----|-----|-----|
+FALSE | FALSE | TRUE
+Enter URL or license point of contact here | Enter URL or license point of contact here | AnalytiQuest Ventures’s Office of General Counsel, legalconsumptionlicense@example.com and (555) 123-4567
+
+- Purpose
+  - Signals that the dataset is primed for use in artificial intelligence applications, performance assessments, and educational or developmental programs, guiding consumers towards its applications in enhancing media planning, content development, and industry research.
+
+1. AI/Not-AI | 2. Specific Use
+|-----|-----|
+AI | Evaluation
+
+- Proprietary data presence
+  - Relays that the dataset does not contain proprietary information exclusive to AnalytiQuest Ventures, suggesting broader flexibility in its use and sharing, which can facilitate unrestricted analysis and collaboration within the legal boundaries established for the dataset.
+
+1. Copyright? | 2. Patent? | 3. Trademark?
+|-----|-----|-----|
+FALSE | FALSE | FALSE
+
+##### Outcome
+
+Metadata associated with the “March 2024 Global Media Consumption Trends” dataset is a vital resource for procuring complex media consumption patterns, ensuring its integrity and applicability in AI analytics. This approach to describing data can facilitate effective personalization of content strategies across various industries and will set a new standard for transparent, efficient, and compliant data usage in media consumption analysis. The outcome includes:
+
+- Comprehensive coverage and actionable insights
+  - Detailed data origin geography and collection methodologies will assure users of the data’s relevance and quality, thus facilitating targeted content strategies.
+- Transparency and trust building
+  - By adhering to version 1.0.0 of data provenance standards and providing a clear metadata URL, the dataset’s transparency is increased, making it easier for media buyers and sellers to assess its credibility.
+  - The documentation of dataset lineage and the use of PETs-like anonymization underscores the commitment to data privacy and security, building trust among clients.
+- Increased efficiency and enhanced compliance
+  - The dataset’s lack of proprietary data restrictions and the provision of a clear license to use, as indicated by contacting AnalytiQuest Ventures’ Office of General Counsel, streamlines the data acquisition process, enhancing clients’ operational efficiency.
+  - Data processing and storage geography metadata will help downstream consumers comply with legal standards and privacy regulations, thereby reducing legal and reputational risks.
+
+#### Use-Case 3: Financial services customer product enablement
 
 Evaluating a new dataset for refining AI algorithms used in customer credit card offerings
 
-TODO
+Minh is tasked with evaluating a new dataset for refining AI algorithms for customer credit card offerings. The dataset under consideration has been documented in accordance with the latest data provenance standards, ensuring transparency and compliance, especially under GDPR and the new EU AI Act. Minh’s evaluation process focuses on the detailed metadata provided for the dataset.
 
-#### Enhancing global logistics efficiency through AI-driven tariff harmonization
+Goals
+
+- Enhance AI model accuracy for customized credit card offerings.
+- Ensure compliance with international laws like GDPR to mitigate legal risks.
+- Optimize data handling practices within geographical limits for increased efficiency.
+- Maintain thorough documentation for dataset transparency and accountability.
+- Uphold dataset quality and integrity to bolster trust in AI insights.
+
+Challenges
+
+- Ensure dataset credibility through clear documentation of its lineage and metadata.
+- Navigate diverse international regulations related to data privacy and AI.
+- Integrate the new dataset with existing systems without operational disruptions.
+- Balance proprietary data use with inform- ation protection and competitive edge.
+- Confirm dataset use is ethical and consensual, particularly with sensitive data.
+- Keep pace with technological and data standard advancements for AI relevance.
+
+##### Analysis:
+
+###### Identification
+
+- Standards version used
+  - `1.1.0`
+  - The dataset’s metadata aligns with the latest standards, facilitating consistent data interpretation and integration across platforms, including the Customer Relationship Management (CRM) system..
+- Dataset title/name
+  - `Consumer Spending Patterns 2020-2024`
+  - The dataset’s focus on analyzing consumer behavior over a five-year period, aids in immediate recognition and relevance for financial trend analysis.
+- Unique metadata identifier
+  - `LFS-1234-5678`  (TODO not a URI format, what is this?)
+  - Provides unambiguous identification and retrieval for uses of the data across the enterprise and tracking internal workflow actions to the dataset, such as sign off for use by the privacy officer.
+- Metadata unique URL
+  - `http://luminadataservices.com/metadata/1234-5678`
+  - Where colleagues from other departments can go to review detailed information about the “Consumer Spending Patterns 2020-2024” dataset, for compliance and relevance reviews to their use cases.
+- Metadata location(s) for datasets feeding the current dataset
+  - Values
+    - `http://luminadataservices.com/metadata/sources/retail-transactions-2023`
+    - `http://luminadataservices.com/metadata/sources/retail-transactions-2024`
+  - The foundation of the current dataset and its dependencies are relayed through the two URLs, increasing the transparency of organizations involved in producing data that will be used by Minh and his team.
+
+###### Provenance and creation
+
+- Creator
+  - Knowing that “Lumina Financial Services” is the dataset’s creator, allows Minh to lookup the vendor in the procurement system and understand what other datasets are under consideration for acquisition from the same supplier. There may be an opportunity to negotiate a broader agreement and save money in the process.
+
+1. Category | 2. Value
+|-----|-----|
+Organization name | Lumina Financial Services
+
+- Source (if different from Creator)
+  - The source of the data is not the same as the creator of the dataset, indicating that Minh may be dealing with a data broker and not the generator.
+
+1. Category | 2. Value
+|-----|-----|
+Organization name | PreciTech Data Inc
+
+- Data origin geography
+  - All locations reflect GDPR requirements so data transfer and processing requirements will be more stringent and complicate Minh’s project from a compliance perspective.
+
+1. Continent | 2. Country | 3. State | 4. City
+|-----|-----|-----|-----|
+Europe | France
+Europe | Germany
+Europe | Italy
+Europe | Poland
+
+- Dataset creation date
+  - `2024-03-14:T10:23:09`
+  - The dataset is quite recent,which is ideal for refining customer-inference algorithms.
+- Range of dates for data generation
+  - There is over a full years worth of data and once collected, the data was quickly published and immediately updated. Thus the recency and vendor ability to refresh is good.
+
+1. Oldest component of data in dataset. | 2. Youngest component of data in dataset.
+
+|-----|-----|
+2023-01-05:T01:01:59 | 2024-03-14:T17:13:47
+
+- Date of prev. issued version of the dataset (if applicable)
+  - `2023-03-15:T01:25:50`
+  - The previously issued date is one one day after the dataset was created, indicating frequent data refresh rates.
+- Method
+  - The point of service (PoS) data will require special handling and protection as it is subject to data privacy regulations. The data is structured and ideal for the use cases.
+
+1. Category | 2. Specific | 3. Specified ‘Other’ | 4. Values
+|-----|-----|-----|-----|
+Feeds | Interval timed database info |     | Aggregated Consumer Transaction Analysis, PoS
+
+- Data format
+  - The SQL structure adheres to the Internet Assigned Number Authority (IANA) Media Types properties, ensuring reliable transaction processing and data integrity even in the event of system failures. It is a good fit for ongoing feeds and frequent data refreshes.
+
+1. General type | 2. Specific type
+|-----|-----|
+Application | SQL
+
+###### Legal, use and restrictions
+
+- Were privacy enhancing technologies (PETs) or tools applied to the dataset in order to remove, mask, or modify PI/SPI in the data?
+  - The dataset is anonymized and compliant with privacy regulations, balancing data utility with individual privacy.
+
+1. Yes/No | 2. Tool | 3. Technique
+|-----|-----|-----|
+TRUE | Google differential privacy library | Differential privacy
+
+- Organizational content classification
+  - The dataset is marked for limited company access, directing its handling and user permissions to guarantee secure and proper usage internally.
+
+Public | Internal | Restricted | Confidential (then go to the P’s) | Other (please specify)
+|-----|-----|-----|-----|-----|
+FALSE | TRUE | FALSE | FALSE | FALSE
+
+- License to use
+  -Minh can refer his legal team to the provided license URL at “http://luminadataservices.com/ license/1234-5678” to understand the specific terms, restrictions, and obligations for using the dataset, ensuring its legal and compliant application within his projects.
+
+Non-commercial | Public license | Commercial/Negotiated License
+|-----|-----|-----|
+FALSE | FALSE | TRUE
+Enter URL or license point of contact here | Enter URL or license point of contact here | http://luminadataservices.com/license/1234-5678
+
+- Purpose
+  -The use is a match for the requirements and use cases, and worth a premium data price.
+
+1. AI/Not-AI | 2. Specific Use | 3. Specified ‘Other’
+|-----|-----|-----|
+AI | Other | Enhancing AI-driven Credit Card Offerings
+
+- Proprietary data presence
+  - The dataset does not contain any information that is owned or controlled exclusively by the organization that created it. This means the data can likely be shared or used more freely, within the parameters of the license but without concern for violation of intellectual property rights.
+
+1. Copyright? | 2. Patent? | 3. Trademark?
+|-----|-----|-----|
+FALSE | FALSE | FALSE
+
+##### Outcome
+
+Minh’s evaluation of the “Consumer Spending Patterns 2020-2024” dataset through the lens of the data provenance standards significantly enhanced ProForma Financial Services’ AI algorithms for customer credit card offerings, ensuring both heightened personalization and strict adherence to international data regulations. This approach improved the precision and effectiveness of the company’s AI models and ensured compliance, data privacy, and seamless integration with existing systems, paving the way for responsible and innovative use of AI insights in the financial sector. The outcome includes:
+
+- Better business case alignment
+  - By not relying solely on high-level dataset descriptions, this process elevated the focus on standards and metadata for business case alignment and ultimate success.
+  - The provided origin, creation dates, and collection method of the metadata assured that the dataset relevance and potential quality were acceptable.
+- Faster data acquisition timeline and speed to market
+  - The absence of proprietary data restrictions and clear licensing terms sped up ProForma’s data acquisition process and ability to develop AI capabilities.
+- Increased compliance and integrity
+  - The ability to assess dataset compliance with the latest data provenance standards, including versioning and unique identifiers meant that the initial assessment of fit-for-use could be performed by an automated system and passed to a human for deeper review.
+  - The dataset lineage, original sources, and PETs allowed ProForma to quickly gauge the level of pre-processing necessary to comply with data privacy requirements.
+  - The data collection, processing and storage information further helped meet data privacy requirements and mitigate legal and reputational risks associated with GDPR and the EU AI Act.
+
+#### USe-Case 4: Enhancing global logistics efficiency through AI-driven tariff harmonization
 
 Managing data to refinine AI systems for accurately predicting tariff costs across countries and categories
 
 TODO
+
+## Datatypes
+
+Primitive Datatypes
+
+- String - A sequence of Unicode characters
+- URI - A Uniform Resource Identifier Reference [RFC 3986](https://www.rfc-editor.org/rfc/rfc3986). Note: URIs are case sensitive. For UUID (urn:uuid:53fefa32-fcbb-4ff8-8a92-55ee120877b7) use all lowercase
+- URL - A Uniform Resource Locator [RFC 1738](https://datatracker.ietf.org/doc/html/rfc1738). Note URLs are accessed directly using the specified protocol. Common URL protocols are http{s}:, ftp:, mailto: and mllp:, though many others are defined
+- Markdown - This specification requires and uses the [GFM (Github Flavored Markdown)](https://github.github.com/gfm/) extensions on [CommonMark](http://spec.commonmark.org/0.28/) format, with the exception of support for inline HTML which is not supported.
+- dateTime	A date, date-time or partial date (e.g. just year or year + month) as used in human communication. The format is a subset of [ISO8601](https://www.iso.org/iso-8601-date-and-time-format.html) icon: YYYY, YYYY-MM, YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz, e.g. 2018, 1973-06, 1905-08-23, 2015-02-07T13:28:17-05:00 or 2017-01-01T00:00:00.000Z. If hours and minutes are specified, a timezone offset SHALL be populated. Actual timezone codes can be sent using the Timezone Code extension, if desired. Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored at receiver discretion. Milliseconds are optionally allowed. Dates SHALL be valid dates. The time "24:00" is not allowed. Leap Seconds are allowed
+
+Complex Datatypes: These are made up of more than one child element as described.
+
+### Organization
+
+- Legal Entity Name
+  - Element-Name: Name
+  - Cardionality: 1..1
+  - Format: String
+- Legal entity Address
+  - Element-Name: Address
+  - Cardionality: 0..*
+  - Format: String
+
+### Location
+
+- Country 
+    - Element-Name: `country`
+    - Cardionality: 1..1
+    - Format: String
+        - SHOULD be ISO 3166 2 letter, 3 letter code, or 3 digit country codes
+- State or Provenance
+    - Element-Name: `state`
+    - Cardionality: 0..1
+    - Format: String
+        - SHOULD be ISO 3166-2: Codes for the names of the principal subdivisions (e.g., states or provinces) of all countries coded in ISO 3166-1.
+
+### Period
+
+- Start date/time
+    - Element-Name: `start`
+    - Cardionality: 0..1
+    - Format: DateTime
+    - if empty, there is no start
+- End date/time
+    - Element-Name: `end`
+    - Cardionality: 0..1
+    - Format: DateTime
+    - if empty, there is no end
+
+### Concept
+
+- specific code for computable
+    - Element-Name: `code`
+    - Cardionality: 0..1
+    - Format: String
+        - Should be from a given vocabulary
+        - SHOULD be compute friendly, without spaces
+- source of code
+    - Element-Name: `system`
+    - Cardionality: 0..1
+    - Format: URI
+- description of code for human 
+    - Element-Name: `description`
+    - Cardionality: 0..1
+    - Format: String
 
 ## Abstract Specification
 
@@ -236,210 +610,164 @@ The Data Provenance Standard is made up of three groups of metadata elements: So
 
 This group describes the dataset and the source of the dataset.
 
+- Element-Name: `source`
+- Cardionality: 1..1
+- The following are child elements
+
 #### Standards version used
 
-Manditory: Specifies the version of the schema or standards used to define the metadata for this dataset, ensuring consistency and compatibility over time.
+Specifies the version of the schema or standards used to define the metadata for this dataset, ensuring consistency and compatibility over time.
 
-Format: Prefer Semantic Versioning (a.k.a., SemVer) format - https://semver.org/
-
-Example: `1.1.0`
+- Element-Name: `Version`
+- Cardionality: 1..1
+- Format: String, Prefer Semantic Versioning (a.k.a., SemVer) format - https://semver.org/
+- Example: `1.1.0`
 
 #### Dataset title / name
 
-Manditory: The official name of the dataset, which should be descriptive and help easily identify the dataset's content and purpose.
+The official name of the dataset, which should be descriptive and help easily identify the dataset's content and purpose.
 
-Format: String
-
-Example: `Blue sky observations`
+- Element-Name: `Title`
+- Cardionality: 1..1
+- Format: String
+- Example: `Blue sky observations`
 
 #### Unique metadata identifier
 
-Manditory: A distinct identifier (such as a UUID) assigned to the dataset's metadata to uniquely distinguish it from others, ensuring no confusion or overlap.
+A distinct identifier (such as a UUID) assigned to the dataset's metadata to uniquely distinguish it from others, ensuring no confusion or overlap.
 
-Format: URI - https://www.rfc-editor.org/rfc/rfc3986
-
-Example: `urn:uuid:17725bad-9098-4f43-abe6-43490ae1596c`
+- Element-Name: `id`
+- Cardionality: 1..1
+- Format: URI
+- Example: `urn:uuid:17725bad-9098-4f43-abe6-43490ae1596c`
 
 #### Metadata location
 
 Optional: The web address where the dataset's metadata is published and can be accessed, providing a direct link to detailed information about the dataset. Typically will be a unique URL of the current dataset
 
-Format: URL - https://datatracker.ietf.org/doc/html/rfc1738
-
-Example: `https://example.org`
+- Element-Name: `location`
+- Cardionality: 0..1
+- Format: URL
+- Example: `https://example.org`
 
 #### Dataset issuer
 
-Manditory: The legal entity responsible for creating the dataset, providing accountability and a point of contact for inquiries.
+The legal entity responsible for creating the dataset, providing accountability and a point of contact for inquiries.
 
-Multiple: 
-
-##### Legal Entity Name
-
-Format: String
-
-##### Legal entity Address
-
-Format: Multiple-Line String
+- Element-Name:  `issuer`
+- Cardionality: 1..*
+- Format: Organization
 
 #### Description of the dataset
 
-Manditory: Contains a detailed narrative that explains the contents, scope, and purpose of the dataset. It provides essential contextual information that helps users understand what the data represents, how it was collected, and any limitations or recommended uses.
+Contains a detailed narrative that explains the contents, scope, and purpose of the dataset. It provides essential contextual information that helps users understand what the data represents, how it was collected, and any limitations or recommended uses.
 
-Format: Markdown - This specification requires and uses the [GFM (Github Flavored Markdown)](https://github.github.com/gfm/) extensions on [CommonMark](http://spec.commonmark.org/0.28/) format, with the exception of support for inline HTML which is not supported.
+- Element-Name: `description`
+- Cardionality: 1..1
+- Format: Markdown
 
 ### Provenance
 
 This group describes the provenance of the dataset
 
+- Element-Name: `provenance`
+- Cardionality: 1..1
+- The following are child elements
+
 #### Source metadata for dataset
 
-Optional: Identifies where the metadata for any source datasets that contribute to the current dataset can be found, establishing lineage and dependencies. This field establishes lineage.
+Identifies where the metadata for any source datasets that contribute to the current dataset can be found, establishing lineage and dependencies. This field establishes lineage.
 
-Multiple:
+- Element-Name: `source`
+- Cardionality: 0..1
+- Format: URL
+- Example: `https://example.org/dataset/blue.xml`
 
-Format: URL - https://datatracker.ietf.org/doc/html/rfc1738
+##### Source for dataset
 
-Example: `https://example.org/dataset/blue.xml`
+If the data originates from a different organization than the one who isued the dataset, this field identifies that original source's legal name.
 
-##### Source
-
-Optional: If the data originates from a different organization than the one who isued the dataset, this field identifies that original source's legal name.
-
-Multiple: 
-
-##### Legal Entity Name
-
-Format: String
-
-##### Legal entity Address
-
-Format: Multiple-Line String
+- Element-Name: `origin`
+- Cardionality: 0..1
+- Format: [Organization](#organization)
 
 #### Data origin geography
 
-Manditory: The geographical location where the data was originally collected, which can be important for compliance with regional laws and understanding the data's context.
- 
-Multiple Location Regions
+The geographical location where the data was originally collected, which can be important for compliance with regional laws and understanding the data's context.
 
-Format:
-
-- Telecom
-- Address
-  - Country, State, County, City, Postal-Code
-- Country - may be ISO 3166 2 or 3 letter code
-- Geo position
-
-TODO: Likely need a bit more discussion and decisions on acceptable formats
-- Concepts defined for region Content and Country
-
---> Intention is to use: 
-  
-ISO 3166-1: Codes for the names of countries and their subdivisions:
-Alpha-2: Two-letter country codes (e.g., US for the United States).
-Alpha-3: Three-letter country codes (e.g., USA for the United States).
-Numeric: Three-digit country codes (e.g., 840 for the United States).
-ISO 3166-2: Codes for the names of the principal subdivisions (e.g., states or provinces) of all countries coded in ISO 3166-1.
-
-Note Telecom not used.
+- Element-Name: `origin-geography`
+- Cardionality: 1..*
+- Format: [Location](#location)
 
 #### Dataset issue date
 
 Manditory: The date when the dataset was compiled or created, providing a temporal context for the data.
 
-Format: ISO-8601 - https://en.wikipedia.org/wiki/ISO_8601
-
-Example: `2024-05-27`, or `2024-05-27T15:18:02Z`
+- Element-Name: `date`
+- Cardionality: 1..1
+- Format: DateTime
+- Example: `2024-05-27`, or `2024-05-27T15:18:02Z`
 
 #### Date of previously issued version of the dataset
 
 Optional: The release date of the last version of the dataset, if it has been updated or revised, to track changes and updates over time.
 
-Format: ISO-8601 - https://en.wikipedia.org/wiki/ISO_8601
-
-Example: `2024-05-27`, or `2024-05-27T15:18:02Z`
+- Element-Name: `previous-date`
+- Cardionality: 0..1
+- Format: DateTime
+- Example: `2024-05-27`, or `2024-05-27T15:18:02Z`
 
 #### Range of dates for data generation
 
 Optional: The span of time during which the data within the dataset was collected or generated, offering insight into the dataset's timeliness and relevance.
 
-Multiple pairs of Start and End date/time.
-
-##### Start
-
-Start of time for this period
-
-Format: ISO-8601 - https://en.wikipedia.org/wiki/ISO_8601
-
-##### End
-
-End of time for this period
-
-Format: ISO-8601 - https://en.wikipedia.org/wiki/ISO_8601
+- Element-Name: `generation-period`
+- Cardionality: 0..1
+- Format: [Period](#period)
 
 #### Method
 
 Manditory: The methodology or procedures used to collect, generate, or compile the data, giving insight into its reliability and validity.
 
-Multiple:
-
-##### Method Concept
-
-Format: Concept: from [Specific method types](#data-collection-methods) -- Extensible
-
-##### Method Description
-
-Format: String
+- Element-Name: `generation-method`
+- Cardionality: 1..*
+- Format: [Concept](#concept)
+    - SHALL be from [Specific method types](#data-collection-methods) if applicable
+- MAY be other code from other code systems 
 
 #### Data format
 
 Describes the nature of the data within the dataset, such as numerical, textual, or multimedia, helping users understand what kind of information is contained within the file or dataset.,
 
-Format: mime-type https://www.rfc-editor.org/rfc/rfc6838.html
-
-Concept Vocabulary: http://www.iana.org/assignments/media-types/
-
-Example: `application/json`
+- Element-Name: `format`
+- Cardionality: 0..*
+- Format: String
+    - SHALL be mime-type https://www.rfc-editor.org/rfc/rfc6838.html
+    - SHALL be from registered media-types http://www.iana.org/assignments/media-types/ if applicable
+- Example: `application/json`
 
 ### Use
 
 This group describes legal, use, and restrictions.
 
-#### Organizational content classification
-
-TODO: This is not in the spreadsheet, but is in the usecase analysis.... so was it eliminated, or is my guess here correct.
-
---> This was not eliminated and it appears in the spreadsheet as * Confidentiality classification. Note that the Use Cases are out of date compared to the latest spreadsheet youu have. So please use file MVP Master Standards with Definitions 04-24-24 v10eh as authoritative list of standards and metadata.
-
-Manditory: The organizational content classification. The level of sensitivity assigned to the dataset, such as personally identifiable information, which dictates how the dataset must be secured and who can access iEach classifier must be evaluated as true/false.
-
-##### Public
-
-Format: `true` / `false`
-
-##### Internal
-
-Format: `true` / `false`
-
-##### Restricted
-
-Format: `true` / `false`
-
-##### Confidential
-
-Format: `true` / `false`
-
-##### Other
-
-Format: if not `false`, then describe the other applicable classifier.
+- Element-Name: `use`
+- Cardionality: 1..1
+- The following are child elements
 
 #### Confidentiality classification
 
 Manditory: Indicate if the dataset includes data falling into the confidentiality classification. Each classifier must be evaluated as true/false/unknown.
 
+- Element-Name: `classification`
+- Cardionality: 1..1
+- Format: Classification
+
+
 TODO: Use-Case 1 was using the words "NOT ASSESSED" and "ASSESSED". I don't understand what that would mean. I could see an "unknown" as an indicate of a classification that was not done. But I don't understand what "ASSESSED" means, are data in the dataset or not?
 
 --> This field indicates the level of sensitivity assigned to the dataset, such as personally identifiable information, which dictates how the dataset must be secured and who can access it. The use cases indicate assessed or not assessed because those used to be the values we considered when the use cases were drafted. Since then, the Working Group moved on to requiring the name of the tool that was used to determine the presence of PII or other sensitive data (e.g., Apache NiFi, Google Cloud or others).
+
+TODO: I am still unclear. what are these tools? Are the following values assessed? How is this related to the  PET element below?
 
 #####  Personal Information (PI)/Demographic
 
@@ -471,40 +799,12 @@ Format: if not `false`, then describe the other applicable classifier.
 
 #### Consent documentation location
 
-Specifies where consent documentation or agreements related to the data can be found, ensuring legal compliance and regulatory use.
+Specifies where consent documentation or agreements related to the data can be found, ensuring legal compliance and regulatory use. This element must be populated when Privacy Consent is appropriate. When populated it points at either one Privacy Consent Policy that all individuals in the dataset agreed to, or one Privacy Policy for each individual in the dataset with that individuals signature.
 
-TODO: unclear what is recorded here
-1. Is this just the policy that all the individuals that have been included have agreed to? Thus one URL.
-2. Is this an array of individual specific copies? Thus each consent ceremony (e.g. individual signed paper) is available?
-3. What formats are allowed? (is there a standard?) Is it a JPEG of the signature page?
-
---> This is the location of the consent text that was used to obtain the consent from the user. Thus it could be a single or multiple URLs, a document path, or a pointer to a document (e.g., PDF) that documents the versioning history and changes to the consent found on a website.  
-
-TODO: How is N/A handled? 
-
---> N/A is a permitted value here as there are data types that do not require consent.
-
-TODO: How is it handled when a consent is needed upon use of the dataset?
-
-Multiple: One entry for each Individual (TODO, is it one or more?)
-
---> Multiple entries are allowed and ALL consents should be captured. For example, if there are 18 tables each depicting survey results from a 19 different people in different geographies with different data privacy laws, then all 19 would be listed here.
-
-##### Individual identifier
-
-The individual identifier as given in the dataset. This may be an external identifier, or an identifier only used in the dataset.
-
-Format: String, URN, or URL
-
-Example: `#34` -- example of an internal number using URL anchor indication `#`
-
-##### Consent
-
-The URL to the Consent terms for the given individual.
-
-Format: URL - https://datatracker.ietf.org/doc/html/rfc1738
-
-Example: `https://example.org/dataset/34/consent.pdf`
+- Element-Name: `consents`
+- Cardionality: 0..*
+- Format: URL
+- Example: `https://example.org/dataset/34/consent.pdf`
 
 #### Privacy indicators
 
@@ -546,117 +846,128 @@ Format: String (tool specific)
 
 Format: String (tool specific)
 
-#### Data processing geography
+#### Data processing geography included
 
-Optional: Defines the geographical boundaries within which the data can or cannot be processed, often for legal or regulatory reasons.
+Defines the geographical boundaries within which the data can be processed, often for legal or regulatory reasons.
 
-Multiple: list of `inclusion` areas and `exclusion` areas
+- Element-Name: `processing-included`
+- Cardionality: 0..*
+- Format: [Location](#location)
+- When not populated there are no processing location requirements
 
-Format: String, preference to use the following formats
+#### Data processing geography excluded
 
-- Telecom
-- Address
-  - Country, State, County, City, Postal-Code
-- Country - may be ISO 3166 2 or 3 letter code
-- Geo position
+Defines the geographical boundaries within which the data canot be processed, often for legal or regulatory reasons.
 
-TODO: Likely need a bit more discussion and decisions on acceptable formats
-- Concepts defined for region Content and Country
-- 
---> Intention is to use: 
-  
-ISO 3166-1: Codes for the names of countries and their subdivisions:
-Alpha-2: Two-letter country codes (e.g., US for the United States).
-Alpha-3: Three-letter country codes (e.g., USA for the United States).
-Numeric: Three-digit country codes (e.g., 840 for the United States).
-ISO 3166-2: Codes for the names of the principal subdivisions (e.g., states or provinces) of all countries coded in ISO 3166-1.
+- Element-Name: `processing-excluded`
+- Cardionality: 0..*
+- Format: [Location](#location)
+- When not populated there are no processing location restrictions
 
+#### Data storage geography allowed
 
+Specifies where the data may be stored, crucial for compliance with data sovereignty laws.
 
-#### Data storage geography
+- Element-Name: `storage-allowed`
+- Cardionality: 0..*
+- Format: [Location](#location)
+- When not populated there are no defined storage location requirements
 
-Optional:  Specifies where the data is stored and any geographical restrictions on storage locations, crucial for compliance with data sovereignty laws.
+#### Data storage geography forbidden
 
-Multiple: list of `inclusion` areas and `exclusion` areas
+Specifies where the data may not be stored, crucial for compliance with data sovereignty laws.
 
-Format: String, preference to use the following formats
-
-- Telecom
-- Address
-  - Country, State, County, City, Postal-Code
-- Geo position
-
-TODO: Likely need a bit more discussion and decisions on acceptable formats
-- Concepts defined for region Content and Country
-
---> Note that this list follows the same logic as processing geography, which follows the same logic as Origin.
-
+- Element-Name: `storage-forbidden`
+- Cardionality: 0..*
+- Format: [Location](#location)
+- When not populated there are no defined storage location restrictions
 
 #### License to use
 
 Details the location or point of contact for identifying the terms under which the dataset can be used, including any restrictions or obligations, clarifying legal use and distribution rights.
 
-Format: String - Prefer License codes such as CreativeCommons or Apache
-
-Example: `Apache-2.0`
+- Element-Name: `license`
+- Cardionality: 0..1
+- Format: String 
+    - Prefer License codes such as CreativeCommons or Apache
+    - May be a URL
+- Example: `Apache-2.0`
 
 #### Intended data use
 
 Describes the purpose for which the dataset was created, guiding users on its intended use and potential applications against identified use cases. List all that 
 
-Multiple:
+- Element-Name: `intended-purpose`
+- Cardionality: 0..*
+- Format: [Concept](#concept)
+  - SHALL populate `code` from [Data Use](#data-use-codes).
+  - SHALL populate `description` with specific description
+  - When using the code `non-ai-other` and `ai-other`, the description SHALL describe the actual use
 
-Format: String, Shall indicate using the following vocabulary if they apply.
+##### Data Use Codes
 
-- Non-AI Staging/testing
-- Non-AI Production
-- Non-AI Quality assurance
-- Non-AI Other
-- AI Pre-Training
-- AI Alignment
-- AI Evaluation
-- AI Sythentic Data Generation
-- AI Other
+The following concepts are defined to describe intended and forbidden uses of the dataset
+
+- source URI: `https://github.com/Data-and-Trust-Alliance/DPS/Use`
+
+| code | description |
+|------|-------------|
+| non-ai-staging | Non-AI Staging/testing
+| non-ai-production | Non-AI Production
+| non-ai-quality | Non-AI Quality assurance
+| non-ai-other | Non-AI Other
+| ai-pre-training | AI Pre-Training
+| ai-alignment | AI Alignment
+| ai-evaluation | AI Evaluation
+| ai-synthetic | AI Sythentic Data Generation
+| ai-other | AI Other
+
+Where: `non-ai-other`, and `ai-other`
 
 #### Forbidden data use
 
 Describes the purposes for which the dataset is not intended and can not be used.
 
-Multiple:
-
-Format: String, Shall indicate using the above vocabulary if they apply.
+- Element-Name: `forbidden-purpose`
+- Cardionality: 0..*
+- Format: [Concept](#concept)
+  - SHALL populate `code` from [Data Use](#data-use-codes).
+  - SHALL populate `description` with specific description
+  - When using the code `non-ai-other` and `ai-other`, the description SHALL describe the actual use
 
 #### Propritary data presence
 
 Indicates whether the dataset contains proprietary information that is owned by or exclusive to the organization, affecting how it can be shared or used.
 
-This is made up of three sections: copyright, patent, and trademark.
-
-Multiple
+- Element-Name: `propritary`
+- The following child elements
 
 ##### Copyright
 
 Indicates whether the dataset contains propritary information that is covered with a Copyright, and the terms of said Copyright.
 
-Format: String, where the string `no` indicates no Copyright
-
-Multiple: unless `no` is indicated
+- Element-Name: `copyright`
+- Cardionality: 0..*
+- Format: String
+  - where the string `no` indicates no Copyright
 
 ##### Patent
 
 Indicates whether the dataset contains propritary information that is covered with a Patent, and the said Patent number.
 
-Format: String, where the string `no` indicates no Patent
-
-Multiple: unless `no` is indicated
+- Element-Name: `patent`
+- Cardionality: 0..*
+- Format: String
+  - where the string `no` indicates no Patent
 
 ##### Trademark
 
 Indicates whether the dataset contains propritary information that is covered with a Trademark, and the terms of said Trademark.
 
-Format: String, where the string `no` indicates no Trademark
-
-Multiple: unless `no` is indicated
+- Element-Name: `trademark`
+- Cardionality: 0..*
+- Format: String
+  - where the string `no` indicates no Trademark
 
 ## Schema
 

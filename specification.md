@@ -1097,9 +1097,9 @@ TODO: Format the following
 
 **AARP**
 - Amr Khani
-- SVP, Data and Analytics
+  - SVP, Data and Analytics
 - Jaye Campbell
-- Legal Leader, General Counsel
+  - Legal Leader, General Counsel
 
 **American Express**
 - Laurel Shifrin

@@ -1021,73 +1021,75 @@ The Annex contain normative vocabulary to be used when it applies. These vocabul
 
 The following defined vocabulary are to be used for the "Method". The vocabulary to use is the whole 
 
-TODO: Format the following line a Code System
+- source URI: `https://github.com/Data-and-Trust-Alliance/DPS/Method`
 
-- Web scraping/Crawling	Textual
-- Web scraping/Crawling	Structured
-- Web scraping/Crawling	Metadata
-- Web scraping/Crawling	Social media
-- Web scraping/Crawling	News & articles
-- Web scraping/Crawling	Other
-- Feeds	RSS source
-- Feeds	API source
-- Feeds	Real time database info
-- Feeds	Interval timed database info
-- Feeds	File feed info
-- Feeds	Other
-- Syndication	News feeds
-- Syndication	Financial feeds
-- Syndication	Social media
-- Syndication	Product/service catalog
-- Syndication	Other
-- Data mining	Association rule
-- Data mining	Classification
-- Data mining	Clustering
-- Data mining	Regression
-- Data mining	Anomaly detection
-- Data mining	Sequencing
-- Data mining	Other
-- Machine generated/MLOps	Synthetic
-- Machine generated/MLOps	Generative
-- Machine generated/MLOps	Twin
-- Machine generated/MLOps	Machine-2-machine (M2M)
-- Machine generated/MLOps	AI inferred
-- Machine generated/MLOps	XR (AR, VR, MR)
-- Machine generated/MLOps	Other
-- Sensor and IoT output	Environmental
-- Sensor and IoT output	Motion & location
-- Sensor and IoT output	Health 
-- Sensor and IoT output	Biometric
-- Sensor and IoT output	Energy consumption
-- Sensor and IoT output	Industrial sensor
-- Sensor and IoT output	Vehicle & transportation
-- Sensor and IoT output	Security & surveillance
-- Sensor and IoT output	Agriculture & environment
-- Sensor and IoT output	Other
-- Social media	Text based
-- Social media	Multimedia
-- Social media	Reviews and ratings
-- Social media	Updates
-- Social media	Q&As
-- Social media	Collaborative
-- Social media	Creative
-- Social media	Other
-- User generated content	Clickstream
-- User generated content	Social media
-- User generated content	Behavior
-- User generated content	Ratings & reviews
-- User generated content	Multimedia
-- User generated content	Other
-- Primary user source	Survey/Questionnaire
-- Primary user source	Interview
-- Primary user source	Event
-- Primary user source	Biometric
-- Primary user source	Focus Group
-- Primary user source	Other
-- Data augmentation	N/A
-- Transfer learning	N/A
-- Simulations	N/A
-- Other	N/A
+| code | description |
+|------|-------------|
+| web-scraping-crawling-textual | Web scraping/Crawling	Textual
+| web-scraping-crawling-structured | Web scraping/Crawling Structured
+| web-scraping-crawling-metadata | Web scraping/Crawling Metadata
+| web-scraping-crawling-social-media | Web scraping/Crawling Social media
+| web-scraping-crawling-news-articles | Web scraping/Crawling News & articles
+| web-scraping-crawling-other | Web scraping/Crawling Other
+| feeds-rss-source | Feeds RSS source
+| feeds-api-source | Feeds API source
+| feeds-real-time-database-info | Feeds Real time database info
+| feeds-interval-timed-database-info | Feeds Interval timed database info
+| feeds-file-feed-info | Feeds File feed info
+| feeds-other | Feeds Other
+| syndication-news-feeds | Syndication News feeds
+| syndication-financial-feeds | Syndication Financial feeds
+| syndication-social-media | Syndication Social media
+| syndication-product-service-catalog | Syndication Product/service catalog
+| syndication-other | Syndication Other
+| data-mining-association-rule | Data mining Association rule
+| data-mining-classification | Data mining Classification
+| data-mining-clustering | Data mining Clustering
+| data-mining-regression | Data mining Regression
+| data-mining-anomaly-detection | Data mining Anomaly detection
+| data-mining-sequencing | Data mining Sequencing
+| data-mining-other | Data mining Other
+| machine-generated-mlops-synthetic | Machine generated/MLOps Synthetic
+| machine-generated-mlops-generative | Machine generated/MLOps Generative
+| machine-generated-mlops-twin | Machine generated/MLOps Twin
+| machine-generated-mlops-machine-2-machine | Machine generated/MLOps Machine-2-machine (M2M)
+| machine-generated-mlops-ai-inferred | Machine generated/MLOps AI inferred
+| machine-generated-mlops-xr | Machine generated/MLOps XR (AR, VR, MR)
+| machine-generated-mlops-other | Machine generated/MLOps Other
+| sensor-and-iot-output-environmental | Sensor and IoT output Environmental
+| sensor-and-iot-output-motion-location | Sensor and IoT output Motion & location
+| sensor-and-iot-output-health | Sensor and IoT output Health 
+| sensor-and-iot-output-biometric | Sensor and IoT output Biometric
+| sensor-and-iot-output-energy-consumption | Sensor and IoT output Energy consumption
+| sensor-and-iot-output-industrial-sensor | Sensor and IoT output Industrial sensor
+| soensor-and-iot-output-vehicle-transportation | Sensor and IoT output Vehicle & transportation
+| sensor-and-iot-output-security-surveillance | Sensor and IoT output Security & surveillance
+| sensor-and-iot-output-agriculture-environment | Sensor and IoT output Agriculture & environment
+| sensor-and-iot-output-other | Sensor and IoT output Other
+| social-media-text-based | Social media Text based
+| social-media-multimedia | Social media Multimedia
+| social-media-reviews-and-ratings | Social media Reviews and ratings
+| social-media-updates | Social media Updates
+| social-media-q-and-a | Social media Q&As
+| social-media-collaborative | Social media Collaborative
+| social-media-creative | Social media Creative
+| social-media-other | Social media Other
+| user-generated-content-clickstream | User generated content Clickstream
+| user-generated-content-social-media | User generated content Social media
+| user-generated-content-behavior | User generated content Behavior
+| user-generated-content-ratings-and-reviews | User generated content Ratings & reviews
+| user-generated-content-multimedia | User generated content Multimedia
+| user-generated-content-other | User generated content Other
+| primary-user-source-survey-questionaire | Primary user source Survey/Questionnaire
+| primary-user-source-interview | Primary user source Interview
+| primary-user-source-event | Primary user source Event
+| primary-user-source-biometric | Primary user source Biometric
+| primary-user-source-focus-group | Primary user source Focus Group
+| primary-user-source-other | Primary user source Other
+| data-augmentation-na | Data augmentation N/A
+| transfer-learning-na | Transfer learning N/A
+| simulations-na | Simulations N/A
+| other-na | Other N/A
 
 ## Acknowledgements
 

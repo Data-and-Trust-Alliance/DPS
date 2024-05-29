@@ -1287,109 +1287,126 @@ TODO: Format the following line a Code System
 
 Acknoledgements to the [Members of the Data and Trust Alliance](https://dataandtrustalliance.org/who-we-are)
 
-TODO: Format the following
-
 **AARP**
 - Amr Khani
-- SVP, Data and Analytics
+  - SVP, Data and Analytics
 - Jaye Campbell
-- Legal Leader, General Counsel
+  - Legal Leader, General Counsel
 
 **American Express**
 - Laurel Shifrin
-- VP, Enterprise Data Governance
-- Saheel Shah Director, Enterprise Data Governance
+  - VP, Enterprise Data Governance
+- Saheel Shah
+  - Director, Enterprise Data Governance
 
 **CVS**
-Dave Sturgeon Executive Director, Data Governance and Enablement
-Herb Holmes
-Data Governance & Data Management Leader
+- Dave Sturgeon 
+  - Executive Director, Data Governance and Enablement
+- Herb Holmes
+  - Data Governance & Data Management Leader
 
-Deloitte
-Juan Tello
-U.S. CDO, Strategy & Analytics Principal
-Leo Cabrera, Rohit Iyer, Ajay Tripathi
-Office of CDO
+**Deloitte**
+- Juan Tello
+  - U.S. CDO, Strategy & Analytics Principal
+- Leo Cabrera, Rohit Iyer, and Ajay Tripathi
+  - Office of CDO
 
-GM
-Jon Francis
-Chief Data & Analytics Officer
-Brian Ames
-Principal Software Engineer
+**GM**
+- Jon Francis
+  - Chief Data & Analytics Officer
+- Brian Ames
+  - Principal Software Engineer
 
-Howso
-Chris Hazard
-Chief Technology Officer
-Michael Meehan General Counsel
+**Howso**
+- Chris Hazard
+  - Chief Technology Officer
+- Michael Meehan
+  - General Counsel
 
-Humana
-Genevy Dimitrion VP, Data Strategy & Governance
+**Humana**
+- Genevy Dimitrion
+  - VP, Data Strategy & Governance
  
-IBM
-Lee Cox
-VP, Integrated Governance & Market Readiness, Office of Privacy and Responsible Tech. Bryan Bortnick
-Counsel, Data Governance Bryan Kyle
-Sr. Technical Staff Member, Data Eng., Chief Data Office
-Orla Flannery
-Privacy Program Manager
+**IBM**
+- Lee Cox
+  - VP, Integrated Governance & Market Readiness, Office of Privacy and Responsible Tech.
+- Bryan Bortnick
+  - Counsel, Data Governance
+- Bryan Kyle
+  - Sr. Technical Staff Member, Data Eng., Chief Data Office
+- Orla Flannery
+  - Privacy Program Manager
 
-Kenvue
-Bernardo Tavares Chief Technology & Data Officer
-Ajay Dhaul
-SVP Global Data Kim Viccaro Data Strategy & Activation Lead
-Sudheesh Kamath
-Data & AI Products Leader
+**Kenvue**
+- Bernardo Tavares
+  - Chief Technology & Data Officer
+- Ajay Dhaul
+  - SVP Global Data
+- Kim Viccaro
+  - Data Strategy & Activation Lead
+- Sudheesh Kamath
+  - Data & AI Products Leader
 
-Mastercard
-Travis Carpenter
-VP, Data Quality & Sources
-Ed Dephilippis
-VP, Data Management & Quality
-Usha Ramalingam Director, Data Management
+**Mastercard**
+- Travis Carpenter
+  - VP, Data Quality & Sources
+- Ed Dephilippis
+  - VP, Data Management & Quality
+- Usha Ramalingam
+  - Director, Data Management
 
-Nielsen
-Christine Pierce Chief Data Officer
-Frank Fasinski Director, Data Science
+**Nielsen**
+- Christine Pierce
+  - Chief Data Officer
+- Frank Fasinski
+  - Director, Data Science
 
-Nike
-Emily White
-Vice President, Enterprise Data & Analytics
+**Nike**
+- Emily White
+  - Vice President, Enterprise Data & Analytics
 
-Pfizer
-Peter Hunter
-Sr Director, Analytic Tools
-Gentiana Spahiu Director, Data Gov. Lead
-Michael Pagliorola, Sasi Mullangi, Adam Nieto,
-John Pastor, Drew Palsgrove, Jay Shetty
+**Pfizer**
+- Peter Hunter
+  - Sr Director, Analytic Tools
+- Gentiana Spahiu 
+  - Director, Data Gov. Lead
+- Michael Pagliorola, Sasi Mullangi, Adam Nieto,
+John Pastor, Drew Palsgrove, and Jay Shetty
 
-Regions
-Dilip Balachandran SVP, Enterprise Data Management
+**Regions**
+- Dilip Balachandran 
+  - SVP, Enterprise Data Management
 
-Smithsonian
-Alan Hejnal
-Data Quality Manager
-Derrick Whitney Interim CDO
-Adam Soroka
-Office of Research Computing
+**Smithsonian**
+- Alan Hejnal
+  - Data Quality Manager
+- Derrick Whitney 
+  - Interim CDO
+- Adam Soroka
+  - Office of Research Computing
 
-Transcarent
-Thi Montalvo
-VP Reporting and Analytics
-Thomas Birchfield Technical Program Manager
+**Transcarent**
+- Thi Montalvo
+  - VP Reporting and Analytics
+- Thomas Birchfield 
+  - Technical Program Manager
 
-UPS
-Mallory Freeman
-VP, Enterprise Data and Analytics at UPS
-Zeenat Syed
-Director of Data Strategy
-Ricardo Rodriguez
-Sr Manager, Data Science and Machine Learning
+**UPS**
+- Mallory Freeman
+  - VP, Enterprise Data and Analytics
+- Zeenat Syed
+  - Director of Data Strategy
+- Ricardo Rodriguez
+  - Sr Manager, Data Science and Machine Learning
 
-Walmart
-Gregory Schaffer
-Chief Counsel, Cyber Security & VP, Digital Trust Compliance
-Laura Asbury Director, Digital Trust Compliance
+**Walmart**
+- Gregory Schaffer
+  - Chief Counsel, Cyber Security & VP, Digital Trust Compliance
+- Laura Asbury 
+  - Director, Digital Trust Compliance
 
-Warby Parker
-Peter Cross Head of Data
-Chris Bleakley Engineering Director
+**Warby Parker**
+- Peter Cross 
+  - Head of Data
+- Chris Bleakley 
+  - Engineering Director

@@ -1187,9 +1187,9 @@ Metadata and the Dataset are data that need to be of quality and trustable to be
 
 The Annex contain normative vocabulary to be used when it applies. These vocabulary SHALL be used when they apply.
 
-### Data Collection Methods
+### Data Collection Method Codes
 
-The following defined vocabulary are to be used for the "Method". The vocabulary to use is the whole 
+The following defined vocabulary are to be used for the "Method".  
 
 - source URI: `https://github.com/Data-and-Trust-Alliance/DPS/Method`
 
@@ -1263,22 +1263,26 @@ The following defined vocabulary are to be used for the "Method". The vocabulary
 
 ### Privacy Enhancing Tools	Codes
 
-TODO codesystem
+The following concepts are defined to describe privacy enhancing tools (PET).
 
-- Data Anonymization
-- Data Encryption
-- Data Masking
-- Data Minimization
-- Data Redaction
-- Differential Privacy
-- Federated Learning
-- Homomorphic Encryption
-- K-anonymity
-- L-diversity
-- Pseudonymization
-- Secure Multi-party Computation (SMC)
-- T-closeness
-- Tokenization
+- source URI: `https://github.com/Data-and-Trust-Alliance/DPS/PET`
+
+| code | description |
+|------|-------------|
+| data-anonymization | Data Anonymization
+| data-encryption | Data Encryption
+| data-masking | Data Masking
+| data-minimization | Data Minimization
+| data-redaction | Data Redaction
+| differential-privacy | Differential Privacy
+| federated-learning | Federated Learning
+| homomorphic-encryption | Homomorphic Encryption
+| k-anonymity | K-anonymity
+| l-diversity | L-diversity
+| pseudonymization | Pseudonymization
+| secure-multi-party-computation | Secure Multi-party Computation (SMC)
+| t-closeness | T-closeness
+| tokenization | Tokenization
 
 ### Data Use Codes
 

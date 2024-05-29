@@ -59,7 +59,7 @@ The Data & Trust Alliance brings together leading businesses and institutions ac
 
 This specification adopts the normative words defined in IETF [Best Current Practice 14](https://www.rfc-editor.org/info/bcp14): Key words for use in RFCs to Indicate Requirement Levels (BCP-14), certain words indicate whether a specific content is normative. The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described. Informative content does not contain these key words.
 
-### Concepts
+### Glossary
 
 The following concepts are used throughout the specification
 
@@ -244,6 +244,7 @@ Goals
 - Enhance clients’ operational efficiency and compliance through strategic data integration.
 
 Challenges
+
 - Balancing data comprehensiveness with privacy and ethical considerations.
 - Keeping pace with rapid changes in media consumption behaviors and technology.
 - Ensuring data standards provide necessary transparency to data buyers and that the metadata is compatible with automated data procurement systems.
@@ -266,9 +267,9 @@ Challenges
   - Offers immediate, transparent access to the dataset’s detailed specifications, fostering trust and ease of use among data consumers.
 - Metadata location(s) for datasets feeding the current dataset
   - Values
-    - `example.com/550e8400-e29b-41d4-a716-44665543902`
-    - `example.com/550e8400-e29b-41d4-a716-44665544732`
-    - `example.com/550e8400-e29b-41d4-a716-446655465722`
+    - `http://example.com/550e8400-e29b-41d4-a716-44665543902`
+    - `http://example.com/550e8400-e29b-41d4-a716-44665544732`
+    - `http://example.com/550e8400-e29b-41d4-a716-446655465722`
   - Demonstrates the three sources of data that make up the existing data set, providing traceability into  the origins and lineage of the data.
 
 ###### Provenance and creation
@@ -555,7 +556,198 @@ Minh’s evaluation of the “Consumer Spending Patterns 2020-2024” dataset th
 
 Managing data to refinine AI systems for accurately predicting tariff costs across countries and categories
 
-TODO
+The global nature of Navisphere Logistics, Ltd.’s operations means that the company must navigate a complex web of international tariffs and customs regulations. Efficiently managing these tariffs is critical to minimizing delivery times and costs. Dr. Hicks and her team are tasked with refining the company’s AI systems to accurately predict tariff costs across different countries and product categories.
+
+- Goals
+  - Unify global tariff schedules into an AI-compatible format for better predictions.
+  - Enhance AI tariff models to reduce cross-border delivery times and costs.
+  - Adhere to data provenance standards for tariff data integrity and compliance.
+  - Attain tariff predictions globally across various product categories with advanced AI.
+  - Simplify customs processes with accurate tariff assessments, aiding global clients.
+- Challenges
+  - Navigate the intricate international tariff and customs landscape with diverse rules.
+  - Rigorously assess dataset metadata for compliance with global standards and privacy.
+  - Continually update AI models to adapt to changing international tariff regulations.
+  - Balance advanced AI development with responsible usage and adherence to privacy laws.
+  - Ensure smooth AI model integration into Navisphere Logistics’ systems without workflow disruption.
+
+##### Analysis
+
+###### Identification
+
+- Standards version used
+  - `1.4.5`
+  - Ingests the metadata into the automated Data Acquisition System, knowing that the metadata is compatible with the system and the vendor-supplier values will match the expected evaluation fields.
+- Dataset title/name
+  - `2023 Global Tariff Schedules – Electronics`
+  - The link between the metadata and data set supports tracking both throughout the assessment and acquisition process.
+- Unique metadata identifier
+  - `urn:uuid:123e4567-e89b-12d3-a456-426614174000`
+  - Allows the Procurement Department and Maya to avoids redundancy as multiple sets of metadata are automated for scoring for trustworthiness and business value.
+- Metadata unique URL
+  - `https://globaltradedatahub.com/metadata/123e4567-e89b-12d3-a456-426614174000`
+  - Provides a working location where the metadata, describing the dataset, can be obtained.
+- Metadata location(s) for datasets feeding the current dataset
+  - Values
+    - `https://internationalcustomsdataconsortium.com/metadata/234f5678-f01c-23d4-b567-537625175111`
+    - `https://internationalcustomsdataconsortium.com/metadata/345g6789-g02d-34e5-c678-648736286222`
+    - `https://internationalcustomsdataconsortium.com/metadata/456h7890-h03e-45f6-d789-759847397333`
+    - `https://internationalcustomsdataconsortium.com/metadata/567i8901-i04f-56g7-e890-860958408444`
+    - `https://internationalcustomsdataconsortium.com/678j9012-j05g-67h8-f901-971069519555`
+  - Demonstrates that the dataset under consideration contains data from four other entities, which requires additional scrutiny of the sources in determining whether to acquire and use the dataset on offer.
+
+###### Provenance and creation
+
+- Creator
+
+  - This is critical context for assessing the data’s credibility, potential biases, and the appropriate point of contact for any technical or data-specific inquiries.
+
+1. Category | 2. Value
+
+|-----|-----|
+
+Organization name | GlobalTradeDataHub
+
+- Source (if different from Creator)
+
+  - Demonstrates that the existing data did not originate with the supplier, but another entity. The single value listed and the previous four URLs for metadata of other datasets which fed the current dataset, indicate that all data on offer originated with the International Customs Data Consortium.
+
+1. Category | 2. Value
+
+|-----|-----|
+
+Organization name | International Customs Data Consortium
+
+- Data origin geography
+
+  - Referring to the metadata concerning the range of dates for data generation, it suggests that the dataset was compiled immediately after the conclusion of the data collection period, ensuring its timeliness and relevance.
+
+1. Continent | 2. Country | 3. State | 4. City
+
+|-----|-----|-----|-----|
+
+Europe | Netherlands |   |
+
+Europe | Switzerland |   |
+
+Europe | UK |   |
+
+- Dataset creation date
+
+  - 2024-02-01:T11:15:10
+
+    - Reinforced the freshness of the data and that it was made available within a business date of when the collection period ended. The exact timestamp indicates that a full year’s data is represented in the dataset.
+
+- Range of dates for data generation
+
+  - Reinforced the freshness of the data and that it was made available within a business date of when the collection period ended. The exact timestamp indicates that a full year’s data is represented in the dataset.
+
+1. Oldest component of data in dataset. | 2. Youngest component of data in dataset.
+
+|-----|-----|
+
+2020-01-01:T00:00:01 | 2024-01-31:T23:23:59
+
+- Date of prev. issued version of the dataset (if applicable)
+
+  - Not applicable
+
+  - This is the first time the dataset is made available and there is no sense of the frequency at which it may be updated.
+
+- Method
+
+  - Supports assessment of the data’s reliability and suitability for training AI models, supporting that the dataset’s generation aligns with Navisphere’s standards for data quality and integrity.
+
+1. Category | 2. Specific | 3. Specified ‘Other’ | 4. Values
+
+|-----|-----|-----|-----|
+
+Feeds | Other |  | Automated Customs Entry Processing
+
+- Data format
+
+  - Helps Maya anticipate the structure and format of the data, ensuring compatibility with Navisphere’s systems and facilitating efficient data processing and integration into AI models.
+
+1. General type | 2. Specific type | 3. Specified ‘Other’
+
+|-----|-----|-----|
+
+Application | Other | vnd.oasis.opendocument.database
+
+###### Legal, use and restrictions
+
+- Were privacy enhancing technologies (PETs) or tools applied to the dataset in order to remove, mask, or modify PI/SPI in the data?
+
+  - Assures that the dataset adheres to privacy standards and regulations, which is critical for maintaining company AI practices and data handling within Navisphere Logistics.
+
+1. Yes/No | 2. Tool | 3. Technique
+
+|-----|-----|-----|
+
+TRUE | Clover DX | Data Anonymization
+
+TRUE | Clover DX; injected 3% random data into the mix | Data Masking
+
+- Organizational content classification
+
+  - Guides how the data can be handled, shared, and utilized within the organization, ensuring that it is used appropriately and in compliance with internal policies and standards for data security and confidentiality.
+
+Public | Internal | Restricted | Confidential (then go to the P’s) | Other (please specify)
+
+|-----|-----|-----|-----|-----|
+
+FALSE | TRUE | FALSE | FALSE | FALSE
+
+- License to use
+
+  - Defines restrictions, obligations, and rights around the legal use and distribution of the data, which stipulate that the data cannot be shared with global federal government entities and the data may be used for evaluation and training in AI-driven projects.
+
+Non-commercial | Public license | Commercial/Negotiated License
+
+|-----|-----|-----|
+
+FALSE | FALSE | TRUE
+
+Enter URL or license point of contact here | Enter URL or license point of contact here | globaltradedatahub.com/license/123e4567-e89b-12d3-a456-426614174000
+
+- Purpose
+
+  - The dataset is best used for AI pre-training and training purposes, which may command a premium fee.
+
+1. AI/Not-AI | 2. Specific Use | 3. Specified ‘Other’
+
+|-----|-----|-----|
+
+AI | Pre-Training
+
+AI | Other | Training
+
+- Proprietary data presence
+
+  - The company has made a contact available for discussing intellectual property rights. There are copyright implications of the dataset, which may not make it appropriate for use in context of the harmonization tariff schedule use case should the capability be productized or offered for downstream consumer use.
+
+1. Copyright? | 1b. Registration | 2. Patent? | 3. Trademark?
+
+|-----|-----|-----|-----|
+
+TRUE | Jonathan Reeves, Esq., Email: jreeves@globaltradedatahublegal.com, Phone: +1-555-012-3456 | FALSE | FALSE
+
+##### Outcome
+
+Through application of the data provenance standards metadata for its global tariff schedule datasets, Navisphere Logistics, Ltd. has achieved a significant enhancement in the operational efficiency and accuracy of its AI-driven tariff prediction models. The outcome includes:
+
+- Improved data consistency and compatibility
+  - By specifying the version used for the metadata, Navisphere ensured that all datasets adhered to a uniform standard, facilitating seamless integration and interpretation by the AI models, regardless of the data’s origin or when it was collected.
+- Enhanced data identification and access
+  - The establishment of a unique metadata identifier and a metadata unique URL for each dataset enabled easy identification, access, and reference, streamlining the data ingestion process for the AI systems, and reducing the time spent on data preprocessing.
+- Streamlined lineage and dependency tracking
+  - The metadata location for datasets feeding the current dataset allowed Navisphere to efficiently manage data dependencies and lineage, ensuring that updates or corrections in source datasets could be rapidly propagated through the system, maintaining the accuracy and timeliness of tariff predictions.
+- Increased accountability and data integrity
+  - Detailed metadata entries for the creator, source, and data origin geography provided clear accountability and context for the data, enhancing trust in the data’s reliability and compliance with regional laws and international regulations.
+- Better data privacy and security measures
+  - The application of privacy enhancing technologies (PETs) and the careful classification of data confidentiality ensured that personally identifiable information (PII) and sensitive personal information (SPI) were adequately protected, aligning with global privacy standards and ethical considerations in AI application.
+- Legal compliance
+  - Detailed metadata on data processing and storage geographies, consent locations, and the license to use the data ensured that all AI operations remained within legal boundaries, respecting data sovereignty laws and consent agreements.
 
 ## Datatypes
 
@@ -748,7 +940,7 @@ Optional: The span of time during which the data within the dataset was collecte
 
 #### Method
 
-Manditory: The methodology or procedures used to collect, generate, or compile the data, giving insight into its reliability and validity.
+The methodology or procedures used to collect, generate, or compile the data, giving insight into its reliability and validity.
 
 - Element-Name: `generation-method`
 - Cardionality: 1..*
@@ -777,7 +969,7 @@ This group describes legal, use, and restrictions.
 
 #### Confidentiality classification
 
-Manditory: Indicate if the dataset includes data falling into the confidentiality classification. Each classifier must be evaluated as true/false/unknown.
+Indicate if the dataset includes data falling into the confidentiality classification. Each classifier must be evaluated as true/false/unknown.
 
 - Element-Name: `classification`
 - Cardionality: 1..1
@@ -840,6 +1032,8 @@ If no, then this section is done.
 ##### Specify which tool(s) was used	
 
 Format: Concept -- Extensible
+
+TODO codesystem
 
 Where: tool codes are:
 - Data Anonymization

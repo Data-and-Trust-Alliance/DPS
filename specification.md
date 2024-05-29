@@ -1,5 +1,26 @@
 # The Data Provenance Standard
 
+TODO: Punch List of work to do:
+- Finish adding the use-cases
+- Format the use-cases, and align them to the formal model
+- Format code systems and give URL
+- Create UML diagram
+- Style (css) to produce numbered headers and anything else we want customized
+- Need a canonical root from which all the technical needs reference. This is a technical anchor. It could be based on the dataandtrustalliance.org DNS, but could/should be ultimately at the standards body that publishes this specification
+- Need at least one of the technical formats drafted, and place holder for the other two
+  - These can be defined only using the technical formats and given examples
+  - Thus we have three GIThub repos for JSON, XML, and YAML. This specification points at them.
+  - Each repo has
+    - README that explains what is in the repo
+    - LICENSE that explains the license
+    - schema files in that format
+    - examples in that format
+- Security Considerations
+- Review top-to-bottom for readability, flow, and completeness
+- Reference GIThub repo with reference implementation and sample applications
+
+--------------------------------------
+
 The Data Provenance Standard defines Metadata about a data set, so that the data provenance and lineage is understood. This set of metadata are necessary to enable proper dataset selection for AI Model Training.
 
 **Version 1.1.0**
@@ -971,7 +992,7 @@ Indicates whether the dataset contains propritary information that is covered wi
 
 ## Schema
 
-the detailed schema specification
+The detailed schema specification for JSON, XML, and YAML are published independently.
 
 - canonical - the URL that defines the specification
 - element description, cardionality
@@ -986,8 +1007,11 @@ The D&TA Data Provenance Standards Working Group is responsible for the ongoing 
 
 Management of D&TA’s Data Provenance Standards vocabulary registry is a collaborative and dynamic process. We welcome feedback from the broader community to ensure that the vocabulary remains a valuable and accurate resource for all.
 
-
 ## Security considerations
+
+TODO: This section should advise the reader on security or privacy things they should be aware of and for which a user of this specificaiton will need to consider. Often it is just a listing of risks that the specification does not address, but for which the specification creates. Such as the fact that datasets and metadata are sensitive data and would need to be protected or carefully crafted such that they are not a risk.
+
+Metadata and the Dataset are data that need to be of quality and trustable to be valuable.... blah blah
 
 ## Annex
 
@@ -996,6 +1020,8 @@ The Annex contain normative vocabulary to be used when it applies. These vocabul
 ### Data Collection Methods
 
 The following defined vocabulary are to be used for the "Method". The vocabulary to use is the whole 
+
+TODO: Format the following line a Code System
 
 - Web scraping/Crawling	Textual
 - Web scraping/Crawling	Structured
@@ -1064,3 +1090,112 @@ The following defined vocabulary are to be used for the "Method". The vocabulary
 - Other	N/A
 
 ## Acknowledgements
+
+Acknoledgements to the [Members of the Data and Trust Alliance](https://dataandtrustalliance.org/who-we-are)
+
+TODO: Format the following
+
+**AARP**
+- Amr Khani
+- SVP, Data and Analytics
+- Jaye Campbell
+- Legal Leader, General Counsel
+
+**American Express**
+- Laurel Shifrin
+- VP, Enterprise Data Governance
+- Saheel Shah Director, Enterprise Data Governance
+
+**CVS**
+Dave Sturgeon Executive Director, Data Governance and Enablement
+Herb Holmes
+Data Governance & Data Management Leader
+
+Deloitte
+Juan Tello
+U.S. CDO, Strategy & Analytics Principal
+Leo Cabrera, Rohit Iyer, Ajay Tripathi
+Office of CDO
+
+GM
+Jon Francis
+Chief Data & Analytics Officer
+Brian Ames
+Principal Software Engineer
+
+Howso
+Chris Hazard
+Chief Technology Officer
+Michael Meehan General Counsel
+
+Humana
+Genevy Dimitrion VP, Data Strategy & Governance
+ 
+IBM
+Lee Cox
+VP, Integrated Governance & Market Readiness, Office of Privacy and Responsible Tech. Bryan Bortnick
+Counsel, Data Governance Bryan Kyle
+Sr. Technical Staff Member, Data Eng., Chief Data Office
+Orla Flannery
+Privacy Program Manager
+
+Kenvue
+Bernardo Tavares Chief Technology & Data Officer
+Ajay Dhaul
+SVP Global Data Kim Viccaro Data Strategy & Activation Lead
+Sudheesh Kamath
+Data & AI Products Leader
+
+Mastercard
+Travis Carpenter
+VP, Data Quality & Sources
+Ed Dephilippis
+VP, Data Management & Quality
+Usha Ramalingam Director, Data Management
+
+Nielsen
+Christine Pierce Chief Data Officer
+Frank Fasinski Director, Data Science
+
+Nike
+Emily White
+Vice President, Enterprise Data & Analytics
+
+Pfizer
+Peter Hunter
+Sr Director, Analytic Tools
+Gentiana Spahiu Director, Data Gov. Lead
+Michael Pagliorola, Sasi Mullangi, Adam Nieto,
+John Pastor, Drew Palsgrove, Jay Shetty
+
+Regions
+Dilip Balachandran SVP, Enterprise Data Management
+
+Smithsonian
+Alan Hejnal
+Data Quality Manager
+Derrick Whitney Interim CDO
+Adam Soroka
+Office of Research Computing
+
+Transcarent
+Thi Montalvo
+VP Reporting and Analytics
+Thomas Birchfield Technical Program Manager
+
+UPS
+Mallory Freeman
+VP, Enterprise Data and Analytics at UPS
+Zeenat Syed
+Director of Data Strategy
+Ricardo Rodriguez
+Sr Manager, Data Science and Machine Learning
+
+Walmart
+Gregory Schaffer
+Chief Counsel, Cyber Security & VP, Digital Trust Compliance
+Laura Asbury Director, Digital Trust Compliance
+
+Warby Parker
+Peter Cross Head of Data
+Chris Bleakley Engineering Director

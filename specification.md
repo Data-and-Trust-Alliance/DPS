@@ -1,7 +1,6 @@
 # The Data Provenance Standard
 
 TODO: Punch List of work to do:
-- Finish adding the use-cases
 - Format the use-cases, and align them to the formal model
 - Format code systems and give URL
 - Create UML diagram
@@ -765,23 +764,23 @@ Complex Datatypes: These are made up of more than one child element as described
 
 - Legal Entity Name
   - Element-Name: Name
-  - Cardionality: 1..1
+  - cardinality: 1..1
   - Format: String
 - Legal entity Address
   - Element-Name: Address
-  - Cardionality: 0..*
+  - cardinality: 0..*
   - Format: String
 
 ### Location
 
 - Country 
     - Element-Name: `country`
-    - Cardionality: 1..1
+    - cardinality: 1..1
     - Format: String
         - SHOULD be ISO 3166 2 letter, 3 letter code, or 3 digit country codes
 - State or Provenance
     - Element-Name: `state`
-    - Cardionality: 0..1
+    - cardinality: 0..1
     - Format: String
         - SHOULD be ISO 3166-2: Codes for the names of the principal subdivisions (e.g., states or provinces) of all countries coded in ISO 3166-1.
 
@@ -789,12 +788,12 @@ Complex Datatypes: These are made up of more than one child element as described
 
 - Start date/time
     - Element-Name: `start`
-    - Cardionality: 0..1
+    - cardinality: 0..1
     - Format: DateTime
     - if empty, there is no start
 - End date/time
     - Element-Name: `end`
-    - Cardionality: 0..1
+    - cardinality: 0..1
     - Format: DateTime
     - if empty, there is no end
 
@@ -802,17 +801,17 @@ Complex Datatypes: These are made up of more than one child element as described
 
 - specific code for computable
     - Element-Name: `code`
-    - Cardionality: 0..1
+    - cardinality: 0..1
     - Format: String
         - Should be from a given vocabulary
         - SHOULD be compute friendly, without spaces
 - source of code
     - Element-Name: `system`
-    - Cardionality: 0..1
+    - cardinality: 0..1
     - Format: URI
 - description of code for human 
     - Element-Name: `description`
-    - Cardionality: 0..1
+    - cardinality: 0..1
     - Format: String
 
 ## Abstract Specification
@@ -824,7 +823,7 @@ The Data Provenance Standard is made up of three groups of metadata elements: So
 This group describes the dataset and the source of the dataset.
 
 - Element-Name: `source`
-- Cardionality: 1..1
+- cardinality: 1..1
 - The following are child elements
 
 #### Standards version used
@@ -832,7 +831,7 @@ This group describes the dataset and the source of the dataset.
 Specifies the version of the schema or standards used to define the metadata for this dataset, ensuring consistency and compatibility over time.
 
 - Element-Name: `Version`
-- Cardionality: 1..1
+- cardinality: 1..1
 - Format: String, Prefer Semantic Versioning (a.k.a., SemVer) format - https://semver.org/
 - Example: `1.1.0`
 
@@ -841,7 +840,7 @@ Specifies the version of the schema or standards used to define the metadata for
 The official name of the dataset, which should be descriptive and help easily identify the dataset's content and purpose.
 
 - Element-Name: `Title`
-- Cardionality: 1..1
+- cardinality: 1..1
 - Format: String
 - Example: `Blue sky observations`
 
@@ -850,7 +849,7 @@ The official name of the dataset, which should be descriptive and help easily id
 A distinct identifier (such as a UUID) assigned to the dataset's metadata to uniquely distinguish it from others, ensuring no confusion or overlap.
 
 - Element-Name: `id`
-- Cardionality: 1..1
+- cardinality: 1..1
 - Format: URI
 - Example: `urn:uuid:17725bad-9098-4f43-abe6-43490ae1596c`
 
@@ -859,7 +858,7 @@ A distinct identifier (such as a UUID) assigned to the dataset's metadata to uni
 Optional: The web address where the dataset's metadata is published and can be accessed, providing a direct link to detailed information about the dataset. Typically will be a unique URL of the current dataset
 
 - Element-Name: `location`
-- Cardionality: 0..1
+- cardinality: 0..1
 - Format: URL
 - Example: `https://example.org`
 
@@ -868,7 +867,7 @@ Optional: The web address where the dataset's metadata is published and can be a
 The legal entity responsible for creating the dataset, providing accountability and a point of contact for inquiries.
 
 - Element-Name:  `issuer`
-- Cardionality: 1..*
+- cardinality: 1..*
 - Format: Organization
 
 #### Description of the dataset
@@ -876,7 +875,7 @@ The legal entity responsible for creating the dataset, providing accountability 
 Contains a detailed narrative that explains the contents, scope, and purpose of the dataset. It provides essential contextual information that helps users understand what the data represents, how it was collected, and any limitations or recommended uses.
 
 - Element-Name: `description`
-- Cardionality: 1..1
+- cardinality: 1..1
 - Format: Markdown
 
 ### Provenance
@@ -884,7 +883,7 @@ Contains a detailed narrative that explains the contents, scope, and purpose of 
 This group describes the provenance of the dataset
 
 - Element-Name: `provenance`
-- Cardionality: 1..1
+- cardinality: 1..1
 - The following are child elements
 
 #### Source metadata for dataset
@@ -892,7 +891,7 @@ This group describes the provenance of the dataset
 Identifies where the metadata for any source datasets that contribute to the current dataset can be found, establishing lineage and dependencies. This field establishes lineage.
 
 - Element-Name: `source`
-- Cardionality: 0..1
+- cardinality: 0..1
 - Format: URL
 - Example: `https://example.org/dataset/blue.xml`
 
@@ -901,7 +900,7 @@ Identifies where the metadata for any source datasets that contribute to the cur
 If the data originates from a different organization than the one who isued the dataset, this field identifies that original source's legal name.
 
 - Element-Name: `origin`
-- Cardionality: 0..1
+- cardinality: 0..1
 - Format: [Organization](#organization)
 
 #### Data origin geography
@@ -909,7 +908,7 @@ If the data originates from a different organization than the one who isued the 
 The geographical location where the data was originally collected, which can be important for compliance with regional laws and understanding the data's context.
 
 - Element-Name: `origin-geography`
-- Cardionality: 1..*
+- cardinality: 1..*
 - Format: [Location](#location)
 
 #### Dataset issue date
@@ -917,7 +916,7 @@ The geographical location where the data was originally collected, which can be 
 Manditory: The date when the dataset was compiled or created, providing a temporal context for the data.
 
 - Element-Name: `date`
-- Cardionality: 1..1
+- cardinality: 1..1
 - Format: DateTime
 - Example: `2024-05-27`, or `2024-05-27T15:18:02Z`
 
@@ -926,7 +925,7 @@ Manditory: The date when the dataset was compiled or created, providing a tempor
 Optional: The release date of the last version of the dataset, if it has been updated or revised, to track changes and updates over time.
 
 - Element-Name: `previous-date`
-- Cardionality: 0..1
+- cardinality: 0..1
 - Format: DateTime
 - Example: `2024-05-27`, or `2024-05-27T15:18:02Z`
 
@@ -935,7 +934,7 @@ Optional: The release date of the last version of the dataset, if it has been up
 Optional: The span of time during which the data within the dataset was collected or generated, offering insight into the dataset's timeliness and relevance.
 
 - Element-Name: `generation-period`
-- Cardionality: 0..1
+- cardinality: 0..1
 - Format: [Period](#period)
 
 #### Method
@@ -943,7 +942,7 @@ Optional: The span of time during which the data within the dataset was collecte
 The methodology or procedures used to collect, generate, or compile the data, giving insight into its reliability and validity.
 
 - Element-Name: `generation-method`
-- Cardionality: 1..*
+- cardinality: 1..*
 - Format: [Concept](#concept)
     - SHALL be from [Specific method types](#data-collection-methods) if applicable
 - MAY be other code from other code systems 
@@ -953,7 +952,7 @@ The methodology or procedures used to collect, generate, or compile the data, gi
 Describes the nature of the data within the dataset, such as numerical, textual, or multimedia, helping users understand what kind of information is contained within the file or dataset.,
 
 - Element-Name: `format`
-- Cardionality: 0..*
+- cardinality: 0..*
 - Format: String
     - SHALL be mime-type https://www.rfc-editor.org/rfc/rfc6838.html
     - SHALL be from registered media-types http://www.iana.org/assignments/media-types/ if applicable
@@ -964,7 +963,7 @@ Describes the nature of the data within the dataset, such as numerical, textual,
 This group describes legal, use, and restrictions.
 
 - Element-Name: `use`
-- Cardionality: 1..1
+- cardinality: 1..1
 - The following are child elements
 
 #### Confidentiality classification
@@ -972,7 +971,7 @@ This group describes legal, use, and restrictions.
 Indicate if the dataset includes data falling into the confidentiality classification. Each classifier must be evaluated as true/false/unknown.
 
 - Element-Name: `classification`
-- Cardionality: 1..1
+- cardinality: 1..1
 - Format: Classification
 
 
@@ -1015,7 +1014,7 @@ Format: if not `false`, then describe the other applicable classifier.
 Specifies where consent documentation or agreements related to the data can be found, ensuring legal compliance and regulatory use. This element must be populated when Privacy Consent is appropriate. When populated it points at either one Privacy Consent Policy that all individuals in the dataset agreed to, or one Privacy Policy for each individual in the dataset with that individuals signature.
 
 - Element-Name: `consents`
-- Cardionality: 0..*
+- cardinality: 0..*
 - Format: URL
 - Example: `https://example.org/dataset/34/consent.pdf`
 
@@ -1023,35 +1022,16 @@ Specifies where consent documentation or agreements related to the data can be f
 
 Indicates whether techniques were used to protect personally identifiable information (PII) or sensitive personal information (SPI), highlighting the dataset's privacy considerations.
 
+TODO
+
+using [Privacy Enhancing Tools](#privacy-enhancing-tools) vocabulary
+
 ##### Specify whether PETs were used (select yes/no)	
 
 Format: yes / no
 
 If no, then this section is done.
 
-##### Specify which tool(s) was used	
-
-Format: Concept -- Extensible
-
-TODO codesystem
-
-Where: tool codes are:
-- Data Anonymization
-- Data Encryption
-- Data Masking
-- Data Minimization
-- Data Redaction
-- Differential Privacy
-- Federated Learning
-- Homomorphic Encryption
-- K-anonymity
-- L-diversity
-- Pseudonymization
-- Secure Multi-party Computation (SMC)
-- T-closeness
-- Tokenization
-
-- --> Other?
 
 ##### Specify the parameters used (key value pairs)	
 
@@ -1066,7 +1046,7 @@ Format: String (tool specific)
 Defines the geographical boundaries within which the data can be processed, often for legal or regulatory reasons.
 
 - Element-Name: `processing-included`
-- Cardionality: 0..*
+- cardinality: 0..*
 - Format: [Location](#location)
 - When not populated there are no processing location requirements
 
@@ -1075,7 +1055,7 @@ Defines the geographical boundaries within which the data can be processed, ofte
 Defines the geographical boundaries within which the data canot be processed, often for legal or regulatory reasons.
 
 - Element-Name: `processing-excluded`
-- Cardionality: 0..*
+- cardinality: 0..*
 - Format: [Location](#location)
 - When not populated there are no processing location restrictions
 
@@ -1084,7 +1064,7 @@ Defines the geographical boundaries within which the data canot be processed, of
 Specifies where the data may be stored, crucial for compliance with data sovereignty laws.
 
 - Element-Name: `storage-allowed`
-- Cardionality: 0..*
+- cardinality: 0..*
 - Format: [Location](#location)
 - When not populated there are no defined storage location requirements
 
@@ -1093,7 +1073,7 @@ Specifies where the data may be stored, crucial for compliance with data soverei
 Specifies where the data may not be stored, crucial for compliance with data sovereignty laws.
 
 - Element-Name: `storage-forbidden`
-- Cardionality: 0..*
+- cardinality: 0..*
 - Format: [Location](#location)
 - When not populated there are no defined storage location restrictions
 
@@ -1102,7 +1082,7 @@ Specifies where the data may not be stored, crucial for compliance with data sov
 Details the location or point of contact for identifying the terms under which the dataset can be used, including any restrictions or obligations, clarifying legal use and distribution rights.
 
 - Element-Name: `license`
-- Cardionality: 0..1
+- cardinality: 0..1
 - Format: String 
     - Prefer License codes such as CreativeCommons or Apache
     - May be a URL
@@ -1113,38 +1093,18 @@ Details the location or point of contact for identifying the terms under which t
 Describes the purpose for which the dataset was created, guiding users on its intended use and potential applications against identified use cases. List all that 
 
 - Element-Name: `intended-purpose`
-- Cardionality: 0..*
+- cardinality: 0..*
 - Format: [Concept](#concept)
   - SHALL populate `code` from [Data Use](#data-use-codes).
   - SHALL populate `description` with specific description
   - When using the code `non-ai-other` and `ai-other`, the description SHALL describe the actual use
-
-##### Data Use Codes
-
-The following concepts are defined to describe intended and forbidden uses of the dataset
-
-- source URI: `https://github.com/Data-and-Trust-Alliance/DPS/Use`
-
-| code | description |
-|------|-------------|
-| non-ai-staging | Non-AI Staging/testing
-| non-ai-production | Non-AI Production
-| non-ai-quality | Non-AI Quality assurance
-| non-ai-other | Non-AI Other
-| ai-pre-training | AI Pre-Training
-| ai-alignment | AI Alignment
-| ai-evaluation | AI Evaluation
-| ai-synthetic | AI Sythentic Data Generation
-| ai-other | AI Other
-
-Where: `non-ai-other`, and `ai-other`
 
 #### Forbidden data use
 
 Describes the purposes for which the dataset is not intended and can not be used.
 
 - Element-Name: `forbidden-purpose`
-- Cardionality: 0..*
+- cardinality: 0..*
 - Format: [Concept](#concept)
   - SHALL populate `code` from [Data Use](#data-use-codes).
   - SHALL populate `description` with specific description
@@ -1162,7 +1122,7 @@ Indicates whether the dataset contains proprietary information that is owned by 
 Indicates whether the dataset contains propritary information that is covered with a Copyright, and the terms of said Copyright.
 
 - Element-Name: `copyright`
-- Cardionality: 0..*
+- cardinality: 0..*
 - Format: String
   - where the string `no` indicates no Copyright
 
@@ -1171,7 +1131,7 @@ Indicates whether the dataset contains propritary information that is covered wi
 Indicates whether the dataset contains propritary information that is covered with a Patent, and the said Patent number.
 
 - Element-Name: `patent`
-- Cardionality: 0..*
+- cardinality: 0..*
 - Format: String
   - where the string `no` indicates no Patent
 
@@ -1180,7 +1140,7 @@ Indicates whether the dataset contains propritary information that is covered wi
 Indicates whether the dataset contains propritary information that is covered with a Trademark, and the terms of said Trademark.
 
 - Element-Name: `trademark`
-- Cardionality: 0..*
+- cardinality: 0..*
 - Format: String
   - where the string `no` indicates no Trademark
 
@@ -1189,7 +1149,7 @@ Indicates whether the dataset contains propritary information that is covered wi
 The detailed schema specification for JSON, XML, and YAML are published independently.
 
 - canonical - the URL that defines the specification
-- element description, cardionality
+- element description, cardinality
 - required vocabulary
   
 The D&TA Data Provenance Standards Working Group is responsible for the ongoing monitoring and periodic review of the terms in the registry. This includes:
@@ -1203,7 +1163,7 @@ Management of D&TA’s Data Provenance Standards vocabulary registry is a collab
 
 ## Security considerations
 
-TODO: This section should advise the reader on security or privacy things they should be aware of and for which a user of this specificaiton will need to consider. Often it is just a listing of risks that the specification does not address, but for which the specification creates. Such as the fact that datasets and metadata are sensitive data and would need to be protected or carefully crafted such that they are not a risk.
+TODO: This section should advise the reader on security or privacy things they should be aware of and for which a user of this specification will need to consider. Often it is just a listing of risks that the specification does not address, but for which the specification creates. Such as the fact that datasets and metadata are sensitive data and would need to be protected or carefully crafted such that they are not a risk.
 
 Metadata and the Dataset are data that need to be of quality and trustable to be valuable.... blah blah
 
@@ -1283,9 +1243,48 @@ TODO: Format the following line a Code System
 - Simulations	N/A
 - Other	N/A
 
+### Privacy Enhancing Tools	Codes
+
+TODO codesystem
+
+- Data Anonymization
+- Data Encryption
+- Data Masking
+- Data Minimization
+- Data Redaction
+- Differential Privacy
+- Federated Learning
+- Homomorphic Encryption
+- K-anonymity
+- L-diversity
+- Pseudonymization
+- Secure Multi-party Computation (SMC)
+- T-closeness
+- Tokenization
+
+### Data Use Codes
+
+The following concepts are defined to describe intended and forbidden uses of the dataset
+
+- source URI: `https://github.com/Data-and-Trust-Alliance/DPS/Use`
+
+| code | description |
+|------|-------------|
+| non-ai-staging | Non-AI Staging/testing
+| non-ai-production | Non-AI Production
+| non-ai-quality | Non-AI Quality assurance
+| non-ai-other | Non-AI Other
+| ai-pre-training | AI Pre-Training
+| ai-alignment | AI Alignment
+| ai-evaluation | AI Evaluation
+| ai-synthetic | AI Sythentic Data Generation
+| ai-other | AI Other
+
+Where: `non-ai-other`, and `ai-other`
+
 ## Acknowledgements
 
-Acknoledgements to the [Members of the Data and Trust Alliance](https://dataandtrustalliance.org/who-we-are)
+Acknowledgements to the [Members of the Data and Trust Alliance](https://dataandtrustalliance.org/who-we-are)
 
 **AARP**
 - Amr Khani

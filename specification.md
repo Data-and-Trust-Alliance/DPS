@@ -6,9 +6,9 @@ TODO: Punch List of work to do:
 - Create UML diagram
 - Style (css) to produce numbered headers and anything else we want customized
 - Need a canonical root from which all the technical needs reference. This is a technical anchor. It could be based on the dataandtrustalliance.org DNS, but could/should be ultimately at the standards body that publishes this specification
-- Need at least one of the technical formats drafted, and place holder for the other two
+- Need at least one of the technical formats drafted, and place holder for the other two. 
   - These can be defined only using the technical formats and given examples
-  - Thus we have three GIThub repos for JSON, XML, and YAML. This specification points at them.
+  - Thus we have three GIThub repos for JSON, XML, and YAML. This specification [points at them](#technical-schema).
   - Each repo has
     - README that explains what is in the repo
     - LICENSE that explains the license

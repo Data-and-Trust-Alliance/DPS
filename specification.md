@@ -1158,7 +1158,7 @@ Acknoledgements to the [Members of the Data and Trust Alliance](https://dataandt
   - VP, Data Quality & Sources
 - Ed Dephilippis
   - VP, Data Management & Quality
--Usha Ramalingam
+- Usha Ramalingam
   - Director, Data Management
 
 **Nielsen**
@@ -1176,7 +1176,7 @@ Acknoledgements to the [Members of the Data and Trust Alliance](https://dataandt
   - Sr Director, Analytic Tools
 - Gentiana Spahiu 
   - Director, Data Gov. Lead
--Michael Pagliorola, Sasi Mullangi, Adam Nieto,
+- Michael Pagliorola, Sasi Mullangi, Adam Nieto,
 John Pastor, Drew Palsgrove, and Jay Shetty
 
 **Regions**
@@ -1186,7 +1186,7 @@ John Pastor, Drew Palsgrove, and Jay Shetty
 **Smithsonian**
 - Alan Hejnal
   - Data Quality Manager
--Derrick Whitney 
+- Derrick Whitney 
   - Interim CDO
 - Adam Soroka
   - Office of Research Computing

@@ -2,18 +2,11 @@
 
 TODO: Punch List of work to do:
 - Format the use-cases, and align them to the formal model
-- Format code systems and give URL
-- Create UML diagram
 - Style (css) to produce numbered headers and anything else we want customized
 - Need a canonical root from which all the technical needs reference. This is a technical anchor. It could be based on the dataandtrustalliance.org DNS, but could/should be ultimately at the standards body that publishes this specification
 - Need at least one of the technical formats drafted, and place holder for the other two. 
   - These can be defined only using the technical formats and given examples
-  - Thus we have three GIThub repos for JSON, XML, and YAML. This specification [points at them](#technical-schema).
-  - Each repo has
-    - README that explains what is in the repo
-    - LICENSE that explains the license
-    - schema files in that format
-    - examples in that format
+  - Thus we have three GIThub repos for JSON, XML, and YAML. 
 - Security Considerations
 - Review top-to-bottom for readability, flow, and completeness
 - Reference GIThub repo with reference implementation and sample applications
@@ -760,14 +753,18 @@ Primitive Datatypes
 
 Complex Datatypes: These are made up of more than one child element as described.
 
+
+![Datatype Structure](./out/ImageSource/datatypes/datatypes.svg)
+
+
 ### Organization
 
 - Legal Entity Name
-  - Element-Name: Name
+  - Element-Name: `name`
   - cardinality: 1..1
   - Format: String
 - Legal entity Address
-  - Element-Name: Address
+  - Element-Name: `address`
   - cardinality: 0..*
   - Format: String
 
@@ -814,9 +811,39 @@ Complex Datatypes: These are made up of more than one child element as described
     - cardinality: 0..1
     - Format: String
 
+### Classification
+
+- specific global regulation domain
+    - Element-Name: `regulation`
+    - cardinality: 1..1
+    - Format: Concept
+        - Should be from [Data Regulation Codes](#data-regulation-codes)
+- Has the dataset been evaluated to the regulation domain?
+    - Element-Name: `evaluated`
+    - cardinality: 1..1
+    - Format: Boolean
+
+### PrivacyIndicator
+
+- specific global regulation domain
+    - Element-Name: `tool`
+    - cardinality: 1..1
+    - Format: Concept
+        - Should be from [Privacy Enhancing Tools](#privacy-enhancing-tools) vocabulary
+- Parameters used with the tool
+    - Element-Name: `parameters`
+    - cardinality: 0..1
+    - Format: String
+- Results of the tool use
+    - Element-Name: `result`
+    - cardinality: 0..1
+    - Format: String
+
 ## Abstract Specification
 
 The Data Provenance Standard is made up of three groups of metadata elements: Source, Provenance, and Use.
+
+![Metadata Structure](./out/ImageSource/metadata/metadata.svg)
 
 ### Source
 
@@ -830,7 +857,7 @@ This group describes the dataset and the source of the dataset.
 
 Specifies the version of the schema or standards used to define the metadata for this dataset, ensuring consistency and compatibility over time.
 
-- Element-Name: `Version`
+- Element-Name: `version`
 - cardinality: 1..1
 - Format: String, Prefer Semantic Versioning (a.k.a., SemVer) format - https://semver.org/
 - Example: `1.1.0`
@@ -839,7 +866,7 @@ Specifies the version of the schema or standards used to define the metadata for
 
 The official name of the dataset, which should be descriptive and help easily identify the dataset's content and purpose.
 
-- Element-Name: `Title`
+- Element-Name: `title`
 - cardinality: 1..1
 - Format: String
 - Example: `Blue sky observations`
@@ -878,7 +905,7 @@ Contains a detailed narrative that explains the contents, scope, and purpose of 
 - cardinality: 1..1
 - Format: Markdown
 
-### Provenance
+#### Provenance
 
 This group describes the provenance of the dataset
 
@@ -971,43 +998,10 @@ This group describes legal, use, and restrictions.
 Indicate if the dataset includes data falling into the confidentiality classification. Each classifier must be evaluated as true/false/unknown.
 
 - Element-Name: `classification`
-- cardinality: 1..1
-- Format: Classification
-
-
-TODO: Use-Case 1 was using the words "NOT ASSESSED" and "ASSESSED". I don't understand what that would mean. I could see an "unknown" as an indicate of a classification that was not done. But I don't understand what "ASSESSED" means, are data in the dataset or not?
-
---> This field indicates the level of sensitivity assigned to the dataset, such as personally identifiable information, which dictates how the dataset must be secured and who can access it. The use cases indicate assessed or not assessed because those used to be the values we considered when the use cases were drafted. Since then, the Working Group moved on to requiring the name of the tool that was used to determine the presence of PII or other sensitive data (e.g., Apache NiFi, Google Cloud or others).
-
-TODO: I am still unclear. what are these tools? Are the following values assessed? How is this related to the  PET element below?
-
-#####  Personal Information (PI)/Demographic
-
-Format: `true` / `false` / `unknown`
-
-##### Payment Card Industry (PCI)
-
-Format: `true` / `false` / `unknown`
-
-##### Personal Financial Information (PFI)
-
-Format: `true` / `false` / `unknown`
-
-##### Personally Identifiable Information (PII)
-
-Format: `true` / `false` / `unknown`
-
-##### Personal Health Information (PHI)
-
-Format: `true` / `false` / `unknown`
-
-##### Sensitive Personal Information (SPI)
-
-Format: `true` / `false` / `unknown`
-
-##### Other
-
-Format: if not `false`, then describe the other applicable classifier.
+- cardinality: 0..*
+- Format: [Classification](#classification)
+- For each [Regulation Domain](#data-regulation-codes) that has been evaluated
+- Additional entries can be added
 
 #### Consent documentation location
 
@@ -1022,24 +1016,10 @@ Specifies where consent documentation or agreements related to the data can be f
 
 Indicates whether techniques were used to protect personally identifiable information (PII) or sensitive personal information (SPI), highlighting the dataset's privacy considerations.
 
-TODO
-
-using [Privacy Enhancing Tools](#privacy-enhancing-tools) vocabulary
-
-##### Specify whether PETs were used (select yes/no)	
-
-Format: yes / no
-
-If no, then this section is done.
-
-
-##### Specify the parameters used (key value pairs)	
-
-Format: String (tool specific)
-
-##### Specify the resulting score
-
-Format: String (tool specific)
+- Element-Name: `privacy-indicators
+- cardinality: 0..*
+- Format: [PrivacyIndicator](#privacyindicator)
+- using [Privacy Enhancing Tools](#privacy-enhancing-tools) vocabulary
 
 #### Data processing geography included
 
@@ -1110,14 +1090,7 @@ Describes the purposes for which the dataset is not intended and can not be used
   - SHALL populate `description` with specific description
   - When using the code `non-ai-other` and `ai-other`, the description SHALL describe the actual use
 
-#### Propritary data presence
-
-Indicates whether the dataset contains proprietary information that is owned by or exclusive to the organization, affecting how it can be shared or used.
-
-- Element-Name: `propritary`
-- The following child elements
-
-##### Copyright
+#### Copyright
 
 Indicates whether the dataset contains propritary information that is covered with a Copyright, and the terms of said Copyright.
 
@@ -1126,7 +1099,7 @@ Indicates whether the dataset contains propritary information that is covered wi
 - Format: String
   - where the string `no` indicates no Copyright
 
-##### Patent
+#### Patent
 
 Indicates whether the dataset contains propritary information that is covered with a Patent, and the said Patent number.
 
@@ -1135,7 +1108,7 @@ Indicates whether the dataset contains propritary information that is covered wi
 - Format: String
   - where the string `no` indicates no Patent
 
-##### Trademark
+#### Trademark
 
 Indicates whether the dataset contains propritary information that is covered with a Trademark, and the terms of said Trademark.
 
@@ -1303,6 +1276,21 @@ The following concepts are defined to describe intended and forbidden uses of th
 | ai-other | AI Other
 
 Where: `non-ai-other`, and `ai-other`
+
+### Data Regulation Codes
+
+The following concepts are defined to indicate specific global regulated domains of relevance
+
+- source URI: `https://github.com/Data-and-Trust-Alliance/DSP/Regulations
+
+| code | description |
+|------|-------------|
+| pi   | Personal Information (PI)/Demographic
+| pci  | Payment Card Industry (PCI)
+| pfi  | Personal Financial Information (PFI)
+| pii  | Personally Identifiable Information (PII)
+| phi  | Personal Health Information (PHI)
+| spi  | Sensitive Personal Information (SPI)
 
 ## Acknowledgements
 

@@ -1,0 +1,31 @@
+@startuml 
+title DataTypes - May 2024
+
+abstract class Organization {
+    Legal entity
+    -----
+    name : String[1..1]
+    address : String[0..*]
+}
+
+abstract class Location {
+    physical location
+    -----
+    country : String[1..1] - Should be ISO 3166-1
+    state : String[0..1] - Should be 3166-2
+}
+abstract class Period {
+    period of date/time
+    -----
+    start : DateTime[0..1]
+    end : DateTIme[0..1]
+}
+abstract class Concept {
+    Coded concept 
+    ----
+    code : String[0..1]
+    system : URI[0..1]
+    description : String[0..1]
+}
+
+@enduml

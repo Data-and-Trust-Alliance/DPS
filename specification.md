@@ -1,18 +1,5 @@
 # The Data Provenance Standard
 
-TODO: Punch List of work to do:
-- Format the use-cases, and align them to the formal model
-- Style (css) to produce numbered headers and anything else we want customized
-- Need a canonical root from which all the technical needs reference. This is a technical anchor. It could be based on the dataandtrustalliance.org DNS, but could/should be ultimately at the standards body that publishes this specification
-- Need at least one of the technical formats drafted, and place holder for the other two. 
-  - These can be defined only using the technical formats and given examples
-  - Thus we have three GIThub repos for JSON, XML, and YAML. 
-- Security Considerations
-- Review top-to-bottom for readability, flow, and completeness
-- Reference GIThub repo with reference implementation and sample applications
-
---------------------------------------
-
 The Data Provenance Standard defines Metadata about a data set, so that the data provenance and lineage is understood. This set of metadata are necessary to enable proper dataset selection for AI Model Training.
 
 **Version 1.1.0**
@@ -79,131 +66,41 @@ The following use-cases are examplar of the use-cases for which this standard ap
 
 #### Use-Case 1: Healthcare insurance data procurement
 
-Evaluating a new dataset that contains comprehensive patient and insurance payment information, for use in predictive analytics
+Evaluating a new dataset that contains comprehensive patient and insurance payment information, for use in predictive analytics.
 
 Bella and her team are evaluating a new dataset that contains comprehensive patient and
 insurance payment information. This dataset is considered crucial for enhancing the company’s
 predictive analytics models, which forecast healthcare trends, personalize insurance plans, and
 optimize claim processing.
 
-**Goals**
+Goals
 
 - Establish lineage and align with data provenance insights.
 - Comply with healthcare regulations, focusing on confidentiality, consent, and appropriate data handling.
 - Enhance operational efficiency and analytical models without major disruptions.
 - Leverage the dataset for developing innovative strategies and improving customer trust by analyzing the dataset’s intent and proprietary content for new personalized engagement opportunities.
 
-**Challenges**
+Challenges
 
 - Balancing the need for detailed, comprehensive data with privacy and confidentiality requirements.
 - Ensuring the dataset’s metadata is accurate, up-to-date, and compliant with evolving data provenance standards.
 - Integrating new datasets with existing systems and models without compromising data integrity or system performance.
 - Navigating the complex landscape of healthcare regulations and ensuring all data usage is compliant.
-Responsibilities
-- Leads the procurement team in evaluating and acquiring high-quality datasets to improve the company’s analytical models.
-- Facilitates vendor reviews and ensuring all datasets comply with data provenance standards, including transparent AI data usage, metadata coverage, and regulatory requirements.
-- Partners with the data team charged with integrating new datasets into existing systems ensures that procured data meets their operational needs.
-- Collaborates with the legal and compliance departments to ensure data usage aligns with healthcare regulations and company policies.
-- Contributes to the success of strategies to leverage data insights for innovative marketing and improved customer trust.
 
-##### Analysis
+##### Use-Case 1 needs
 
-###### Identification
-
-- Standards version used
-  - `1.1.0`
-  - Since the metadata maps to the standards version 1.1.0, it aligns with the one used by her system and can be systematically read and evaluated.
-- Dataset title/name]
-  - `2024 Comprehensive Patient Care and Insurance Claims Dataset`
-  - The filename doesn’t appear in the company’s data governance tool, indicating the data is unlikely to have been acquired or ingested previously.
-- Unique metadata identifier
-  - `urn:uuid:1234-5678-9012-3456`
-  - The metadata unique ID doesn’t appear in the company’s procurement database, confirming that it has not previously been evaluated for acquisition.
-- Metadata unique URL
-  - `https://example.com/dataset/metadata/UUID-1234-5678-9012-3456`
-  - The metadata about the dataset under consideration is comprehensive and can be evaluated for trustworthiness.
-- Metadata location(s) for datasets feeding the current dataset
-  - `https://example.com/metadata/sources`
-  - The single URL indicates there is only one source of data that contributed to the creation of the one being evaluated. This URL provides the same context for the feeder dataset as is available for the dataset under consideration for acquisition.
-
-###### Provenance and creation
-
-- Creator
-  - `National Health Data Systems`
-  - The data in the dataset was provided by the National Health Data Systems, an entity listed in the organization’s procurement database, meaning they have previously supplied data to the enterprise.
-- Source (if different from Creator)
-  - `Nationwide Hospitals Systems, Insurance Providers Ltd.`
-  - The data was provided by Nationwide Hospitals Systems and Insurance Providers Ltd., not National Health Data Systems. Although Nationwide is not in the procurement database, it has a favorable rating in the Dun & Bradstreet vendor database.
-- Data origin geography
-  - values
-    - `Arcata, CA, USA`
-    - `Eureka, CA, USA`
-    - `San Francisco, CA, USA`
-  - The data offered originated in California, which may mean it is subject to the California Consumer Privacy Act (CCPA) if the dataset contains personal data.
-- Dataset creation date
-  - `2024-01-10:T11:00:57`
-  - The dataset was created on January 10, 2024 and initially published on March 15, 2024, which indicates period updates to data that represents year-long data compilation.
-- Range of dates for data generation
-  - Values
-    - Start: `2023-01-01:T00:00:01`
-    - End: `2023-12-31:T23:23:59`
-  - The dataset was created ten days after the data collection period, thus the data is recent and appropriate for refinement of predictive analytics.
-- Date of prev. issued version of the dataset (if applicable)
-  - `2024-03-15:T01:00:00`
-  - The current dataset was previously issued on March 15, 2024, almost two months after its creation date, indicating a relatively frequent update rate for periodic data.
-- Method
-  - Values
-    - Concept: `Feeds Real time database info`
-    - Description: `Electronic Health Records Extraction and Insurance Claim Processing Logs`
-  - The dataset was created from real time database feeds and thus the data is well structured and any errors or anomalies were likely addressed quickly since database feeds provide real time error detection.
-- Data format
-  - `application/sql`
-  - SQL format will enable the data analytics team to perform precise and efficient querying and manipulation of the data. This makes data retrieval and management more straightforward and effective.
-
-###### Use
-
+- Has the data already been incorporated?
+- Who has generated the data> Are they a trusted supplier?
+- Where was the data captured from?
+- When was te data captured, and how often is it updated?
+- How was the data captured?
+- What format is the dataset?
 - Were privacy enhancing technologies (PETs) or tools applied to the dataset in order to remove, mask, or modify PI/SPI in the data?
-  - `no`
-  - California’s data privacy regulation (CCPA) require the use of privacy-preserving measures when handling personal data. Not applying PETs could result in non-compliance with such regulations, leading to legal and financial risk.
-- Organizational content classification
-  - values
-    - Public = `false`
-    - Internal = `false`
-    - Restricted = `true`
-    - Confidential = `false`
-    - Other = `false`
-  - Access to the dataset is highly controlled and limited to specific individuals or groups who have the necessary clearance or authorization and will need to managed and protected accordingly.
-- Confidentiality classification
-  - values
-    - PI = `false`
-    - PCI = `true`
-    - PFI = `false`
-    - PII = `false`
-    - PHI = `true`
-    - SPI = `unknown`
-    - false = `false`
-  - Strict data protection requirements due to the sensitive nature of the information will be necessary, ensuring only authorized personnel who have a legitimate need for the data in the course of their duties have access.
-- Consent language location
-  - `https://example.com/dataset/UUID-1234-5678-9012-3456/consent1.html`
-  - The consent outlines the scope, purpose, and conditions under which the data was collected and how it can be used. Bella’s colleagues in the legal department confirm that the consent extends to data sharing with third parties and can be used for predictive analytics purposes.
-- Data processing geography
-  - inclusion = `CA, USA`
-  - If the dataset is acquired, the data will have to be ingested into algorithms and worked on through the company’s Santa Clara office location since it it cannot be processed on the East Coast or in Europe.
-- Data storage geography
-  - inclusion = `CA, USA`
-  - If this dataset is acquired, the data will need to be stored in database at the company’s Santa Clara, CA location or in the cloud in a manner that limits the data to servers located in California.
-- License to use
-  - `License details available upon request from the Data Governance Department, National Health Data Repository, contactme@example.com`
-  - The dataset comes with a commercial license, which means there are specific terms and conditions governing how the dataset can be used, especially in commercial settings. Bella will need to confer with the legal department about uses and restrictions once they contact the Data Governance Department at the National Health Data Repository and obtain a copy of the license.
-- Intended data use
-  - `AI Pre-Training`
-  - The dataset is designed for AI “Pre-Training,” aligning with her company’s specific use cases. This alignment ensures the dataset’s applicability and avoids misuse.
-- Proprietary data presence
-  - values
-    - Copyright = `false`
-    - Patent = `false`
-    - Trademark = `false`
-  - The dataset contains no proprietary information, meaning that the company will avoid intellectual property infringement and ensure compliance with contractual agreements.
+- What kind of privacy classes of data are in the dataset?
+- Are there appropriate Consents covering the dataset?
+- Are there geography restrictions on processing or storage?
+- What licenses, copyright, trademark, or patent requirements?
+- What allowances or restrictions on the kinds of use (e.g. AI training)?
 
 ##### Outcome
 
@@ -241,144 +138,16 @@ Challenges
 - Keeping pace with rapid changes in media consumption behaviors and technology.
 - Ensuring data standards provide necessary transparency to data buyers and that the metadata is compatible with automated data procurement systems.
 
-##### Analysis
+##### Use-Case 2 needs
 
-###### Identification
+In addition to some needs outlined in Use-Case 1:
 
-- Standards version used
-  - `1.1.0`
-  - Explains the  structure and specifications of the  datasets’ metadata, allowing for easy assessment by prospects and consumers.
-- Dataset title/name
-  - `March 2024 Global Media Consumption Trends`
-  - Communicates the dataset’s scope, timing, and focus, facilitating recognition and understanding what the dataset is about..
-- Unique metadata identifier
-  - `550e8400-e29b-41d4-a716-446655440000`
-  - Ensures precise tracking and referencing of the dataset within the data ecosystem, including customer’s  acquisitions databases.
-- Metadata unique URL
-  - `example.com/550e8400-e29b-41d4-a716-446655440000/metadata.html`
-  - Offers immediate, transparent access to the dataset’s detailed specifications, fostering trust and ease of use among data consumers.
-- Metadata location(s) for datasets feeding the current dataset
-  - Values
-    - `http://example.com/550e8400-e29b-41d4-a716-44665543902`
-    - `http://example.com/550e8400-e29b-41d4-a716-44665544732`
-    - `http://example.com/550e8400-e29b-41d4-a716-446655465722`
-  - Demonstrates the three sources of data that make up the existing data set, providing traceability into  the origins and lineage of the data.
-
-###### Provenance and creation
-
-- Creator
-  - Establishes the company as the authoritative source and responsible entity for the dataset, providing a clear point of accountability.
-
-1. Category | 2. Value
-|-----|-----|
-Organization name | AnalytiQuest Ventures
-
-- Source (if different from Creator)
-  - Indicates that the entity that is supplying the data is the same as the entity that created the dataset, not just a data reseller.
-
-1. Category | 2. Value
-|-----|-----|
-Organization name | AnalytiQuest Ventures
-
-- Data origin geography
-  - Conveys the regional specificity of the dataset, highlighting its focus on media consumption patterns within these diverse Floridian markets. This granularity not only aids in compliance with regional data laws but also enriches the dataset’s contextual relevance for analyses tailored to these geographic areas.
-
-1. Continent | 2. Country | 3. State | 4. City
-|-----|-----|-----|-----|
-North America | USA | Florida | Augusta
-North America | USA | Florida | Clearwater
-North America | USA | Florida | Ft. Lauderdale
-North America | USA | Florida | Jacksonville
-North America | USA | Florida | Miami
-North America | USA | Florida | Orlando
-North America | USA | Florida | Pensacola
-North America | USA | Florida | St. Petersburg; USA, FL
-North America | USA | Florida | Tampa
-
-- Dataset creation date
-  - `2024-01-10:T01:00:00`
-  - Provides a clear context for the dataset, indicating its recency and relevance for users seeking the most current insights into media consumption trends as of early 2024.
-- Range of dates for data generation
-  - Indicates that the dataset encompasses a full year’s worth of media consumption data, providing insights into trends and patterns over this period and ensuring the dataset’s relevance for analyses focused on the year 2023.
-
-1. Oldest component of data in dataset. | 2. Youngest component of data in dataset.
-|-----|-----|
-2023-01-01:T00:00:01 | 2023-12-31:T23:23:59
-
-- Date of prev. issued version of the dataset (if applicable)
-  - Not applicable
-  - Conveys the dataset’s foundation on real consumer behaviors and feedback, providing direct insight into media consumption patterns, which enhances the dataset’s reliability and validity for analyzing consumer engagement across various media platforms.
-- Method
-  - Signifies that users are accessing the inaugural edition of this dataset, setting expectations for its novelty and current relevance in understanding media consumption trends.
-
-1. Category | 2. Specific | 3. Specified ‘Other’ | 4. Values
-|-----|-----|-----|-----|
-User generated content | Other | Digital Interaction Tracking and Survey Responses
-
-- Data format
-  - Indicates that the dataset contains a mix of structured data (like spreadsheets and databases) and unstructured data (like text docs), offering a diverse range of information that caters to both quantitative analysis and qualitative insights. It also provides insight into the potential need for data cleanup.
-
-1. General type | 2. Specific type | 3. Specified ‘Other’
-|-----|-----|-----|
-Text | csv | xls
-Text | plain | .doc
-Application | SQL
-
-###### Legal, use and restrictions
-
-- Were privacy enhancing technologies (PETs) or tools applied to the dataset in order to remove, mask, or modify PI/SPI in the data?
-  - Highlights the dataset’s adherence to privacy standards by ensuring that personally identifiable information (PII) and sensitive personal information (SPI) have been responsibly managed to protect individual privacy, making the dataset ethically robust and compliant with data protection regulations.
-
-1. Yes/No | 2. Tool | 3. Technique
-|-----|-----|-----|
-TRUE | Adverity | Data Anonymization
-
-- Organizational content classification
-  - Describes the dataset access and handling requirements, indicating that it is designated for internal analytics and strategic planning purposes only, thus guiding downstream consumers on who can access and how to handle this dataset securely.
-
-Public | Internal | Restricted | Confidential (then go to the P’s) | Other (please specify)
-|-----|-----|-----|-----|------|
-FALSE | TRUE | FALSE | FALSE | FALSE
-
-- Confidentiality classification (only if no PETs applied)
-  - Personal information (PI)/Demographic
-  - Payment Card Industry (PCI)
-  - Personal Financial Information (PFI)
-  - Personally Identifiable Information (PII)
-  - Personal Health Information (PHI)
-  - Sensitive Personal Information (SPI)
-  - Other (please specify)
-- Consent location (only if confidential classification is completed and no PETs applied)
-- Data processing geography (inclusion/exclusion)
-
-1. In/exclude | 2. Continent | 3. Country | 4. State
-|-----|-----|-----|-----|
-- Data storage geography inclusion/exclusion
-
-1. In/exclude | 2. Continent | 3. Country | 4. State
-|-----|-----|-----|-----|
-
-- License to use
-  - Provides a clear pathway for understanding the legal framework and usage rights associated with the dataset, ensuring that potential users are aware of their obligations, restrictions, and permissions before leveraging the data for their purposes.
-
-Non-commercial | Public license | Commercial/Negotiated License
-|-----|-----|-----|
-FALSE | FALSE | TRUE
-Enter URL or license point of contact here | Enter URL or license point of contact here | AnalytiQuest Ventures’s Office of General Counsel, legalconsumptionlicense@example.com and (555) 123-4567
-
-- Purpose
-  - Signals that the dataset is primed for use in artificial intelligence applications, performance assessments, and educational or developmental programs, guiding consumers towards its applications in enhancing media planning, content development, and industry research.
-
-1. AI/Not-AI | 2. Specific Use
-|-----|-----|
-AI | Evaluation
-
-- Proprietary data presence
-  - Relays that the dataset does not contain proprietary information exclusive to AnalytiQuest Ventures, suggesting broader flexibility in its use and sharing, which can facilitate unrestricted analysis and collaboration within the legal boundaries established for the dataset.
-
-1. Copyright? | 2. Patent? | 3. Trademark?
-|-----|-----|-----|
-FALSE | FALSE | FALSE
+- Traceability to all data sources
+- Applicability of the dataset to the use-case
+- Dataset covers the geography of interest
+- Dataset has covered full timeframe of interest
+- Are there restrictions on the use?
+- can the data be used for AI, educational, and developmental programs?
 
 ##### Outcome
 
@@ -387,7 +156,7 @@ Metadata associated with the “March 2024 Global Media Consumption Trends” da
 - Comprehensive coverage and actionable insights
   - Detailed data origin geography and collection methodologies will assure users of the data’s relevance and quality, thus facilitating targeted content strategies.
 - Transparency and trust building
-  - By adhering to version 1.0.0 of data provenance standards and providing a clear metadata URL, the dataset’s transparency is increased, making it easier for media buyers and sellers to assess its credibility.
+  - By adhering to the data provenance standards and providing a clear metadata URL, the dataset’s transparency is increased, making it easier for media buyers and sellers to assess its credibility.
   - The documentation of dataset lineage and the use of PETs-like anonymization underscores the commitment to data privacy and security, building trust among clients.
 - Increased efficiency and enhanced compliance
   - The dataset’s lack of proprietary data restrictions and the provision of a clear license to use, as indicated by contacting AnalytiQuest Ventures’ Office of General Counsel, streamlines the data acquisition process, enhancing clients’ operational efficiency.
@@ -412,123 +181,16 @@ Challenges
 - Ensure dataset credibility through clear documentation of its lineage and metadata.
 - Navigate diverse international regulations related to data privacy and AI.
 - Integrate the new dataset with existing systems without operational disruptions.
-- Balance proprietary data use with inform- ation protection and competitive edge.
+- Balance proprietary data use with information protection and competitive edge.
 - Confirm dataset use is ethical and consensual, particularly with sensitive data.
 - Keep pace with technological and data standard advancements for AI relevance.
 
-##### Analysis:
+##### Use-Case 3 needs
 
-###### Identification
+In addition to some needs outlined in Use-Case 1 and 2:
 
-- Standards version used
-  - `1.1.0`
-  - The dataset’s metadata aligns with the latest standards, facilitating consistent data interpretation and integration across platforms, including the Customer Relationship Management (CRM) system..
-- Dataset title/name
-  - `Consumer Spending Patterns 2020-2024`
-  - The dataset’s focus on analyzing consumer behavior over a five-year period, aids in immediate recognition and relevance for financial trend analysis.
-- Unique metadata identifier
-  - `LFS-1234-5678`  (TODO not a URI format, what is this?)
-  - Provides unambiguous identification and retrieval for uses of the data across the enterprise and tracking internal workflow actions to the dataset, such as sign off for use by the privacy officer.
-- Metadata unique URL
-  - `http://luminadataservices.com/metadata/1234-5678`
-  - Where colleagues from other departments can go to review detailed information about the “Consumer Spending Patterns 2020-2024” dataset, for compliance and relevance reviews to their use cases.
-- Metadata location(s) for datasets feeding the current dataset
-  - Values
-    - `http://luminadataservices.com/metadata/sources/retail-transactions-2023`
-    - `http://luminadataservices.com/metadata/sources/retail-transactions-2024`
-  - The foundation of the current dataset and its dependencies are relayed through the two URLs, increasing the transparency of organizations involved in producing data that will be used by Minh and his team.
-
-###### Provenance and creation
-
-- Creator
-  - Knowing that “Lumina Financial Services” is the dataset’s creator, allows Minh to lookup the vendor in the procurement system and understand what other datasets are under consideration for acquisition from the same supplier. There may be an opportunity to negotiate a broader agreement and save money in the process.
-
-1. Category | 2. Value
-|-----|-----|
-Organization name | Lumina Financial Services
-
-- Source (if different from Creator)
-  - The source of the data is not the same as the creator of the dataset, indicating that Minh may be dealing with a data broker and not the generator.
-
-1. Category | 2. Value
-|-----|-----|
-Organization name | PreciTech Data Inc
-
-- Data origin geography
-  - All locations reflect GDPR requirements so data transfer and processing requirements will be more stringent and complicate Minh’s project from a compliance perspective.
-
-1. Continent | 2. Country | 3. State | 4. City
-|-----|-----|-----|-----|
-Europe | France
-Europe | Germany
-Europe | Italy
-Europe | Poland
-
-- Dataset creation date
-  - `2024-03-14:T10:23:09`
-  - The dataset is quite recent,which is ideal for refining customer-inference algorithms.
-- Range of dates for data generation
-  - There is over a full years worth of data and once collected, the data was quickly published and immediately updated. Thus the recency and vendor ability to refresh is good.
-
-1. Oldest component of data in dataset. | 2. Youngest component of data in dataset.
-
-|-----|-----|
-2023-01-05:T01:01:59 | 2024-03-14:T17:13:47
-
-- Date of prev. issued version of the dataset (if applicable)
-  - `2023-03-15:T01:25:50`
-  - The previously issued date is one one day after the dataset was created, indicating frequent data refresh rates.
-- Method
-  - The point of service (PoS) data will require special handling and protection as it is subject to data privacy regulations. The data is structured and ideal for the use cases.
-
-1. Category | 2. Specific | 3. Specified ‘Other’ | 4. Values
-|-----|-----|-----|-----|
-Feeds | Interval timed database info |     | Aggregated Consumer Transaction Analysis, PoS
-
-- Data format
-  - The SQL structure adheres to the Internet Assigned Number Authority (IANA) Media Types properties, ensuring reliable transaction processing and data integrity even in the event of system failures. It is a good fit for ongoing feeds and frequent data refreshes.
-
-1. General type | 2. Specific type
-|-----|-----|
-Application | SQL
-
-###### Legal, use and restrictions
-
-- Were privacy enhancing technologies (PETs) or tools applied to the dataset in order to remove, mask, or modify PI/SPI in the data?
-  - The dataset is anonymized and compliant with privacy regulations, balancing data utility with individual privacy.
-
-1. Yes/No | 2. Tool | 3. Technique
-|-----|-----|-----|
-TRUE | Google differential privacy library | Differential privacy
-
-- Organizational content classification
-  - The dataset is marked for limited company access, directing its handling and user permissions to guarantee secure and proper usage internally.
-
-Public | Internal | Restricted | Confidential (then go to the P’s) | Other (please specify)
-|-----|-----|-----|-----|-----|
-FALSE | TRUE | FALSE | FALSE | FALSE
-
-- License to use
-  -Minh can refer his legal team to the provided license URL at “http://luminadataservices.com/ license/1234-5678” to understand the specific terms, restrictions, and obligations for using the dataset, ensuring its legal and compliant application within his projects.
-
-Non-commercial | Public license | Commercial/Negotiated License
-|-----|-----|-----|
-FALSE | FALSE | TRUE
-Enter URL or license point of contact here | Enter URL or license point of contact here | http://luminadataservices.com/license/1234-5678
-
-- Purpose
-  -The use is a match for the requirements and use cases, and worth a premium data price.
-
-1. AI/Not-AI | 2. Specific Use | 3. Specified ‘Other’
-|-----|-----|-----|
-AI | Other | Enhancing AI-driven Credit Card Offerings
-
-- Proprietary data presence
-  - The dataset does not contain any information that is owned or controlled exclusively by the organization that created it. This means the data can likely be shared or used more freely, within the parameters of the license but without concern for violation of intellectual property rights.
-
-1. Copyright? | 2. Patent? | 3. Trademark?
-|-----|-----|-----|
-FALSE | FALSE | FALSE
+- Has the dataset been anonymized compliant to privacy regulations?
+- are there any publication restrictions or limits?
 
 ##### Outcome
 
@@ -546,183 +208,33 @@ Minh’s evaluation of the “Consumer Spending Patterns 2020-2024” dataset th
 
 #### USe-Case 4: Enhancing global logistics efficiency through AI-driven tariff harmonization
 
-Managing data to refinine AI systems for accurately predicting tariff costs across countries and categories
+Managing data to refine AI systems for accurately predicting tariff costs across countries and categories
 
 The global nature of Navisphere Logistics, Ltd.’s operations means that the company must navigate a complex web of international tariffs and customs regulations. Efficiently managing these tariffs is critical to minimizing delivery times and costs. Dr. Hicks and her team are tasked with refining the company’s AI systems to accurately predict tariff costs across different countries and product categories.
 
-- Goals
-  - Unify global tariff schedules into an AI-compatible format for better predictions.
-  - Enhance AI tariff models to reduce cross-border delivery times and costs.
-  - Adhere to data provenance standards for tariff data integrity and compliance.
-  - Attain tariff predictions globally across various product categories with advanced AI.
-  - Simplify customs processes with accurate tariff assessments, aiding global clients.
-- Challenges
-  - Navigate the intricate international tariff and customs landscape with diverse rules.
-  - Rigorously assess dataset metadata for compliance with global standards and privacy.
-  - Continually update AI models to adapt to changing international tariff regulations.
-  - Balance advanced AI development with responsible usage and adherence to privacy laws.
-  - Ensure smooth AI model integration into Navisphere Logistics’ systems without workflow disruption.
+Goals
 
-##### Analysis
+- Unify global tariff schedules into an AI-compatible format for better predictions.
+- Enhance AI tariff models to reduce cross-border delivery times and costs.
+- Adhere to data provenance standards for tariff data integrity and compliance.
+- Attain tariff predictions globally across various product categories with advanced AI.
+- Simplify customs processes with accurate tariff assessments, aiding global clients.
 
-###### Identification
+ Challenges
 
-- Standards version used
-  - `1.4.5`
-  - Ingests the metadata into the automated Data Acquisition System, knowing that the metadata is compatible with the system and the vendor-supplier values will match the expected evaluation fields.
-- Dataset title/name
-  - `2023 Global Tariff Schedules – Electronics`
-  - The link between the metadata and data set supports tracking both throughout the assessment and acquisition process.
-- Unique metadata identifier
-  - `urn:uuid:123e4567-e89b-12d3-a456-426614174000`
-  - Allows the Procurement Department and Maya to avoids redundancy as multiple sets of metadata are automated for scoring for trustworthiness and business value.
-- Metadata unique URL
-  - `https://globaltradedatahub.com/metadata/123e4567-e89b-12d3-a456-426614174000`
-  - Provides a working location where the metadata, describing the dataset, can be obtained.
-- Metadata location(s) for datasets feeding the current dataset
-  - Values
-    - `https://internationalcustomsdataconsortium.com/metadata/234f5678-f01c-23d4-b567-537625175111`
-    - `https://internationalcustomsdataconsortium.com/metadata/345g6789-g02d-34e5-c678-648736286222`
-    - `https://internationalcustomsdataconsortium.com/metadata/456h7890-h03e-45f6-d789-759847397333`
-    - `https://internationalcustomsdataconsortium.com/metadata/567i8901-i04f-56g7-e890-860958408444`
-    - `https://internationalcustomsdataconsortium.com/678j9012-j05g-67h8-f901-971069519555`
-  - Demonstrates that the dataset under consideration contains data from four other entities, which requires additional scrutiny of the sources in determining whether to acquire and use the dataset on offer.
+- Navigate the intricate international tariff and customs landscape with diverse rules.
+- Rigorously assess dataset metadata for compliance with global standards and privacy.
+- Continually update AI models to adapt to changing international tariff regulations.
+- Balance advanced AI development with responsible usage and adherence to privacy laws.
+- Ensure smooth AI model integration into Navisphere Logistics’ systems without workflow disruption.
 
-###### Provenance and creation
+##### Use-Case 4 needs
 
-- Creator
 
-  - This is critical context for assessing the data’s credibility, potential biases, and the appropriate point of contact for any technical or data-specific inquiries.
+In addition to some needs outlined in Use-Case 1, 3, and 3:
 
-1. Category | 2. Value
-
-|-----|-----|
-
-Organization name | GlobalTradeDataHub
-
-- Source (if different from Creator)
-
-  - Demonstrates that the existing data did not originate with the supplier, but another entity. The single value listed and the previous four URLs for metadata of other datasets which fed the current dataset, indicate that all data on offer originated with the International Customs Data Consortium.
-
-1. Category | 2. Value
-
-|-----|-----|
-
-Organization name | International Customs Data Consortium
-
-- Data origin geography
-
-  - Referring to the metadata concerning the range of dates for data generation, it suggests that the dataset was compiled immediately after the conclusion of the data collection period, ensuring its timeliness and relevance.
-
-1. Continent | 2. Country | 3. State | 4. City
-
-|-----|-----|-----|-----|
-
-Europe | Netherlands |   |
-
-Europe | Switzerland |   |
-
-Europe | UK |   |
-
-- Dataset creation date
-
-  - 2024-02-01:T11:15:10
-
-    - Reinforced the freshness of the data and that it was made available within a business date of when the collection period ended. The exact timestamp indicates that a full year’s data is represented in the dataset.
-
-- Range of dates for data generation
-
-  - Reinforced the freshness of the data and that it was made available within a business date of when the collection period ended. The exact timestamp indicates that a full year’s data is represented in the dataset.
-
-1. Oldest component of data in dataset. | 2. Youngest component of data in dataset.
-
-|-----|-----|
-
-2020-01-01:T00:00:01 | 2024-01-31:T23:23:59
-
-- Date of prev. issued version of the dataset (if applicable)
-
-  - Not applicable
-
-  - This is the first time the dataset is made available and there is no sense of the frequency at which it may be updated.
-
-- Method
-
-  - Supports assessment of the data’s reliability and suitability for training AI models, supporting that the dataset’s generation aligns with Navisphere’s standards for data quality and integrity.
-
-1. Category | 2. Specific | 3. Specified ‘Other’ | 4. Values
-
-|-----|-----|-----|-----|
-
-Feeds | Other |  | Automated Customs Entry Processing
-
-- Data format
-
-  - Helps Maya anticipate the structure and format of the data, ensuring compatibility with Navisphere’s systems and facilitating efficient data processing and integration into AI models.
-
-1. General type | 2. Specific type | 3. Specified ‘Other’
-
-|-----|-----|-----|
-
-Application | Other | vnd.oasis.opendocument.database
-
-###### Legal, use and restrictions
-
-- Were privacy enhancing technologies (PETs) or tools applied to the dataset in order to remove, mask, or modify PI/SPI in the data?
-
-  - Assures that the dataset adheres to privacy standards and regulations, which is critical for maintaining company AI practices and data handling within Navisphere Logistics.
-
-1. Yes/No | 2. Tool | 3. Technique
-
-|-----|-----|-----|
-
-TRUE | Clover DX | Data Anonymization
-
-TRUE | Clover DX; injected 3% random data into the mix | Data Masking
-
-- Organizational content classification
-
-  - Guides how the data can be handled, shared, and utilized within the organization, ensuring that it is used appropriately and in compliance with internal policies and standards for data security and confidentiality.
-
-Public | Internal | Restricted | Confidential (then go to the P’s) | Other (please specify)
-
-|-----|-----|-----|-----|-----|
-
-FALSE | TRUE | FALSE | FALSE | FALSE
-
-- License to use
-
-  - Defines restrictions, obligations, and rights around the legal use and distribution of the data, which stipulate that the data cannot be shared with global federal government entities and the data may be used for evaluation and training in AI-driven projects.
-
-Non-commercial | Public license | Commercial/Negotiated License
-
-|-----|-----|-----|
-
-FALSE | FALSE | TRUE
-
-Enter URL or license point of contact here | Enter URL or license point of contact here | globaltradedatahub.com/license/123e4567-e89b-12d3-a456-426614174000
-
-- Purpose
-
-  - The dataset is best used for AI pre-training and training purposes, which may command a premium fee.
-
-1. AI/Not-AI | 2. Specific Use | 3. Specified ‘Other’
-
-|-----|-----|-----|
-
-AI | Pre-Training
-
-AI | Other | Training
-
-- Proprietary data presence
-
-  - The company has made a contact available for discussing intellectual property rights. There are copyright implications of the dataset, which may not make it appropriate for use in context of the harmonization tariff schedule use case should the capability be productized or offered for downstream consumer use.
-
-1. Copyright? | 1b. Registration | 2. Patent? | 3. Trademark?
-
-|-----|-----|-----|-----|
-
-TRUE | Jonathan Reeves, Esq., Email: jreeves@globaltradedatahublegal.com, Phone: +1-555-012-3456 | FALSE | FALSE
+- Indications of data credibility or bias.
+- Indications that the data are original vs intermediary combined from multiple sources
 
 ##### Outcome
 
@@ -1164,7 +676,7 @@ The Annex contain normative vocabulary to be used when it applies. These vocabul
 
 The following defined vocabulary are to be used for the "Method".  
 
-- source URI: `https://github.com/Data-and-Trust-Alliance/DPS/Method`
+- source URI: `https://github.com/Data-and-Trust-Alliance/DPS/CodeSystem/Method`
 
 | code | description |
 |------|-------------|
@@ -1238,7 +750,7 @@ The following defined vocabulary are to be used for the "Method".
 
 The following concepts are defined to describe privacy enhancing tools (PET).
 
-- source URI: `https://github.com/Data-and-Trust-Alliance/DPS/PET`
+- source URI: `https://github.com/Data-and-Trust-Alliance/DPS/CodeSystem/PET`
 
 | code | description |
 |------|-------------|
@@ -1261,7 +773,7 @@ The following concepts are defined to describe privacy enhancing tools (PET).
 
 The following concepts are defined to describe intended and forbidden uses of the dataset
 
-- source URI: `https://github.com/Data-and-Trust-Alliance/DPS/Use`
+- source URI: `https://github.com/Data-and-Trust-Alliance/DPS/CodeSystem/Use`
 
 | code | description |
 |------|-------------|

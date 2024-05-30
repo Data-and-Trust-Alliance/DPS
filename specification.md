@@ -1,4 +1,4 @@
-# The Data Provenance Standard
+**The Data Provenance Standard**
 
 The Data Provenance Standard defines Metadata about a data set, so that the data provenance and lineage is understood. This set of metadata are necessary to enable proper dataset selection for AI Model Training.
 
@@ -16,13 +16,13 @@ The Data Provenance Standard defines Metadata about a data set, so that the data
 
 **License** [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)
 
-## Abstract
+# Abstract
 
 Data transparency is critical. Trust in the insights and decisions coming from both traditional data and AI applications depends on understanding the origin, lineage, and rights associated with the data that feeds them. Lack of transparency has real costs, including unnecessary risks and foregone opportunities. And yet, many organizations today cannot answer basic data questions without considerable difficulty and investment.
 
 To realize the value of data and AI requires a reliable cross-industry baseline of data transparency. Our Data Provenance Standards propose a solution.
 
-## Introduction
+# Introduction
 
 For the past quarter century, companies have worked to become “digital.” Now they are using data, algorithms, and AI to reinvent how decisions are made. They are becoming data enterprises. This is transforming everything from retail, education, and entertainment to health and wellness, transportation, and energy.
 
@@ -30,15 +30,26 @@ For these intelligent systems to create economic and societal value for all stak
 
 The Data Provenance Standards surface metadata on source, legal rights, privacy & protection, generation date, data type, generation method, intended use and restrictions and lineage. Each metadata field has associated values. This essential information about the origin of and rights associated with data allows enterprises to make informed choices about the data they source and use. The result can be improvements in operational efficiency, regulatory compliance, collaboration and value generation.
 
-### The Data & Trust Alliance
+## The Data & Trust Alliance
 
 The Data & Trust Alliance brings together leading businesses and institutions across multiple industries to learn, develop, and adopt responsible data and AI practices. Established in September 2020, it was founded as a not-for-profit consortium and is co-chaired by Ken Chenault, General Catalyst chairman and managing director, and former American Express chairman and CEO; and Sam Palmisano, former IBM chairman and CEO. Jon Iwata, founding executive director, works with our Leadership Council, a cross-functional team of senior executives selected by their CEOs to identify and drive Alliance projects.
 
-### Normative vs Informative
+## Normative vs Informative
 
 This specification adopts the normative words defined in IETF [Best Current Practice 14](https://www.rfc-editor.org/info/bcp14): Key words for use in RFCs to Indicate Requirement Levels (BCP-14), certain words indicate whether a specific content is normative. The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described. Informative content does not contain these key words.
 
-### Glossary
+## Maintenance of the specification
+
+The D&TA Data Provenance Standards Working Group is responsible for the ongoing monitoring and periodic review of the terms in the registry. This includes:
+
+- Annual review of all terms to ensure continued relevance
+- Soliciting feedback from the community on the usage and applicability of terms
+- Making revisions to definitions as needed
+- Retiring terms that are no longer relevant or have become obsolete
+
+Management of D&TA’s Data Provenance Standards vocabulary registry is a collaborative and dynamic process. We welcome feedback from the broader community to ensure that the vocabulary remains a valuable and accurate resource for all.
+
+## Glossary
 
 The following concepts are used throughout the specification
 
@@ -55,7 +66,7 @@ The following concepts are used throughout the specification
 - **Generation Method**: Identifies how the data was produced (data mining, machine-generated, IoT sensors, etc.)
 - **Intended Use and Restrictions**: Identifies the intended use of the data and which downstream audiences should not be allowed access to the current dataset
 
-### Use-Case
+# Use-Case
 
 The following use-cases are examplar of the use-cases for which this standard applies.  These use-cases show how this standard supports diverse needs across the data ecosystem.
 
@@ -64,7 +75,7 @@ The following use-cases are examplar of the use-cases for which this standard ap
 3. Financial services customer product enablement
 4. Enhancing global logistics efficiency through AI-driven tariff harmonization
 
-#### Use-Case 1: Healthcare insurance data procurement
+## Use-Case 1: Healthcare insurance data procurement
 
 Evaluating a new dataset that contains comprehensive patient and insurance payment information, for use in predictive analytics.
 
@@ -87,7 +98,7 @@ Challenges
 - Integrating new datasets with existing systems and models without compromising data integrity or system performance.
 - Navigating the complex landscape of healthcare regulations and ensuring all data usage is compliant.
 
-##### Use-Case 1 needs
+### Use-Case 1 needs
 
 - Has the data already been incorporated?
 - Who has generated the data> Are they a trusted supplier?
@@ -102,7 +113,7 @@ Challenges
 - What licenses, copyright, trademark, or patent requirements?
 - What allowances or restrictions on the kinds of use (e.g. AI training)?
 
-##### Outcome
+### Outcome
 
 Through comprehensive metadata evaluation, the procurement team was able to perform a
 more in-depth assessment of a crucial dataset, decreasing procurement time and risk while
@@ -120,7 +131,7 @@ and ethical standards. The benefits of having access to the dataset metadata
 - Suspect data processing and storage metadata resulted in increased legal scrutiny in advance of data acquisition, leading to the correction of inaccuracies in the metadata.
 - The metadata evaluation process, despite causing a brief delay, ultimately safeguarded the organization against potential legal and operational risks, ensuring the dataset’s strategic and compliant use.
 
-#### Use-Case 2: Media consumption pattern data set for consumer behavior insights
+## Use-Case 2: Media consumption pattern data set for consumer behavior insights
 
 Curating a high-quality dataset that tracks media consumption habits across diverse platforms for content personalization
 
@@ -138,7 +149,7 @@ Challenges
 - Keeping pace with rapid changes in media consumption behaviors and technology.
 - Ensuring data standards provide necessary transparency to data buyers and that the metadata is compatible with automated data procurement systems.
 
-##### Use-Case 2 needs
+### Use-Case 2 needs
 
 In addition to some needs outlined in Use-Case 1:
 
@@ -149,7 +160,7 @@ In addition to some needs outlined in Use-Case 1:
 - Are there restrictions on the use?
 - can the data be used for AI, educational, and developmental programs?
 
-##### Outcome
+### Outcome
 
 Metadata associated with the “March 2024 Global Media Consumption Trends” dataset is a vital resource for procuring complex media consumption patterns, ensuring its integrity and applicability in AI analytics. This approach to describing data can facilitate effective personalization of content strategies across various industries and will set a new standard for transparent, efficient, and compliant data usage in media consumption analysis. The outcome includes:
 
@@ -162,7 +173,7 @@ Metadata associated with the “March 2024 Global Media Consumption Trends” da
   - The dataset’s lack of proprietary data restrictions and the provision of a clear license to use, as indicated by contacting AnalytiQuest Ventures’ Office of General Counsel, streamlines the data acquisition process, enhancing clients’ operational efficiency.
   - Data processing and storage geography metadata will help downstream consumers comply with legal standards and privacy regulations, thereby reducing legal and reputational risks.
 
-#### Use-Case 3: Financial services customer product enablement
+## Use-Case 3: Financial services customer product enablement
 
 Evaluating a new dataset for refining AI algorithms used in customer credit card offerings
 
@@ -185,14 +196,14 @@ Challenges
 - Confirm dataset use is ethical and consensual, particularly with sensitive data.
 - Keep pace with technological and data standard advancements for AI relevance.
 
-##### Use-Case 3 needs
+### Use-Case 3 needs
 
 In addition to some needs outlined in Use-Case 1 and 2:
 
 - Has the dataset been anonymized compliant to privacy regulations?
 - are there any publication restrictions or limits?
 
-##### Outcome
+### Outcome
 
 Minh’s evaluation of the “Consumer Spending Patterns 2020-2024” dataset through the lens of the data provenance standards significantly enhanced ProForma Financial Services’ AI algorithms for customer credit card offerings, ensuring both heightened personalization and strict adherence to international data regulations. This approach improved the precision and effectiveness of the company’s AI models and ensured compliance, data privacy, and seamless integration with existing systems, paving the way for responsible and innovative use of AI insights in the financial sector. The outcome includes:
 
@@ -206,7 +217,7 @@ Minh’s evaluation of the “Consumer Spending Patterns 2020-2024” dataset th
   - The dataset lineage, original sources, and PETs allowed ProForma to quickly gauge the level of pre-processing necessary to comply with data privacy requirements.
   - The data collection, processing and storage information further helped meet data privacy requirements and mitigate legal and reputational risks associated with GDPR and the EU AI Act.
 
-#### USe-Case 4: Enhancing global logistics efficiency through AI-driven tariff harmonization
+## Use-Case 4: Enhancing global logistics efficiency through AI-driven tariff harmonization
 
 Managing data to refine AI systems for accurately predicting tariff costs across countries and categories
 
@@ -228,7 +239,7 @@ Goals
 - Balance advanced AI development with responsible usage and adherence to privacy laws.
 - Ensure smooth AI model integration into Navisphere Logistics’ systems without workflow disruption.
 
-##### Use-Case 4 needs
+### Use-Case 4 needs
 
 
 In addition to some needs outlined in Use-Case 1, 3, and 3:
@@ -236,7 +247,7 @@ In addition to some needs outlined in Use-Case 1, 3, and 3:
 - Indications of data credibility or bias.
 - Indications that the data are original vs intermediary combined from multiple sources
 
-##### Outcome
+### Outcome
 
 Through application of the data provenance standards metadata for its global tariff schedule datasets, Navisphere Logistics, Ltd. has achieved a significant enhancement in the operational efficiency and accuracy of its AI-driven tariff prediction models. The outcome includes:
 
@@ -253,23 +264,25 @@ Through application of the data provenance standards metadata for its global tar
 - Legal compliance
   - Detailed metadata on data processing and storage geographies, consent locations, and the license to use the data ensured that all AI operations remained within legal boundaries, respecting data sovereignty laws and consent agreements.
 
-## Datatypes
+# Datatypes
 
-Primitive Datatypes
+## Primitive Datatypes
 
-- String - A sequence of Unicode characters
-- URI - A Uniform Resource Identifier Reference [RFC 3986](https://www.rfc-editor.org/rfc/rfc3986). Note: URIs are case sensitive. For UUID (urn:uuid:53fefa32-fcbb-4ff8-8a92-55ee120877b7) use all lowercase
-- URL - A Uniform Resource Locator [RFC 1738](https://datatracker.ietf.org/doc/html/rfc1738). Note URLs are accessed directly using the specified protocol. Common URL protocols are http{s}:, ftp:, mailto: and mllp:, though many others are defined
-- Markdown - This specification requires and uses the [GFM (Github Flavored Markdown)](https://github.github.com/gfm/) extensions on [CommonMark](http://spec.commonmark.org/0.28/) format, with the exception of support for inline HTML which is not supported.
-- dateTime	A date, date-time or partial date (e.g. just year or year + month) as used in human communication. The format is a subset of [ISO8601](https://www.iso.org/iso-8601-date-and-time-format.html) icon: YYYY, YYYY-MM, YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz, e.g. 2018, 1973-06, 1905-08-23, 2015-02-07T13:28:17-05:00 or 2017-01-01T00:00:00.000Z. If hours and minutes are specified, a timezone offset SHALL be populated. Actual timezone codes can be sent using the Timezone Code extension, if desired. Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored at receiver discretion. Milliseconds are optionally allowed. Dates SHALL be valid dates. The time "24:00" is not allowed. Leap Seconds are allowed
+These datatypes are commonly understood.
 
-Complex Datatypes: These are made up of more than one child element as described.
+- **String** - A sequence of Unicode characters
+- **URI** - A Uniform Resource Identifier Reference [RFC 3986](https://www.rfc-editor.org/rfc/rfc3986). Note: URIs are case sensitive. For UUID (urn:uuid:53fefa32-fcbb-4ff8-8a92-55ee120877b7) use all lowercase
+- **URL** - A Uniform Resource Locator [RFC 1738](https://datatracker.ietf.org/doc/html/rfc1738). Note URLs are accessed directly using the specified protocol. Common URL protocols are http{s}:, ftp:, mailto: and mllp:, though many others are defined
+- **Markdown** - A String that can include markdown. This specification requires and uses the [GFM (Github Flavored Markdown)](https://github.github.com/gfm/) extensions on [CommonMark](http://spec.commonmark.org/0.28/) format, with the exception of support for inline HTML which is not supported.
+- **dateTime**	A date, date-time or partial date (e.g. just year or year + month) as used in human communication. The format is a subset of [ISO8601](https://www.iso.org/iso-8601-date-and-time-format.html) icon: YYYY, YYYY-MM, YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz, e.g. 2018, 1973-06, 1905-08-23, 2015-02-07T13:28:17-05:00 or 2017-01-01T00:00:00.000Z. If hours and minutes are specified, a timezone offset SHALL be populated. Actual timezone codes can be sent using the Timezone Code extension, if desired. Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored at receiver discretion. Milliseconds are optionally allowed. Dates SHALL be valid dates. The time "24:00" is not allowed. Leap Seconds are allowed
 
+## Complex Datatypes
+
+These are made up of more than one child element as described.
 
 ![Datatype Structure](./out/ImageSource/datatypes/datatypes.svg)
 
-
-### Organization
+## Organization
 
 - Legal Entity Name
   - Element-Name: `name`
@@ -280,7 +293,7 @@ Complex Datatypes: These are made up of more than one child element as described
   - cardinality: 0..*
   - Format: String
 
-### Location
+## Location
 
 - Country 
     - Element-Name: `country`
@@ -293,7 +306,7 @@ Complex Datatypes: These are made up of more than one child element as described
     - Format: String
         - SHOULD be ISO 3166-2: Codes for the names of the principal subdivisions (e.g., states or provinces) of all countries coded in ISO 3166-1.
 
-### Period
+## Period
 
 - Start date/time
     - Element-Name: `start`
@@ -306,7 +319,7 @@ Complex Datatypes: These are made up of more than one child element as described
     - Format: DateTime
     - if empty, there is no end
 
-### Concept
+## Concept
 
 - specific code for computable
     - Element-Name: `code`
@@ -323,7 +336,7 @@ Complex Datatypes: These are made up of more than one child element as described
     - cardinality: 0..1
     - Format: String
 
-### Classification
+## Classification
 
 - specific global regulation domain
     - Element-Name: `regulation`
@@ -335,7 +348,7 @@ Complex Datatypes: These are made up of more than one child element as described
     - cardinality: 1..1
     - Format: Boolean
 
-### PrivacyIndicator
+## PrivacyIndicator
 
 - specific global regulation domain
     - Element-Name: `tool`
@@ -351,13 +364,13 @@ Complex Datatypes: These are made up of more than one child element as described
     - cardinality: 0..1
     - Format: String
 
-## Abstract Specification
+# Abstract Specification
 
 The Data Provenance Standard is made up of three groups of metadata elements: Source, Provenance, and Use.
 
 ![Metadata Structure](./out/ImageSource/metadata/metadata.svg)
 
-### Source
+## Source
 
 This group describes the dataset and the source of the dataset.
 
@@ -365,7 +378,7 @@ This group describes the dataset and the source of the dataset.
 - cardinality: 1..1
 - The following are child elements
 
-#### Standards version used
+### Standards version used
 
 Specifies the version of the schema or standards used to define the metadata for this dataset, ensuring consistency and compatibility over time.
 
@@ -374,7 +387,7 @@ Specifies the version of the schema or standards used to define the metadata for
 - Format: String, Prefer Semantic Versioning (a.k.a., SemVer) format - https://semver.org/
 - Example: `1.1.0`
 
-#### Dataset title / name
+### Dataset title / name
 
 The official name of the dataset, which should be descriptive and help easily identify the dataset's content and purpose.
 
@@ -383,7 +396,7 @@ The official name of the dataset, which should be descriptive and help easily id
 - Format: String
 - Example: `Blue sky observations`
 
-#### Unique metadata identifier
+### Unique metadata identifier
 
 A distinct identifier (such as a UUID) assigned to the dataset's metadata to uniquely distinguish it from others, ensuring no confusion or overlap.
 
@@ -392,7 +405,7 @@ A distinct identifier (such as a UUID) assigned to the dataset's metadata to uni
 - Format: URI
 - Example: `urn:uuid:17725bad-9098-4f43-abe6-43490ae1596c`
 
-#### Metadata location
+### Metadata location
 
 Optional: The web address where the dataset's metadata is published and can be accessed, providing a direct link to detailed information about the dataset. Typically will be a unique URL of the current dataset
 
@@ -401,7 +414,7 @@ Optional: The web address where the dataset's metadata is published and can be a
 - Format: URL
 - Example: `https://example.org`
 
-#### Dataset issuer
+### Dataset issuer
 
 The legal entity responsible for creating the dataset, providing accountability and a point of contact for inquiries.
 
@@ -409,7 +422,7 @@ The legal entity responsible for creating the dataset, providing accountability 
 - cardinality: 1..*
 - Format: Organization
 
-#### Description of the dataset
+### Description of the dataset
 
 Contains a detailed narrative that explains the contents, scope, and purpose of the dataset. It provides essential contextual information that helps users understand what the data represents, how it was collected, and any limitations or recommended uses.
 
@@ -417,7 +430,7 @@ Contains a detailed narrative that explains the contents, scope, and purpose of 
 - cardinality: 1..1
 - Format: Markdown
 
-#### Provenance
+## Provenance
 
 This group describes the provenance of the dataset
 
@@ -425,7 +438,7 @@ This group describes the provenance of the dataset
 - cardinality: 1..1
 - The following are child elements
 
-#### Source metadata for dataset
+### Source metadata for dataset
 
 Identifies where the metadata for any source datasets that contribute to the current dataset can be found, establishing lineage and dependencies. This field establishes lineage.
 
@@ -434,7 +447,7 @@ Identifies where the metadata for any source datasets that contribute to the cur
 - Format: URL
 - Example: `https://example.org/dataset/blue.xml`
 
-##### Source for dataset
+### Source for dataset
 
 If the data originates from a different organization than the one who isued the dataset, this field identifies that original source's legal name.
 
@@ -442,7 +455,7 @@ If the data originates from a different organization than the one who isued the 
 - cardinality: 0..1
 - Format: [Organization](#organization)
 
-#### Data origin geography
+### Data origin geography
 
 The geographical location where the data was originally collected, which can be important for compliance with regional laws and understanding the data's context.
 
@@ -450,7 +463,7 @@ The geographical location where the data was originally collected, which can be 
 - cardinality: 1..*
 - Format: [Location](#location)
 
-#### Dataset issue date
+### Dataset issue date
 
 Manditory: The date when the dataset was compiled or created, providing a temporal context for the data.
 
@@ -459,7 +472,7 @@ Manditory: The date when the dataset was compiled or created, providing a tempor
 - Format: DateTime
 - Example: `2024-05-27`, or `2024-05-27T15:18:02Z`
 
-#### Date of previously issued version of the dataset
+### Date of previously issued version of the dataset
 
 Optional: The release date of the last version of the dataset, if it has been updated or revised, to track changes and updates over time.
 
@@ -468,7 +481,7 @@ Optional: The release date of the last version of the dataset, if it has been up
 - Format: DateTime
 - Example: `2024-05-27`, or `2024-05-27T15:18:02Z`
 
-#### Range of dates for data generation
+### Range of dates for data generation
 
 Optional: The span of time during which the data within the dataset was collected or generated, offering insight into the dataset's timeliness and relevance.
 
@@ -476,7 +489,7 @@ Optional: The span of time during which the data within the dataset was collecte
 - cardinality: 0..1
 - Format: [Period](#period)
 
-#### Method
+### Method
 
 The methodology or procedures used to collect, generate, or compile the data, giving insight into its reliability and validity.
 
@@ -486,7 +499,7 @@ The methodology or procedures used to collect, generate, or compile the data, gi
     - SHALL be from [Specific method types](#data-collection-methods) if applicable
 - MAY be other code from other code systems 
 
-#### Data format
+### Data format
 
 Describes the nature of the data within the dataset, such as numerical, textual, or multimedia, helping users understand what kind of information is contained within the file or dataset.,
 
@@ -497,7 +510,7 @@ Describes the nature of the data within the dataset, such as numerical, textual,
     - SHALL be from registered media-types http://www.iana.org/assignments/media-types/ if applicable
 - Example: `application/json`
 
-### Use
+## Use
 
 This group describes legal, use, and restrictions.
 
@@ -505,7 +518,7 @@ This group describes legal, use, and restrictions.
 - cardinality: 1..1
 - The following are child elements
 
-#### Confidentiality classification
+### Confidentiality classification
 
 Indicate if the dataset includes data falling into the confidentiality classification. Each classifier must be evaluated as true/false/unknown.
 
@@ -515,7 +528,7 @@ Indicate if the dataset includes data falling into the confidentiality classific
 - For each [Regulation Domain](#data-regulation-codes) that has been evaluated
 - Additional entries can be added
 
-#### Consent documentation location
+### Consent documentation location
 
 Specifies where consent documentation or agreements related to the data can be found, ensuring legal compliance and regulatory use. This element must be populated when Privacy Consent is appropriate. When populated it points at either one Privacy Consent Policy that all individuals in the dataset agreed to, or one Privacy Policy for each individual in the dataset with that individuals signature.
 
@@ -524,7 +537,7 @@ Specifies where consent documentation or agreements related to the data can be f
 - Format: URL
 - Example: `https://example.org/dataset/34/consent.pdf`
 
-#### Privacy indicators
+### Privacy indicators
 
 Indicates whether techniques were used to protect personally identifiable information (PII) or sensitive personal information (SPI), highlighting the dataset's privacy considerations.
 
@@ -533,7 +546,7 @@ Indicates whether techniques were used to protect personally identifiable inform
 - Format: [PrivacyIndicator](#privacyindicator)
 - using [Privacy Enhancing Tools](#privacy-enhancing-tools) vocabulary
 
-#### Data processing geography included
+### Data processing geography included
 
 Defines the geographical boundaries within which the data can be processed, often for legal or regulatory reasons.
 
@@ -542,7 +555,7 @@ Defines the geographical boundaries within which the data can be processed, ofte
 - Format: [Location](#location)
 - When not populated there are no processing location requirements
 
-#### Data processing geography excluded
+### Data processing geography excluded
 
 Defines the geographical boundaries within which the data canot be processed, often for legal or regulatory reasons.
 
@@ -551,7 +564,7 @@ Defines the geographical boundaries within which the data canot be processed, of
 - Format: [Location](#location)
 - When not populated there are no processing location restrictions
 
-#### Data storage geography allowed
+### Data storage geography allowed
 
 Specifies where the data may be stored, crucial for compliance with data sovereignty laws.
 
@@ -560,7 +573,7 @@ Specifies where the data may be stored, crucial for compliance with data soverei
 - Format: [Location](#location)
 - When not populated there are no defined storage location requirements
 
-#### Data storage geography forbidden
+### Data storage geography forbidden
 
 Specifies where the data may not be stored, crucial for compliance with data sovereignty laws.
 
@@ -569,7 +582,7 @@ Specifies where the data may not be stored, crucial for compliance with data sov
 - Format: [Location](#location)
 - When not populated there are no defined storage location restrictions
 
-#### License to use
+### License to use
 
 Details the location or point of contact for identifying the terms under which the dataset can be used, including any restrictions or obligations, clarifying legal use and distribution rights.
 
@@ -580,7 +593,7 @@ Details the location or point of contact for identifying the terms under which t
     - May be a URL
 - Example: `Apache-2.0`
 
-#### Intended data use
+### Intended data use
 
 Describes the purpose for which the dataset was created, guiding users on its intended use and potential applications against identified use cases. List all that 
 
@@ -591,7 +604,7 @@ Describes the purpose for which the dataset was created, guiding users on its in
   - SHALL populate `description` with specific description
   - When using the code `non-ai-other` and `ai-other`, the description SHALL describe the actual use
 
-#### Forbidden data use
+### Forbidden data use
 
 Describes the purposes for which the dataset is not intended and can not be used.
 
@@ -602,7 +615,7 @@ Describes the purposes for which the dataset is not intended and can not be used
   - SHALL populate `description` with specific description
   - When using the code `non-ai-other` and `ai-other`, the description SHALL describe the actual use
 
-#### Copyright
+### Copyright
 
 Indicates whether the dataset contains propritary information that is covered with a Copyright, and the terms of said Copyright.
 
@@ -611,7 +624,7 @@ Indicates whether the dataset contains propritary information that is covered wi
 - Format: String
   - where the string `no` indicates no Copyright
 
-#### Patent
+### Patent
 
 Indicates whether the dataset contains propritary information that is covered with a Patent, and the said Patent number.
 
@@ -620,7 +633,7 @@ Indicates whether the dataset contains propritary information that is covered wi
 - Format: String
   - where the string `no` indicates no Patent
 
-#### Trademark
+### Trademark
 
 Indicates whether the dataset contains propritary information that is covered with a Trademark, and the terms of said Trademark.
 
@@ -629,7 +642,7 @@ Indicates whether the dataset contains propritary information that is covered wi
 - Format: String
   - where the string `no` indicates no Trademark
 
-## Technical Encoding
+# Technical Encoding
 
 The detailed schema specification for JSON, XML, and YAML are published independently in GIThub repositories. In these repositories the following are to be found:
 
@@ -637,42 +650,31 @@ The detailed schema specification for JSON, XML, and YAML are published independ
 - required vocabulary in that encoding format
 - examples
   
-### Technical Schema
+## Technical Schema
 
-#### JSON Metadata Encoding
+### JSON Metadata Encoding
 
 The technical coding and examples are available in GIThub for the [JSON Metadata encoding](https://github.com/Data-and-Trust-Alliance/json-metadata)
 
-#### XML Metadata Encoding
+### XML Metadata Encoding
 
 The technical coding and examples are available in GIThub for the [XML Metadata encoding](https://github.com/Data-and-Trust-Alliance/xml-metadata)
 
-#### YAML Metadata Encoding
+### YAML Metadata Encoding
 
 The technical coding and examples are available in GIThub for the [YAML Metadata encoding](https://github.com/Data-and-Trust-Alliance/yaml-metadata)
 
-### Maintenance of the specification
-
-The D&TA Data Provenance Standards Working Group is responsible for the ongoing monitoring and periodic review of the terms in the registry. This includes:
-
-• Annual review of all terms to ensure continued relevance
-• Soliciting feedback from the community on the usage and applicability of terms
-• Making revisions to definitions as needed
-• Retiring terms that are no longer relevant or have become obsolete
-
-Management of D&TA’s Data Provenance Standards vocabulary registry is a collaborative and dynamic process. We welcome feedback from the broader community to ensure that the vocabulary remains a valuable and accurate resource for all.
-
-## Security considerations
+# Security considerations
 
 TODO: This section should advise the reader on security or privacy things they should be aware of and for which a user of this specification will need to consider. Often it is just a listing of risks that the specification does not address, but for which the specification creates. Such as the fact that datasets and metadata are sensitive data and would need to be protected or carefully crafted such that they are not a risk.
 
 Metadata and the Dataset are data that need to be of quality and trustable to be valuable.... blah blah
 
-## Annex
+# Annex
 
 The Annex contain normative vocabulary to be used when it applies. These vocabulary SHALL be used when they apply.
 
-### Data Collection Method Codes
+## Data Collection Method Codes
 
 The following defined vocabulary are to be used for the "Method".  
 
@@ -746,7 +748,7 @@ The following defined vocabulary are to be used for the "Method".
 | simulations-na | Simulations N/A
 | other-na | Other N/A
 
-### Privacy Enhancing Tools	Codes
+## Privacy Enhancing Tools	Codes
 
 The following concepts are defined to describe privacy enhancing tools (PET).
 
@@ -769,7 +771,7 @@ The following concepts are defined to describe privacy enhancing tools (PET).
 | t-closeness | T-closeness
 | tokenization | Tokenization
 
-### Data Use Codes
+## Data Use Codes
 
 The following concepts are defined to describe intended and forbidden uses of the dataset
 
@@ -789,7 +791,7 @@ The following concepts are defined to describe intended and forbidden uses of th
 
 Where: `non-ai-other`, and `ai-other`
 
-### Data Regulation Codes
+## Data Regulation Codes
 
 The following concepts are defined to indicate specific global regulated domains of relevance
 
@@ -804,51 +806,59 @@ The following concepts are defined to indicate specific global regulated domains
 | phi  | Personal Health Information (PHI)
 | spi  | Sensitive Personal Information (SPI)
 
-## Acknowledgements
+# Acknowledgements
 
 Acknowledgements to the [Members of the Data and Trust Alliance](https://dataandtrustalliance.org/who-we-are)
 
 **AARP**
+
 - Amr Khani
   - SVP, Data and Analytics
 - Jaye Campbell
   - Legal Leader, General Counsel
 
 **American Express**
+
 - Laurel Shifrin
   - VP, Enterprise Data Governance
 - Saheel Shah
   - Director, Enterprise Data Governance
 
 **CVS**
+
 - Dave Sturgeon 
   - Executive Director, Data Governance and Enablement
 - Herb Holmes
   - Data Governance & Data Management Leader
 
 **Deloitte**
+
 - Juan Tello
   - U.S. CDO, Strategy & Analytics Principal
 - Leo Cabrera, Rohit Iyer, and Ajay Tripathi
   - Office of CDO
 
 **GM**
+
 - Jon Francis
   - Chief Data & Analytics Officer
 - Brian Ames
   - Principal Software Engineer
 
 **Howso**
+
 - Chris Hazard
   - Chief Technology Officer
 - Michael Meehan
   - General Counsel
 
 **Humana**
+
 - Genevy Dimitrion
   - VP, Data Strategy & Governance
  
 **IBM**
+
 - Lee Cox
   - VP, Integrated Governance & Market Readiness, Office of Privacy and Responsible Tech.
 - Bryan Bortnick
@@ -859,6 +869,7 @@ Acknowledgements to the [Members of the Data and Trust Alliance](https://dataand
   - Privacy Program Manager
 
 **Kenvue**
+
 - Bernardo Tavares
   - Chief Technology & Data Officer
 - Ajay Dhaul
@@ -869,6 +880,7 @@ Acknowledgements to the [Members of the Data and Trust Alliance](https://dataand
   - Data & AI Products Leader
 
 **Mastercard**
+
 - Travis Carpenter
   - VP, Data Quality & Sources
 - Ed Dephilippis
@@ -877,16 +889,19 @@ Acknowledgements to the [Members of the Data and Trust Alliance](https://dataand
   - Director, Data Management
 
 **Nielsen**
+
 - Christine Pierce
   - Chief Data Officer
 - Frank Fasinski
   - Director, Data Science
 
 **Nike**
+
 - Emily White
   - Vice President, Enterprise Data & Analytics
 
 **Pfizer**
+
 - Peter Hunter
   - Sr Director, Analytic Tools
 - Gentiana Spahiu 
@@ -895,10 +910,12 @@ Acknowledgements to the [Members of the Data and Trust Alliance](https://dataand
 John Pastor, Drew Palsgrove, and Jay Shetty
 
 **Regions**
+
 - Dilip Balachandran 
   - SVP, Enterprise Data Management
 
 **Smithsonian**
+
 - Alan Hejnal
   - Data Quality Manager
 - Derrick Whitney 
@@ -907,12 +924,14 @@ John Pastor, Drew Palsgrove, and Jay Shetty
   - Office of Research Computing
 
 **Transcarent**
+
 - Thi Montalvo
   - VP Reporting and Analytics
 - Thomas Birchfield 
   - Technical Program Manager
 
 **UPS**
+
 - Mallory Freeman
   - VP, Enterprise Data and Analytics
 - Zeenat Syed
@@ -921,12 +940,14 @@ John Pastor, Drew Palsgrove, and Jay Shetty
   - Sr Manager, Data Science and Machine Learning
 
 **Walmart**
+
 - Gregory Schaffer
   - Chief Counsel, Cyber Security & VP, Digital Trust Compliance
 - Laura Asbury 
   - Director, Digital Trust Compliance
 
 **Warby Parker**
+
 - Peter Cross 
   - Head of Data
 - Chris Bleakley 

@@ -2,6 +2,8 @@
 
 The [Data Provenance Standard](https://github.com/Data-and-Trust-Alliance/DPS/blob/main/specification.md)
 
+HTML rendering out.html
+
 ## References
 
 - The [Data&Trust Alliance](https://dataandtrustalliance.org/)
@@ -32,3 +34,10 @@ Punch List of work to do:
 - Need at least one of the technical formats drafted, and place holder for the other two. 
   - These can be defined only using the technical formats and given examples
   - Thus we have three GIThub repos for JSON, XML, and YAML. 
+
+## Convert to html
+
+pandoc --number-sections < specification.md > out.html
+
+need to add more style such as
+- tables should have lines

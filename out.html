@@ -1,0 +1,1774 @@
+<p><strong>The Data Provenance Standard</strong></p>
+<p>The Data Provenance Standard defines Metadata about a data set, so
+that the data provenance and lineage is understood. This set of metadata
+are necessary to enable proper dataset selection for AI Model
+Training.</p>
+<p><strong>Version 1.1.0</strong></p>
+<p><strong><a
+href="https://github.com/Data-and-Trust-Alliance/DPS">Published</a></strong>
+Draft</p>
+<p><strong>Authors:</strong></p>
+<ul>
+<li><a href="https://dataandtrustalliance.org/">Data and Trust
+Alliance</a></li>
+<li>Kristina Podnar</li>
+<li>John Moehrke</li>
+</ul>
+<p><strong>Comments</strong> inquiries@dataandtrustalliance.org</p>
+<p><strong>License</strong> <a
+href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+Attribution-ShareAlike 4.0 International</a></p>
+<h1 data-number="1" id="abstract"><span
+class="header-section-number">1</span> Abstract</h1>
+<p>Data transparency is critical. Trust in the insights and decisions
+coming from both traditional data and AI applications depends on
+understanding the origin, lineage, and rights associated with the data
+that feeds them. Lack of transparency has real costs, including
+unnecessary risks and foregone opportunities. And yet, many
+organizations today cannot answer basic data questions without
+considerable difficulty and investment.</p>
+<p>To realize the value of data and AI requires a reliable
+cross-industry baseline of data transparency. Our Data Provenance
+Standards propose a solution.</p>
+<h1 data-number="2" id="introduction"><span
+class="header-section-number">2</span> Introduction</h1>
+<p>For the past quarter century, companies have worked to become
+“digital.” Now they are using data, algorithms, and AI to reinvent how
+decisions are made. They are becoming data enterprises. This is
+transforming everything from retail, education, and entertainment to
+health and wellness, transportation, and energy.</p>
+<p>For these intelligent systems to create economic and societal value
+for all stakeholders—customers, employees, citizens, shareholders,
+partners, suppliers, and more—they must be designed and managed
+responsibly.</p>
+<p>The Data Provenance Standards surface metadata on source, legal
+rights, privacy &amp; protection, generation date, data type, generation
+method, intended use and restrictions and lineage. Each metadata field
+has associated values. This essential information about the origin of
+and rights associated with data allows enterprises to make informed
+choices about the data they source and use. The result can be
+improvements in operational efficiency, regulatory compliance,
+collaboration and value generation.</p>
+<h2 data-number="2.1" id="the-data-trust-alliance"><span
+class="header-section-number">2.1</span> The Data &amp; Trust
+Alliance</h2>
+<p>The Data &amp; Trust Alliance brings together leading businesses and
+institutions across multiple industries to learn, develop, and adopt
+responsible data and AI practices. Established in September 2020, it was
+founded as a not-for-profit consortium and is co-chaired by Ken
+Chenault, General Catalyst chairman and managing director, and former
+American Express chairman and CEO; and Sam Palmisano, former IBM
+chairman and CEO. Jon Iwata, founding executive director, works with our
+Leadership Council, a cross-functional team of senior executives
+selected by their CEOs to identify and drive Alliance projects.</p>
+<h2 data-number="2.2" id="normative-vs-informative"><span
+class="header-section-number">2.2</span> Normative vs Informative</h2>
+<p>This specification adopts the normative words defined in IETF <a
+href="https://www.rfc-editor.org/info/bcp14">Best Current Practice
+14</a>: Key words for use in RFCs to Indicate Requirement Levels
+(BCP-14), certain words indicate whether a specific content is
+normative. The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL
+NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in
+this document are to be interpreted as described. Informative content
+does not contain these key words.</p>
+<h2 data-number="2.3" id="maintenance-of-the-specification"><span
+class="header-section-number">2.3</span> Maintenance of the
+specification</h2>
+<p>The D&amp;TA Data Provenance Standards Working Group is responsible
+for the ongoing monitoring and periodic review of the terms in the
+registry. This includes:</p>
+<ul>
+<li>Annual review of all terms to ensure continued relevance</li>
+<li>Soliciting feedback from the community on the usage and
+applicability of terms</li>
+<li>Making revisions to definitions as needed</li>
+<li>Retiring terms that are no longer relevant or have become
+obsolete</li>
+</ul>
+<p>Management of D&amp;TA’s Data Provenance Standards vocabulary
+registry is a collaborative and dynamic process. We welcome feedback
+from the broader community to ensure that the vocabulary remains a
+valuable and accurate resource for all.</p>
+<h2 data-number="2.4" id="glossary"><span
+class="header-section-number">2.4</span> Glossary</h2>
+<p>The following concepts are used throughout the specification</p>
+<ul>
+<li><strong>AI</strong>: Computer systems that can perform tasks
+typically requiring human intelligence, such as understanding language,
+recognizing patterns, and making decisions.</li>
+<li><strong>Dataset</strong>: A collection of data.</li>
+<li><strong>Metadata</strong>: Structured description about a Dataset
+that enable the understanding of that Dataset.</li>
+<li><strong>Dataset Identifier</strong>: A unique label identifying the
+provenance metadata of the current dataset</li>
+<li><strong>Lineage</strong>: Identifiers or pointers of metadata
+representing the data which comprise the current dataset</li>
+<li><strong>Source</strong>: Identifies the origin (person,
+organization, system, device, etc.) of the current dataset</li>
+<li><strong>Legal Rights</strong>: Identifies the legal or regulatory
+framework applicable to the current dataset, along with the required
+data attributions, associated copyright or trademark, and localization
+and processing requirements</li>
+<li><strong>Privacy and Protection</strong>: Identifies any types of
+sensitive data associated with the current dataset and any privacy
+enhancing techniques applied</li>
+<li><strong>Generation Date</strong>: Timestamp marking the creation of
+the current dataset</li>
+<li><strong>Data Type</strong>: Identifies the data type contained in
+the current set, and provides insights into how the data is organized,
+its potential use cases, and the challenges associated with handling and
+using it</li>
+<li><strong>Generation Method</strong>: Identifies how the data was
+produced (data mining, machine-generated, IoT sensors, etc.)</li>
+<li><strong>Intended Use and Restrictions</strong>: Identifies the
+intended use of the data and which downstream audiences should not be
+allowed access to the current dataset</li>
+</ul>
+<h1 data-number="3" id="use-case"><span
+class="header-section-number">3</span> Use-Case</h1>
+<p>The following use-cases are examplar of the use-cases for which this
+standard applies. These use-cases show how this standard supports
+diverse needs across the data ecosystem.</p>
+<ol type="1">
+<li>Healthcare insurance data procurement</li>
+<li>Media consumption pattern data set for consumer behavior
+insights</li>
+<li>Financial services customer product enablement</li>
+<li>Enhancing global logistics efficiency through AI-driven tariff
+harmonization</li>
+</ol>
+<h2 data-number="3.1"
+id="use-case-1-healthcare-insurance-data-procurement"><span
+class="header-section-number">3.1</span> Use-Case 1: Healthcare
+insurance data procurement</h2>
+<p>Evaluating a new dataset that contains comprehensive patient and
+insurance payment information, for use in predictive analytics.</p>
+<p>Bella and her team are evaluating a new dataset that contains
+comprehensive patient and insurance payment information. This dataset is
+considered crucial for enhancing the company’s predictive analytics
+models, which forecast healthcare trends, personalize insurance plans,
+and optimize claim processing.</p>
+<p>Goals</p>
+<ul>
+<li>Establish lineage and align with data provenance insights.</li>
+<li>Comply with healthcare regulations, focusing on confidentiality,
+consent, and appropriate data handling.</li>
+<li>Enhance operational efficiency and analytical models without major
+disruptions.</li>
+<li>Leverage the dataset for developing innovative strategies and
+improving customer trust by analyzing the dataset’s intent and
+proprietary content for new personalized engagement opportunities.</li>
+</ul>
+<p>Challenges</p>
+<ul>
+<li>Balancing the need for detailed, comprehensive data with privacy and
+confidentiality requirements.</li>
+<li>Ensuring the dataset’s metadata is accurate, up-to-date, and
+compliant with evolving data provenance standards.</li>
+<li>Integrating new datasets with existing systems and models without
+compromising data integrity or system performance.</li>
+<li>Navigating the complex landscape of healthcare regulations and
+ensuring all data usage is compliant.</li>
+</ul>
+<h3 data-number="3.1.1" id="use-case-1-needs"><span
+class="header-section-number">3.1.1</span> Use-Case 1 needs</h3>
+<ul>
+<li>Has the data already been incorporated?</li>
+<li>Who has generated the data&gt; Are they a trusted supplier?</li>
+<li>Where was the data captured from?</li>
+<li>When was te data captured, and how often is it updated?</li>
+<li>How was the data captured?</li>
+<li>What format is the dataset?</li>
+<li>Were privacy enhancing technologies (PETs) or tools applied to the
+dataset in order to remove, mask, or modify PI/SPI in the data?</li>
+<li>What kind of privacy classes of data are in the dataset?</li>
+<li>Are there appropriate Consents covering the dataset?</li>
+<li>Are there geography restrictions on processing or storage?</li>
+<li>What licenses, copyright, trademark, or patent requirements?</li>
+<li>What allowances or restrictions on the kinds of use (e.g. AI
+training)?</li>
+</ul>
+<h3 data-number="3.1.2" id="outcome"><span
+class="header-section-number">3.1.2</span> Outcome</h3>
+<p>Through comprehensive metadata evaluation, the procurement team was
+able to perform a more in-depth assessment of a crucial dataset,
+decreasing procurement time and risk while enhancing the company’s
+predictive analytics capabilities and maintaining adherence to legal and
+ethical standards. The benefits of having access to the dataset
+metadata</p>
+<ul>
+<li>Better dataset evaluation</li>
+<li>Title, unique identifier, and details about data origin and
+collection methods allowed for quick insights into the dataset’s
+provenance without having to read through many pages of descriptive
+text.</li>
+<li>Confidentiality, consent documentation, data processing and storage
+geographies provided evidence of the dataset’s compliance with
+healthcare regulations.</li>
+<li>Clarity from the metadata enabled coordination and discussions
+between the procurement and data teams to assess the dataset’s impact on
+analytical models, ensuring seamless integration and operational
+improvement.</li>
+<li>Increased risk and opportunity balance</li>
+<li>Metadata around generation method and permitted use proved critical
+to the organization’s innovative marketing strategies and improving
+internal customer trust of the acquired data.</li>
+<li>Collaboration between the legal and compliance departments was
+boosted because it was clear at the onset who needed to be involved in
+which aspects of dataset acquisition evaluation,ensuring the dataset’s
+use was in strict adherence to healthcare regulations and company
+policies.</li>
+<li>Improved data procurement and legal validation</li>
+<li>Suspect data processing and storage metadata resulted in increased
+legal scrutiny in advance of data acquisition, leading to the correction
+of inaccuracies in the metadata.</li>
+<li>The metadata evaluation process, despite causing a brief delay,
+ultimately safeguarded the organization against potential legal and
+operational risks, ensuring the dataset’s strategic and compliant
+use.</li>
+</ul>
+<h2 data-number="3.2"
+id="use-case-2-media-consumption-pattern-data-set-for-consumer-behavior-insights"><span
+class="header-section-number">3.2</span> Use-Case 2: Media consumption
+pattern data set for consumer behavior insights</h2>
+<p>Curating a high-quality dataset that tracks media consumption habits
+across diverse platforms for content personalization</p>
+<p>Jordan’s current project involves curating a dataset that tracks
+media consumption habits across diverse platforms. This dataset aims to
+empower media buyers and sellers in accurately targeting their audience
+segments, facilitating personalized content strategies for industries
+ranging from consumer goods to tourism.</p>
+<p>Goals</p>
+<ul>
+<li>Ensure comprehensive coverage of media consumption patterns to
+provide actionable insights for diverse industries.</li>
+<li>Maintain high standards of data transparency to build trust and
+encourage collaboration.</li>
+<li>Enhance clients’ operational efficiency and compliance through
+strategic data integration.</li>
+</ul>
+<p>Challenges</p>
+<ul>
+<li>Balancing data comprehensiveness with privacy and ethical
+considerations.</li>
+<li>Keeping pace with rapid changes in media consumption behaviors and
+technology.</li>
+<li>Ensuring data standards provide necessary transparency to data
+buyers and that the metadata is compatible with automated data
+procurement systems.</li>
+</ul>
+<h3 data-number="3.2.1" id="use-case-2-needs"><span
+class="header-section-number">3.2.1</span> Use-Case 2 needs</h3>
+<p>In addition to some needs outlined in Use-Case 1:</p>
+<ul>
+<li>Traceability to all data sources</li>
+<li>Applicability of the dataset to the use-case</li>
+<li>Dataset covers the geography of interest</li>
+<li>Dataset has covered full timeframe of interest</li>
+<li>Are there restrictions on the use?</li>
+<li>can the data be used for AI, educational, and developmental
+programs?</li>
+</ul>
+<h3 data-number="3.2.2" id="outcome-1"><span
+class="header-section-number">3.2.2</span> Outcome</h3>
+<p>Metadata associated with the “March 2024 Global Media Consumption
+Trends” dataset is a vital resource for procuring complex media
+consumption patterns, ensuring its integrity and applicability in AI
+analytics. This approach to describing data can facilitate effective
+personalization of content strategies across various industries and will
+set a new standard for transparent, efficient, and compliant data usage
+in media consumption analysis. The outcome includes:</p>
+<ul>
+<li>Comprehensive coverage and actionable insights
+<ul>
+<li>Detailed data origin geography and collection methodologies will
+assure users of the data’s relevance and quality, thus facilitating
+targeted content strategies.</li>
+</ul></li>
+<li>Transparency and trust building
+<ul>
+<li>By adhering to the data provenance standards and providing a clear
+metadata URL, the dataset’s transparency is increased, making it easier
+for media buyers and sellers to assess its credibility.</li>
+<li>The documentation of dataset lineage and the use of PETs-like
+anonymization underscores the commitment to data privacy and security,
+building trust among clients.</li>
+</ul></li>
+<li>Increased efficiency and enhanced compliance
+<ul>
+<li>The dataset’s lack of proprietary data restrictions and the
+provision of a clear license to use, as indicated by contacting
+AnalytiQuest Ventures’ Office of General Counsel, streamlines the data
+acquisition process, enhancing clients’ operational efficiency.</li>
+<li>Data processing and storage geography metadata will help downstream
+consumers comply with legal standards and privacy regulations, thereby
+reducing legal and reputational risks.</li>
+</ul></li>
+</ul>
+<h2 data-number="3.3"
+id="use-case-3-financial-services-customer-product-enablement"><span
+class="header-section-number">3.3</span> Use-Case 3: Financial services
+customer product enablement</h2>
+<p>Evaluating a new dataset for refining AI algorithms used in customer
+credit card offerings</p>
+<p>Minh is tasked with evaluating a new dataset for refining AI
+algorithms for customer credit card offerings. The dataset under
+consideration has been documented in accordance with the latest data
+provenance standards, ensuring transparency and compliance, especially
+under GDPR and the new EU AI Act. Minh’s evaluation process focuses on
+the detailed metadata provided for the dataset.</p>
+<p>Goals</p>
+<ul>
+<li>Enhance AI model accuracy for customized credit card offerings.</li>
+<li>Ensure compliance with international laws like GDPR to mitigate
+legal risks.</li>
+<li>Optimize data handling practices within geographical limits for
+increased efficiency.</li>
+<li>Maintain thorough documentation for dataset transparency and
+accountability.</li>
+<li>Uphold dataset quality and integrity to bolster trust in AI
+insights.</li>
+</ul>
+<p>Challenges</p>
+<ul>
+<li>Ensure dataset credibility through clear documentation of its
+lineage and metadata.</li>
+<li>Navigate diverse international regulations related to data privacy
+and AI.</li>
+<li>Integrate the new dataset with existing systems without operational
+disruptions.</li>
+<li>Balance proprietary data use with information protection and
+competitive edge.</li>
+<li>Confirm dataset use is ethical and consensual, particularly with
+sensitive data.</li>
+<li>Keep pace with technological and data standard advancements for AI
+relevance.</li>
+</ul>
+<h3 data-number="3.3.1" id="use-case-3-needs"><span
+class="header-section-number">3.3.1</span> Use-Case 3 needs</h3>
+<p>In addition to some needs outlined in Use-Case 1 and 2:</p>
+<ul>
+<li>Has the dataset been anonymized compliant to privacy
+regulations?</li>
+<li>are there any publication restrictions or limits?</li>
+</ul>
+<h3 data-number="3.3.2" id="outcome-2"><span
+class="header-section-number">3.3.2</span> Outcome</h3>
+<p>Minh’s evaluation of the “Consumer Spending Patterns 2020-2024”
+dataset through the lens of the data provenance standards significantly
+enhanced ProForma Financial Services’ AI algorithms for customer credit
+card offerings, ensuring both heightened personalization and strict
+adherence to international data regulations. This approach improved the
+precision and effectiveness of the company’s AI models and ensured
+compliance, data privacy, and seamless integration with existing
+systems, paving the way for responsible and innovative use of AI
+insights in the financial sector. The outcome includes:</p>
+<ul>
+<li>Better business case alignment
+<ul>
+<li>By not relying solely on high-level dataset descriptions, this
+process elevated the focus on standards and metadata for business case
+alignment and ultimate success.</li>
+<li>The provided origin, creation dates, and collection method of the
+metadata assured that the dataset relevance and potential quality were
+acceptable.</li>
+</ul></li>
+<li>Faster data acquisition timeline and speed to market
+<ul>
+<li>The absence of proprietary data restrictions and clear licensing
+terms sped up ProForma’s data acquisition process and ability to develop
+AI capabilities.</li>
+</ul></li>
+<li>Increased compliance and integrity
+<ul>
+<li>The ability to assess dataset compliance with the latest data
+provenance standards, including versioning and unique identifiers meant
+that the initial assessment of fit-for-use could be performed by an
+automated system and passed to a human for deeper review.</li>
+<li>The dataset lineage, original sources, and PETs allowed ProForma to
+quickly gauge the level of pre-processing necessary to comply with data
+privacy requirements.</li>
+<li>The data collection, processing and storage information further
+helped meet data privacy requirements and mitigate legal and
+reputational risks associated with GDPR and the EU AI Act.</li>
+</ul></li>
+</ul>
+<h2 data-number="3.4"
+id="use-case-4-enhancing-global-logistics-efficiency-through-ai-driven-tariff-harmonization"><span
+class="header-section-number">3.4</span> Use-Case 4: Enhancing global
+logistics efficiency through AI-driven tariff harmonization</h2>
+<p>Managing data to refine AI systems for accurately predicting tariff
+costs across countries and categories</p>
+<p>The global nature of Navisphere Logistics, Ltd.’s operations means
+that the company must navigate a complex web of international tariffs
+and customs regulations. Efficiently managing these tariffs is critical
+to minimizing delivery times and costs. Dr. Hicks and her team are
+tasked with refining the company’s AI systems to accurately predict
+tariff costs across different countries and product categories.</p>
+<p>Goals</p>
+<ul>
+<li>Unify global tariff schedules into an AI-compatible format for
+better predictions.</li>
+<li>Enhance AI tariff models to reduce cross-border delivery times and
+costs.</li>
+<li>Adhere to data provenance standards for tariff data integrity and
+compliance.</li>
+<li>Attain tariff predictions globally across various product categories
+with advanced AI.</li>
+<li>Simplify customs processes with accurate tariff assessments, aiding
+global clients.</li>
+</ul>
+<p>Challenges</p>
+<ul>
+<li>Navigate the intricate international tariff and customs landscape
+with diverse rules.</li>
+<li>Rigorously assess dataset metadata for compliance with global
+standards and privacy.</li>
+<li>Continually update AI models to adapt to changing international
+tariff regulations.</li>
+<li>Balance advanced AI development with responsible usage and adherence
+to privacy laws.</li>
+<li>Ensure smooth AI model integration into Navisphere Logistics’
+systems without workflow disruption.</li>
+</ul>
+<h3 data-number="3.4.1" id="use-case-4-needs"><span
+class="header-section-number">3.4.1</span> Use-Case 4 needs</h3>
+<p>In addition to some needs outlined in Use-Case 1, 3, and 3:</p>
+<ul>
+<li>Indications of data credibility or bias.</li>
+<li>Indications that the data are original vs intermediary combined from
+multiple sources</li>
+</ul>
+<h3 data-number="3.4.2" id="outcome-3"><span
+class="header-section-number">3.4.2</span> Outcome</h3>
+<p>Through application of the data provenance standards metadata for its
+global tariff schedule datasets, Navisphere Logistics, Ltd. has achieved
+a significant enhancement in the operational efficiency and accuracy of
+its AI-driven tariff prediction models. The outcome includes:</p>
+<ul>
+<li>Improved data consistency and compatibility
+<ul>
+<li>By specifying the version used for the metadata, Navisphere ensured
+that all datasets adhered to a uniform standard, facilitating seamless
+integration and interpretation by the AI models, regardless of the
+data’s origin or when it was collected.</li>
+</ul></li>
+<li>Enhanced data identification and access
+<ul>
+<li>The establishment of a unique metadata identifier and a metadata
+unique URL for each dataset enabled easy identification, access, and
+reference, streamlining the data ingestion process for the AI systems,
+and reducing the time spent on data preprocessing.</li>
+</ul></li>
+<li>Streamlined lineage and dependency tracking
+<ul>
+<li>The metadata location for datasets feeding the current dataset
+allowed Navisphere to efficiently manage data dependencies and lineage,
+ensuring that updates or corrections in source datasets could be rapidly
+propagated through the system, maintaining the accuracy and timeliness
+of tariff predictions.</li>
+</ul></li>
+<li>Increased accountability and data integrity
+<ul>
+<li>Detailed metadata entries for the creator, source, and data origin
+geography provided clear accountability and context for the data,
+enhancing trust in the data’s reliability and compliance with regional
+laws and international regulations.</li>
+</ul></li>
+<li>Better data privacy and security measures
+<ul>
+<li>The application of privacy enhancing technologies (PETs) and the
+careful classification of data confidentiality ensured that personally
+identifiable information (PII) and sensitive personal information (SPI)
+were adequately protected, aligning with global privacy standards and
+ethical considerations in AI application.</li>
+</ul></li>
+<li>Legal compliance
+<ul>
+<li>Detailed metadata on data processing and storage geographies,
+consent locations, and the license to use the data ensured that all AI
+operations remained within legal boundaries, respecting data sovereignty
+laws and consent agreements.</li>
+</ul></li>
+</ul>
+<h1 data-number="4" id="datatypes"><span
+class="header-section-number">4</span> Datatypes</h1>
+<h2 data-number="4.1" id="primitive-datatypes"><span
+class="header-section-number">4.1</span> Primitive Datatypes</h2>
+<p>These datatypes are commonly understood.</p>
+<ul>
+<li><strong>String</strong> - A sequence of Unicode characters</li>
+<li><strong>URI</strong> - A Uniform Resource Identifier Reference <a
+href="https://www.rfc-editor.org/rfc/rfc3986">RFC 3986</a>. Note: URIs
+are case sensitive. For UUID
+(urn:uuid:53fefa32-fcbb-4ff8-8a92-55ee120877b7) use all lowercase</li>
+<li><strong>URL</strong> - A Uniform Resource Locator <a
+href="https://datatracker.ietf.org/doc/html/rfc1738">RFC 1738</a>. Note
+URLs are accessed directly using the specified protocol. Common URL
+protocols are http{s}:, ftp:, mailto: and mllp:, though many others are
+defined</li>
+<li><strong>Markdown</strong> - A String that can include markdown. This
+specification requires and uses the <a
+href="https://github.github.com/gfm/">GFM (Github Flavored Markdown)</a>
+extensions on <a href="http://spec.commonmark.org/0.28/">CommonMark</a>
+format, with the exception of support for inline HTML which is not
+supported.</li>
+<li><strong>dateTime</strong> A date, date-time or partial date
+(e.g. just year or year + month) as used in human communication. The
+format is a subset of <a
+href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO8601</a>
+icon: YYYY, YYYY-MM, YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz, e.g. 2018,
+1973-06, 1905-08-23, 2015-02-07T13:28:17-05:00 or
+2017-01-01T00:00:00.000Z. If hours and minutes are specified, a timezone
+offset SHALL be populated. Actual timezone codes can be sent using the
+Timezone Code extension, if desired. Seconds must be provided due to
+schema type constraints but may be zero-filled and may be ignored at
+receiver discretion. Milliseconds are optionally allowed. Dates SHALL be
+valid dates. The time “24:00” is not allowed. Leap Seconds are
+allowed</li>
+</ul>
+<h2 data-number="4.2" id="complex-datatypes"><span
+class="header-section-number">4.2</span> Complex Datatypes</h2>
+<p>These are made up of more than one child element as described.</p>
+<figure>
+<img src="./out/ImageSource/datatypes/datatypes.svg"
+alt="Datatype Structure" />
+<figcaption aria-hidden="true">Datatype Structure</figcaption>
+</figure>
+<h2 data-number="4.3" id="organization"><span
+class="header-section-number">4.3</span> Organization</h2>
+<ul>
+<li>Legal Entity Name
+<ul>
+<li>Element-Name: <code>name</code></li>
+<li>cardinality: 1..1</li>
+<li>Format: String</li>
+</ul></li>
+<li>Legal entity Address
+<ul>
+<li>Element-Name: <code>address</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: String</li>
+</ul></li>
+</ul>
+<h2 data-number="4.4" id="location"><span
+class="header-section-number">4.4</span> Location</h2>
+<ul>
+<li>Country
+<ul>
+<li>Element-Name: <code>country</code></li>
+<li>cardinality: 1..1</li>
+<li>Format: String
+<ul>
+<li>SHOULD be ISO 3166 2 letter, 3 letter code, or 3 digit country
+codes</li>
+</ul></li>
+</ul></li>
+<li>State or Provenance
+<ul>
+<li>Element-Name: <code>state</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: String
+<ul>
+<li>SHOULD be ISO 3166-2: Codes for the names of the principal
+subdivisions (e.g., states or provinces) of all countries coded in ISO
+3166-1.</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 data-number="4.5" id="period"><span
+class="header-section-number">4.5</span> Period</h2>
+<ul>
+<li>Start date/time
+<ul>
+<li>Element-Name: <code>start</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: DateTime</li>
+<li>if empty, there is no start</li>
+</ul></li>
+<li>End date/time
+<ul>
+<li>Element-Name: <code>end</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: DateTime</li>
+<li>if empty, there is no end</li>
+</ul></li>
+</ul>
+<h2 data-number="4.6" id="concept"><span
+class="header-section-number">4.6</span> Concept</h2>
+<ul>
+<li>specific code for computable
+<ul>
+<li>Element-Name: <code>code</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: String
+<ul>
+<li>Should be from a given vocabulary</li>
+<li>SHOULD be compute friendly, without spaces</li>
+</ul></li>
+</ul></li>
+<li>source of code
+<ul>
+<li>Element-Name: <code>system</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: URI</li>
+</ul></li>
+<li>description of code for human
+<ul>
+<li>Element-Name: <code>description</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: String</li>
+</ul></li>
+</ul>
+<h2 data-number="4.7" id="classification"><span
+class="header-section-number">4.7</span> Classification</h2>
+<ul>
+<li>specific global regulation domain
+<ul>
+<li>Element-Name: <code>regulation</code></li>
+<li>cardinality: 1..1</li>
+<li>Format: Concept
+<ul>
+<li>Should be from <a href="#data-regulation-codes">Data Regulation
+Codes</a></li>
+</ul></li>
+</ul></li>
+<li>Has the dataset been evaluated to the regulation domain?
+<ul>
+<li>Element-Name: <code>evaluated</code></li>
+<li>cardinality: 1..1</li>
+<li>Format: Boolean</li>
+</ul></li>
+</ul>
+<h2 data-number="4.8" id="privacyindicator"><span
+class="header-section-number">4.8</span> PrivacyIndicator</h2>
+<ul>
+<li>specific global regulation domain
+<ul>
+<li>Element-Name: <code>tool</code></li>
+<li>cardinality: 1..1</li>
+<li>Format: Concept
+<ul>
+<li>Should be from <a href="#privacy-enhancing-tools">Privacy Enhancing
+Tools</a> vocabulary</li>
+</ul></li>
+</ul></li>
+<li>Parameters used with the tool
+<ul>
+<li>Element-Name: <code>parameters</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: String</li>
+</ul></li>
+<li>Results of the tool use
+<ul>
+<li>Element-Name: <code>result</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: String</li>
+</ul></li>
+</ul>
+<h1 data-number="5" id="abstract-specification"><span
+class="header-section-number">5</span> Abstract Specification</h1>
+<p>The Data Provenance Standard is made up of three groups of metadata
+elements: Source, Provenance, and Use.</p>
+<figure>
+<img src="./out/ImageSource/metadata/metadata.svg"
+alt="Metadata Structure" />
+<figcaption aria-hidden="true">Metadata Structure</figcaption>
+</figure>
+<h2 data-number="5.1" id="source"><span
+class="header-section-number">5.1</span> Source</h2>
+<p>This group describes the dataset and the source of the dataset.</p>
+<ul>
+<li>Element-Name: <code>source</code></li>
+<li>cardinality: 1..1</li>
+<li>The following are child elements</li>
+</ul>
+<h3 data-number="5.1.1" id="standards-version-used"><span
+class="header-section-number">5.1.1</span> Standards version used</h3>
+<p>Specifies the version of the schema or standards used to define the
+metadata for this dataset, ensuring consistency and compatibility over
+time.</p>
+<ul>
+<li>Element-Name: <code>version</code></li>
+<li>cardinality: 1..1</li>
+<li>Format: String, Prefer Semantic Versioning (a.k.a., SemVer) format -
+https://semver.org/</li>
+<li>Example: <code>1.1.0</code></li>
+</ul>
+<h3 data-number="5.1.2" id="dataset-title-name"><span
+class="header-section-number">5.1.2</span> Dataset title / name</h3>
+<p>The official name of the dataset, which should be descriptive and
+help easily identify the dataset’s content and purpose.</p>
+<ul>
+<li>Element-Name: <code>title</code></li>
+<li>cardinality: 1..1</li>
+<li>Format: String</li>
+<li>Example: <code>Blue sky observations</code></li>
+</ul>
+<h3 data-number="5.1.3" id="unique-metadata-identifier"><span
+class="header-section-number">5.1.3</span> Unique metadata
+identifier</h3>
+<p>A distinct identifier (such as a UUID) assigned to the dataset’s
+metadata to uniquely distinguish it from others, ensuring no confusion
+or overlap.</p>
+<ul>
+<li>Element-Name: <code>id</code></li>
+<li>cardinality: 1..1</li>
+<li>Format: URI</li>
+<li>Example:
+<code>urn:uuid:17725bad-9098-4f43-abe6-43490ae1596c</code></li>
+</ul>
+<h3 data-number="5.1.4" id="metadata-location"><span
+class="header-section-number">5.1.4</span> Metadata location</h3>
+<p>Optional: The web address where the dataset’s metadata is published
+and can be accessed, providing a direct link to detailed information
+about the dataset. Typically will be a unique URL of the current
+dataset</p>
+<ul>
+<li>Element-Name: <code>location</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: URL</li>
+<li>Example: <code>https://example.org</code></li>
+</ul>
+<h3 data-number="5.1.5" id="dataset-issuer"><span
+class="header-section-number">5.1.5</span> Dataset issuer</h3>
+<p>The legal entity responsible for creating the dataset, providing
+accountability and a point of contact for inquiries.</p>
+<ul>
+<li>Element-Name: <code>issuer</code></li>
+<li>cardinality: 1..*</li>
+<li>Format: Organization</li>
+</ul>
+<h3 data-number="5.1.6" id="description-of-the-dataset"><span
+class="header-section-number">5.1.6</span> Description of the
+dataset</h3>
+<p>Contains a detailed narrative that explains the contents, scope, and
+purpose of the dataset. It provides essential contextual information
+that helps users understand what the data represents, how it was
+collected, and any limitations or recommended uses.</p>
+<ul>
+<li>Element-Name: <code>description</code></li>
+<li>cardinality: 1..1</li>
+<li>Format: Markdown</li>
+</ul>
+<h2 data-number="5.2" id="provenance"><span
+class="header-section-number">5.2</span> Provenance</h2>
+<p>This group describes the provenance of the dataset</p>
+<ul>
+<li>Element-Name: <code>provenance</code></li>
+<li>cardinality: 1..1</li>
+<li>The following are child elements</li>
+</ul>
+<h3 data-number="5.2.1" id="source-metadata-for-dataset"><span
+class="header-section-number">5.2.1</span> Source metadata for
+dataset</h3>
+<p>Identifies where the metadata for any source datasets that contribute
+to the current dataset can be found, establishing lineage and
+dependencies. This field establishes lineage.</p>
+<ul>
+<li>Element-Name: <code>source</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: URL</li>
+<li>Example: <code>https://example.org/dataset/blue.xml</code></li>
+</ul>
+<h3 data-number="5.2.2" id="source-for-dataset"><span
+class="header-section-number">5.2.2</span> Source for dataset</h3>
+<p>If the data originates from a different organization than the one who
+isued the dataset, this field identifies that original source’s legal
+name.</p>
+<ul>
+<li>Element-Name: <code>origin</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: <a href="#organization">Organization</a></li>
+</ul>
+<h3 data-number="5.2.3" id="data-origin-geography"><span
+class="header-section-number">5.2.3</span> Data origin geography</h3>
+<p>The geographical location where the data was originally collected,
+which can be important for compliance with regional laws and
+understanding the data’s context.</p>
+<ul>
+<li>Element-Name: <code>origin-geography</code></li>
+<li>cardinality: 1..*</li>
+<li>Format: <a href="#location">Location</a></li>
+</ul>
+<h3 data-number="5.2.4" id="dataset-issue-date"><span
+class="header-section-number">5.2.4</span> Dataset issue date</h3>
+<p>Manditory: The date when the dataset was compiled or created,
+providing a temporal context for the data.</p>
+<ul>
+<li>Element-Name: <code>date</code></li>
+<li>cardinality: 1..1</li>
+<li>Format: DateTime</li>
+<li>Example: <code>2024-05-27</code>, or
+<code>2024-05-27T15:18:02Z</code></li>
+</ul>
+<h3 data-number="5.2.5"
+id="date-of-previously-issued-version-of-the-dataset"><span
+class="header-section-number">5.2.5</span> Date of previously issued
+version of the dataset</h3>
+<p>Optional: The release date of the last version of the dataset, if it
+has been updated or revised, to track changes and updates over time.</p>
+<ul>
+<li>Element-Name: <code>previous-date</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: DateTime</li>
+<li>Example: <code>2024-05-27</code>, or
+<code>2024-05-27T15:18:02Z</code></li>
+</ul>
+<h3 data-number="5.2.6" id="range-of-dates-for-data-generation"><span
+class="header-section-number">5.2.6</span> Range of dates for data
+generation</h3>
+<p>Optional: The span of time during which the data within the dataset
+was collected or generated, offering insight into the dataset’s
+timeliness and relevance.</p>
+<ul>
+<li>Element-Name: <code>generation-period</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: <a href="#period">Period</a></li>
+</ul>
+<h3 data-number="5.2.7" id="method"><span
+class="header-section-number">5.2.7</span> Method</h3>
+<p>The methodology or procedures used to collect, generate, or compile
+the data, giving insight into its reliability and validity.</p>
+<ul>
+<li>Element-Name: <code>generation-method</code></li>
+<li>cardinality: 1..*</li>
+<li>Format: <a href="#concept">Concept</a>
+<ul>
+<li>SHALL be from <a href="#data-collection-methods">Specific method
+types</a> if applicable</li>
+</ul></li>
+<li>MAY be other code from other code systems</li>
+</ul>
+<h3 data-number="5.2.8" id="data-format"><span
+class="header-section-number">5.2.8</span> Data format</h3>
+<p>Describes the nature of the data within the dataset, such as
+numerical, textual, or multimedia, helping users understand what kind of
+information is contained within the file or dataset.,</p>
+<ul>
+<li>Element-Name: <code>format</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: String
+<ul>
+<li>SHALL be mime-type https://www.rfc-editor.org/rfc/rfc6838.html</li>
+<li>SHALL be from registered media-types
+http://www.iana.org/assignments/media-types/ if applicable</li>
+</ul></li>
+<li>Example: <code>application/json</code></li>
+</ul>
+<h2 data-number="5.3" id="use"><span
+class="header-section-number">5.3</span> Use</h2>
+<p>This group describes legal, use, and restrictions.</p>
+<ul>
+<li>Element-Name: <code>use</code></li>
+<li>cardinality: 1..1</li>
+<li>The following are child elements</li>
+</ul>
+<h3 data-number="5.3.1" id="confidentiality-classification"><span
+class="header-section-number">5.3.1</span> Confidentiality
+classification</h3>
+<p>Indicate if the dataset includes data falling into the
+confidentiality classification. Each classifier must be evaluated as
+true/false/unknown.</p>
+<ul>
+<li>Element-Name: <code>classification</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: <a href="#classification">Classification</a></li>
+<li>For each <a href="#data-regulation-codes">Regulation Domain</a> that
+has been evaluated</li>
+<li>Additional entries can be added</li>
+</ul>
+<h3 data-number="5.3.2" id="consent-documentation-location"><span
+class="header-section-number">5.3.2</span> Consent documentation
+location</h3>
+<p>Specifies where consent documentation or agreements related to the
+data can be found, ensuring legal compliance and regulatory use. This
+element must be populated when Privacy Consent is appropriate. When
+populated it points at either one Privacy Consent Policy that all
+individuals in the dataset agreed to, or one Privacy Policy for each
+individual in the dataset with that individuals signature.</p>
+<ul>
+<li>Element-Name: <code>consents</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: URL</li>
+<li>Example:
+<code>https://example.org/dataset/34/consent.pdf</code></li>
+</ul>
+<h3 data-number="5.3.3" id="privacy-indicators"><span
+class="header-section-number">5.3.3</span> Privacy indicators</h3>
+<p>Indicates whether techniques were used to protect personally
+identifiable information (PII) or sensitive personal information (SPI),
+highlighting the dataset’s privacy considerations.</p>
+<ul>
+<li>Element-Name: `privacy-indicators</li>
+<li>cardinality: 0..*</li>
+<li>Format: <a href="#privacyindicator">PrivacyIndicator</a></li>
+<li>using <a href="#privacy-enhancing-tools">Privacy Enhancing Tools</a>
+vocabulary</li>
+</ul>
+<h3 data-number="5.3.4" id="data-processing-geography-included"><span
+class="header-section-number">5.3.4</span> Data processing geography
+included</h3>
+<p>Defines the geographical boundaries within which the data can be
+processed, often for legal or regulatory reasons.</p>
+<ul>
+<li>Element-Name: <code>processing-included</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: <a href="#location">Location</a></li>
+<li>When not populated there are no processing location
+requirements</li>
+</ul>
+<h3 data-number="5.3.5" id="data-processing-geography-excluded"><span
+class="header-section-number">5.3.5</span> Data processing geography
+excluded</h3>
+<p>Defines the geographical boundaries within which the data canot be
+processed, often for legal or regulatory reasons.</p>
+<ul>
+<li>Element-Name: <code>processing-excluded</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: <a href="#location">Location</a></li>
+<li>When not populated there are no processing location
+restrictions</li>
+</ul>
+<h3 data-number="5.3.6" id="data-storage-geography-allowed"><span
+class="header-section-number">5.3.6</span> Data storage geography
+allowed</h3>
+<p>Specifies where the data may be stored, crucial for compliance with
+data sovereignty laws.</p>
+<ul>
+<li>Element-Name: <code>storage-allowed</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: <a href="#location">Location</a></li>
+<li>When not populated there are no defined storage location
+requirements</li>
+</ul>
+<h3 data-number="5.3.7" id="data-storage-geography-forbidden"><span
+class="header-section-number">5.3.7</span> Data storage geography
+forbidden</h3>
+<p>Specifies where the data may not be stored, crucial for compliance
+with data sovereignty laws.</p>
+<ul>
+<li>Element-Name: <code>storage-forbidden</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: <a href="#location">Location</a></li>
+<li>When not populated there are no defined storage location
+restrictions</li>
+</ul>
+<h3 data-number="5.3.8" id="license-to-use"><span
+class="header-section-number">5.3.8</span> License to use</h3>
+<p>Details the location or point of contact for identifying the terms
+under which the dataset can be used, including any restrictions or
+obligations, clarifying legal use and distribution rights.</p>
+<ul>
+<li>Element-Name: <code>license</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: String
+<ul>
+<li>Prefer License codes such as CreativeCommons or Apache</li>
+<li>May be a URL</li>
+</ul></li>
+<li>Example: <code>Apache-2.0</code></li>
+</ul>
+<h3 data-number="5.3.9" id="intended-data-use"><span
+class="header-section-number">5.3.9</span> Intended data use</h3>
+<p>Describes the purpose for which the dataset was created, guiding
+users on its intended use and potential applications against identified
+use cases. List all that</p>
+<ul>
+<li>Element-Name: <code>intended-purpose</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: <a href="#concept">Concept</a>
+<ul>
+<li>SHALL populate <code>code</code> from <a href="#data-use-codes">Data
+Use</a>.</li>
+<li>SHALL populate <code>description</code> with specific
+description</li>
+<li>When using the code <code>non-ai-other</code> and
+<code>ai-other</code>, the description SHALL describe the actual
+use</li>
+</ul></li>
+</ul>
+<h3 data-number="5.3.10" id="forbidden-data-use"><span
+class="header-section-number">5.3.10</span> Forbidden data use</h3>
+<p>Describes the purposes for which the dataset is not intended and can
+not be used.</p>
+<ul>
+<li>Element-Name: <code>forbidden-purpose</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: <a href="#concept">Concept</a>
+<ul>
+<li>SHALL populate <code>code</code> from <a href="#data-use-codes">Data
+Use</a>.</li>
+<li>SHALL populate <code>description</code> with specific
+description</li>
+<li>When using the code <code>non-ai-other</code> and
+<code>ai-other</code>, the description SHALL describe the actual
+use</li>
+</ul></li>
+</ul>
+<h3 data-number="5.3.11" id="copyright"><span
+class="header-section-number">5.3.11</span> Copyright</h3>
+<p>Indicates whether the dataset contains propritary information that is
+covered with a Copyright, and the terms of said Copyright.</p>
+<ul>
+<li>Element-Name: <code>copyright</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: String
+<ul>
+<li>where the string <code>no</code> indicates no Copyright</li>
+</ul></li>
+</ul>
+<h3 data-number="5.3.12" id="patent"><span
+class="header-section-number">5.3.12</span> Patent</h3>
+<p>Indicates whether the dataset contains propritary information that is
+covered with a Patent, and the said Patent number.</p>
+<ul>
+<li>Element-Name: <code>patent</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: String
+<ul>
+<li>where the string <code>no</code> indicates no Patent</li>
+</ul></li>
+</ul>
+<h3 data-number="5.3.13" id="trademark"><span
+class="header-section-number">5.3.13</span> Trademark</h3>
+<p>Indicates whether the dataset contains propritary information that is
+covered with a Trademark, and the terms of said Trademark.</p>
+<ul>
+<li>Element-Name: <code>trademark</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: String
+<ul>
+<li>where the string <code>no</code> indicates no Trademark</li>
+</ul></li>
+</ul>
+<h1 data-number="6" id="technical-encoding"><span
+class="header-section-number">6</span> Technical Encoding</h1>
+<p>The detailed schema specification for JSON, XML, and YAML are
+published independently in GIThub repositories. In these repositories
+the following are to be found:</p>
+<ul>
+<li>schema - technical encoding of the rules</li>
+<li>required vocabulary in that encoding format</li>
+<li>examples</li>
+</ul>
+<h2 data-number="6.1" id="technical-schema"><span
+class="header-section-number">6.1</span> Technical Schema</h2>
+<h3 data-number="6.1.1" id="json-metadata-encoding"><span
+class="header-section-number">6.1.1</span> JSON Metadata Encoding</h3>
+<p>The technical coding and examples are available in GIThub for the <a
+href="https://github.com/Data-and-Trust-Alliance/json-metadata">JSON
+Metadata encoding</a></p>
+<h3 data-number="6.1.2" id="xml-metadata-encoding"><span
+class="header-section-number">6.1.2</span> XML Metadata Encoding</h3>
+<p>The technical coding and examples are available in GIThub for the <a
+href="https://github.com/Data-and-Trust-Alliance/xml-metadata">XML
+Metadata encoding</a></p>
+<h3 data-number="6.1.3" id="yaml-metadata-encoding"><span
+class="header-section-number">6.1.3</span> YAML Metadata Encoding</h3>
+<p>The technical coding and examples are available in GIThub for the <a
+href="https://github.com/Data-and-Trust-Alliance/yaml-metadata">YAML
+Metadata encoding</a></p>
+<h1 data-number="7" id="security-considerations"><span
+class="header-section-number">7</span> Security considerations</h1>
+<p>TODO: This section should advise the reader on security or privacy
+things they should be aware of and for which a user of this
+specification will need to consider. Often it is just a listing of risks
+that the specification does not address, but for which the specification
+creates. Such as the fact that datasets and metadata are sensitive data
+and would need to be protected or carefully crafted such that they are
+not a risk.</p>
+<p>Metadata and the Dataset are data that need to be of quality and
+trustable to be valuable…. blah blah</p>
+<h1 data-number="8" id="annex"><span
+class="header-section-number">8</span> Annex</h1>
+<p>The Annex contain normative vocabulary to be used when it applies.
+These vocabulary SHALL be used when they apply.</p>
+<h2 data-number="8.1" id="data-collection-method-codes"><span
+class="header-section-number">8.1</span> Data Collection Method
+Codes</h2>
+<p>The following defined vocabulary are to be used for the “Method”.</p>
+<ul>
+<li>source URI:
+<code>https://github.com/Data-and-Trust-Alliance/DPS/CodeSystem/Method</code></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>code</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>web-scraping-crawling-textual</td>
+<td>Web scraping/Crawling Textual</td>
+</tr>
+<tr class="even">
+<td>web-scraping-crawling-structured</td>
+<td>Web scraping/Crawling Structured</td>
+</tr>
+<tr class="odd">
+<td>web-scraping-crawling-metadata</td>
+<td>Web scraping/Crawling Metadata</td>
+</tr>
+<tr class="even">
+<td>web-scraping-crawling-social-media</td>
+<td>Web scraping/Crawling Social media</td>
+</tr>
+<tr class="odd">
+<td>web-scraping-crawling-news-articles</td>
+<td>Web scraping/Crawling News &amp; articles</td>
+</tr>
+<tr class="even">
+<td>web-scraping-crawling-other</td>
+<td>Web scraping/Crawling Other</td>
+</tr>
+<tr class="odd">
+<td>feeds-rss-source</td>
+<td>Feeds RSS source</td>
+</tr>
+<tr class="even">
+<td>feeds-api-source</td>
+<td>Feeds API source</td>
+</tr>
+<tr class="odd">
+<td>feeds-real-time-database-info</td>
+<td>Feeds Real time database info</td>
+</tr>
+<tr class="even">
+<td>feeds-interval-timed-database-info</td>
+<td>Feeds Interval timed database info</td>
+</tr>
+<tr class="odd">
+<td>feeds-file-feed-info</td>
+<td>Feeds File feed info</td>
+</tr>
+<tr class="even">
+<td>feeds-other</td>
+<td>Feeds Other</td>
+</tr>
+<tr class="odd">
+<td>syndication-news-feeds</td>
+<td>Syndication News feeds</td>
+</tr>
+<tr class="even">
+<td>syndication-financial-feeds</td>
+<td>Syndication Financial feeds</td>
+</tr>
+<tr class="odd">
+<td>syndication-social-media</td>
+<td>Syndication Social media</td>
+</tr>
+<tr class="even">
+<td>syndication-product-service-catalog</td>
+<td>Syndication Product/service catalog</td>
+</tr>
+<tr class="odd">
+<td>syndication-other</td>
+<td>Syndication Other</td>
+</tr>
+<tr class="even">
+<td>data-mining-association-rule</td>
+<td>Data mining Association rule</td>
+</tr>
+<tr class="odd">
+<td>data-mining-classification</td>
+<td>Data mining Classification</td>
+</tr>
+<tr class="even">
+<td>data-mining-clustering</td>
+<td>Data mining Clustering</td>
+</tr>
+<tr class="odd">
+<td>data-mining-regression</td>
+<td>Data mining Regression</td>
+</tr>
+<tr class="even">
+<td>data-mining-anomaly-detection</td>
+<td>Data mining Anomaly detection</td>
+</tr>
+<tr class="odd">
+<td>data-mining-sequencing</td>
+<td>Data mining Sequencing</td>
+</tr>
+<tr class="even">
+<td>data-mining-other</td>
+<td>Data mining Other</td>
+</tr>
+<tr class="odd">
+<td>machine-generated-mlops-synthetic</td>
+<td>Machine generated/MLOps Synthetic</td>
+</tr>
+<tr class="even">
+<td>machine-generated-mlops-generative</td>
+<td>Machine generated/MLOps Generative</td>
+</tr>
+<tr class="odd">
+<td>machine-generated-mlops-twin</td>
+<td>Machine generated/MLOps Twin</td>
+</tr>
+<tr class="even">
+<td>machine-generated-mlops-machine-2-machine</td>
+<td>Machine generated/MLOps Machine-2-machine (M2M)</td>
+</tr>
+<tr class="odd">
+<td>machine-generated-mlops-ai-inferred</td>
+<td>Machine generated/MLOps AI inferred</td>
+</tr>
+<tr class="even">
+<td>machine-generated-mlops-xr</td>
+<td>Machine generated/MLOps XR (AR, VR, MR)</td>
+</tr>
+<tr class="odd">
+<td>machine-generated-mlops-other</td>
+<td>Machine generated/MLOps Other</td>
+</tr>
+<tr class="even">
+<td>sensor-and-iot-output-environmental</td>
+<td>Sensor and IoT output Environmental</td>
+</tr>
+<tr class="odd">
+<td>sensor-and-iot-output-motion-location</td>
+<td>Sensor and IoT output Motion &amp; location</td>
+</tr>
+<tr class="even">
+<td>sensor-and-iot-output-health</td>
+<td>Sensor and IoT output Health</td>
+</tr>
+<tr class="odd">
+<td>sensor-and-iot-output-biometric</td>
+<td>Sensor and IoT output Biometric</td>
+</tr>
+<tr class="even">
+<td>sensor-and-iot-output-energy-consumption</td>
+<td>Sensor and IoT output Energy consumption</td>
+</tr>
+<tr class="odd">
+<td>sensor-and-iot-output-industrial-sensor</td>
+<td>Sensor and IoT output Industrial sensor</td>
+</tr>
+<tr class="even">
+<td>soensor-and-iot-output-vehicle-transportation</td>
+<td>Sensor and IoT output Vehicle &amp; transportation</td>
+</tr>
+<tr class="odd">
+<td>sensor-and-iot-output-security-surveillance</td>
+<td>Sensor and IoT output Security &amp; surveillance</td>
+</tr>
+<tr class="even">
+<td>sensor-and-iot-output-agriculture-environment</td>
+<td>Sensor and IoT output Agriculture &amp; environment</td>
+</tr>
+<tr class="odd">
+<td>sensor-and-iot-output-other</td>
+<td>Sensor and IoT output Other</td>
+</tr>
+<tr class="even">
+<td>social-media-text-based</td>
+<td>Social media Text based</td>
+</tr>
+<tr class="odd">
+<td>social-media-multimedia</td>
+<td>Social media Multimedia</td>
+</tr>
+<tr class="even">
+<td>social-media-reviews-and-ratings</td>
+<td>Social media Reviews and ratings</td>
+</tr>
+<tr class="odd">
+<td>social-media-updates</td>
+<td>Social media Updates</td>
+</tr>
+<tr class="even">
+<td>social-media-q-and-a</td>
+<td>Social media Q&amp;As</td>
+</tr>
+<tr class="odd">
+<td>social-media-collaborative</td>
+<td>Social media Collaborative</td>
+</tr>
+<tr class="even">
+<td>social-media-creative</td>
+<td>Social media Creative</td>
+</tr>
+<tr class="odd">
+<td>social-media-other</td>
+<td>Social media Other</td>
+</tr>
+<tr class="even">
+<td>user-generated-content-clickstream</td>
+<td>User generated content Clickstream</td>
+</tr>
+<tr class="odd">
+<td>user-generated-content-social-media</td>
+<td>User generated content Social media</td>
+</tr>
+<tr class="even">
+<td>user-generated-content-behavior</td>
+<td>User generated content Behavior</td>
+</tr>
+<tr class="odd">
+<td>user-generated-content-ratings-and-reviews</td>
+<td>User generated content Ratings &amp; reviews</td>
+</tr>
+<tr class="even">
+<td>user-generated-content-multimedia</td>
+<td>User generated content Multimedia</td>
+</tr>
+<tr class="odd">
+<td>user-generated-content-other</td>
+<td>User generated content Other</td>
+</tr>
+<tr class="even">
+<td>primary-user-source-survey-questionaire</td>
+<td>Primary user source Survey/Questionnaire</td>
+</tr>
+<tr class="odd">
+<td>primary-user-source-interview</td>
+<td>Primary user source Interview</td>
+</tr>
+<tr class="even">
+<td>primary-user-source-event</td>
+<td>Primary user source Event</td>
+</tr>
+<tr class="odd">
+<td>primary-user-source-biometric</td>
+<td>Primary user source Biometric</td>
+</tr>
+<tr class="even">
+<td>primary-user-source-focus-group</td>
+<td>Primary user source Focus Group</td>
+</tr>
+<tr class="odd">
+<td>primary-user-source-other</td>
+<td>Primary user source Other</td>
+</tr>
+<tr class="even">
+<td>data-augmentation-na</td>
+<td>Data augmentation N/A</td>
+</tr>
+<tr class="odd">
+<td>transfer-learning-na</td>
+<td>Transfer learning N/A</td>
+</tr>
+<tr class="even">
+<td>simulations-na</td>
+<td>Simulations N/A</td>
+</tr>
+<tr class="odd">
+<td>other-na</td>
+<td>Other N/A</td>
+</tr>
+</tbody>
+</table>
+<h2 data-number="8.2" id="privacy-enhancing-tools-codes"><span
+class="header-section-number">8.2</span> Privacy Enhancing Tools
+Codes</h2>
+<p>The following concepts are defined to describe privacy enhancing
+tools (PET).</p>
+<ul>
+<li>source URI:
+<code>https://github.com/Data-and-Trust-Alliance/DPS/CodeSystem/PET</code></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>code</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>data-anonymization</td>
+<td>Data Anonymization</td>
+</tr>
+<tr class="even">
+<td>data-encryption</td>
+<td>Data Encryption</td>
+</tr>
+<tr class="odd">
+<td>data-masking</td>
+<td>Data Masking</td>
+</tr>
+<tr class="even">
+<td>data-minimization</td>
+<td>Data Minimization</td>
+</tr>
+<tr class="odd">
+<td>data-redaction</td>
+<td>Data Redaction</td>
+</tr>
+<tr class="even">
+<td>differential-privacy</td>
+<td>Differential Privacy</td>
+</tr>
+<tr class="odd">
+<td>federated-learning</td>
+<td>Federated Learning</td>
+</tr>
+<tr class="even">
+<td>homomorphic-encryption</td>
+<td>Homomorphic Encryption</td>
+</tr>
+<tr class="odd">
+<td>k-anonymity</td>
+<td>K-anonymity</td>
+</tr>
+<tr class="even">
+<td>l-diversity</td>
+<td>L-diversity</td>
+</tr>
+<tr class="odd">
+<td>pseudonymization</td>
+<td>Pseudonymization</td>
+</tr>
+<tr class="even">
+<td>secure-multi-party-computation</td>
+<td>Secure Multi-party Computation (SMC)</td>
+</tr>
+<tr class="odd">
+<td>t-closeness</td>
+<td>T-closeness</td>
+</tr>
+<tr class="even">
+<td>tokenization</td>
+<td>Tokenization</td>
+</tr>
+</tbody>
+</table>
+<h2 data-number="8.3" id="data-use-codes"><span
+class="header-section-number">8.3</span> Data Use Codes</h2>
+<p>The following concepts are defined to describe intended and forbidden
+uses of the dataset</p>
+<ul>
+<li>source URI:
+<code>https://github.com/Data-and-Trust-Alliance/DPS/CodeSystem/Use</code></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>code</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>non-ai-staging</td>
+<td>Non-AI Staging/testing</td>
+</tr>
+<tr class="even">
+<td>non-ai-production</td>
+<td>Non-AI Production</td>
+</tr>
+<tr class="odd">
+<td>non-ai-quality</td>
+<td>Non-AI Quality assurance</td>
+</tr>
+<tr class="even">
+<td>non-ai-other</td>
+<td>Non-AI Other</td>
+</tr>
+<tr class="odd">
+<td>ai-pre-training</td>
+<td>AI Pre-Training</td>
+</tr>
+<tr class="even">
+<td>ai-alignment</td>
+<td>AI Alignment</td>
+</tr>
+<tr class="odd">
+<td>ai-evaluation</td>
+<td>AI Evaluation</td>
+</tr>
+<tr class="even">
+<td>ai-synthetic</td>
+<td>AI Sythentic Data Generation</td>
+</tr>
+<tr class="odd">
+<td>ai-other</td>
+<td>AI Other</td>
+</tr>
+</tbody>
+</table>
+<p>Where: <code>non-ai-other</code>, and <code>ai-other</code></p>
+<h2 data-number="8.4" id="data-regulation-codes"><span
+class="header-section-number">8.4</span> Data Regulation Codes</h2>
+<p>The following concepts are defined to indicate specific global
+regulated domains of relevance</p>
+<ul>
+<li>source URI:
+`https://github.com/Data-and-Trust-Alliance/DSP/Regulations</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>code</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>pi</td>
+<td>Personal Information (PI)/Demographic</td>
+</tr>
+<tr class="even">
+<td>pci</td>
+<td>Payment Card Industry (PCI)</td>
+</tr>
+<tr class="odd">
+<td>pfi</td>
+<td>Personal Financial Information (PFI)</td>
+</tr>
+<tr class="even">
+<td>pii</td>
+<td>Personally Identifiable Information (PII)</td>
+</tr>
+<tr class="odd">
+<td>phi</td>
+<td>Personal Health Information (PHI)</td>
+</tr>
+<tr class="even">
+<td>spi</td>
+<td>Sensitive Personal Information (SPI)</td>
+</tr>
+</tbody>
+</table>
+<h1 data-number="9" id="acknowledgements"><span
+class="header-section-number">9</span> Acknowledgements</h1>
+<p>Acknowledgements to the <a
+href="https://dataandtrustalliance.org/who-we-are">Members of the Data
+and Trust Alliance</a></p>
+<p><strong>AARP</strong></p>
+<ul>
+<li>Amr Khani
+<ul>
+<li>SVP, Data and Analytics</li>
+</ul></li>
+<li>Jaye Campbell
+<ul>
+<li>Legal Leader, General Counsel</li>
+</ul></li>
+</ul>
+<p><strong>American Express</strong></p>
+<ul>
+<li>Laurel Shifrin
+<ul>
+<li>VP, Enterprise Data Governance</li>
+</ul></li>
+<li>Saheel Shah
+<ul>
+<li>Director, Enterprise Data Governance</li>
+</ul></li>
+</ul>
+<p><strong>CVS</strong></p>
+<ul>
+<li>Dave Sturgeon
+<ul>
+<li>Executive Director, Data Governance and Enablement</li>
+</ul></li>
+<li>Herb Holmes
+<ul>
+<li>Data Governance &amp; Data Management Leader</li>
+</ul></li>
+</ul>
+<p><strong>Deloitte</strong></p>
+<ul>
+<li>Juan Tello
+<ul>
+<li>U.S. CDO, Strategy &amp; Analytics Principal</li>
+</ul></li>
+<li>Leo Cabrera, Rohit Iyer, and Ajay Tripathi
+<ul>
+<li>Office of CDO</li>
+</ul></li>
+</ul>
+<p><strong>GM</strong></p>
+<ul>
+<li>Jon Francis
+<ul>
+<li>Chief Data &amp; Analytics Officer</li>
+</ul></li>
+<li>Brian Ames
+<ul>
+<li>Principal Software Engineer</li>
+</ul></li>
+</ul>
+<p><strong>Howso</strong></p>
+<ul>
+<li>Chris Hazard
+<ul>
+<li>Chief Technology Officer</li>
+</ul></li>
+<li>Michael Meehan
+<ul>
+<li>General Counsel</li>
+</ul></li>
+</ul>
+<p><strong>Humana</strong></p>
+<ul>
+<li>Genevy Dimitrion
+<ul>
+<li>VP, Data Strategy &amp; Governance</li>
+</ul></li>
+</ul>
+<p><strong>IBM</strong></p>
+<ul>
+<li>Lee Cox
+<ul>
+<li>VP, Integrated Governance &amp; Market Readiness, Office of Privacy
+and Responsible Tech.</li>
+</ul></li>
+<li>Bryan Bortnick
+<ul>
+<li>Counsel, Data Governance</li>
+</ul></li>
+<li>Bryan Kyle
+<ul>
+<li>Sr. Technical Staff Member, Data Eng., Chief Data Office</li>
+</ul></li>
+<li>Orla Flannery
+<ul>
+<li>Privacy Program Manager</li>
+</ul></li>
+</ul>
+<p><strong>Kenvue</strong></p>
+<ul>
+<li>Bernardo Tavares
+<ul>
+<li>Chief Technology &amp; Data Officer</li>
+</ul></li>
+<li>Ajay Dhaul
+<ul>
+<li>SVP Global Data</li>
+</ul></li>
+<li>Kim Viccaro
+<ul>
+<li>Data Strategy &amp; Activation Lead</li>
+</ul></li>
+<li>Sudheesh Kamath
+<ul>
+<li>Data &amp; AI Products Leader</li>
+</ul></li>
+</ul>
+<p><strong>Mastercard</strong></p>
+<ul>
+<li>Travis Carpenter
+<ul>
+<li>VP, Data Quality &amp; Sources</li>
+</ul></li>
+<li>Ed Dephilippis
+<ul>
+<li>VP, Data Management &amp; Quality</li>
+</ul></li>
+<li>Usha Ramalingam
+<ul>
+<li>Director, Data Management</li>
+</ul></li>
+</ul>
+<p><strong>Nielsen</strong></p>
+<ul>
+<li>Christine Pierce
+<ul>
+<li>Chief Data Officer</li>
+</ul></li>
+<li>Frank Fasinski
+<ul>
+<li>Director, Data Science</li>
+</ul></li>
+</ul>
+<p><strong>Nike</strong></p>
+<ul>
+<li>Emily White
+<ul>
+<li>Vice President, Enterprise Data &amp; Analytics</li>
+</ul></li>
+</ul>
+<p><strong>Pfizer</strong></p>
+<ul>
+<li>Peter Hunter
+<ul>
+<li>Sr Director, Analytic Tools</li>
+</ul></li>
+<li>Gentiana Spahiu
+<ul>
+<li>Director, Data Gov. Lead</li>
+</ul></li>
+<li>Michael Pagliorola, Sasi Mullangi, Adam Nieto, John Pastor, Drew
+Palsgrove, and Jay Shetty</li>
+</ul>
+<p><strong>Regions</strong></p>
+<ul>
+<li>Dilip Balachandran
+<ul>
+<li>SVP, Enterprise Data Management</li>
+</ul></li>
+</ul>
+<p><strong>Smithsonian</strong></p>
+<ul>
+<li>Alan Hejnal
+<ul>
+<li>Data Quality Manager</li>
+</ul></li>
+<li>Derrick Whitney
+<ul>
+<li>Interim CDO</li>
+</ul></li>
+<li>Adam Soroka
+<ul>
+<li>Office of Research Computing</li>
+</ul></li>
+</ul>
+<p><strong>Transcarent</strong></p>
+<ul>
+<li>Thi Montalvo
+<ul>
+<li>VP Reporting and Analytics</li>
+</ul></li>
+<li>Thomas Birchfield
+<ul>
+<li>Technical Program Manager</li>
+</ul></li>
+</ul>
+<p><strong>UPS</strong></p>
+<ul>
+<li>Mallory Freeman
+<ul>
+<li>VP, Enterprise Data and Analytics</li>
+</ul></li>
+<li>Zeenat Syed
+<ul>
+<li>Director of Data Strategy</li>
+</ul></li>
+<li>Ricardo Rodriguez
+<ul>
+<li>Sr Manager, Data Science and Machine Learning</li>
+</ul></li>
+</ul>
+<p><strong>Walmart</strong></p>
+<ul>
+<li>Gregory Schaffer
+<ul>
+<li>Chief Counsel, Cyber Security &amp; VP, Digital Trust
+Compliance</li>
+</ul></li>
+<li>Laura Asbury
+<ul>
+<li>Director, Digital Trust Compliance</li>
+</ul></li>
+</ul>
+<p><strong>Warby Parker</strong></p>
+<ul>
+<li>Peter Cross
+<ul>
+<li>Head of Data</li>
+</ul></li>
+<li>Chris Bleakley
+<ul>
+<li>Engineering Director</li>
+</ul></li>
+</ul>

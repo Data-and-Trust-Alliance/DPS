@@ -264,106 +264,6 @@ Through application of the data provenance standards metadata for its global tar
 - Legal compliance
   - Detailed metadata on data processing and storage geographies, consent locations, and the license to use the data ensured that all AI operations remained within legal boundaries, respecting data sovereignty laws and consent agreements.
 
-# Datatypes
-
-## Primitive Datatypes
-
-These datatypes are commonly understood.
-
-- **String** - A sequence of Unicode characters
-- **URI** - A Uniform Resource Identifier Reference [RFC 3986](https://www.rfc-editor.org/rfc/rfc3986). Note: URIs are case sensitive. For UUID (urn:uuid:53fefa32-fcbb-4ff8-8a92-55ee120877b7) use all lowercase
-- **URL** - A Uniform Resource Locator [RFC 1738](https://datatracker.ietf.org/doc/html/rfc1738). Note URLs are accessed directly using the specified protocol. Common URL protocols are http{s}:, ftp:, mailto: and mllp:, though many others are defined
-- **Markdown** - A String that can include markdown. This specification requires and uses the [GFM (Github Flavored Markdown)](https://github.github.com/gfm/) extensions on [CommonMark](http://spec.commonmark.org/0.28/) format, with the exception of support for inline HTML which is not supported.
-- **dateTime**	A date, date-time or partial date (e.g. just year or year + month) as used in human communication. The format is a subset of [ISO8601](https://www.iso.org/iso-8601-date-and-time-format.html) icon: YYYY, YYYY-MM, YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz, e.g. 2018, 1973-06, 1905-08-23, 2015-02-07T13:28:17-05:00 or 2017-01-01T00:00:00.000Z. If hours and minutes are specified, a timezone offset SHALL be populated. Actual timezone codes can be sent using the Timezone Code extension, if desired. Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored at receiver discretion. Milliseconds are optionally allowed. Dates SHALL be valid dates. The time "24:00" is not allowed. Leap Seconds are allowed
-
-## Complex Datatypes
-
-These are made up of more than one child element as described.
-
-![Datatype Structure](./out/ImageSource/datatypes/datatypes.svg)
-
-## Organization
-
-- Legal Entity Name
-  - Element-Name: `name`
-  - cardinality: 1..1
-  - Format: String
-- Legal entity Address
-  - Element-Name: `address`
-  - cardinality: 0..*
-  - Format: String
-
-## Location
-
-- Country 
-    - Element-Name: `country`
-    - cardinality: 1..1
-    - Format: String
-        - SHOULD be ISO 3166 2 letter, 3 letter code, or 3 digit country codes
-- State or Provenance
-    - Element-Name: `state`
-    - cardinality: 0..1
-    - Format: String
-        - SHOULD be ISO 3166-2: Codes for the names of the principal subdivisions (e.g., states or provinces) of all countries coded in ISO 3166-1.
-
-## Period
-
-- Start date/time
-    - Element-Name: `start`
-    - cardinality: 0..1
-    - Format: DateTime
-    - if empty, there is no start
-- End date/time
-    - Element-Name: `end`
-    - cardinality: 0..1
-    - Format: DateTime
-    - if empty, there is no end
-
-## Concept
-
-- specific code for computable
-    - Element-Name: `code`
-    - cardinality: 0..1
-    - Format: String
-        - Should be from a given vocabulary
-        - SHOULD be compute friendly, without spaces
-- source of code
-    - Element-Name: `system`
-    - cardinality: 0..1
-    - Format: URI
-- description of code for human 
-    - Element-Name: `description`
-    - cardinality: 0..1
-    - Format: String
-
-## Classification
-
-- specific global regulation domain
-    - Element-Name: `regulation`
-    - cardinality: 1..1
-    - Format: Concept
-        - Should be from [Data Regulation Codes](#data-regulation-codes)
-- Has the dataset been evaluated to the regulation domain?
-    - Element-Name: `evaluated`
-    - cardinality: 1..1
-    - Format: Boolean
-
-## PrivacyIndicator
-
-- specific global regulation domain
-    - Element-Name: `tool`
-    - cardinality: 1..1
-    - Format: Concept
-        - Should be from [Privacy Enhancing Tools](#privacy-enhancing-tools) vocabulary
-- Parameters used with the tool
-    - Element-Name: `parameters`
-    - cardinality: 0..1
-    - Format: String
-- Results of the tool use
-    - Element-Name: `result`
-    - cardinality: 0..1
-    - Format: String
-
 # Abstract Specification
 
 The Data Provenance Standard is made up of three groups of metadata elements: Source, Provenance, and Use.
@@ -641,6 +541,104 @@ Indicates whether the dataset contains propritary information that is covered wi
 - cardinality: 0..*
 - Format: String
   - where the string `no` indicates no Trademark
+
+## Primitive Datatypes
+
+These datatypes are commonly understood.
+
+- **String** - A sequence of Unicode characters
+- **URI** - A Uniform Resource Identifier Reference [RFC 3986](https://www.rfc-editor.org/rfc/rfc3986). Note: URIs are case sensitive. For UUID (urn:uuid:53fefa32-fcbb-4ff8-8a92-55ee120877b7) use all lowercase
+- **URL** - A Uniform Resource Locator [RFC 1738](https://datatracker.ietf.org/doc/html/rfc1738). Note URLs are accessed directly using the specified protocol. Common URL protocols are http{s}:, ftp:, mailto: and mllp:, though many others are defined
+- **Markdown** - A String that can include markdown. This specification requires and uses the [GFM (Github Flavored Markdown)](https://github.github.com/gfm/) extensions on [CommonMark](http://spec.commonmark.org/0.28/) format, with the exception of support for inline HTML which is not supported.
+- **dateTime**	A date, date-time or partial date (e.g. just year or year + month) as used in human communication. The format is a subset of [ISO8601](https://www.iso.org/iso-8601-date-and-time-format.html) icon: YYYY, YYYY-MM, YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz, e.g. 2018, 1973-06, 1905-08-23, 2015-02-07T13:28:17-05:00 or 2017-01-01T00:00:00.000Z. If hours and minutes are specified, a timezone offset SHALL be populated. Actual timezone codes can be sent using the Timezone Code extension, if desired. Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored at receiver discretion. Milliseconds are optionally allowed. Dates SHALL be valid dates. The time "24:00" is not allowed. Leap Seconds are allowed
+
+## Complex Datatypes
+
+These are made up of more than one child element as described.
+
+![Datatype Structure](./out/ImageSource/datatypes/datatypes.svg)
+
+### Organization
+
+- Legal Entity Name
+  - Element-Name: `name`
+  - cardinality: 1..1
+  - Format: String
+- Legal entity Address
+  - Element-Name: `address`
+  - cardinality: 0..*
+  - Format: String
+
+### Location
+
+- Country 
+    - Element-Name: `country`
+    - cardinality: 1..1
+    - Format: String
+        - SHOULD be ISO 3166 2 letter, 3 letter code, or 3 digit country codes
+- State or Provenance
+    - Element-Name: `state`
+    - cardinality: 0..1
+    - Format: String
+        - SHOULD be ISO 3166-2: Codes for the names of the principal subdivisions (e.g., states or provinces) of all countries coded in ISO 3166-1.
+
+### Period
+
+- Start date/time
+    - Element-Name: `start`
+    - cardinality: 0..1
+    - Format: DateTime
+    - if empty, there is no start
+- End date/time
+    - Element-Name: `end`
+    - cardinality: 0..1
+    - Format: DateTime
+    - if empty, there is no end
+
+### Concept
+
+- specific code for computable
+    - Element-Name: `code`
+    - cardinality: 0..1
+    - Format: String
+        - Should be from a given vocabulary
+        - SHOULD be compute friendly, without spaces
+- source of code
+    - Element-Name: `system`
+    - cardinality: 0..1
+    - Format: URI
+- description of code for human 
+    - Element-Name: `description`
+    - cardinality: 0..1
+    - Format: String
+
+### Classification
+
+- specific global regulation domain
+    - Element-Name: `regulation`
+    - cardinality: 1..1
+    - Format: Concept
+        - Should be from [Data Regulation Codes](#data-regulation-codes)
+- Has the dataset been evaluated to the regulation domain?
+    - Element-Name: `evaluated`
+    - cardinality: 1..1
+    - Format: Boolean
+
+### PrivacyIndicator
+
+- specific global regulation domain
+    - Element-Name: `tool`
+    - cardinality: 1..1
+    - Format: Concept
+        - Should be from [Privacy Enhancing Tools](#privacy-enhancing-tools) vocabulary
+- Parameters used with the tool
+    - Element-Name: `parameters`
+    - cardinality: 0..1
+    - Format: String
+- Results of the tool use
+    - Element-Name: `result`
+    - cardinality: 0..1
+    - Format: String
 
 # Technical Encoding
 

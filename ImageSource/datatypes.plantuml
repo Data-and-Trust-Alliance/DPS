@@ -1,5 +1,5 @@
 @startuml 
-title DataTypes - May 2024
+title Complex DataTypes
 
 abstract class Organization {
     Legal entity
@@ -28,4 +28,18 @@ abstract class Concept {
     description : String[0..1]
 }
 
+abstract class Classification {
+    Sensitivity Classifications
+    -----
+    regulation : Concept[1..1]
+    evaluated : boolean[1..1]
+}
+
+abstract class PrivacyIndicators {
+    Indicate the privacy tools used and results obtained
+    -----
+    tool : Concept[1..1] - from Privacy Enhancing Tools
+    parameters : String[0..1]
+    result : String[0..1]
+}
 @enduml

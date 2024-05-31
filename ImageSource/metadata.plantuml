@@ -1,5 +1,5 @@
 @startuml 
-title Data Provenance - May 2024
+title Data Provenance
 
 entity Data
 
@@ -55,22 +55,5 @@ abstract class Use {
     trademark : String[0..*]
 }
 
-Use  *-down- Classification 
-Use *-down- PrivacyIndicators
 
-
-abstract class Classification {
-    Sensitivity Classifications
-    -----
-    regulation : Concept[1..1]
-    evaluated : boolean[1..1]
-}
-
-abstract class PrivacyIndicators {
-    Indicate the privacy tools used and results obtained
-    -----
-    tool : Concept[1..1] - from Privacy Enhancing Tools
-    parameters : String[0..1]
-    result : String[0..1]
-}
 @enduml

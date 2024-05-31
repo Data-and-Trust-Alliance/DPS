@@ -29,6 +29,10 @@ Punch List of work to do:
   - am using `https://github.com/Data-and-Trust-Alliance/DPS/` today
 - Security Considerations
 - Review top-to-bottom for readability, flow, and completeness
+- Should there be a TOC?
+- Should we manually number the headers? If so, then all links need to be fixed.
+
+Other todo:
 
 - Reference GIThub repo with reference implementation and sample applications
 - Need at least one of the technical formats drafted, and place holder for the other two. 
@@ -37,7 +41,11 @@ Punch List of work to do:
 
 ## Convert to html
 
-pandoc --number-sections < specification.md > out.html
+pandoc --number-sections -t html -f gfm specification.md -o out.html
 
 need to add more style such as
 - tables should have lines
+
+## Convert to text
+
+pandoc --number-sections --wrap=none -t plain -f gfm specification.md -o out.txt

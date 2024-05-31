@@ -14,7 +14,8 @@ Alliance</a></li>
 <li>Kristina Podnar</li>
 <li>John Moehrke</li>
 </ul>
-<p><strong>Comments</strong> inquiries@dataandtrustalliance.org</p>
+<p><strong>Comments</strong> <a
+href="mailto:inquiries@dataandtrustalliance.org">inquiries@dataandtrustalliance.org</a></p>
 <p><strong>License</strong> <a
 href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
 Attribution-ShareAlike 4.0 International</a></p>
@@ -49,7 +50,7 @@ and rights associated with data allows enterprises to make informed
 choices about the data they source and use. The result can be
 improvements in operational efficiency, regulatory compliance,
 collaboration and value generation.</p>
-<h2 data-number="2.1" id="the-data-trust-alliance"><span
+<h2 data-number="2.1" id="the-data--trust-alliance"><span
 class="header-section-number">2.1</span> The Data &amp; Trust
 Alliance</h2>
 <p>The Data &amp; Trust Alliance brings together leading businesses and
@@ -67,8 +68,8 @@ class="header-section-number">2.2</span> Normative vs Informative</h2>
 href="https://www.rfc-editor.org/info/bcp14">Best Current Practice
 14</a>: Key words for use in RFCs to Indicate Requirement Levels
 (BCP-14), certain words indicate whether a specific content is
-normative. The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL
-NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in
+normative. The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
+NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in
 this document are to be interpreted as described. Informative content
 does not contain these key words.</p>
 <h2 data-number="2.3" id="maintenance-of-the-specification"><span
@@ -185,7 +186,7 @@ dataset in order to remove, mask, or modify PI/SPI in the data?</li>
 <li>Are there appropriate Consents covering the dataset?</li>
 <li>Are there geography restrictions on processing or storage?</li>
 <li>What licenses, copyright, trademark, or patent requirements?</li>
-<li>What allowances or restrictions on the kinds of use (e.g. AI
+<li>What allowances or restrictions on the kinds of use (e.g. AI
 training)?</li>
 </ul>
 <h3 data-number="3.1.2" id="outcome"><span
@@ -402,7 +403,7 @@ costs across countries and categories</p>
 <p>The global nature of Navisphere Logistics, Ltd.’s operations means
 that the company must navigate a complex web of international tariffs
 and customs regulations. Efficiently managing these tariffs is critical
-to minimizing delivery times and costs. Dr. Hicks and her team are
+to minimizing delivery times and costs. Dr. Hicks and her team are
 tasked with refining the company’s AI systems to accurately predict
 tariff costs across different countries and product categories.</p>
 <p>Goals</p>
@@ -442,7 +443,7 @@ multiple sources</li>
 <h3 data-number="3.4.2" id="outcome-3"><span
 class="header-section-number">3.4.2</span> Outcome</h3>
 <p>Through application of the data provenance standards metadata for its
-global tariff schedule datasets, Navisphere Logistics, Ltd. has achieved
+global tariff schedule datasets, Navisphere Logistics, Ltd. has achieved
 a significant enhancement in the operational efficiency and accuracy of
 its AI-driven tariff prediction models. The outcome includes:</p>
 <ul>
@@ -491,10 +492,383 @@ operations remained within legal boundaries, respecting data sovereignty
 laws and consent agreements.</li>
 </ul></li>
 </ul>
-<h1 data-number="4" id="datatypes"><span
-class="header-section-number">4</span> Datatypes</h1>
-<h2 data-number="4.1" id="primitive-datatypes"><span
-class="header-section-number">4.1</span> Primitive Datatypes</h2>
+<h1 data-number="4" id="abstract-specification"><span
+class="header-section-number">4</span> Abstract Specification</h1>
+<p>The Data Provenance Standard is made up of three groups of metadata
+elements: Source, Provenance, and Use.</p>
+<p><img src="./out/ImageSource/metadata/metadata.svg"
+alt="Metadata Structure" /></p>
+<h2 data-number="4.1" id="source"><span
+class="header-section-number">4.1</span> Source</h2>
+<p>This group describes the dataset and the source of the dataset.</p>
+<ul>
+<li>Element-Name: <code>source</code></li>
+<li>cardinality: 1..1</li>
+<li>The following are child elements</li>
+</ul>
+<h3 data-number="4.1.1" id="standards-version-used"><span
+class="header-section-number">4.1.1</span> Standards version used</h3>
+<p>Specifies the version of the schema or standards used to define the
+metadata for this dataset, ensuring consistency and compatibility over
+time.</p>
+<ul>
+<li>Element-Name: <code>version</code></li>
+<li>cardinality: 1..1</li>
+<li>Format: String, Prefer Semantic Versioning (a.k.a., SemVer) format -
+<a href="https://semver.org/">https://semver.org/</a></li>
+<li>Example: <code>1.1.0</code></li>
+</ul>
+<h3 data-number="4.1.2" id="dataset-title--name"><span
+class="header-section-number">4.1.2</span> Dataset title / name</h3>
+<p>The official name of the dataset, which should be descriptive and
+help easily identify the dataset's content and purpose.</p>
+<ul>
+<li>Element-Name: <code>title</code></li>
+<li>cardinality: 1..1</li>
+<li>Format: String</li>
+<li>Example: <code>Blue sky observations</code></li>
+</ul>
+<h3 data-number="4.1.3" id="unique-metadata-identifier"><span
+class="header-section-number">4.1.3</span> Unique metadata
+identifier</h3>
+<p>A distinct identifier (such as a UUID) assigned to the dataset's
+metadata to uniquely distinguish it from others, ensuring no confusion
+or overlap.</p>
+<ul>
+<li>Element-Name: <code>id</code></li>
+<li>cardinality: 1..1</li>
+<li>Format: URI</li>
+<li>Example:
+<code>urn:uuid:17725bad-9098-4f43-abe6-43490ae1596c</code></li>
+</ul>
+<h3 data-number="4.1.4" id="metadata-location"><span
+class="header-section-number">4.1.4</span> Metadata location</h3>
+<p>Optional: The web address where the dataset's metadata is published
+and can be accessed, providing a direct link to detailed information
+about the dataset. Typically will be a unique URL of the current
+dataset</p>
+<ul>
+<li>Element-Name: <code>location</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: URL</li>
+<li>Example: <code>https://example.org</code></li>
+</ul>
+<h3 data-number="4.1.5" id="dataset-issuer"><span
+class="header-section-number">4.1.5</span> Dataset issuer</h3>
+<p>The legal entity responsible for creating the dataset, providing
+accountability and a point of contact for inquiries.</p>
+<ul>
+<li>Element-Name: <code>issuer</code></li>
+<li>cardinality: 1..*</li>
+<li>Format: Organization</li>
+</ul>
+<h3 data-number="4.1.6" id="description-of-the-dataset"><span
+class="header-section-number">4.1.6</span> Description of the
+dataset</h3>
+<p>Contains a detailed narrative that explains the contents, scope, and
+purpose of the dataset. It provides essential contextual information
+that helps users understand what the data represents, how it was
+collected, and any limitations or recommended uses.</p>
+<ul>
+<li>Element-Name: <code>description</code></li>
+<li>cardinality: 1..1</li>
+<li>Format: Markdown</li>
+</ul>
+<h2 data-number="4.2" id="provenance"><span
+class="header-section-number">4.2</span> Provenance</h2>
+<p>This group describes the provenance of the dataset</p>
+<ul>
+<li>Element-Name: <code>provenance</code></li>
+<li>cardinality: 1..1</li>
+<li>The following are child elements</li>
+</ul>
+<h3 data-number="4.2.1" id="source-metadata-for-dataset"><span
+class="header-section-number">4.2.1</span> Source metadata for
+dataset</h3>
+<p>Identifies where the metadata for any source datasets that contribute
+to the current dataset can be found, establishing lineage and
+dependencies. This field establishes lineage.</p>
+<ul>
+<li>Element-Name: <code>source</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: URL</li>
+<li>Example: <code>https://example.org/dataset/blue.xml</code></li>
+</ul>
+<h3 data-number="4.2.2" id="source-for-dataset"><span
+class="header-section-number">4.2.2</span> Source for dataset</h3>
+<p>If the data originates from a different organization than the one who
+isued the dataset, this field identifies that original source's legal
+name.</p>
+<ul>
+<li>Element-Name: <code>origin</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: <a href="#organization">Organization</a></li>
+</ul>
+<h3 data-number="4.2.3" id="data-origin-geography"><span
+class="header-section-number">4.2.3</span> Data origin geography</h3>
+<p>The geographical location where the data was originally collected,
+which can be important for compliance with regional laws and
+understanding the data's context.</p>
+<ul>
+<li>Element-Name: <code>origin-geography</code></li>
+<li>cardinality: 1..*</li>
+<li>Format: <a href="#location">Location</a></li>
+</ul>
+<h3 data-number="4.2.4" id="dataset-issue-date"><span
+class="header-section-number">4.2.4</span> Dataset issue date</h3>
+<p>Manditory: The date when the dataset was compiled or created,
+providing a temporal context for the data.</p>
+<ul>
+<li>Element-Name: <code>date</code></li>
+<li>cardinality: 1..1</li>
+<li>Format: DateTime</li>
+<li>Example: <code>2024-05-27</code>, or
+<code>2024-05-27T15:18:02Z</code></li>
+</ul>
+<h3 data-number="4.2.5"
+id="date-of-previously-issued-version-of-the-dataset"><span
+class="header-section-number">4.2.5</span> Date of previously issued
+version of the dataset</h3>
+<p>Optional: The release date of the last version of the dataset, if it
+has been updated or revised, to track changes and updates over time.</p>
+<ul>
+<li>Element-Name: <code>previous-date</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: DateTime</li>
+<li>Example: <code>2024-05-27</code>, or
+<code>2024-05-27T15:18:02Z</code></li>
+</ul>
+<h3 data-number="4.2.6" id="range-of-dates-for-data-generation"><span
+class="header-section-number">4.2.6</span> Range of dates for data
+generation</h3>
+<p>Optional: The span of time during which the data within the dataset
+was collected or generated, offering insight into the dataset's
+timeliness and relevance.</p>
+<ul>
+<li>Element-Name: <code>generation-period</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: <a href="#period">Period</a></li>
+</ul>
+<h3 data-number="4.2.7" id="method"><span
+class="header-section-number">4.2.7</span> Method</h3>
+<p>The methodology or procedures used to collect, generate, or compile
+the data, giving insight into its reliability and validity.</p>
+<ul>
+<li>Element-Name: <code>generation-method</code></li>
+<li>cardinality: 1..*</li>
+<li>Format: <a href="#concept">Concept</a>
+<ul>
+<li>SHALL be from <a href="#data-collection-methods">Specific method
+types</a> if applicable</li>
+</ul></li>
+<li>MAY be other code from other code systems</li>
+</ul>
+<h3 data-number="4.2.8" id="data-format"><span
+class="header-section-number">4.2.8</span> Data format</h3>
+<p>Describes the nature of the data within the dataset, such as
+numerical, textual, or multimedia, helping users understand what kind of
+information is contained within the file or dataset.,</p>
+<ul>
+<li>Element-Name: <code>format</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: String
+<ul>
+<li>SHALL be mime-type <a
+href="https://www.rfc-editor.org/rfc/rfc6838.html">https://www.rfc-editor.org/rfc/rfc6838.html</a></li>
+<li>SHALL be from registered media-types <a
+href="http://www.iana.org/assignments/media-types/">http://www.iana.org/assignments/media-types/</a>
+if applicable</li>
+</ul></li>
+<li>Example: <code>application/json</code></li>
+</ul>
+<h2 data-number="4.3" id="use"><span
+class="header-section-number">4.3</span> Use</h2>
+<p>This group describes legal, use, and restrictions.</p>
+<ul>
+<li>Element-Name: <code>use</code></li>
+<li>cardinality: 1..1</li>
+<li>The following are child elements</li>
+</ul>
+<h3 data-number="4.3.1" id="confidentiality-classification"><span
+class="header-section-number">4.3.1</span> Confidentiality
+classification</h3>
+<p>Indicate if the dataset includes data falling into the
+confidentiality classification. Each classifier must be evaluated as
+true/false/unknown.</p>
+<ul>
+<li>Element-Name: <code>classification</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: <a href="#classification">Classification</a></li>
+<li>For each <a href="#data-regulation-codes">Regulation Domain</a> that
+has been evaluated</li>
+<li>Additional entries can be added</li>
+</ul>
+<h3 data-number="4.3.2" id="consent-documentation-location"><span
+class="header-section-number">4.3.2</span> Consent documentation
+location</h3>
+<p>Specifies where consent documentation or agreements related to the
+data can be found, ensuring legal compliance and regulatory use. This
+element must be populated when Privacy Consent is appropriate. When
+populated it points at either one Privacy Consent Policy that all
+individuals in the dataset agreed to, or one Privacy Policy for each
+individual in the dataset with that individuals signature.</p>
+<ul>
+<li>Element-Name: <code>consents</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: URL</li>
+<li>Example:
+<code>https://example.org/dataset/34/consent.pdf</code></li>
+</ul>
+<h3 data-number="4.3.3" id="privacy-indicators"><span
+class="header-section-number">4.3.3</span> Privacy indicators</h3>
+<p>Indicates whether techniques were used to protect personally
+identifiable information (PII) or sensitive personal information (SPI),
+highlighting the dataset's privacy considerations.</p>
+<ul>
+<li>Element-Name: `privacy-indicators</li>
+<li>cardinality: 0..*</li>
+<li>Format: <a href="#privacyindicator">PrivacyIndicator</a></li>
+<li>using <a href="#privacy-enhancing-tools">Privacy Enhancing Tools</a>
+vocabulary</li>
+</ul>
+<h3 data-number="4.3.4" id="data-processing-geography-included"><span
+class="header-section-number">4.3.4</span> Data processing geography
+included</h3>
+<p>Defines the geographical boundaries within which the data can be
+processed, often for legal or regulatory reasons.</p>
+<ul>
+<li>Element-Name: <code>processing-included</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: <a href="#location">Location</a></li>
+<li>When not populated there are no processing location
+requirements</li>
+</ul>
+<h3 data-number="4.3.5" id="data-processing-geography-excluded"><span
+class="header-section-number">4.3.5</span> Data processing geography
+excluded</h3>
+<p>Defines the geographical boundaries within which the data canot be
+processed, often for legal or regulatory reasons.</p>
+<ul>
+<li>Element-Name: <code>processing-excluded</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: <a href="#location">Location</a></li>
+<li>When not populated there are no processing location
+restrictions</li>
+</ul>
+<h3 data-number="4.3.6" id="data-storage-geography-allowed"><span
+class="header-section-number">4.3.6</span> Data storage geography
+allowed</h3>
+<p>Specifies where the data may be stored, crucial for compliance with
+data sovereignty laws.</p>
+<ul>
+<li>Element-Name: <code>storage-allowed</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: <a href="#location">Location</a></li>
+<li>When not populated there are no defined storage location
+requirements</li>
+</ul>
+<h3 data-number="4.3.7" id="data-storage-geography-forbidden"><span
+class="header-section-number">4.3.7</span> Data storage geography
+forbidden</h3>
+<p>Specifies where the data may not be stored, crucial for compliance
+with data sovereignty laws.</p>
+<ul>
+<li>Element-Name: <code>storage-forbidden</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: <a href="#location">Location</a></li>
+<li>When not populated there are no defined storage location
+restrictions</li>
+</ul>
+<h3 data-number="4.3.8" id="license-to-use"><span
+class="header-section-number">4.3.8</span> License to use</h3>
+<p>Details the location or point of contact for identifying the terms
+under which the dataset can be used, including any restrictions or
+obligations, clarifying legal use and distribution rights.</p>
+<ul>
+<li>Element-Name: <code>license</code></li>
+<li>cardinality: 0..1</li>
+<li>Format: String
+<ul>
+<li>Prefer License codes such as CreativeCommons or Apache</li>
+<li>May be a URL</li>
+</ul></li>
+<li>Example: <code>Apache-2.0</code></li>
+</ul>
+<h3 data-number="4.3.9" id="intended-data-use"><span
+class="header-section-number">4.3.9</span> Intended data use</h3>
+<p>Describes the purpose for which the dataset was created, guiding
+users on its intended use and potential applications against identified
+use cases. List all that</p>
+<ul>
+<li>Element-Name: <code>intended-purpose</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: <a href="#concept">Concept</a>
+<ul>
+<li>SHALL populate <code>code</code> from <a href="#data-use-codes">Data
+Use</a>.</li>
+<li>SHALL populate <code>description</code> with specific
+description</li>
+<li>When using the code <code>non-ai-other</code> and
+<code>ai-other</code>, the description SHALL describe the actual
+use</li>
+</ul></li>
+</ul>
+<h3 data-number="4.3.10" id="forbidden-data-use"><span
+class="header-section-number">4.3.10</span> Forbidden data use</h3>
+<p>Describes the purposes for which the dataset is not intended and can
+not be used.</p>
+<ul>
+<li>Element-Name: <code>forbidden-purpose</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: <a href="#concept">Concept</a>
+<ul>
+<li>SHALL populate <code>code</code> from <a href="#data-use-codes">Data
+Use</a>.</li>
+<li>SHALL populate <code>description</code> with specific
+description</li>
+<li>When using the code <code>non-ai-other</code> and
+<code>ai-other</code>, the description SHALL describe the actual
+use</li>
+</ul></li>
+</ul>
+<h3 data-number="4.3.11" id="copyright"><span
+class="header-section-number">4.3.11</span> Copyright</h3>
+<p>Indicates whether the dataset contains propritary information that is
+covered with a Copyright, and the terms of said Copyright.</p>
+<ul>
+<li>Element-Name: <code>copyright</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: String
+<ul>
+<li>where the string <code>no</code> indicates no Copyright</li>
+</ul></li>
+</ul>
+<h3 data-number="4.3.12" id="patent"><span
+class="header-section-number">4.3.12</span> Patent</h3>
+<p>Indicates whether the dataset contains propritary information that is
+covered with a Patent, and the said Patent number.</p>
+<ul>
+<li>Element-Name: <code>patent</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: String
+<ul>
+<li>where the string <code>no</code> indicates no Patent</li>
+</ul></li>
+</ul>
+<h3 data-number="4.3.13" id="trademark"><span
+class="header-section-number">4.3.13</span> Trademark</h3>
+<p>Indicates whether the dataset contains propritary information that is
+covered with a Trademark, and the terms of said Trademark.</p>
+<ul>
+<li>Element-Name: <code>trademark</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: String
+<ul>
+<li>where the string <code>no</code> indicates no Trademark</li>
+</ul></li>
+</ul>
+<h2 data-number="4.4" id="primitive-datatypes"><span
+class="header-section-number">4.4</span> Primitive Datatypes</h2>
 <p>These datatypes are commonly understood.</p>
 <ul>
 <li><strong>String</strong> - A sequence of Unicode characters</li>
@@ -513,30 +887,27 @@ href="https://github.github.com/gfm/">GFM (Github Flavored Markdown)</a>
 extensions on <a href="http://spec.commonmark.org/0.28/">CommonMark</a>
 format, with the exception of support for inline HTML which is not
 supported.</li>
-<li><strong>dateTime</strong> A date, date-time or partial date
-(e.g. just year or year + month) as used in human communication. The
-format is a subset of <a
+<li><strong>dateTime</strong> A date, date-time or partial date (e.g.
+just year or year + month) as used in human communication. The format is
+a subset of <a
 href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO8601</a>
-icon: YYYY, YYYY-MM, YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz, e.g. 2018,
+icon: YYYY, YYYY-MM, YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz, e.g. 2018,
 1973-06, 1905-08-23, 2015-02-07T13:28:17-05:00 or
 2017-01-01T00:00:00.000Z. If hours and minutes are specified, a timezone
 offset SHALL be populated. Actual timezone codes can be sent using the
 Timezone Code extension, if desired. Seconds must be provided due to
 schema type constraints but may be zero-filled and may be ignored at
 receiver discretion. Milliseconds are optionally allowed. Dates SHALL be
-valid dates. The time “24:00” is not allowed. Leap Seconds are
+valid dates. The time "24:00" is not allowed. Leap Seconds are
 allowed</li>
 </ul>
-<h2 data-number="4.2" id="complex-datatypes"><span
-class="header-section-number">4.2</span> Complex Datatypes</h2>
+<h2 data-number="4.5" id="complex-datatypes"><span
+class="header-section-number">4.5</span> Complex Datatypes</h2>
 <p>These are made up of more than one child element as described.</p>
-<figure>
-<img src="./out/ImageSource/datatypes/datatypes.svg"
-alt="Datatype Structure" />
-<figcaption aria-hidden="true">Datatype Structure</figcaption>
-</figure>
-<h2 data-number="4.3" id="organization"><span
-class="header-section-number">4.3</span> Organization</h2>
+<p><img src="./out/ImageSource/datatypes/datatypes.svg"
+alt="Datatype Structure" /></p>
+<h3 data-number="4.5.1" id="organization"><span
+class="header-section-number">4.5.1</span> Organization</h3>
 <ul>
 <li>Legal Entity Name
 <ul>
@@ -551,8 +922,8 @@ class="header-section-number">4.3</span> Organization</h2>
 <li>Format: String</li>
 </ul></li>
 </ul>
-<h2 data-number="4.4" id="location"><span
-class="header-section-number">4.4</span> Location</h2>
+<h3 data-number="4.5.2" id="location"><span
+class="header-section-number">4.5.2</span> Location</h3>
 <ul>
 <li>Country
 <ul>
@@ -576,8 +947,8 @@ subdivisions (e.g., states or provinces) of all countries coded in ISO
 </ul></li>
 </ul></li>
 </ul>
-<h2 data-number="4.5" id="period"><span
-class="header-section-number">4.5</span> Period</h2>
+<h3 data-number="4.5.3" id="period"><span
+class="header-section-number">4.5.3</span> Period</h3>
 <ul>
 <li>Start date/time
 <ul>
@@ -594,8 +965,8 @@ class="header-section-number">4.5</span> Period</h2>
 <li>if empty, there is no end</li>
 </ul></li>
 </ul>
-<h2 data-number="4.6" id="concept"><span
-class="header-section-number">4.6</span> Concept</h2>
+<h3 data-number="4.5.4" id="concept"><span
+class="header-section-number">4.5.4</span> Concept</h3>
 <ul>
 <li>specific code for computable
 <ul>
@@ -620,8 +991,8 @@ class="header-section-number">4.6</span> Concept</h2>
 <li>Format: String</li>
 </ul></li>
 </ul>
-<h2 data-number="4.7" id="classification"><span
-class="header-section-number">4.7</span> Classification</h2>
+<h3 data-number="4.5.5" id="classification"><span
+class="header-section-number">4.5.5</span> Classification</h3>
 <ul>
 <li>specific global regulation domain
 <ul>
@@ -640,8 +1011,8 @@ Codes</a></li>
 <li>Format: Boolean</li>
 </ul></li>
 </ul>
-<h2 data-number="4.8" id="privacyindicator"><span
-class="header-section-number">4.8</span> PrivacyIndicator</h2>
+<h3 data-number="4.5.6" id="privacyindicator"><span
+class="header-section-number">4.5.6</span> PrivacyIndicator</h3>
 <ul>
 <li>specific global regulation domain
 <ul>
@@ -666,384 +1037,8 @@ Tools</a> vocabulary</li>
 <li>Format: String</li>
 </ul></li>
 </ul>
-<h1 data-number="5" id="abstract-specification"><span
-class="header-section-number">5</span> Abstract Specification</h1>
-<p>The Data Provenance Standard is made up of three groups of metadata
-elements: Source, Provenance, and Use.</p>
-<figure>
-<img src="./out/ImageSource/metadata/metadata.svg"
-alt="Metadata Structure" />
-<figcaption aria-hidden="true">Metadata Structure</figcaption>
-</figure>
-<h2 data-number="5.1" id="source"><span
-class="header-section-number">5.1</span> Source</h2>
-<p>This group describes the dataset and the source of the dataset.</p>
-<ul>
-<li>Element-Name: <code>source</code></li>
-<li>cardinality: 1..1</li>
-<li>The following are child elements</li>
-</ul>
-<h3 data-number="5.1.1" id="standards-version-used"><span
-class="header-section-number">5.1.1</span> Standards version used</h3>
-<p>Specifies the version of the schema or standards used to define the
-metadata for this dataset, ensuring consistency and compatibility over
-time.</p>
-<ul>
-<li>Element-Name: <code>version</code></li>
-<li>cardinality: 1..1</li>
-<li>Format: String, Prefer Semantic Versioning (a.k.a., SemVer) format -
-https://semver.org/</li>
-<li>Example: <code>1.1.0</code></li>
-</ul>
-<h3 data-number="5.1.2" id="dataset-title-name"><span
-class="header-section-number">5.1.2</span> Dataset title / name</h3>
-<p>The official name of the dataset, which should be descriptive and
-help easily identify the dataset’s content and purpose.</p>
-<ul>
-<li>Element-Name: <code>title</code></li>
-<li>cardinality: 1..1</li>
-<li>Format: String</li>
-<li>Example: <code>Blue sky observations</code></li>
-</ul>
-<h3 data-number="5.1.3" id="unique-metadata-identifier"><span
-class="header-section-number">5.1.3</span> Unique metadata
-identifier</h3>
-<p>A distinct identifier (such as a UUID) assigned to the dataset’s
-metadata to uniquely distinguish it from others, ensuring no confusion
-or overlap.</p>
-<ul>
-<li>Element-Name: <code>id</code></li>
-<li>cardinality: 1..1</li>
-<li>Format: URI</li>
-<li>Example:
-<code>urn:uuid:17725bad-9098-4f43-abe6-43490ae1596c</code></li>
-</ul>
-<h3 data-number="5.1.4" id="metadata-location"><span
-class="header-section-number">5.1.4</span> Metadata location</h3>
-<p>Optional: The web address where the dataset’s metadata is published
-and can be accessed, providing a direct link to detailed information
-about the dataset. Typically will be a unique URL of the current
-dataset</p>
-<ul>
-<li>Element-Name: <code>location</code></li>
-<li>cardinality: 0..1</li>
-<li>Format: URL</li>
-<li>Example: <code>https://example.org</code></li>
-</ul>
-<h3 data-number="5.1.5" id="dataset-issuer"><span
-class="header-section-number">5.1.5</span> Dataset issuer</h3>
-<p>The legal entity responsible for creating the dataset, providing
-accountability and a point of contact for inquiries.</p>
-<ul>
-<li>Element-Name: <code>issuer</code></li>
-<li>cardinality: 1..*</li>
-<li>Format: Organization</li>
-</ul>
-<h3 data-number="5.1.6" id="description-of-the-dataset"><span
-class="header-section-number">5.1.6</span> Description of the
-dataset</h3>
-<p>Contains a detailed narrative that explains the contents, scope, and
-purpose of the dataset. It provides essential contextual information
-that helps users understand what the data represents, how it was
-collected, and any limitations or recommended uses.</p>
-<ul>
-<li>Element-Name: <code>description</code></li>
-<li>cardinality: 1..1</li>
-<li>Format: Markdown</li>
-</ul>
-<h2 data-number="5.2" id="provenance"><span
-class="header-section-number">5.2</span> Provenance</h2>
-<p>This group describes the provenance of the dataset</p>
-<ul>
-<li>Element-Name: <code>provenance</code></li>
-<li>cardinality: 1..1</li>
-<li>The following are child elements</li>
-</ul>
-<h3 data-number="5.2.1" id="source-metadata-for-dataset"><span
-class="header-section-number">5.2.1</span> Source metadata for
-dataset</h3>
-<p>Identifies where the metadata for any source datasets that contribute
-to the current dataset can be found, establishing lineage and
-dependencies. This field establishes lineage.</p>
-<ul>
-<li>Element-Name: <code>source</code></li>
-<li>cardinality: 0..1</li>
-<li>Format: URL</li>
-<li>Example: <code>https://example.org/dataset/blue.xml</code></li>
-</ul>
-<h3 data-number="5.2.2" id="source-for-dataset"><span
-class="header-section-number">5.2.2</span> Source for dataset</h3>
-<p>If the data originates from a different organization than the one who
-isued the dataset, this field identifies that original source’s legal
-name.</p>
-<ul>
-<li>Element-Name: <code>origin</code></li>
-<li>cardinality: 0..1</li>
-<li>Format: <a href="#organization">Organization</a></li>
-</ul>
-<h3 data-number="5.2.3" id="data-origin-geography"><span
-class="header-section-number">5.2.3</span> Data origin geography</h3>
-<p>The geographical location where the data was originally collected,
-which can be important for compliance with regional laws and
-understanding the data’s context.</p>
-<ul>
-<li>Element-Name: <code>origin-geography</code></li>
-<li>cardinality: 1..*</li>
-<li>Format: <a href="#location">Location</a></li>
-</ul>
-<h3 data-number="5.2.4" id="dataset-issue-date"><span
-class="header-section-number">5.2.4</span> Dataset issue date</h3>
-<p>Manditory: The date when the dataset was compiled or created,
-providing a temporal context for the data.</p>
-<ul>
-<li>Element-Name: <code>date</code></li>
-<li>cardinality: 1..1</li>
-<li>Format: DateTime</li>
-<li>Example: <code>2024-05-27</code>, or
-<code>2024-05-27T15:18:02Z</code></li>
-</ul>
-<h3 data-number="5.2.5"
-id="date-of-previously-issued-version-of-the-dataset"><span
-class="header-section-number">5.2.5</span> Date of previously issued
-version of the dataset</h3>
-<p>Optional: The release date of the last version of the dataset, if it
-has been updated or revised, to track changes and updates over time.</p>
-<ul>
-<li>Element-Name: <code>previous-date</code></li>
-<li>cardinality: 0..1</li>
-<li>Format: DateTime</li>
-<li>Example: <code>2024-05-27</code>, or
-<code>2024-05-27T15:18:02Z</code></li>
-</ul>
-<h3 data-number="5.2.6" id="range-of-dates-for-data-generation"><span
-class="header-section-number">5.2.6</span> Range of dates for data
-generation</h3>
-<p>Optional: The span of time during which the data within the dataset
-was collected or generated, offering insight into the dataset’s
-timeliness and relevance.</p>
-<ul>
-<li>Element-Name: <code>generation-period</code></li>
-<li>cardinality: 0..1</li>
-<li>Format: <a href="#period">Period</a></li>
-</ul>
-<h3 data-number="5.2.7" id="method"><span
-class="header-section-number">5.2.7</span> Method</h3>
-<p>The methodology or procedures used to collect, generate, or compile
-the data, giving insight into its reliability and validity.</p>
-<ul>
-<li>Element-Name: <code>generation-method</code></li>
-<li>cardinality: 1..*</li>
-<li>Format: <a href="#concept">Concept</a>
-<ul>
-<li>SHALL be from <a href="#data-collection-methods">Specific method
-types</a> if applicable</li>
-</ul></li>
-<li>MAY be other code from other code systems</li>
-</ul>
-<h3 data-number="5.2.8" id="data-format"><span
-class="header-section-number">5.2.8</span> Data format</h3>
-<p>Describes the nature of the data within the dataset, such as
-numerical, textual, or multimedia, helping users understand what kind of
-information is contained within the file or dataset.,</p>
-<ul>
-<li>Element-Name: <code>format</code></li>
-<li>cardinality: 0..*</li>
-<li>Format: String
-<ul>
-<li>SHALL be mime-type https://www.rfc-editor.org/rfc/rfc6838.html</li>
-<li>SHALL be from registered media-types
-http://www.iana.org/assignments/media-types/ if applicable</li>
-</ul></li>
-<li>Example: <code>application/json</code></li>
-</ul>
-<h2 data-number="5.3" id="use"><span
-class="header-section-number">5.3</span> Use</h2>
-<p>This group describes legal, use, and restrictions.</p>
-<ul>
-<li>Element-Name: <code>use</code></li>
-<li>cardinality: 1..1</li>
-<li>The following are child elements</li>
-</ul>
-<h3 data-number="5.3.1" id="confidentiality-classification"><span
-class="header-section-number">5.3.1</span> Confidentiality
-classification</h3>
-<p>Indicate if the dataset includes data falling into the
-confidentiality classification. Each classifier must be evaluated as
-true/false/unknown.</p>
-<ul>
-<li>Element-Name: <code>classification</code></li>
-<li>cardinality: 0..*</li>
-<li>Format: <a href="#classification">Classification</a></li>
-<li>For each <a href="#data-regulation-codes">Regulation Domain</a> that
-has been evaluated</li>
-<li>Additional entries can be added</li>
-</ul>
-<h3 data-number="5.3.2" id="consent-documentation-location"><span
-class="header-section-number">5.3.2</span> Consent documentation
-location</h3>
-<p>Specifies where consent documentation or agreements related to the
-data can be found, ensuring legal compliance and regulatory use. This
-element must be populated when Privacy Consent is appropriate. When
-populated it points at either one Privacy Consent Policy that all
-individuals in the dataset agreed to, or one Privacy Policy for each
-individual in the dataset with that individuals signature.</p>
-<ul>
-<li>Element-Name: <code>consents</code></li>
-<li>cardinality: 0..*</li>
-<li>Format: URL</li>
-<li>Example:
-<code>https://example.org/dataset/34/consent.pdf</code></li>
-</ul>
-<h3 data-number="5.3.3" id="privacy-indicators"><span
-class="header-section-number">5.3.3</span> Privacy indicators</h3>
-<p>Indicates whether techniques were used to protect personally
-identifiable information (PII) or sensitive personal information (SPI),
-highlighting the dataset’s privacy considerations.</p>
-<ul>
-<li>Element-Name: `privacy-indicators</li>
-<li>cardinality: 0..*</li>
-<li>Format: <a href="#privacyindicator">PrivacyIndicator</a></li>
-<li>using <a href="#privacy-enhancing-tools">Privacy Enhancing Tools</a>
-vocabulary</li>
-</ul>
-<h3 data-number="5.3.4" id="data-processing-geography-included"><span
-class="header-section-number">5.3.4</span> Data processing geography
-included</h3>
-<p>Defines the geographical boundaries within which the data can be
-processed, often for legal or regulatory reasons.</p>
-<ul>
-<li>Element-Name: <code>processing-included</code></li>
-<li>cardinality: 0..*</li>
-<li>Format: <a href="#location">Location</a></li>
-<li>When not populated there are no processing location
-requirements</li>
-</ul>
-<h3 data-number="5.3.5" id="data-processing-geography-excluded"><span
-class="header-section-number">5.3.5</span> Data processing geography
-excluded</h3>
-<p>Defines the geographical boundaries within which the data canot be
-processed, often for legal or regulatory reasons.</p>
-<ul>
-<li>Element-Name: <code>processing-excluded</code></li>
-<li>cardinality: 0..*</li>
-<li>Format: <a href="#location">Location</a></li>
-<li>When not populated there are no processing location
-restrictions</li>
-</ul>
-<h3 data-number="5.3.6" id="data-storage-geography-allowed"><span
-class="header-section-number">5.3.6</span> Data storage geography
-allowed</h3>
-<p>Specifies where the data may be stored, crucial for compliance with
-data sovereignty laws.</p>
-<ul>
-<li>Element-Name: <code>storage-allowed</code></li>
-<li>cardinality: 0..*</li>
-<li>Format: <a href="#location">Location</a></li>
-<li>When not populated there are no defined storage location
-requirements</li>
-</ul>
-<h3 data-number="5.3.7" id="data-storage-geography-forbidden"><span
-class="header-section-number">5.3.7</span> Data storage geography
-forbidden</h3>
-<p>Specifies where the data may not be stored, crucial for compliance
-with data sovereignty laws.</p>
-<ul>
-<li>Element-Name: <code>storage-forbidden</code></li>
-<li>cardinality: 0..*</li>
-<li>Format: <a href="#location">Location</a></li>
-<li>When not populated there are no defined storage location
-restrictions</li>
-</ul>
-<h3 data-number="5.3.8" id="license-to-use"><span
-class="header-section-number">5.3.8</span> License to use</h3>
-<p>Details the location or point of contact for identifying the terms
-under which the dataset can be used, including any restrictions or
-obligations, clarifying legal use and distribution rights.</p>
-<ul>
-<li>Element-Name: <code>license</code></li>
-<li>cardinality: 0..1</li>
-<li>Format: String
-<ul>
-<li>Prefer License codes such as CreativeCommons or Apache</li>
-<li>May be a URL</li>
-</ul></li>
-<li>Example: <code>Apache-2.0</code></li>
-</ul>
-<h3 data-number="5.3.9" id="intended-data-use"><span
-class="header-section-number">5.3.9</span> Intended data use</h3>
-<p>Describes the purpose for which the dataset was created, guiding
-users on its intended use and potential applications against identified
-use cases. List all that</p>
-<ul>
-<li>Element-Name: <code>intended-purpose</code></li>
-<li>cardinality: 0..*</li>
-<li>Format: <a href="#concept">Concept</a>
-<ul>
-<li>SHALL populate <code>code</code> from <a href="#data-use-codes">Data
-Use</a>.</li>
-<li>SHALL populate <code>description</code> with specific
-description</li>
-<li>When using the code <code>non-ai-other</code> and
-<code>ai-other</code>, the description SHALL describe the actual
-use</li>
-</ul></li>
-</ul>
-<h3 data-number="5.3.10" id="forbidden-data-use"><span
-class="header-section-number">5.3.10</span> Forbidden data use</h3>
-<p>Describes the purposes for which the dataset is not intended and can
-not be used.</p>
-<ul>
-<li>Element-Name: <code>forbidden-purpose</code></li>
-<li>cardinality: 0..*</li>
-<li>Format: <a href="#concept">Concept</a>
-<ul>
-<li>SHALL populate <code>code</code> from <a href="#data-use-codes">Data
-Use</a>.</li>
-<li>SHALL populate <code>description</code> with specific
-description</li>
-<li>When using the code <code>non-ai-other</code> and
-<code>ai-other</code>, the description SHALL describe the actual
-use</li>
-</ul></li>
-</ul>
-<h3 data-number="5.3.11" id="copyright"><span
-class="header-section-number">5.3.11</span> Copyright</h3>
-<p>Indicates whether the dataset contains propritary information that is
-covered with a Copyright, and the terms of said Copyright.</p>
-<ul>
-<li>Element-Name: <code>copyright</code></li>
-<li>cardinality: 0..*</li>
-<li>Format: String
-<ul>
-<li>where the string <code>no</code> indicates no Copyright</li>
-</ul></li>
-</ul>
-<h3 data-number="5.3.12" id="patent"><span
-class="header-section-number">5.3.12</span> Patent</h3>
-<p>Indicates whether the dataset contains propritary information that is
-covered with a Patent, and the said Patent number.</p>
-<ul>
-<li>Element-Name: <code>patent</code></li>
-<li>cardinality: 0..*</li>
-<li>Format: String
-<ul>
-<li>where the string <code>no</code> indicates no Patent</li>
-</ul></li>
-</ul>
-<h3 data-number="5.3.13" id="trademark"><span
-class="header-section-number">5.3.13</span> Trademark</h3>
-<p>Indicates whether the dataset contains propritary information that is
-covered with a Trademark, and the terms of said Trademark.</p>
-<ul>
-<li>Element-Name: <code>trademark</code></li>
-<li>cardinality: 0..*</li>
-<li>Format: String
-<ul>
-<li>where the string <code>no</code> indicates no Trademark</li>
-</ul></li>
-</ul>
-<h1 data-number="6" id="technical-encoding"><span
-class="header-section-number">6</span> Technical Encoding</h1>
+<h1 data-number="5" id="technical-encoding"><span
+class="header-section-number">5</span> Technical Encoding</h1>
 <p>The detailed schema specification for JSON, XML, and YAML are
 published independently in GIThub repositories. In these repositories
 the following are to be found:</p>
@@ -1052,25 +1047,25 @@ the following are to be found:</p>
 <li>required vocabulary in that encoding format</li>
 <li>examples</li>
 </ul>
-<h2 data-number="6.1" id="technical-schema"><span
-class="header-section-number">6.1</span> Technical Schema</h2>
-<h3 data-number="6.1.1" id="json-metadata-encoding"><span
-class="header-section-number">6.1.1</span> JSON Metadata Encoding</h3>
+<h2 data-number="5.1" id="technical-schema"><span
+class="header-section-number">5.1</span> Technical Schema</h2>
+<h3 data-number="5.1.1" id="json-metadata-encoding"><span
+class="header-section-number">5.1.1</span> JSON Metadata Encoding</h3>
 <p>The technical coding and examples are available in GIThub for the <a
 href="https://github.com/Data-and-Trust-Alliance/json-metadata">JSON
 Metadata encoding</a></p>
-<h3 data-number="6.1.2" id="xml-metadata-encoding"><span
-class="header-section-number">6.1.2</span> XML Metadata Encoding</h3>
+<h3 data-number="5.1.2" id="xml-metadata-encoding"><span
+class="header-section-number">5.1.2</span> XML Metadata Encoding</h3>
 <p>The technical coding and examples are available in GIThub for the <a
 href="https://github.com/Data-and-Trust-Alliance/xml-metadata">XML
 Metadata encoding</a></p>
-<h3 data-number="6.1.3" id="yaml-metadata-encoding"><span
-class="header-section-number">6.1.3</span> YAML Metadata Encoding</h3>
+<h3 data-number="5.1.3" id="yaml-metadata-encoding"><span
+class="header-section-number">5.1.3</span> YAML Metadata Encoding</h3>
 <p>The technical coding and examples are available in GIThub for the <a
 href="https://github.com/Data-and-Trust-Alliance/yaml-metadata">YAML
 Metadata encoding</a></p>
-<h1 data-number="7" id="security-considerations"><span
-class="header-section-number">7</span> Security considerations</h1>
+<h1 data-number="6" id="security-considerations"><span
+class="header-section-number">6</span> Security considerations</h1>
 <p>TODO: This section should advise the reader on security or privacy
 things they should be aware of and for which a user of this
 specification will need to consider. Often it is just a listing of risks
@@ -1079,24 +1074,20 @@ creates. Such as the fact that datasets and metadata are sensitive data
 and would need to be protected or carefully crafted such that they are
 not a risk.</p>
 <p>Metadata and the Dataset are data that need to be of quality and
-trustable to be valuable…. blah blah</p>
-<h1 data-number="8" id="annex"><span
-class="header-section-number">8</span> Annex</h1>
+trustable to be valuable.... blah blah</p>
+<h1 data-number="7" id="annex"><span
+class="header-section-number">7</span> Annex</h1>
 <p>The Annex contain normative vocabulary to be used when it applies.
 These vocabulary SHALL be used when they apply.</p>
-<h2 data-number="8.1" id="data-collection-method-codes"><span
-class="header-section-number">8.1</span> Data Collection Method
+<h2 data-number="7.1" id="data-collection-method-codes"><span
+class="header-section-number">7.1</span> Data Collection Method
 Codes</h2>
-<p>The following defined vocabulary are to be used for the “Method”.</p>
+<p>The following defined vocabulary are to be used for the "Method".</p>
 <ul>
 <li>source URI:
 <code>https://github.com/Data-and-Trust-Alliance/DPS/CodeSystem/Method</code></li>
 </ul>
 <table>
-<colgroup>
-<col style="width: 31%" />
-<col style="width: 68%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th>code</th>
@@ -1366,8 +1357,8 @@ Codes</h2>
 </tr>
 </tbody>
 </table>
-<h2 data-number="8.2" id="privacy-enhancing-tools-codes"><span
-class="header-section-number">8.2</span> Privacy Enhancing Tools
+<h2 data-number="7.2" id="privacy-enhancing-tools-codes"><span
+class="header-section-number">7.2</span> Privacy Enhancing Tools
 Codes</h2>
 <p>The following concepts are defined to describe privacy enhancing
 tools (PET).</p>
@@ -1441,8 +1432,8 @@ tools (PET).</p>
 </tr>
 </tbody>
 </table>
-<h2 data-number="8.3" id="data-use-codes"><span
-class="header-section-number">8.3</span> Data Use Codes</h2>
+<h2 data-number="7.3" id="data-use-codes"><span
+class="header-section-number">7.3</span> Data Use Codes</h2>
 <p>The following concepts are defined to describe intended and forbidden
 uses of the dataset</p>
 <ul>
@@ -1496,13 +1487,13 @@ uses of the dataset</p>
 </tbody>
 </table>
 <p>Where: <code>non-ai-other</code>, and <code>ai-other</code></p>
-<h2 data-number="8.4" id="data-regulation-codes"><span
-class="header-section-number">8.4</span> Data Regulation Codes</h2>
+<h2 data-number="7.4" id="data-regulation-codes"><span
+class="header-section-number">7.4</span> Data Regulation Codes</h2>
 <p>The following concepts are defined to indicate specific global
 regulated domains of relevance</p>
 <ul>
-<li>source URI:
-`https://github.com/Data-and-Trust-Alliance/DSP/Regulations</li>
+<li>source URI: `<a
+href="https://github.com/Data-and-Trust-Alliance/DSP/Regulations">https://github.com/Data-and-Trust-Alliance/DSP/Regulations</a></li>
 </ul>
 <table>
 <thead>
@@ -1538,8 +1529,8 @@ regulated domains of relevance</p>
 </tr>
 </tbody>
 </table>
-<h1 data-number="9" id="acknowledgements"><span
-class="header-section-number">9</span> Acknowledgements</h1>
+<h1 data-number="8" id="acknowledgements"><span
+class="header-section-number">8</span> Acknowledgements</h1>
 <p>Acknowledgements to the <a
 href="https://dataandtrustalliance.org/who-we-are">Members of the Data
 and Trust Alliance</a></p>
@@ -1629,7 +1620,7 @@ and Responsible Tech.</li>
 </ul></li>
 <li>Bryan Kyle
 <ul>
-<li>Sr. Technical Staff Member, Data Eng., Chief Data Office</li>
+<li>Sr. Technical Staff Member, Data Eng., Chief Data Office</li>
 </ul></li>
 <li>Orla Flannery
 <ul>
@@ -1696,7 +1687,7 @@ and Responsible Tech.</li>
 </ul></li>
 <li>Gentiana Spahiu
 <ul>
-<li>Director, Data Gov. Lead</li>
+<li>Director, Data Gov. Lead</li>
 </ul></li>
 <li>Michael Pagliorola, Sasi Mullangi, Adam Nieto, John Pastor, Drew
 Palsgrove, and Jay Shetty</li>

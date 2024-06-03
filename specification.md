@@ -678,7 +678,7 @@ Metadata and the Dataset are data that need to be of quality and trustable to be
 
 # 7. Annex
 
-The Annex contain normative vocabulary to be used when it applies. These vocabulary SHALL be used when they apply.
+The Annex contains normative vocabulary to be used when it applies. This vocabulary SHALL be used when they apply.
 
 ## 7.1 Data Collection Method Codes
 
@@ -779,7 +779,7 @@ The following concepts are defined to describe privacy enhancing tools (PET).
 
 ## 7.3 Data Use Codes
 
-The following concepts are defined to describe intended and forbidden uses of the dataset
+The following concepts are defined to describe intended and forbidden uses of the dataset.
 
 - source URI: `https://dataandtrustalliance.org/DPS/CodeSystem/Use`
 
@@ -799,7 +799,7 @@ Where: `non-ai-other`, and `ai-other`
 
 ## 7.4 Data Regulation Codes
 
-The following concepts are defined to indicate specific global regulated domains of relevance
+The following concepts are defined to indicate specific global regulated domains of relevance.
 
 - source URI: `https://dataandtrustalliance.org/DSP/CodeSystem/Regulations`
 

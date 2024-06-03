@@ -971,7 +971,7 @@ trustable to be valuable.... blah blah
 
 7. Annex
 
-The Annex contain normative vocabulary to be used when it applies. These
+The Annex contains normative vocabulary to be used when it applies. This
 vocabulary SHALL be used when they apply.
 
 7.1 Data Collection Method Codes
@@ -1075,7 +1075,7 @@ The following concepts are defined to describe privacy enhancing tools
 7.3 Data Use Codes
 
 The following concepts are defined to describe intended and forbidden
-uses of the dataset
+uses of the dataset.
 
 -   source URI: https://dataandtrustalliance.org/DPS/CodeSystem/Use
 
@@ -1096,7 +1096,7 @@ Where: non-ai-other, and ai-other
 7.4 Data Regulation Codes
 
 The following concepts are defined to indicate specific global regulated
-domains of relevance
+domains of relevance.
 
 -   source URI:
     https://dataandtrustalliance.org/DSP/CodeSystem/Regulations

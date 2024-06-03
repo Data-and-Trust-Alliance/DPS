@@ -24,13 +24,7 @@ This standards is released under Creative Commons CC-BY-SA-4.0 and all code and 
 
 Punch List of work to do:
 
-- Style (css) to produce numbered headers and anything else we want customized
-- Need a canonical root from which all the technical needs reference. This is a technical anchor. It could be based on the dataandtrustalliance.org DNS, but could/should be ultimately at the standards body that publishes this specification
-  - am using `https://github.com/Data-and-Trust-Alliance/DPS/` today
 - Security Considerations
-- Review top-to-bottom for readability, flow, and completeness
-- Should there be a TOC?
-- Should we manually number the headers? If so, then all links need to be fixed.
 
 Other todo:
 
@@ -41,11 +35,12 @@ Other todo:
 
 ## Convert to html
 
-pandoc --number-sections -t html -f gfm specification.md -o out.html
-
-need to add more style such as
-- tables should have lines
+pandoc --standalone --metadata title="The Data Provenance Standard" -r gfm --css=style.css -w html -o dps.html specification.md
 
 ## Convert to text
 
-pandoc --number-sections --wrap=none -t plain -f gfm specification.md -o out.txt
+pandoc -r gfm -w plain -o dps.txt specification.md
+
+## Convert to PDF
+
+This does not work at this point as pandoc does not have the ability to convert the SVG graphics to PDF without a helper tool. We could use a different graphic format, but svg is the most accessible and scalable form.

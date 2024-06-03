@@ -1,3 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>The Data Provenance Standard</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">The Data Provenance Standard</h1>
+</header>
 <p><strong>The Data Provenance Standard</strong></p>
 <p>The Data Provenance Standard defines metadata about a data set, so
 that the data set provenance and lineage are understood. This set of
@@ -20,8 +53,7 @@ href="mailto:inquiries@dataandtrustalliance.org">inquiries@dataandtrustalliance.
 href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
 Attribution-ShareAlike 4.0 International</a></p>
 <hr />
-<h1 data-number="1" id="1-abstract"><span
-class="header-section-number">1</span> 1. Abstract</h1>
+<h1 id="1-abstract">1. Abstract</h1>
 <p>Data transparency is critical. Trust in the insights and decisions
 coming from both traditional data and AI applications depends on
 understanding the origin, lineage, and rights associated with the data
@@ -44,8 +76,7 @@ Considerations</a></li>
 <li><a href="#7-annex">Annex</a></li>
 <li><a href="#8-acknowledgements">Acknowledgements</a></li>
 </ol>
-<h1 data-number="2" id="2-introduction"><span
-class="header-section-number">2</span> 2. Introduction</h1>
+<h1 id="2-introduction">2. Introduction</h1>
 <p>For the past quarter century, companies have worked to become
 "digital". Now they are using data, algorithms, and AI to reinvent how
 decisions are made. These companies are becoming "data enterprises".
@@ -64,8 +95,7 @@ rights associated with data allows enterprises to make informed choices
 about the data they source and use. The result can be improvements in
 operational efficiency, regulatory compliance, collaboration, and value
 generation.</p>
-<h2 data-number="2.1" id="21-the-data--trust-alliance"><span
-class="header-section-number">2.1</span> 2.1 The Data &amp; Trust
+<h2 id="21-the-data--trust-alliance">2.1 The Data &amp; Trust
 Alliance</h2>
 <p>The Data &amp; Trust Alliance brings together leading businesses and
 institutions across multiple industries to learn, develop, and adopt
@@ -76,9 +106,7 @@ American Express chairman and CEO; and Sam Palmisano, former IBM
 chairman and CEO. Jon Iwata, founding executive director, works with our
 Leadership Council, a cross-functional team of senior executives
 selected by their CEOs to identify and drive Alliance projects.</p>
-<h2 data-number="2.2" id="22-normative-vs-informative"><span
-class="header-section-number">2.2</span> 2.2 Normative vs
-Informative</h2>
+<h2 id="22-normative-vs-informative">2.2 Normative vs Informative</h2>
 <p>This specification adopts the normative words defined in IETF <a
 href="https://www.rfc-editor.org/info/bcp14">Best Current Practice
 14</a>: Key words for use in RFCs to Indicate Requirement Levels
@@ -87,8 +115,7 @@ normative. The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
 NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in
 this document are to be interpreted as described. Informative content
 does not contain these key words.</p>
-<h2 data-number="2.3" id="23-maintenance-of-the-specification"><span
-class="header-section-number">2.3</span> 2.3 Maintenance of the
+<h2 id="23-maintenance-of-the-specification">2.3 Maintenance of the
 specification</h2>
 <p>The D&amp;TA Data Provenance Standard Working Group is responsible
 for the ongoing monitoring and periodic review of the terms in the
@@ -105,8 +132,7 @@ obsolete</li>
 is a collaborative and dynamic process. We welcome feedback from the
 broader community to ensure that the vocabulary remains a valuable and
 accurate resource for all.</p>
-<h2 data-number="2.4" id="24-glossary"><span
-class="header-section-number">2.4</span> 2.4 Glossary</h2>
+<h2 id="24-glossary">2.4 Glossary</h2>
 <p>The following concepts are used throughout the specification</p>
 <ul>
 <li><strong>AI</strong>: Computer systems that can perform tasks
@@ -140,8 +166,7 @@ produced (data mining, machine-generated, IoT sensors, etc.)</li>
 intended use of the data and which downstream audiences should not be
 allowed access to the current dataset</li>
 </ul>
-<h1 data-number="3" id="3-use-case"><span
-class="header-section-number">3</span> 3. Use-Case</h1>
+<h1 id="3-use-case">3. Use-Case</h1>
 <p>The following use-cases are examplar of the use-cases for which this
 standard applies. These use-cases show how this standard supports
 diverse needs across the data ecosystem.</p>
@@ -153,10 +178,8 @@ insights</li>
 <li>Enhancing global logistics efficiency through AI-driven tariff
 harmonization</li>
 </ol>
-<h2 data-number="3.1"
-id="31-use-case-1-healthcare-insurance-data-procurement"><span
-class="header-section-number">3.1</span> 3.1 Use-Case 1: Healthcare
-insurance data procurement</h2>
+<h2 id="31-use-case-1-healthcare-insurance-data-procurement">3.1
+Use-Case 1: Healthcare insurance data procurement</h2>
 <p>Bella and her team are evaluating a new dataset that contains
 comprehensive patient and insurance payment information. This dataset is
 considered crucial for enhancing the company’s predictive analytics
@@ -184,8 +207,7 @@ compromising data integrity or system performance.</li>
 <li>Navigating the complex landscape of healthcare regulations and
 ensuring all data usage is compliant.</li>
 </ul>
-<h3 data-number="3.1.1" id="311-use-case-1-needs"><span
-class="header-section-number">3.1.1</span> 3.1.1 Use-Case 1 needs</h3>
+<h3 id="311-use-case-1-needs">3.1.1 Use-Case 1 needs</h3>
 <ul>
 <li>Has the data already been incorporated?</li>
 <li>Who has generated the data? Are they a trusted supplier?</li>
@@ -202,8 +224,7 @@ dataset in order to remove, mask, or modify PI/SPI in the data?</li>
 <li>What are the allowances or restrictions on the kinds of use (e.g. AI
 training)?</li>
 </ul>
-<h3 data-number="3.1.2" id="312-outcome"><span
-class="header-section-number">3.1.2</span> 3.1.2 Outcome</h3>
+<h3 id="312-outcome">3.1.2 Outcome</h3>
 <p>Through comprehensive metadata evaluation, the procurement team was
 able to perform a more in-depth assessment of a crucial dataset. The
 results were decreasing procurement time and risk while enhancing the
@@ -241,10 +262,10 @@ ultimately safeguarded the organization against potential legal and
 operational risks, ensuring the dataset’s strategic and compliant
 use.</li>
 </ul>
-<h2 data-number="3.2"
-id="32-use-case-2-media-consumption-pattern-data-set-for-consumer-behavior-insights"><span
-class="header-section-number">3.2</span> 3.2 Use-Case 2: Media
-consumption pattern data set for consumer behavior insights</h2>
+<h2
+id="32-use-case-2-media-consumption-pattern-data-set-for-consumer-behavior-insights">3.2
+Use-Case 2: Media consumption pattern data set for consumer behavior
+insights</h2>
 <p>Curating a high-quality dataset that tracks media consumption habits
 across diverse platforms for content personalization.</p>
 <p>Jordan’s current project involves curating a dataset that tracks
@@ -271,8 +292,7 @@ technology.</li>
 buyers and that the metadata is compatible with automated data
 procurement systems.</li>
 </ul>
-<h3 data-number="3.2.1" id="321-use-case-2-needs"><span
-class="header-section-number">3.2.1</span> 3.2.1 Use-Case 2 needs</h3>
+<h3 id="321-use-case-2-needs">3.2.1 Use-Case 2 needs</h3>
 <p>In addition to some needs outlined in Use-Case 1:</p>
 <ul>
 <li>Traceability to all data sources</li>
@@ -283,8 +303,7 @@ class="header-section-number">3.2.1</span> 3.2.1 Use-Case 2 needs</h3>
 <li>can the data be used for AI, educational, and developmental
 programs?</li>
 </ul>
-<h3 data-number="3.2.2" id="322-outcome"><span
-class="header-section-number">3.2.2</span> 3.2.2 Outcome</h3>
+<h3 id="322-outcome">3.2.2 Outcome</h3>
 <p>Metadata associated with the "March 2024 Global Media Consumption
 Trends" dataset is a vital resource for procuring complex media
 consumption patterns, ensuring its integrity and applicability in AI
@@ -319,10 +338,9 @@ consumers comply with legal standards and privacy regulations, thereby
 reducing legal and reputational risks.</li>
 </ul></li>
 </ul>
-<h2 data-number="3.3"
-id="33-use-case-3-financial-services-customer-product-enablement"><span
-class="header-section-number">3.3</span> 3.3 Use-Case 3: Financial
-services customer product enablement</h2>
+<h2
+id="33-use-case-3-financial-services-customer-product-enablement">3.3
+Use-Case 3: Financial services customer product enablement</h2>
 <p>Evaluating a new dataset for refining AI algorithms used in customer
 credit card offerings.</p>
 <p>Minh is tasked with evaluating a new dataset for refining AI
@@ -358,16 +376,14 @@ sensitive data.</li>
 <li>Keep pace with technological and data standard advancements for AI
 relevance.</li>
 </ul>
-<h3 data-number="3.3.1" id="331-use-case-3-needs"><span
-class="header-section-number">3.3.1</span> 3.3.1 Use-Case 3 needs</h3>
+<h3 id="331-use-case-3-needs">3.3.1 Use-Case 3 needs</h3>
 <p>In addition to some needs outlined in Use-Case 1 and 2:</p>
 <ul>
 <li>Has the dataset been anonymized compliant to privacy
 regulations?</li>
 <li>Are there any publication restrictions or limits?</li>
 </ul>
-<h3 data-number="3.3.2" id="332-outcome"><span
-class="header-section-number">3.3.2</span> 3.3.2 Outcome</h3>
+<h3 id="332-outcome">3.3.2 Outcome</h3>
 <p>Minh’s evaluation of the "Consumer Spending Patterns 2020-2024"
 dataset through the lens of the Data Provenance Standard significantly
 enhanced ProForma Financial Services’ AI algorithms for customer credit
@@ -407,10 +423,10 @@ helped meet data privacy requirements and mitigate legal and
 reputational risks associated with GDPR and the EU AI Act.</li>
 </ul></li>
 </ul>
-<h2 data-number="3.4"
-id="34-use-case-4-enhancing-global-logistics-efficiency-through-ai-driven-tariff-harmonization"><span
-class="header-section-number">3.4</span> 3.4 Use-Case 4: Enhancing
-global logistics efficiency through AI-driven tariff harmonization</h2>
+<h2
+id="34-use-case-4-enhancing-global-logistics-efficiency-through-ai-driven-tariff-harmonization">3.4
+Use-Case 4: Enhancing global logistics efficiency through AI-driven
+tariff harmonization</h2>
 <p>Managing data to refine AI systems for accurately predicting tariff
 costs across countries and categories.</p>
 <p>The global nature of Navisphere Logistics, Ltd.’s operations means
@@ -445,16 +461,14 @@ to privacy laws.</li>
 <li>Ensure smooth AI model integration into Navisphere Logistics’
 systems without workflow disruption.</li>
 </ul>
-<h3 data-number="3.4.1" id="341-use-case-4-needs"><span
-class="header-section-number">3.4.1</span> 3.4.1 Use-Case 4 needs</h3>
+<h3 id="341-use-case-4-needs">3.4.1 Use-Case 4 needs</h3>
 <p>In addition to some needs outlined in Use-Case 1, 2, and 3:</p>
 <ul>
 <li>Indications of data credibility or bias.</li>
 <li>Indications that the data are original vs intermediary combined from
 multiple sources</li>
 </ul>
-<h3 data-number="3.4.2" id="342-outcome"><span
-class="header-section-number">3.4.2</span> 3.4.2 Outcome</h3>
+<h3 id="342-outcome">3.4.2 Outcome</h3>
 <p>Through application of the Data Provenance Standard metadata for its
 global tariff schedule datasets, Navisphere Logistics, Ltd., has
 achieved a significant enhancement in the operational efficiency and
@@ -506,23 +520,19 @@ operations remained within legal boundaries, respecting data sovereignty
 laws and consent agreements.</li>
 </ul></li>
 </ul>
-<h1 data-number="4" id="4-abstract-specification"><span
-class="header-section-number">4</span> 4. Abstract Specification</h1>
+<h1 id="4-abstract-specification">4. Abstract Specification</h1>
 <p>The Data Provenance Standard is made up of three groups of metadata
 elements: Source, Provenance, and Use.</p>
 <p><img src="./out/ImageSource/metadata/metadata.svg"
 alt="Metadata Structure" /></p>
-<h2 data-number="4.1" id="41-source"><span
-class="header-section-number">4.1</span> 4.1 Source</h2>
+<h2 id="41-source">4.1 Source</h2>
 <p>This group describes the dataset and the source of the dataset.</p>
 <ul>
 <li>Element-Name: <code>source</code></li>
 <li>cardinality: 1..1</li>
 <li>The following are child elements</li>
 </ul>
-<h3 data-number="4.1.1" id="411-standards-version-used"><span
-class="header-section-number">4.1.1</span> 4.1.1 Standards version
-used</h3>
+<h3 id="411-standards-version-used">4.1.1 Standards version used</h3>
 <p>Specifies the version of the schema or standards used to define the
 metadata for this dataset, ensuring consistency and compatibility over
 time.</p>
@@ -533,9 +543,7 @@ time.</p>
 <a href="https://semver.org/">https://semver.org/</a></li>
 <li>Example: <code>1.1.0</code></li>
 </ul>
-<h3 data-number="4.1.2" id="412-dataset-title--name"><span
-class="header-section-number">4.1.2</span> 4.1.2 Dataset title /
-name</h3>
+<h3 id="412-dataset-title--name">4.1.2 Dataset title / name</h3>
 <p>The official name of the dataset, which should be descriptive and
 help easily identify the dataset's content and purpose.</p>
 <ul>
@@ -544,8 +552,7 @@ help easily identify the dataset's content and purpose.</p>
 <li>Format: String</li>
 <li>Example: <code>Blue sky observations</code></li>
 </ul>
-<h3 data-number="4.1.3" id="413-unique-metadata-identifier"><span
-class="header-section-number">4.1.3</span> 4.1.3 Unique metadata
+<h3 id="413-unique-metadata-identifier">4.1.3 Unique metadata
 identifier</h3>
 <p>A distinct identifier (such as a UUID) assigned to the dataset's
 metadata to uniquely distinguish it from others, ensuring no confusion
@@ -557,8 +564,7 @@ or overlap.</p>
 <li>Example:
 <code>urn:uuid:17725bad-9098-4f43-abe6-43490ae1596c</code></li>
 </ul>
-<h3 data-number="4.1.4" id="414-metadata-location"><span
-class="header-section-number">4.1.4</span> 4.1.4 Metadata location</h3>
+<h3 id="414-metadata-location">4.1.4 Metadata location</h3>
 <p>The web address where the dataset's metadata is published and can be
 accessed, providing a direct link to detailed information about the
 dataset. Typically will be a unique URL of the current dataset</p>
@@ -568,8 +574,7 @@ dataset. Typically will be a unique URL of the current dataset</p>
 <li>Format: URL</li>
 <li>Example: <code>https://example.org</code></li>
 </ul>
-<h3 data-number="4.1.5" id="415-dataset-issuer"><span
-class="header-section-number">4.1.5</span> 4.1.5 Dataset issuer</h3>
+<h3 id="415-dataset-issuer">4.1.5 Dataset issuer</h3>
 <p>The legal entity responsible for creating the dataset, providing
 accountability and a point of contact for inquiries.</p>
 <ul>
@@ -577,8 +582,7 @@ accountability and a point of contact for inquiries.</p>
 <li>cardinality: 1..*</li>
 <li>Format: Organization</li>
 </ul>
-<h3 data-number="4.1.6" id="416-description-of-the-dataset"><span
-class="header-section-number">4.1.6</span> 4.1.6 Description of the
+<h3 id="416-description-of-the-dataset">4.1.6 Description of the
 dataset</h3>
 <p>Contains a detailed narrative that explains the contents, scope, and
 purpose of the dataset. It provides essential contextual information
@@ -589,16 +593,14 @@ collected, and any limitations or recommended uses.</p>
 <li>cardinality: 1..1</li>
 <li>Format: Markdown</li>
 </ul>
-<h2 data-number="4.2" id="42-provenance"><span
-class="header-section-number">4.2</span> 4.2 Provenance</h2>
+<h2 id="42-provenance">4.2 Provenance</h2>
 <p>This group describes the provenance of the dataset</p>
 <ul>
 <li>Element-Name: <code>provenance</code></li>
 <li>cardinality: 1..1</li>
 <li>The following are child elements</li>
 </ul>
-<h3 data-number="4.2.1" id="421-source-metadata-for-dataset"><span
-class="header-section-number">4.2.1</span> 4.2.1 Source metadata for
+<h3 id="421-source-metadata-for-dataset">4.2.1 Source metadata for
 dataset</h3>
 <p>Identifies where the metadata for any source datasets that contribute
 to the current dataset can be found, establishing lineage and
@@ -609,8 +611,7 @@ dependencies. This field establishes lineage.</p>
 <li>Format: URL</li>
 <li>Example: <code>https://example.org/dataset/blue.xml</code></li>
 </ul>
-<h3 data-number="4.2.2" id="422-source-for-dataset"><span
-class="header-section-number">4.2.2</span> 4.2.2 Source for dataset</h3>
+<h3 id="422-source-for-dataset">4.2.2 Source for dataset</h3>
 <p>If the data originates from a different organization than the one who
 issued the dataset, this field identifies the original source's legal
 name.</p>
@@ -619,9 +620,7 @@ name.</p>
 <li>cardinality: 0..1</li>
 <li>Format: <a href="#451-organization">Organization</a></li>
 </ul>
-<h3 data-number="4.2.3" id="423-data-origin-geography"><span
-class="header-section-number">4.2.3</span> 4.2.3 Data origin
-geography</h3>
+<h3 id="423-data-origin-geography">4.2.3 Data origin geography</h3>
 <p>The geographical location where the data was originally collected,
 which can be important for compliance with regional laws and
 understanding the data's context.</p>
@@ -630,8 +629,7 @@ understanding the data's context.</p>
 <li>cardinality: 1..*</li>
 <li>Format: <a href="#452-location">Location</a></li>
 </ul>
-<h3 data-number="4.2.4" id="424-dataset-issue-date"><span
-class="header-section-number">4.2.4</span> 4.2.4 Dataset issue date</h3>
+<h3 id="424-dataset-issue-date">4.2.4 Dataset issue date</h3>
 <p>The date when the dataset was compiled or created, providing a
 temporal context for the data.</p>
 <ul>
@@ -641,10 +639,8 @@ temporal context for the data.</p>
 <li>Example: <code>2024-05-27</code>, or
 <code>2024-05-27T15:18:02Z</code></li>
 </ul>
-<h3 data-number="4.2.5"
-id="425-date-of-previously-issued-version-of-the-dataset"><span
-class="header-section-number">4.2.5</span> 4.2.5 Date of previously
-issued version of the dataset</h3>
+<h3 id="425-date-of-previously-issued-version-of-the-dataset">4.2.5 Date
+of previously issued version of the dataset</h3>
 <p>The release date of the last version of the dataset, if it has been
 updated or revised, to track changes and updates over time.</p>
 <ul>
@@ -654,10 +650,8 @@ updated or revised, to track changes and updates over time.</p>
 <li>Example: <code>2024-05-27</code>, or
 <code>2024-05-27T15:18:02Z</code></li>
 </ul>
-<h3 data-number="4.2.6"
-id="426-range-of-dates-for-data-generation"><span
-class="header-section-number">4.2.6</span> 4.2.6 Range of dates for data
-generation</h3>
+<h3 id="426-range-of-dates-for-data-generation">4.2.6 Range of dates for
+data generation</h3>
 <p>The span of time during which the data within the dataset was
 collected or generated, offering insight into the dataset's timeliness
 and relevance.</p>
@@ -666,8 +660,7 @@ and relevance.</p>
 <li>cardinality: 0..1</li>
 <li>Format: <a href="#453-period">Period</a></li>
 </ul>
-<h3 data-number="4.2.7" id="427-method"><span
-class="header-section-number">4.2.7</span> 4.2.7 Method</h3>
+<h3 id="427-method">4.2.7 Method</h3>
 <p>The methodology or procedures used to collect, generate, or compile
 the data, giving insight into its reliability and validity.</p>
 <ul>
@@ -680,8 +673,7 @@ method types</a> if applicable</li>
 </ul></li>
 <li>MAY be other code from other code systems</li>
 </ul>
-<h3 data-number="4.2.8" id="428-data-format"><span
-class="header-section-number">4.2.8</span> 4.2.8 Data format</h3>
+<h3 id="428-data-format">4.2.8 Data format</h3>
 <p>Describes the nature of the data within the dataset, such as
 numerical, textual, or multimedia, helping users understand what kind of
 information is contained within the file or dataset.,</p>
@@ -698,16 +690,14 @@ if applicable</li>
 </ul></li>
 <li>Example: <code>application/json</code></li>
 </ul>
-<h2 data-number="4.3" id="43-use"><span
-class="header-section-number">4.3</span> 4.3 Use</h2>
+<h2 id="43-use">4.3 Use</h2>
 <p>This group describes legal, use, and restrictions.</p>
 <ul>
 <li>Element-Name: <code>use</code></li>
 <li>cardinality: 1..1</li>
 <li>The following are child elements</li>
 </ul>
-<h3 data-number="4.3.1" id="431-confidentiality-classification"><span
-class="header-section-number">4.3.1</span> 4.3.1 Confidentiality
+<h3 id="431-confidentiality-classification">4.3.1 Confidentiality
 classification</h3>
 <p>Indicate if the dataset includes data falling into the
 confidentiality classification. Each classifier must be evaluated as
@@ -720,8 +710,7 @@ true/false/unknown.</p>
 that has been evaluated</li>
 <li>Additional entries can be added</li>
 </ul>
-<h3 data-number="4.3.2" id="432-consent-documentation-location"><span
-class="header-section-number">4.3.2</span> 4.3.2 Consent documentation
+<h3 id="432-consent-documentation-location">4.3.2 Consent documentation
 location</h3>
 <p>Specifies where consent documentation or agreements related to the
 data can be found, ensuring legal compliance and regulatory use. This
@@ -736,8 +725,7 @@ individual in the dataset with that individual's signature.</p>
 <li>Example:
 <code>https://example.org/dataset/34/consent.pdf</code></li>
 </ul>
-<h3 data-number="4.3.3" id="433-privacy-indicators"><span
-class="header-section-number">4.3.3</span> 4.3.3 Privacy indicators</h3>
+<h3 id="433-privacy-indicators">4.3.3 Privacy indicators</h3>
 <p>Indicates whether techniques were used to protect personally
 identifiable information (PII) or sensitive personal information (SPI),
 highlighting the dataset's privacy considerations.</p>
@@ -748,9 +736,7 @@ highlighting the dataset's privacy considerations.</p>
 <li>using <a href="#72-privacy-enhancing-tools-codes">Privacy Enhancing
 Tools</a> vocabulary</li>
 </ul>
-<h3 data-number="4.3.4"
-id="434-data-processing-geography-included"><span
-class="header-section-number">4.3.4</span> 4.3.4 Data processing
+<h3 id="434-data-processing-geography-included">4.3.4 Data processing
 geography included</h3>
 <p>Defines the geographical boundaries within which the data can be
 processed, often for legal or regulatory reasons.</p>
@@ -761,9 +747,7 @@ processed, often for legal or regulatory reasons.</p>
 <li>When not populated there are no processing location
 requirements</li>
 </ul>
-<h3 data-number="4.3.5"
-id="435-data-processing-geography-excluded"><span
-class="header-section-number">4.3.5</span> 4.3.5 Data processing
+<h3 id="435-data-processing-geography-excluded">4.3.5 Data processing
 geography excluded</h3>
 <p>Defines the geographical boundaries within which the data cannot be
 processed, often for legal or regulatory reasons.</p>
@@ -774,8 +758,7 @@ processed, often for legal or regulatory reasons.</p>
 <li>When not populated there are no processing location
 restrictions</li>
 </ul>
-<h3 data-number="4.3.6" id="436-data-storage-geography-allowed"><span
-class="header-section-number">4.3.6</span> 4.3.6 Data storage geography
+<h3 id="436-data-storage-geography-allowed">4.3.6 Data storage geography
 allowed</h3>
 <p>Specifies where the data may be stored, crucial for compliance with
 data sovereignty laws.</p>
@@ -786,9 +769,8 @@ data sovereignty laws.</p>
 <li>When not populated there are no defined storage location
 requirements</li>
 </ul>
-<h3 data-number="4.3.7" id="437-data-storage-geography-forbidden"><span
-class="header-section-number">4.3.7</span> 4.3.7 Data storage geography
-forbidden</h3>
+<h3 id="437-data-storage-geography-forbidden">4.3.7 Data storage
+geography forbidden</h3>
 <p>Specifies where the data may not be stored, crucial for compliance
 with data sovereignty laws.</p>
 <ul>
@@ -798,8 +780,7 @@ with data sovereignty laws.</p>
 <li>When not populated there are no defined storage location
 restrictions</li>
 </ul>
-<h3 data-number="4.3.8" id="438-license-to-use"><span
-class="header-section-number">4.3.8</span> 4.3.8 License to use</h3>
+<h3 id="438-license-to-use">4.3.8 License to use</h3>
 <p>Details the location or point of contact for identifying the terms
 under which the dataset can be used, including any restrictions or
 obligations, clarifying legal use and distribution rights.</p>
@@ -813,8 +794,7 @@ obligations, clarifying legal use and distribution rights.</p>
 </ul></li>
 <li>Example: <code>Apache-2.0</code></li>
 </ul>
-<h3 data-number="4.3.9" id="439-intended-data-use"><span
-class="header-section-number">4.3.9</span> 4.3.9 Intended data use</h3>
+<h3 id="439-intended-data-use">4.3.9 Intended data use</h3>
 <p>Describes the purpose for which the dataset was created, guiding
 users on its intended use and potential applications against identified
 use cases. List all that apply from the <a
@@ -834,9 +814,7 @@ description</li>
 use</li>
 </ul></li>
 </ul>
-<h3 data-number="4.3.10" id="4310-forbidden-data-use"><span
-class="header-section-number">4.3.10</span> 4.3.10 Forbidden data
-use</h3>
+<h3 id="4310-forbidden-data-use">4.3.10 Forbidden data use</h3>
 <p>Describes the purposes for which the dataset is not intended and can
 not be used. List all that apply from the <a
 href="#73-data-use-codes">Data Use</a> codes that apply. Additional
@@ -855,8 +833,7 @@ description</li>
 use</li>
 </ul></li>
 </ul>
-<h3 data-number="4.3.11" id="4311-copyright"><span
-class="header-section-number">4.3.11</span> 4.3.11 Copyright</h3>
+<h3 id="4311-copyright">4.3.11 Copyright</h3>
 <p>Indicates whether the dataset contains proprietary information that
 is covered with a Copyright and the terms of said Copyright.</p>
 <ul>
@@ -867,8 +844,7 @@ is covered with a Copyright and the terms of said Copyright.</p>
 <li>where the string <code>no</code> indicates no Copyright</li>
 </ul></li>
 </ul>
-<h3 data-number="4.3.12" id="4312-patent"><span
-class="header-section-number">4.3.12</span> 4.3.12 Patent</h3>
+<h3 id="4312-patent">4.3.12 Patent</h3>
 <p>Indicates whether the dataset contains proprietary information that
 is covered with a Patent and said Patent number.</p>
 <ul>
@@ -879,8 +855,7 @@ is covered with a Patent and said Patent number.</p>
 <li>where the string <code>no</code> indicates no Patent</li>
 </ul></li>
 </ul>
-<h3 data-number="4.3.13" id="4313-trademark"><span
-class="header-section-number">4.3.13</span> 4.3.13 Trademark</h3>
+<h3 id="4313-trademark">4.3.13 Trademark</h3>
 <p>Indicates whether the dataset contains proprietary information that
 is covered with a Trademark, and the terms of said Trademark.</p>
 <ul>
@@ -891,8 +866,7 @@ is covered with a Trademark, and the terms of said Trademark.</p>
 <li>where the string <code>no</code> indicates no Trademark</li>
 </ul></li>
 </ul>
-<h2 data-number="4.4" id="44-primitive-datatypes"><span
-class="header-section-number">4.4</span> 4.4 Primitive Datatypes</h2>
+<h2 id="44-primitive-datatypes">4.4 Primitive Datatypes</h2>
 <p>These datatypes are commonly understood.</p>
 <ul>
 <li><strong>String</strong> - A sequence of Unicode characters</li>
@@ -925,13 +899,11 @@ receiver discretion. Milliseconds are optionally allowed. Dates SHALL be
 valid dates. The time "24:00" is not allowed. Leap Seconds are
 allowed</li>
 </ul>
-<h2 data-number="4.5" id="45-complex-datatypes"><span
-class="header-section-number">4.5</span> 4.5 Complex Datatypes</h2>
+<h2 id="45-complex-datatypes">4.5 Complex Datatypes</h2>
 <p>These are made up of more than one child element as described.</p>
 <p><img src="./out/ImageSource/datatypes/datatypes.svg"
 alt="Datatype Structure" /></p>
-<h3 data-number="4.5.1" id="451-organization"><span
-class="header-section-number">4.5.1</span> 4.5.1 Organization</h3>
+<h3 id="451-organization">4.5.1 Organization</h3>
 <ul>
 <li>Legal Entity Name
 <ul>
@@ -946,8 +918,7 @@ class="header-section-number">4.5.1</span> 4.5.1 Organization</h3>
 <li>Format: String</li>
 </ul></li>
 </ul>
-<h3 data-number="4.5.2" id="452-location"><span
-class="header-section-number">4.5.2</span> 4.5.2 Location</h3>
+<h3 id="452-location">4.5.2 Location</h3>
 <ul>
 <li>Country
 <ul>
@@ -975,8 +946,7 @@ subdivisions (e.g., states or provinces) of all countries coded in ISO
 </ul></li>
 </ul></li>
 </ul>
-<h3 data-number="4.5.3" id="453-period"><span
-class="header-section-number">4.5.3</span> 4.5.3 Period</h3>
+<h3 id="453-period">4.5.3 Period</h3>
 <ul>
 <li>Start date/time
 <ul>
@@ -997,8 +967,7 @@ class="header-section-number">4.5.3</span> 4.5.3 Period</h3>
 </ul></li>
 </ul></li>
 </ul>
-<h3 data-number="4.5.4" id="454-concept"><span
-class="header-section-number">4.5.4</span> 4.5.4 Concept</h3>
+<h3 id="454-concept">4.5.4 Concept</h3>
 <ul>
 <li>specific code for computable
 <ul>
@@ -1029,8 +998,7 @@ class="header-section-number">4.5.4</span> 4.5.4 Concept</h3>
 </ul></li>
 </ul></li>
 </ul>
-<h3 data-number="4.5.5" id="455-classification"><span
-class="header-section-number">4.5.5</span> 4.5.5 Classification</h3>
+<h3 id="455-classification">4.5.5 Classification</h3>
 <ul>
 <li>specific global regulation domain
 <ul>
@@ -1053,8 +1021,7 @@ Codes</a></li>
 </ul></li>
 </ul></li>
 </ul>
-<h3 data-number="4.5.6" id="456-privacyindicator"><span
-class="header-section-number">4.5.6</span> 4.5.6 PrivacyIndicator</h3>
+<h3 id="456-privacyindicator">4.5.6 PrivacyIndicator</h3>
 <ul>
 <li>specific global regulation domain
 <ul>
@@ -1085,8 +1052,7 @@ Enhancing Tools</a> vocabulary</li>
 </ul></li>
 </ul></li>
 </ul>
-<h1 data-number="5" id="5-technical-encoding"><span
-class="header-section-number">5</span> 5. Technical Encoding</h1>
+<h1 id="5-technical-encoding">5. Technical Encoding</h1>
 <p>The detailed schema specification for JSON, XML, and YAML are
 published independently in GIThub repositories. In these repositories
 the following are to be found:</p>
@@ -1095,23 +1061,19 @@ the following are to be found:</p>
 <li>required vocabulary in that encoding format</li>
 <li>examples</li>
 </ul>
-<h2 data-number="5.1" id="51-json-metadata-encoding"><span
-class="header-section-number">5.1</span> 5.1 JSON Metadata Encoding</h2>
+<h2 id="51-json-metadata-encoding">5.1 JSON Metadata Encoding</h2>
 <p>The technical coding and examples are available in GIThub for the <a
 href="https://github.com/Data-and-Trust-Alliance/json-metadata">JSON
 metadata encoding</a></p>
-<h2 data-number="5.2" id="52-xml-metadata-encoding"><span
-class="header-section-number">5.2</span> 5.2 XML Metadata Encoding</h2>
+<h2 id="52-xml-metadata-encoding">5.2 XML Metadata Encoding</h2>
 <p>The technical coding and examples are available in GIThub for the <a
 href="https://github.com/Data-and-Trust-Alliance/xml-metadata">XML
 metadata encoding</a></p>
-<h2 data-number="5.3" id="53-yaml-metadata-encoding"><span
-class="header-section-number">5.3</span> 5.3 YAML Metadata Encoding</h2>
+<h2 id="53-yaml-metadata-encoding">5.3 YAML Metadata Encoding</h2>
 <p>The technical coding and examples are available in GIThub for the <a
 href="https://github.com/Data-and-Trust-Alliance/yaml-metadata">YAML
 metadata encoding</a></p>
-<h1 data-number="6" id="6-security-considerations"><span
-class="header-section-number">6</span> 6. Security considerations</h1>
+<h1 id="6-security-considerations">6. Security considerations</h1>
 <p>TODO: This section should advise the reader on security or privacy
 things they should be aware of and for which a user of this
 specification will need to consider. Often it is just a listing of risks
@@ -1121,12 +1083,10 @@ and would need to be protected or carefully crafted such that they are
 not a risk.</p>
 <p>Metadata and the Dataset are data that need to be of quality and
 trustable to be valuable.... blah blah</p>
-<h1 data-number="7" id="7-annex"><span
-class="header-section-number">7</span> 7. Annex</h1>
+<h1 id="7-annex">7. Annex</h1>
 <p>The Annex contain normative vocabulary to be used when it applies.
 These vocabulary SHALL be used when they apply.</p>
-<h2 data-number="7.1" id="71-data-collection-method-codes"><span
-class="header-section-number">7.1</span> 7.1 Data Collection Method
+<h2 id="71-data-collection-method-codes">7.1 Data Collection Method
 Codes</h2>
 <p>The following defined vocabulary are to be used for the "Method".</p>
 <ul>
@@ -1403,8 +1363,7 @@ Codes</h2>
 </tr>
 </tbody>
 </table>
-<h2 data-number="7.2" id="72-privacy-enhancing-tools-codes"><span
-class="header-section-number">7.2</span> 7.2 Privacy Enhancing Tools
+<h2 id="72-privacy-enhancing-tools-codes">7.2 Privacy Enhancing Tools
 Codes</h2>
 <p>The following concepts are defined to describe privacy enhancing
 tools (PET).</p>
@@ -1478,8 +1437,7 @@ tools (PET).</p>
 </tr>
 </tbody>
 </table>
-<h2 data-number="7.3" id="73-data-use-codes"><span
-class="header-section-number">7.3</span> 7.3 Data Use Codes</h2>
+<h2 id="73-data-use-codes">7.3 Data Use Codes</h2>
 <p>The following concepts are defined to describe intended and forbidden
 uses of the dataset</p>
 <ul>
@@ -1533,8 +1491,7 @@ uses of the dataset</p>
 </tbody>
 </table>
 <p>Where: <code>non-ai-other</code>, and <code>ai-other</code></p>
-<h2 data-number="7.4" id="74-data-regulation-codes"><span
-class="header-section-number">7.4</span> 7.4 Data Regulation Codes</h2>
+<h2 id="74-data-regulation-codes">7.4 Data Regulation Codes</h2>
 <p>The following concepts are defined to indicate specific global
 regulated domains of relevance</p>
 <ul>
@@ -1575,8 +1532,7 @@ regulated domains of relevance</p>
 </tr>
 </tbody>
 </table>
-<h1 data-number="8" id="8-acknowledgements"><span
-class="header-section-number">8</span> 8. Acknowledgements</h1>
+<h1 id="8-acknowledgements">8. Acknowledgements</h1>
 <p>Acknowledgements to the <a
 href="https://dataandtrustalliance.org/who-we-are">Members of the Data
 and Trust Alliance</a></p>
@@ -1809,3 +1765,5 @@ Compliance</li>
 <li>Engineering Director</li>
 </ul></li>
 </ul>
+</body>
+</html>

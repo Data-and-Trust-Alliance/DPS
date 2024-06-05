@@ -169,7 +169,7 @@ In addition to some needs outlined in Use-Case 1:
 - Dataset covers the geography of interest
 - Dataset has covered full timeframe of interest
 - Are there restrictions on the use?
-- can the data be used for AI, educational, and developmental programs?
+- Can the data be used for AI, educational, and developmental programs?
 
 ### 3.2.2 Outcome
 
@@ -503,6 +503,8 @@ Details the location or point of contact for identifying the terms under which t
   - May be a URL
 - Example: `Apache-2.0`
 
+TODO: May be a point of contact for identifying the legal terms under which the data can be used.License may be End User License Agreement (EULA), subvject to Data Use Agreement (DUA) for the Alliance members.
+
 ### 4.3.9 Intended data use
 
 Describes the purpose for which the dataset was created, guiding users on its intended use and potential applications against identified use cases. List all that apply from the [Data Use](#73-data-use-codes) codes that apply. Additional codes can be included with descriptions.
@@ -524,6 +526,8 @@ Describes the purposes for which the dataset is not intended and can not be used
   - SHALL populate `code` from [Data Use](#73-data-use-codes).
   - SHALL populate `description` with specific description
   - When using the code `non-ai-other` and `ai-other`, the description SHALL describe the actual use
+ 
+  TODO: We do not have a Forbidden data use defined in the standard. The Working Group specifically chose to not look at intended/forbidden data use as a metadata option (we considered not for release/use by Federal Governments for example).
 
 ### 4.3.11 Copyright
 

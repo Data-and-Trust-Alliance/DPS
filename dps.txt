@@ -121,10 +121,9 @@ The following concepts are used throughout the specification
     which comprise the current dataset
 -   Source: Identifies the origin (person, organization, system, device,
     etc.) of the current dataset
--   Legal Rights: Identifies the legal or regulatory framework
-    applicable to the current dataset, along with the required data
-    attributions, associated copyright, or trademark, and localization
-    and processing requirements (TODO need help with sentence. )
+-   Legal Rights: Identifies the lawful entitlements and protections
+    over data ownership, use, and distribution, ensuring compliance,
+    privacy, and accountability
 -   Privacy and Protection: Identifies any types of sensitive data
     associated with the current dataset and any privacy enhancing
     techniques applied
@@ -276,7 +275,7 @@ In addition to some needs outlined in Use-Case 1:
 -   Dataset covers the geography of interest
 -   Dataset has covered full timeframe of interest
 -   Are there restrictions on the use?
--   can the data be used for AI, educational, and developmental
+-   Can the data be used for AI, educational, and developmental
     programs?
 
 3.2.2 Outcome
@@ -745,7 +744,9 @@ data sovereignty laws.
 
 Details the location or point of contact for identifying the terms under
 which the dataset can be used, including any restrictions or
-obligations, clarifying legal use and distribution rights.
+obligations, clarifying legal use and distribution rights. License may
+be an End User License Agreement (EULA), subject to Data Use Agreement
+(DUA).
 
 -   Element-Name: license
 -   cardinality: 0..1
@@ -769,21 +770,7 @@ Additional codes can be included with descriptions.
     -   When using the code non-ai-other and ai-other, the description
         SHALL describe the actual use
 
-4.3.10 Forbidden data use
-
-Describes the purposes for which the dataset is not intended and can not
-be used. List all that apply from the Data Use codes that apply.
-Additional codes can be included with descriptions.
-
--   Element-Name: forbidden-purpose
--   cardinality: 0..*
--   Format: Concept
-    -   SHALL populate code from Data Use.
-    -   SHALL populate description with specific description
-    -   When using the code non-ai-other and ai-other, the description
-        SHALL describe the actual use
-
-4.3.11 Copyright
+4.3.10 Copyright
 
 Indicates whether the dataset contains proprietary information that is
 covered with a Copyright and the terms of said Copyright.
@@ -793,7 +780,7 @@ covered with a Copyright and the terms of said Copyright.
 -   Format: String
     -   where the string no indicates no Copyright
 
-4.3.12 Patent
+4.3.11 Patent
 
 Indicates whether the dataset contains proprietary information that is
 covered with a Patent and said Patent number.
@@ -803,7 +790,7 @@ covered with a Patent and said Patent number.
 -   Format: String
     -   where the string no indicates no Patent
 
-4.3.13 Trademark
+4.3.12 Trademark
 
 Indicates whether the dataset contains proprietary information that is
 covered with a Trademark, and the terms of said Trademark.

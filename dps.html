@@ -147,10 +147,9 @@ provenance metadata of the current dataset</li>
 representing the data which comprise the current dataset</li>
 <li><strong>Source</strong>: Identifies the origin (person,
 organization, system, device, etc.) of the current dataset</li>
-<li><strong>Legal Rights</strong>: Identifies the legal or regulatory
-framework applicable to the current dataset, along with the required
-data attributions, associated copyright, or trademark, and localization
-and processing requirements (TODO need help with sentence. )</li>
+<li><strong>Legal Rights</strong>: Identifies the lawful entitlements
+and protections over data ownership, use, and distribution, ensuring
+compliance, privacy, and accountability</li>
 <li><strong>Privacy and Protection</strong>: Identifies any types of
 sensitive data associated with the current dataset and any privacy
 enhancing techniques applied</li>
@@ -300,7 +299,7 @@ procurement systems.</li>
 <li>Dataset covers the geography of interest</li>
 <li>Dataset has covered full timeframe of interest</li>
 <li>Are there restrictions on the use?</li>
-<li>can the data be used for AI, educational, and developmental
+<li>Can the data be used for AI, educational, and developmental
 programs?</li>
 </ul>
 <h3 id="322-outcome">3.2.2 Outcome</h3>
@@ -783,7 +782,9 @@ restrictions</li>
 <h3 id="438-license-to-use">4.3.8 License to use</h3>
 <p>Details the location or point of contact for identifying the terms
 under which the dataset can be used, including any restrictions or
-obligations, clarifying legal use and distribution rights.</p>
+obligations, clarifying legal use and distribution rights. License may
+be an End User License Agreement (EULA), subject to Data Use Agreement
+(DUA).</p>
 <ul>
 <li>Element-Name: <code>license</code></li>
 <li>cardinality: 0..1</li>
@@ -814,26 +815,7 @@ description</li>
 use</li>
 </ul></li>
 </ul>
-<h3 id="4310-forbidden-data-use">4.3.10 Forbidden data use</h3>
-<p>Describes the purposes for which the dataset is not intended and can
-not be used. List all that apply from the <a
-href="#73-data-use-codes">Data Use</a> codes that apply. Additional
-codes can be included with descriptions.</p>
-<ul>
-<li>Element-Name: <code>forbidden-purpose</code></li>
-<li>cardinality: 0..*</li>
-<li>Format: <a href="#454-concept">Concept</a>
-<ul>
-<li>SHALL populate <code>code</code> from <a
-href="#73-data-use-codes">Data Use</a>.</li>
-<li>SHALL populate <code>description</code> with specific
-description</li>
-<li>When using the code <code>non-ai-other</code> and
-<code>ai-other</code>, the description SHALL describe the actual
-use</li>
-</ul></li>
-</ul>
-<h3 id="4311-copyright">4.3.11 Copyright</h3>
+<h3 id="4310-copyright">4.3.10 Copyright</h3>
 <p>Indicates whether the dataset contains proprietary information that
 is covered with a Copyright and the terms of said Copyright.</p>
 <ul>
@@ -844,7 +826,7 @@ is covered with a Copyright and the terms of said Copyright.</p>
 <li>where the string <code>no</code> indicates no Copyright</li>
 </ul></li>
 </ul>
-<h3 id="4312-patent">4.3.12 Patent</h3>
+<h3 id="4311-patent">4.3.11 Patent</h3>
 <p>Indicates whether the dataset contains proprietary information that
 is covered with a Patent and said Patent number.</p>
 <ul>
@@ -855,7 +837,7 @@ is covered with a Patent and said Patent number.</p>
 <li>where the string <code>no</code> indicates no Patent</li>
 </ul></li>
 </ul>
-<h3 id="4313-trademark">4.3.13 Trademark</h3>
+<h3 id="4312-trademark">4.3.12 Trademark</h3>
 <p>Indicates whether the dataset contains proprietary information that
 is covered with a Trademark, and the terms of said Trademark.</p>
 <ul>

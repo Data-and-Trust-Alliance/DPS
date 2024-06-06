@@ -72,7 +72,7 @@ The following concepts are used throughout the specification
 - **Dataset Identifier**: A unique label identifying the provenance metadata of the current dataset
 - **Lineage**: Identifiers or pointers of metadata representing the data which comprise the current dataset
 - **Source**: Identifies the origin (person, organization, system, device, etc.) of the current dataset
-- **Legal Rights**: Identifies the lawful entitlements and protections over data ownership, use, and distribution, ensuring compliance, privacy, and accountability (TODO need help with sentence --> Kristina changed it. Better?)
+- **Legal Rights**: Identifies the lawful entitlements and protections over data ownership, use, and distribution, ensuring compliance, privacy, and accountability 
 - **Privacy and Protection**: Identifies any types of sensitive data associated with the current dataset and any privacy enhancing techniques applied
 - **Generation Date**: Timestamp marking the creation of the current dataset
 - **Data Type**: Identifies the data type contained in the current set, and provides insights into how the data is organized, its potential use cases, and the challenges associated with handling and using it
@@ -494,7 +494,7 @@ Specifies where the data may not be stored, crucial for compliance with data sov
 
 ### 4.3.8 License to use
 
-Details the location or point of contact for identifying the terms under which the dataset can be used, including any restrictions or obligations, clarifying legal use and distribution rights.
+Details the location or point of contact for identifying the terms under which the dataset can be used, including any restrictions or obligations, clarifying legal use and distribution rights. License may be an End User License Agreement (EULA), subject to Data Use Agreement (DUA).
 
 - Element-Name: `license`
 - cardinality: 0..1
@@ -502,8 +502,6 @@ Details the location or point of contact for identifying the terms under which t
   - Prefer License codes such as CreativeCommons or Apache
   - May be a URL
 - Example: `Apache-2.0`
-
-TODO: May be a point of contact for identifying the legal terms under which the data can be used.License may be End User License Agreement (EULA), subvject to Data Use Agreement (DUA) for the Alliance members.
 
 ### 4.3.9 Intended data use
 
@@ -516,20 +514,7 @@ Describes the purpose for which the dataset was created, guiding users on its in
   - SHALL populate `description` with specific description
   - When using the code `non-ai-other` and `ai-other`, the description SHALL describe the actual use
 
-### 4.3.10 Forbidden data use
-
-Describes the purposes for which the dataset is not intended and can not be used. List all that apply from the [Data Use](#73-data-use-codes) codes that apply. Additional codes can be included with descriptions.
-
-- Element-Name: `forbidden-purpose`
-- cardinality: 0..*
-- Format: [Concept](#454-concept)
-  - SHALL populate `code` from [Data Use](#73-data-use-codes).
-  - SHALL populate `description` with specific description
-  - When using the code `non-ai-other` and `ai-other`, the description SHALL describe the actual use
- 
-  TODO: We do not have a Forbidden data use defined in the standard. The Working Group specifically chose to not look at intended/forbidden data use as a metadata option (we considered not for release/use by Federal Governments for example).
-
-### 4.3.11 Copyright
+### 4.3.10 Copyright
 
 Indicates whether the dataset contains proprietary information that is covered with a Copyright and the terms of said Copyright.
 
@@ -538,7 +523,7 @@ Indicates whether the dataset contains proprietary information that is covered w
 - Format: String
   - where the string `no` indicates no Copyright
 
-### 4.3.12 Patent
+### 4.3.11 Patent
 
 Indicates whether the dataset contains proprietary information that is covered with a Patent and said Patent number.
 
@@ -547,7 +532,7 @@ Indicates whether the dataset contains proprietary information that is covered w
 - Format: String
   - where the string `no` indicates no Patent
 
-### 4.3.13 Trademark
+### 4.3.12 Trademark
 
 Indicates whether the dataset contains proprietary information that is covered with a Trademark, and the terms of said Trademark.
 

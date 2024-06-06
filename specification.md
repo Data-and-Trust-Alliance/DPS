@@ -72,7 +72,7 @@ The following concepts are used throughout the specification
 - **Dataset Identifier**: A unique label identifying the provenance metadata of the current dataset
 - **Lineage**: Identifiers or pointers of metadata representing the data which comprise the current dataset
 - **Source**: Identifies the origin (person, organization, system, device, etc.) of the current dataset
-- **Legal Rights**: Identifies the legal or regulatory framework applicable to the current dataset, along with the required data attributions, associated copyright, or trademark, and localization and processing requirements (TODO need help with sentence. )
+- **Legal Rights**: Identifies the lawful entitlements and protections over data ownership, use, and distribution, ensuring compliance, privacy, and accountability (TODO need help with sentence --> Kristina changed it. Better?)
 - **Privacy and Protection**: Identifies any types of sensitive data associated with the current dataset and any privacy enhancing techniques applied
 - **Generation Date**: Timestamp marking the creation of the current dataset
 - **Data Type**: Identifies the data type contained in the current set, and provides insights into how the data is organized, its potential use cases, and the challenges associated with handling and using it

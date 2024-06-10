@@ -945,16 +945,78 @@ metadata encoding
 
 6. Security considerations
 
-TODO: This section should advise the reader on security or privacy
-things they should be aware of and for which a user of this
-specification will need to consider. Often it is just a listing of risks
-that the specification does not address, but for which the specification
-creates. Such as the fact that datasets and metadata are sensitive data
-and would need to be protected or carefully crafted such that they are
-not a risk.
+Creating and publicly sharing metadata is crucial for transparency and
+trust building in data assets used for AI. However, it can also expose
+organizations to security risks, including:
 
-Metadata and the Dataset are data that need to be of quality and
-trustable to be valuable.... blah blah
+1.  Unauthorized access and data breaches
+    -   Disclosing the metadata location (Unique URL of the current
+        dataset) and making publicly accessible URLs visible may cause
+        an organization to be targeted by unauthorized users attempting
+        to access the dataset's contents.
+    -   By specifying the confidentiality classification, attackers
+        could exploit the declaration to identify and target high-value
+        datasets.
+2.  Data integrity and manipulation
+    -   Unique metadata identifiers are predictable, and attackers could
+        manipulate or create false metadata entries to corrupt data
+        integrity.
+    -   Provenance information details a dataset's source metadata and
+        data lineage. This information may provide attackers with
+        information on data flows and dependencies, potentially allowing
+        them to introduce malicious data into the pipeline.
+3.  Privacy and confidentiality risks
+    -   Organizations may expose sensitive contractual information and
+        legal agreements by publicly listing where the consent for
+        private data collection is stored.
+    -   Indicating the use of Privacy Enhancing Technologies (PETs)
+        might reveal which datasets contain sensitive personal
+        information (PII/SPI), making them targets for privacy attacks.
+4.  Compliance and legal risks
+    -   Disclosure of geographical data origins and storage locations
+        through the “Data Origin Geography” and “Data Storage Geography”
+        metadata can expose organizations to legal and compliance risks,
+        especially if data sovereignty laws are violated.
+    -   Publicly sharing licensing information via the “License to Use”
+        metadata can lead to misuse or unauthorized exploitation of
+        datasets if not adequately protected.
+5.  Operational and organizational risks
+    -   Publicly identifying the legal entity responsible for the
+        dataset via the dataset “Issuer” and “Source” metadata could
+        expose the organization to targeted phishing attacks or social
+        engineering attempts.
+    -   Revealing the intended use of data can provide insights into
+        organizational strategies and operational plans, which could be
+        exploited by competitors or malicious actors.
+6.  Exploitation of methodologies
+    -   Detailed descriptions of data collection methodologies via the
+        “Method” metadata component can be exploited by adversaries to
+        identify weaknesses in data generation processes or to mimic
+        legitimate data collection efforts for fraudulent purposes.
+7.  Proprietary information exposure
+    -   Indicating the presence of proprietary data can make datasets
+        targets for industrial espionage or intellectual property theft.
+8.  Potential misuse of metadata
+    -   Detailed descriptions and titles of datasets may inadvertently
+        disclose sensitive project details or internal operational
+        information.
+    -   Revealing specific data collection time frames through the
+        “Range of Dates for Data Generation” can provide adversaries
+        with insights into organizational activities and patterns.
+
+To mitigate these risks, organizations should:
+
+-   Implement robust access controls and authentication mechanisms for
+    metadata and datasets
+-   Use Privacy Enhancing Technologies (e.g., encryption) to protect
+    datasets
+-   Redact sensitive metadata elements
+-   Regularly audit and monitor access to metadata and datasets to
+    detect and respond to unauthorized activities
+-   Limit the public disclosure of sensitive information and use
+    anonymization techniques where possible
+-   Ensure compliance with relevant data protection laws and regulations
+    by adhering to best data governance and privacy practices.
 
 7. Annex
 

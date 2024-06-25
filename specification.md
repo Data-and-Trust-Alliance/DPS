@@ -664,14 +664,13 @@ The technical coding and examples are available in GIThub for the [YAML metadata
 Creating and publicly sharing metadata is crucial for transparency and trust building in data assets used for AI. However, it can also expose organizations to security risks, including:
 
 1. Unauthorized access and data breaches
-    - Disclosing the metadata location (Unique URL of the current dataset) and making publicly accessible URLs visible may cause an organization to be targeted by unauthorized users attempting to access the dataset's contents.
+    - Publicly disclosing the metadata location (Unique URL of the current dataset) may cause an organization to be targeted by unauthorized users attempting to access the dataset.
     - By specifying the confidentiality classification, attackers could exploit the declaration to identify and target high-value datasets.
 2. Data integrity and manipulation
     - Unique metadata identifiers are predictable, and attackers could manipulate or create false metadata entries to corrupt data integrity.
     - Provenance information details a dataset's source metadata and data lineage. This information may provide attackers with information on data flows and dependencies, potentially allowing them to introduce malicious data into the pipeline.
 3. Privacy and confidentiality risks
-    - Organizations may expose sensitive contractual information and legal agreements by publicly listing where the consent for private data collection is stored.
-    - Indicating the use of Privacy Enhancing Technologies (PETs) might reveal which datasets contain sensitive personal information (PII/SPI), making them targets for privacy attacks.
+    -Indicating PI but no usage of PETS may reveal SPI in datasets. 
 4. Compliance and legal risks
     - Disclosure of geographical data origins and storage locations through the “Data Origin Geography” and “Data Storage Geography” metadata can expose organizations to legal and compliance risks, especially if data sovereignty laws are violated.
     - Publicly sharing licensing information via the “License to Use” metadata can lead to misuse or unauthorized exploitation of datasets if not adequately protected.
@@ -688,12 +687,10 @@ Creating and publicly sharing metadata is crucial for transparency and trust bui
 
 To mitigate these risks, organizations should:
 
-- Implement robust access controls and authentication mechanisms for metadata and datasets
-- Use Privacy Enhancing Technologies (e.g., encryption) to protect datasets
-- Redact sensitive metadata elements
-- Regularly audit and monitor access to metadata and datasets to detect and respond to unauthorized activities
-- Limit the public disclosure of sensitive information and use anonymization techniques where possible
-- Ensure compliance with relevant data protection laws and regulations by adhering to best data governance and privacy practices.
+- Invest in and implement robust access controls and authentication mechanisms for datasets
+- 	When PI or sensitive information is present in a dataset invest in Privacy Enhancing Technologies (e.g., encryption) to add additional protection
+- 	 nvest in practices to ensure compliance with relevant data protection laws and regulations by adhering to best data governance and privacy practices
+
 
 # 7. Annex
 

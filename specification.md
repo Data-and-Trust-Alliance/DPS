@@ -759,7 +759,7 @@ The following defined vocabulary are to be used for the "Method".
 | user-generated-content-ratings-and-reviews | User generated content Ratings & reviews
 | user-generated-content-multimedia | User generated content Multimedia
 | user-generated-content-other | User generated content Other
-| primary-user-source-survey-questionaire | Primary user source Survey/Questionnaire
+| primary-user-source-survey-questionnaire | Primary user source Survey/Questionnaire
 | primary-user-source-interview | Primary user source Interview
 | primary-user-source-event | Primary user source Event
 | primary-user-source-biometric | Primary user source Biometric

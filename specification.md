@@ -834,8 +834,6 @@ Acknowledgements to the [Members of the Data and Trust Alliance](https://dataand
 
 **AARP**
 
-- Amr Khani
-  - SVP, Data and Analytics
 - Jaye Campbell
   - Legal Leader, General Counsel
 
@@ -843,29 +841,11 @@ Acknowledgements to the [Members of the Data and Trust Alliance](https://dataand
 
 - Laurel Shifrin
   - VP, Enterprise Data Governance
-- Saheel Shah
-  - Director, Enterprise Data Governance
-
-**CVS**
-
-- Dave Sturgeon 
-  - Executive Director, Data Governance and Enablement
-- Herb Holmes
-  - Data Governance & Data Management Leader
 
 **Deloitte**
 
-- Juan Tello
-  - U.S. CDO, Strategy & Analytics Principal
-- Leo Cabrera, Rohit Iyer, and Ajay Tripathi
+- Ajay Tripathi
   - Office of CDO
-
-**GM**
-
-- Jon Francis
-  - Chief Data & Analytics Officer
-- Brian Ames
-  - Principal Software Engineer
 
 **Howso**
 
@@ -874,10 +854,6 @@ Acknowledgements to the [Members of the Data and Trust Alliance](https://dataand
 - Michael Meehan
   - General Counsel
 
-**Humana**
-
-- Genevy Dimitrion
-  - VP, Data Strategy & Governance
  
 **IBM**
 
@@ -890,60 +866,20 @@ Acknowledgements to the [Members of the Data and Trust Alliance](https://dataand
 - Orla Flannery
   - Privacy Program Manager
 
-**Kenvue**
-
-- Bernardo Tavares
-  - Chief Technology & Data Officer
-- Ajay Dhaul
-  - SVP Global Data
-- Kim Viccaro
-  - Data Strategy & Activation Lead
-- Sudheesh Kamath
-  - Data & AI Products Leader
-
 **Mastercard**
 
 - Travis Carpenter
   - VP, Data Quality & Sources
-- Ed Dephilippis
-  - VP, Data Management & Quality
-- Usha Ramalingam
-  - Director, Data Management
 
 **Nielsen**
 
 - Christine Pierce
   - Chief Data Officer
-- Frank Fasinski
-  - Director, Data Science
-
-**Nike**
-
-- Emily White
-  - Vice President, Enterprise Data & Analytics
 
 **Pfizer**
 
-- Peter Hunter
-  - Sr Director, Analytic Tools
-- Gentiana Spahiu 
+- Genta Spahiu 
   - Director, Data Gov. Lead
-- Michael Pagliorola, Sasi Mullangi, Adam Nieto,
-John Pastor, Drew Palsgrove, and Jay Shetty
-
-**Regions**
-
-- Dilip Balachandran 
-  - SVP, Enterprise Data Management
-
-**Smithsonian**
-
-- Alan Hejnal
-  - Data Quality Manager
-- Derrick Whitney 
-  - Interim CDO
-- Adam Soroka
-  - Office of Research Computing
 
 **Transcarent**
 
@@ -958,19 +894,4 @@ John Pastor, Drew Palsgrove, and Jay Shetty
   - VP, Enterprise Data and Analytics
 - Zeenat Syed
   - Director of Data Strategy
-- Ricardo Rodriguez
-  - Sr Manager, Data Science and Machine Learning
 
-**Walmart**
-
-- Gregory Schaffer
-  - Chief Counsel, Cyber Security & VP, Digital Trust Compliance
-- Laura Asbury 
-  - Director, Digital Trust Compliance
-
-**Warby Parker**
-
-- Peter Cross 
-  - Head of Data
-- Chris Bleakley 
-  - Engineering Director

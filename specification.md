@@ -1,6 +1,6 @@
 **The Data Provenance Standard**
 
-The Data Provenance Standard defines metadata about a data set, so that the dataset provenance and lineage are understood. This set of metadata are necessary to enable proper dataset selection for AI Model Training.
+The Data Provenance Standard defines metadata about a dataset, so that the dataset provenance and lineage are understood. This set of metadata are necessary to enable proper dataset selection for AI Model Training.
 
 **Version 1.1.0**
 
@@ -24,7 +24,7 @@ Data transparency is critical. Trust in the insights and decisions coming from b
 
 To realize the value of data and AI requires a reliable cross-industry baseline of data transparency. The Data Provenance Standard proposes a solution.
 
-**Table of Content**
+**Table of Contents**
 
 1. [Abstract](#1-abstract)
 2. [Introduction](#2-introduction)

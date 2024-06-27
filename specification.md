@@ -105,7 +105,7 @@ Goals
 Challenges
 
 - Balancing the need for detailed, comprehensive data with privacy and confidentiality requirements.
-- Ensuring the dataset’s metadata is accurate, up-to-date, and compliant with evolving Data Provenance Standard.
+- Ensuring the dataset’s metadata is accurate, up-to-date, and compliant with evolving Data Provenance Standards.
 - Integrating new datasets with existing systems and models without compromising data integrity or system performance.
 - Navigating the complex landscape of healthcare regulations and ensuring all data usage is compliant.
 

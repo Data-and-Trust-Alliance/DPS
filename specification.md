@@ -84,7 +84,7 @@ The following concepts are used throughout the specification
 The following use-cases are examplar of the use-cases for which this standard applies.  These use-cases show how this standard supports diverse needs across the data ecosystem.
 
 1. Healthcare insurance data procurement
-2. Media consumption pattern data set for consumer behavior insights
+2. Media consumption pattern dataset for consumer behavior insights
 3. Financial services customer product enablement
 4. Enhancing global logistics efficiency through AI-driven tariff harmonization
 

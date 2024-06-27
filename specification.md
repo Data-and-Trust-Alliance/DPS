@@ -69,15 +69,15 @@ The following concepts are used throughout the specification
 - **AI**:  Computer systems that can perform tasks typically requiring human intelligence, such as understanding language, recognizing patterns, and making decisions.
 - **Dataset**: A collection of data.
 - **Metadata**: Structured description about a dataset that enable the understanding of that dataset.
-- **Dataset Identifier**: A unique label identifying the provenance metadata of the current dataset
-- **Lineage**: Identifiers or pointers of metadata representing the data which comprise the current dataset
-- **Source**: Identifies the origin (person, organization, system, device, etc.) of the current dataset
-- **Legal Rights**: Identifies the lawful entitlements and protections over data ownership, use, and distribution, ensuring compliance, privacy, and accountability 
-- **Privacy and Protection**: Identifies any types of sensitive data associated with the current dataset and any privacy enhancing techniques applied
-- **Generation Date**: Timestamp marking the creation of the current dataset
-- **Data Type**: Identifies the data type contained in the current set, and provides insights into how the data is organized, its potential use cases, and the challenges associated with handling and using it
-- **Generation Method**: Identifies how the data was produced (data mining, machine-generated, IoT sensors, etc.)
-- **Intended Use and Restrictions**: Identifies the intended use of the data and which downstream audiences should not be allowed access to the current dataset
+- **Dataset Identifier**: A unique label identifying the provenance metadata of the current dataset.
+- **Lineage**: Identifiers or pointers of metadata representing the data which comprise the current dataset.
+- **Source**: Identifies the origin (person, organization, system, device, etc.) of the current dataset.
+- **Legal Rights**: Identifies the lawful entitlements and protections over data ownership, use, and distribution, ensuring compliance, privacy, and accountability. 
+- **Privacy and Protection**: Identifies any types of sensitive data associated with the current dataset and any privacy enhancing techniques applied.
+- **Generation Date**: Timestamp marking the creation of the current dataset.
+- **Data Type**: Identifies the data type contained in the current set, and provides insights into how the data is organized, its potential use cases, and the challenges associated with handling and using it.
+- **Generation Method**: Identifies how the data was produced (data mining, machine-generated, IoT sensors, etc.).
+- **Intended Use and Restrictions**: Identifies the intended use of the data and which downstream audiences should not be allowed access to the current dataset.
 
 # 3. Use-Case
 
@@ -164,10 +164,10 @@ Challenges
 
 In addition to some needs outlined in Use-Case 1:
 
-- Traceability to all data sources
-- Applicability of the dataset to the use-case
-- Dataset covers the geography of interest
-- Dataset has covered full timeframe of interest
+- Traceability to all data sources.
+- Applicability of the dataset to the use-case.
+- Dataset covers the geography of interest.
+- Dataset has covered full timeframe of interest.
 - Are there restrictions on the use?
 - Can the data be used for AI, educational, and developmental programs?
 
@@ -687,9 +687,9 @@ Creating and publicly sharing metadata is crucial for transparency and trust bui
 
 To mitigate these risks, organizations should:
 
-- Invest in and implement robust access controls and authentication mechanisms for datasets
-- 	When PI or sensitive information is present in a dataset invest in Privacy Enhancing Technologies (e.g., encryption) to add additional protection
-- 	 nvest in practices to ensure compliance with relevant data protection laws and regulations by adhering to best data governance and privacy practices
+- Invest in and implement robust access controls and authentication mechanisms for datasets.
+- 	When PI or sensitive information is present in a dataset invest in Privacy Enhancing Technologies (e.g., encryption) to add additional protection.
+- 	 Invest in practices to ensure compliance with relevant data protection laws and regulations by adhering to best data governance and privacy practices.
 
 
 # 7. Annex

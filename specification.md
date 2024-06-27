@@ -8,7 +8,7 @@ The D&TA Data Provenance Standards define metadata about a dataset, so that the 
 
 **Authors:**
 
-- [Data and Trust Alliance](https://dataandtrustalliance.org/)
+- [Data & Trust Alliance](https://dataandtrustalliance.org/)
 - Kristina Podnar
 - John Moehrke
 
@@ -317,7 +317,7 @@ A distinct identifier (such as a UUID) assigned to the dataset's metadata to uni
 
 ### 4.1.4 Metadata location
 
-The web address where the dataset's metadata is published and can be accessed, providing a direct link to detailed information about the dataset. Typically will be a unique URL of the current dataset
+The web address where the dataset's metadata is published and can be accessed, providing a direct link to detailed information about the dataset. Typically will be a unique URL of the current dataset.
 
 - Element-Name: `location`
 - cardinality: 0..1
@@ -342,7 +342,7 @@ Contains a detailed narrative that explains the contents, scope, and purpose of 
 
 ## 4.2 Provenance
 
-This group describes the provenance of the dataset
+This group describes the provenance of the dataset.
 
 - Element-Name: `provenance`
 - cardinality: 1..1
@@ -411,7 +411,7 @@ The methodology or procedures used to collect, generate, or compile the data, gi
 
 ### 4.2.8 Data format
 
-Describes the nature of the data within the dataset, such as numerical, textual, or multimedia, helping users understand what kind of information is contained within the file or dataset.,
+Describes the nature of the data within the dataset, such as numerical, textual, or multimedia, helping users understand what kind of information is contained within the file or dataset.
 
 - Element-Name: `format`
 - cardinality: 0..*
@@ -830,7 +830,7 @@ The following concepts are defined to indicate specific global regulated domains
 
 # 8. Acknowledgements
 
-Acknowledgements to the [Members of the Data and Trust Alliance](https://dataandtrustalliance.org/who-we-are)
+Acknowledgements to the [Members of the Data & Trust Alliance](https://dataandtrustalliance.org/who-we-are)
 
 **AARP**
 

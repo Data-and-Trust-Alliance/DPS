@@ -1,6 +1,6 @@
-**The Data Provenance Standard**
+**Data & Trust Alliance Data Provenance Standards**
 
-The Data Provenance Standard defines metadata about a dataset, so that the dataset provenance and lineage are understood. This set of metadata are necessary to enable proper dataset selection for AI Model Training.
+The D&TA Data Provenance Standards define metadata about a dataset, so that the dataset provenance and lineage are understood. This set of metadata are necessary to enable proper dataset selection for AI Model Training.
 
 **Version 1.1.0**
 

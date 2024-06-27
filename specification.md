@@ -22,7 +22,7 @@ The D&TA Data Provenance Standards define metadata about a dataset, so that the 
 
 Data transparency is critical. Trust in the insights and decisions coming from both traditional data and AI applications depends on understanding the origin, lineage, and rights associated with the data that feeds them. Lack of transparency has real costs, including unnecessary risks and foregone opportunities. And yet, many organizations today cannot answer basic data questions without considerable difficulty and investment.
 
-To realize the value of data and AI requires a reliable cross-industry baseline of data transparency. The Data Provenance Standard proposes a solution.
+To realize the value of data and AI requires a reliable cross-industry baseline of data transparency. The Data Provenance Standards propose a solution.
 
 **Table of Contents**
 
@@ -41,7 +41,7 @@ For the past quarter century, companies have worked to become "digital". Now the
 
 For these intelligent systems to create economic and societal value for all stakeholders—customers, employees, citizens, shareholders, partners, suppliers, and more—they must be designed and managed responsibly.
 
-The Data Provenance Standard surface metadata on source, legal rights, privacy & protection, generation date, data type, generation method, intended use, restrictions, and lineage. Each metadata field has associated values. This essential information about the origin of and rights associated with data allows enterprises to make informed choices about the data they source and use. The result can be improvements in operational efficiency, regulatory compliance, collaboration, and value generation.
+The Data Provenance Standards surface metadata on source, legal rights, privacy & protection, generation date, data type, generation method, intended use, restrictions, and lineage. Each metadata field has associated values. This essential information about the origin of and rights associated with data allows enterprises to make informed choices about the data they source and use. The result can be improvements in operational efficiency, regulatory compliance, collaboration, and value generation.
 
 ## 2.1 The Data & Trust Alliance
 
@@ -53,14 +53,14 @@ This specification adopts the normative words defined in IETF [Best Current Prac
 
 ## 2.3 Maintenance of the specification
 
-The D&TA Data Provenance Standard Working Group is responsible for the ongoing monitoring and periodic review of the terms in the registry. This includes:
+The D&TA Data Provenance Standards Working Group is responsible for the ongoing monitoring and periodic review of the terms in the registry. This includes:
 
 - Annual review of all terms to ensure continued relevance
 - Soliciting feedback from the community on the usage and applicability of terms
 - Making revisions to definitions as needed
 - Retiring terms that are no longer relevant or have become obsolete
 
-Management of D&TA’s Data Provenance Standard vocabulary registry is a collaborative and dynamic process. We welcome feedback from the broader community to ensure that the vocabulary remains a valuable and accurate resource for all.
+Management of D&TA’s Data Provenance Standards vocabulary registry is a collaborative and dynamic process. We welcome feedback from the broader community to ensure that the vocabulary remains a valuable and accurate resource for all.
 
 ## 2.4 Glossary
 
@@ -81,7 +81,7 @@ The following concepts are used throughout the specification
 
 # 3. Use-Case
 
-The following use-cases are examplar of the use-cases for which this standard applies.  These use-cases show how this standard supports diverse needs across the data ecosystem.
+The following use-cases are examplar of the use-cases for which the standards apply.  These use-cases show how the standards support diverse needs across the data ecosystem.
 
 1. Healthcare insurance data procurement
 2. Media consumption pattern dataset for consumer behavior insights
@@ -178,7 +178,7 @@ Metadata associated with the "March 2024 Global Media Consumption Trends" datase
 - Comprehensive coverage and actionable insights
   - Detailed data origin geography and collection methodologies will assure users of the data’s relevance and quality, thus facilitating targeted content strategies.
 - Transparency and trust building
-  - By adhering to the Data Provenance Standard and providing a clear metadata URL, the dataset’s transparency is increased, making it easier for media buyers and sellers to assess its credibility.
+  - By adhering to the Data Provenance Standards and providing a clear metadata URL, the dataset’s transparency is increased, making it easier for media buyers and sellers to assess its credibility.
   - The documentation of dataset lineage and the use of PETs-like anonymization underscores the commitment to data privacy and security, building trust among clients.
 - Increased efficiency and enhanced compliance
   - The dataset’s lack of proprietary data restrictions and the provision of a clear license to use, as indicated by contacting AnalytiQuest Ventures’ Office of General Counsel, streamlines the data acquisition process, enhancing clients’ operational efficiency.
@@ -188,7 +188,7 @@ Metadata associated with the "March 2024 Global Media Consumption Trends" datase
 
 Evaluating a new dataset for refining AI algorithms used in customer credit card offerings.
 
-Minh is tasked with evaluating a new dataset for refining AI algorithms for customer credit card offerings. The dataset under consideration has been documented in accordance with the Data Provenance Standard, ensuring transparency and compliance, especially under GDPR and the new EU AI Act. Minh’s evaluation process focuses on the detailed metadata provided for the dataset.
+Minh is tasked with evaluating a new dataset for refining AI algorithms for customer credit card offerings. The dataset under consideration has been documented in accordance with the Data Provenance Standards, ensuring transparency and compliance, especially under GDPR and the new EU AI Act. Minh’s evaluation process focuses on the detailed metadata provided for the dataset.
 
 Goals
 
@@ -216,7 +216,7 @@ In addition to some needs outlined in Use-Case 1 and 2:
 
 ### 3.3.2 Outcome
 
-Minh’s evaluation of the "Consumer Spending Patterns 2020-2024" dataset through the lens of the Data Provenance Standard significantly enhanced ProForma Financial Services’ AI algorithms for customer credit card offerings, ensuring both heightened personalization and strict adherence to international data regulations. This approach improved the precision and effectiveness of the company’s AI models and ensured compliance, data privacy, and seamless integration with existing systems, paving the way for responsible and innovative use of AI insights in the financial sector. The outcome includes:
+Minh’s evaluation of the "Consumer Spending Patterns 2020-2024" dataset through the lens of the Data Provenance Standards significantly enhanced ProForma Financial Services’ AI algorithms for customer credit card offerings, ensuring both heightened personalization and strict adherence to international data regulations. This approach improved the precision and effectiveness of the company’s AI models and ensured compliance, data privacy, and seamless integration with existing systems, paving the way for responsible and innovative use of AI insights in the financial sector. The outcome includes:
 
 - Better business case alignment
   - By not relying solely on high-level dataset descriptions, this process elevated the focus on standards and metadata for business case alignment and ultimate success.
@@ -224,7 +224,7 @@ Minh’s evaluation of the "Consumer Spending Patterns 2020-2024" dataset throug
 - Faster data acquisition timeline and speed to market
   - The absence of proprietary data restrictions and clear licensing terms sped up ProForma’s data acquisition process and ability to develop AI capabilities.
 - Increased compliance and integrity
-  - The ability to assess dataset compliance with the latest Data Provenance Standard, including versioning and unique identifiers meant that the initial assessment of fit-for-use could be performed by an automated system and passed to a human for deeper review.
+  - The ability to assess dataset compliance with the latest Data Provenance Standards, including versioning and unique identifiers meant that the initial assessment of fit-for-use could be performed by an automated system and passed to a human for deeper review.
   - The dataset lineage, original sources, and PETs allowed ProForma to quickly gauge the level of pre-processing necessary to comply with data privacy requirements.
   - The data collection, processing and storage information further helped meet data privacy requirements and mitigate legal and reputational risks associated with GDPR and the EU AI Act.
 
@@ -238,7 +238,7 @@ Goals
 
 - Unify global tariff schedules into an AI-compatible format for better predictions.
 - Enhance AI tariff models to reduce cross-border delivery times and costs.
-- Adhere to Data Provenance Standard for tariff data integrity and compliance.
+- Adhere to Data Provenance Standards for tariff data integrity and compliance.
 - Attain tariff predictions globally across various product categories with advanced AI.
 - Simplify customs processes with accurate tariff assessments, aiding global clients.
 
@@ -255,11 +255,11 @@ Goals
 In addition to some needs outlined in Use-Case 1, 2, and 3:
 
 - Indications of data credibility or bias.
-- Indications that the data are original vs intermediary combined from multiple sources
+- Indications that the data are original vs intermediary combined from multiple sources.
 
 ### 3.4.2 Outcome
 
-Through application of the Data Provenance Standard metadata for its global tariff schedule datasets, Navisphere Logistics, Ltd., has achieved a significant enhancement in the operational efficiency and accuracy of its AI-driven tariff prediction models. The outcome includes:
+Through application of the Data Provenance Standards metadata for its global tariff schedule datasets, Navisphere Logistics, Ltd., has achieved a significant enhancement in the operational efficiency and accuracy of its AI-driven tariff prediction models. The outcome includes:
 
 - Improved data consistency and compatibility
   - By specifying the version used for the metadata, Navisphere ensured that all datasets adhered to a uniform standard, facilitating seamless integration and interpretation by the AI models, regardless of the data’s origin or when it was collected.
@@ -276,7 +276,7 @@ Through application of the Data Provenance Standard metadata for its global tari
 
 # 4. Abstract Specification
 
-The Data Provenance Standard is made up of three groups of metadata elements: Source, Provenance, and Use.
+The Data Provenance Standards are made up of three groups of metadata elements: Source, Provenance, and Use.
 
 ![Metadata Structure](./out/ImageSource/metadata/metadata.svg)
 

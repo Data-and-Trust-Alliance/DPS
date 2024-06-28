@@ -854,6 +854,9 @@ Acknowledgements to the [Members of the Data & Trust Alliance](https://dataandtr
 - Michael Meehan
   - General Counsel
 
+**Humana**
+-Genevy Dimitrion
+  -VP, Data Strategy & Governance
  
 **IBM**
 

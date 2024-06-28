@@ -132,15 +132,15 @@ enhancing the company’s predictive analytics capabilities and maintaining adhe
 and ethical standards. The benefits of having access to the dataset metadata include:
 
 - Better dataset evaluation.
-- Title, unique identifier, and details about data origin and collection methods allowed for quick insights into the dataset’s provenance without having to read through many pages of descriptive text.
-- Confidentiality, consent documentation, data processing, and storage geographies provided evidence of the dataset’s compliance with healthcare regulations.
-- Clarity from the metadata enabled coordination and discussions between the procurement and data teams to assess the dataset’s impact on analytical models, ensuring seamless integration and operational improvement.
+  -  Title, unique identifier, and details about data origin and collection methods allowed for quick insights into the dataset’s       provenance without having to read through many pages of descriptive text.
+  -  Confidentiality, consent documentation, data processing, and storage geographies provided evidence of the dataset’s compliance with healthcare regulations.
+  - Clarity from the metadata enabled coordination and discussions between the procurement and data teams to assess the dataset’s impact on analytical models, ensuring seamless integration and operational improvement.
 - Increased risk and opportunity balance.
-- Metadata around generation method and permitted use proved critical to the organization’s innovative marketing strategies and improving internal customer trust of the acquired data.
-- Collaboration between the legal and compliance departments was boosted because it was clear at the onset who needed to be involved in which aspects of dataset acquisition evaluation, ensuring the dataset’s use was in strict adherence to healthcare regulations and company policies.
+  - Metadata around generation method and permitted use proved critical to the organization’s innovative marketing strategies and improving internal customer trust of the acquired data.
+  - Collaboration between the legal and compliance departments was boosted because it was clear at the onset who needed to be involved in which aspects of dataset acquisition evaluation, ensuring the dataset’s use was in strict adherence to healthcare regulations and company policies.
 - Improved data procurement and legal validation.
-- Suspect data processing and storage metadata resulted in increased legal scrutiny in advance of data acquisition, leading to the correction of inaccuracies in the metadata.
-- The metadata evaluation process, despite causing a brief delay, ultimately safeguarded the organization against potential legal and operational risks, ensuring the dataset’s strategic and compliant use.
+  - Suspect data processing and storage metadata resulted in increased legal scrutiny in advance of data acquisition, leading to the correction of inaccuracies in the metadata.
+  - The metadata evaluation process, despite causing a brief delay, ultimately safeguarded the organization against potential legal and operational risks, ensuring the dataset’s strategic and compliant use.
 
 ## 3.2 Use-Case 2: Media consumption pattern data set for consumer behavior insights
 

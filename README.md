@@ -6,13 +6,13 @@ HTML rendering out.html
 
 ## References
 
-- The [Data&Trust Alliance](https://dataandtrustalliance.org/)
+- The [Data & Trust Alliance](https://dataandtrustalliance.org/)
 - Kristina [Presentation](https://dataandtrustalliance.org/our-initiatives/data-provenance-standards#review)
-- [DataProv Survey](https://bit.ly/DataProvSurvey)
+- [Data Provenance Survey](https://bit.ly/DataProvSurvey)
 
 ## License
 
-This standards is released under Creative Commons CC-BY-SA-4.0 and all code and supporting artifacts will fall under Apache 2.0.
+These standards are released under Creative Commons CC-BY-SA-4.0 and all code and supporting artifacts will fall under Apache 2.0.
 
 ## Potential projects
 
@@ -30,7 +30,7 @@ Other todo:
 
 - Reference GIThub repo with reference implementation and sample applications
 - Need at least one of the technical formats drafted, and place holder for the other two. 
-  - These can be defined only using the technical formats and given examples
+  - These can be defined only using the technical formats and given examples.
   - Thus we have three GIThub repos for JSON, XML, and YAML. 
 
 ## Convert to html

@@ -91,11 +91,11 @@ The D&TA Data Provenance Standards Working Group is responsible for the
 ongoing monitoring and periodic review of the terms in the registry.
 This includes:
 
--   Annual review of all terms to ensure continued relevance
+-   Annual review of all terms to ensure continued relevance.
 -   Soliciting feedback from the community on the usage and
-    applicability of terms
--   Making revisions to definitions as needed
--   Retiring terms that are no longer relevant or have become obsolete
+    applicability of terms.
+-   Making revisions to definitions as needed.
+-   Retiring terms that are no longer relevant or have become obsolete.
 
 Management of D&TA’s Data Provenance Standards vocabulary registry is a
 collaborative and dynamic process. We welcome feedback from the broader
@@ -113,27 +113,27 @@ The following concepts are used throughout the specification
 -   Metadata: Structured description about a dataset that enable the
     understanding of that dataset.
 -   Dataset Identifier: A unique label identifying the provenance
-    metadata of the current dataset
+    metadata of the current dataset.
 -   Lineage: Identifiers or pointers of metadata representing the data
-    which comprise the current dataset
+    which comprise the current dataset.
 -   Source: Identifies the origin (person, organization, system, device,
-    etc.) of the current dataset
+    etc.) of the current dataset.
 -   Legal Rights: Identifies the lawful entitlements and protections
     over data ownership, use, and distribution, ensuring compliance,
-    privacy, and accountability
+    privacy, and accountability.
 -   Privacy and Protection: Identifies any types of sensitive data
     associated with the current dataset and any privacy enhancing
-    techniques applied
+    techniques applied.
 -   Generation Date: Timestamp marking the creation of the current
-    dataset
+    dataset.
 -   Data Type: Identifies the data type contained in the current set,
     and provides insights into how the data is organized, its potential
     use cases, and the challenges associated with handling and using it
 -   Generation Method: Identifies how the data was produced (data
-    mining, machine-generated, IoT sensors, etc.)
+    mining, machine-generated, IoT sensors, etc.).
 -   Intended Use and Restrictions: Identifies the intended use of the
     data and which downstream audiences should not be allowed access to
-    the current dataset
+    the current dataset.
 
 3. Use-Case
 

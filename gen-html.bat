@@ -1,4 +1,4 @@
-pandoc --standalone --metadata title="The Data Provenance Standards" -r gfm --css=style.css -w html -o dps.html specification.md
+pandoc --standalone --metadata title="Data & Trust Alliance Data Provenance Standards" -r gfm --css=style.css -w html -o dps.html specification.md
 pause
 
 pandoc -r gfm -w plain -o dps.txt specification.md

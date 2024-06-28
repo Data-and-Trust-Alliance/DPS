@@ -57,10 +57,10 @@ For these intelligent systems to create economic and societal value for
 all stakeholders—customers, employees, citizens, shareholders, partners,
 suppliers, and more—they must be designed and managed responsibly.
 
-The Data Provenance Standards surface metadata on source, provenance, and use. Each metadata field has
-associated values. This essential information about the origin of and
-rights associated with data allows enterprises to make informed choices
-about the data they source and use. The result can be improvements in
+The Data Provenance Standards surface metadata on source, provenance, and use. 
+Each metadata field has associated values. This essential information about 
+the origin of and rights associated with data allows enterprises to make informed 
+choices about the data they source and use. The result can be improvements in
 operational efficiency, regulatory compliance, collaboration, and value
 generation.
 

@@ -1,4 +1,4 @@
-The Data Provenance Standards
+Data & Trust Alliance Data Provenance Standards
 
 The Data Provenance Standards define metadata about a dataset, so that
 the dataset provenance and lineage are understood. This set of metadata

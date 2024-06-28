@@ -857,8 +857,8 @@ Acknowledgements to the [Members of the Data & Trust Alliance](https://dataandtr
 **Humana**
 
 -  Genevy Dimitrion
-  - VP, Data Strategy & Governance
- 
+   - VP, Data Strategy & Governance
+   
 **IBM**
 
 - Lee Cox

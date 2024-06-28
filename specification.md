@@ -855,8 +855,9 @@ Acknowledgements to the [Members of the Data & Trust Alliance](https://dataandtr
   - General Counsel
 
 **Humana**
--Genevy Dimitrion
-  -VP, Data Strategy & Governance
+
+-  Genevy Dimitrion
+  - VP, Data Strategy & Governance
  
 **IBM**
 

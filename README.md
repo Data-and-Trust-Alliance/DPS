@@ -1,13 +1,13 @@
 # DPS
 
-The [Data Provenance Standard](https://github.com/Data-and-Trust-Alliance/DPS/blob/main/specification.md)
+The [Data Provenance Standards](https://github.com/Data-and-Trust-Alliance/DPS/blob/main/specification.md)
 
 HTML rendering out.html
 
 ## References
 
 - The [Data & Trust Alliance](https://dataandtrustalliance.org/)
-- Kristina [Presentation](https://dataandtrustalliance.org/our-initiatives/data-provenance-standards#review)
+- Kristina Podnar [Presentation](https://dataandtrustalliance.org/our-initiatives/data-provenance-standards#review)
 - [Data Provenance Survey](https://bit.ly/DataProvSurvey)
 
 ## License

@@ -1,6 +1,6 @@
 # DPS
 
-The [Data Provenance Standards](https://github.com/Data-and-Trust-Alliance/DPS/blob/main/specification.md)
+Data & Trust Alliance [Data Provenance Standards](https://github.com/Data-and-Trust-Alliance/DPS/blob/main/specification.md)
 
 HTML rendering out.html
 

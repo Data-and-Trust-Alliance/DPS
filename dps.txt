@@ -1,8 +1,9 @@
 Data & Trust Alliance Data Provenance Standards
 
-The D&TA Data Provenance Standards define metadata about a dataset, so that
-the dataset provenance and lineage are understood. This set of metadata
-are necessary to enable proper dataset selection for AI Model Training.
+The D&TA Data Provenance Standards define metadata about a dataset, so
+that the dataset provenance and lineage are understood. This set of
+metadata are necessary to enable proper dataset selection for AI Model
+Training.
 
 Version 1.1.0
 
@@ -57,11 +58,12 @@ For these intelligent systems to create economic and societal value for
 all stakeholders—customers, employees, citizens, shareholders, partners,
 suppliers, and more—they must be designed and managed responsibly.
 
-The Data Provenance Standards surface metadata on source, provenance, and use. 
-Each metadata field has associated values. This essential information about 
-the origin of and rights associated with data allows enterprises to make informed 
-choices about the data they source and use. The result can be improvements in
-operational efficiency, regulatory compliance, collaboration, and value generation.
+The Data Provenance Standards surface metadata on source, provenance,
+and use. Each metadata field has associated values. This essential
+information about the origin of and rights associated with data allows
+enterprises to make informed choices about the data they source and use.
+The result can be improvements in operational efficiency, regulatory
+compliance, collaboration, and value generation.
 
 2.1 The Data & Trust Alliance
 
@@ -91,11 +93,11 @@ The D&TA Data Provenance Standards Working Group is responsible for the
 ongoing monitoring and periodic review of the terms in the registry.
 This includes:
 
--   Annual review of all terms to ensure continued relevance.
+-   Annual review of all terms to ensure continued relevance
 -   Soliciting feedback from the community on the usage and
-    applicability of terms.
--   Making revisions to definitions as needed.
--   Retiring terms that are no longer relevant or have become obsolete.
+    applicability of terms
+-   Making revisions to definitions as needed
+-   Retiring terms that are no longer relevant or have become obsolete
 
 Management of D&TA’s Data Provenance Standards vocabulary registry is a
 collaborative and dynamic process. We welcome feedback from the broader
@@ -128,7 +130,7 @@ The following concepts are used throughout the specification
     dataset.
 -   Data Type: Identifies the data type contained in the current set,
     and provides insights into how the data is organized, its potential
-    use cases, and the challenges associated with handling and using it
+    use cases, and the challenges associated with handling and using it.
 -   Generation Method: Identifies how the data was produced (data
     mining, machine-generated, IoT sensors, etc.).
 -   Intended Use and Restrictions: Identifies the intended use of the
@@ -137,12 +139,12 @@ The following concepts are used throughout the specification
 
 3. Use-Case
 
-The following use-cases are examplar of the use-cases for which this
-standard applies. These use-cases show how this standard supports
-diverse needs across the data ecosystem.
+The following use-cases are examplar of the use-cases for which the
+standards apply. These use-cases show how the standards support diverse
+needs across the data ecosystem.
 
 1.  Healthcare insurance data procurement
-2.  Media consumption pattern data set for consumer behavior insights
+2.  Media consumption pattern dataset for consumer behavior insights
 3.  Financial services customer product enablement
 4.  Enhancing global logistics efficiency through AI-driven tariff
     harmonization
@@ -171,7 +173,7 @@ Challenges
 -   Balancing the need for detailed, comprehensive data with privacy and
     confidentiality requirements.
 -   Ensuring the dataset’s metadata is accurate, up-to-date, and
-    compliant with evolving Data Provenance Standard.
+    compliant with evolving Data Provenance Standards.
 -   Integrating new datasets with existing systems and models without
     compromising data integrity or system performance.
 -   Navigating the complex landscape of healthcare regulations and
@@ -206,32 +208,32 @@ include:
 -   Better dataset evaluation.
     -   Title, unique identifier, and details about data origin and
         collection methods allowed for quick insights into the dataset’s
-        provenance without having to read through many pages of descriptive
-        text.
-    -   Confidentiality, consent documentation, data processing, and storage
-        geographies provided evidence of the dataset’s compliance with
-        healthcare regulations.
+        provenance without having to read through many pages of
+        descriptive text.
+    -   Confidentiality, consent documentation, data processing, and
+        storage geographies provided evidence of the dataset’s
+        compliance with healthcare regulations.
     -   Clarity from the metadata enabled coordination and discussions
         between the procurement and data teams to assess the dataset’s
         impact on analytical models, ensuring seamless integration and
         operational improvement.
 -   Increased risk and opportunity balance.
-   -    Metadata around generation method and permitted use proved critical
-        to the organization’s innovative marketing strategies and improving
-        internal customer trust of the acquired data.
+    -   Metadata around generation method and permitted use proved
+        critical to the organization’s innovative marketing strategies
+        and improving internal customer trust of the acquired data.
     -   Collaboration between the legal and compliance departments was
-        boosted because it was clear at the onset who needed to be involved
-        in which aspects of dataset acquisition evaluation, ensuring the
-        dataset’s use was in strict adherence to healthcare regulations and
-        company policies.
+        boosted because it was clear at the onset who needed to be
+        involved in which aspects of dataset acquisition evaluation,
+        ensuring the dataset’s use was in strict adherence to healthcare
+        regulations and company policies.
 -   Improved data procurement and legal validation.
-    -   Suspect data processing and storage metadata resulted in increased
-        legal scrutiny in advance of data acquisition, leading to the
-        correction of inaccuracies in the metadata.
+    -   Suspect data processing and storage metadata resulted in
+        increased legal scrutiny in advance of data acquisition, leading
+        to the correction of inaccuracies in the metadata.
     -   The metadata evaluation process, despite causing a brief delay,
-        ultimately safeguarded the organization against potential legal and
-        operational risks, ensuring the dataset’s strategic and compliant
-        use.
+        ultimately safeguarded the organization against potential legal
+        and operational risks, ensuring the dataset’s strategic and
+        compliant use.
 
 3.2 Use-Case 2: Media consumption pattern data set for consumer behavior insights
 
@@ -378,10 +380,10 @@ sector. The outcome includes:
         develop AI capabilities.
 -   Increased compliance and integrity
     -   The ability to assess dataset compliance with the latest Data
-        Provenance Standards, including versioning and unique identifiers
-        meant that the initial assessment of fit-for-use could be
-        performed by an automated system and passed to a human for
-        deeper review.
+        Provenance Standards, including versioning and unique
+        identifiers meant that the initial assessment of fit-for-use
+        could be performed by an automated system and passed to a human
+        for deeper review.
     -   The dataset lineage, original sources, and PETs allowed ProForma
         to quickly gauge the level of pre-processing necessary to comply
         with data privacy requirements.
@@ -530,7 +532,7 @@ or overlap.
 
 The web address where the dataset's metadata is published and can be
 accessed, providing a direct link to detailed information about the
-dataset. Typically will be a unique URL of the current dataset
+dataset. Typically will be a unique URL of the current dataset.
 
 -   Element-Name: location
 -   cardinality: 0..1
@@ -559,7 +561,7 @@ collected, and any limitations or recommended uses.
 
 4.2 Provenance
 
-This group describes the provenance of the dataset
+This group describes the provenance of the dataset.
 
 -   Element-Name: provenance
 -   cardinality: 1..1
@@ -641,7 +643,7 @@ data, giving insight into its reliability and validity.
 
 Describes the nature of the data within the dataset, such as numerical,
 textual, or multimedia, helping users understand what kind of
-information is contained within the file or dataset.,
+information is contained within the file or dataset.
 
 -   Element-Name: format
 -   cardinality: 0..*
@@ -812,9 +814,9 @@ These datatypes are commonly understood.
     requires and uses the GFM (Github Flavored Markdown) extensions on
     CommonMark format, with the exception of support for inline HTML
     which is not supported.
--   dateTime A date, date-time or partial date (e.g. just year or year +
-    month) as used in human communication. The format is a subset of
-    ISO8601 icon: YYYY, YYYY-MM, YYYY-MM-DD or
+-   dateTime - A date, date-time or partial date (e.g. just year or
+    year + month) as used in human communication. The format is a subset
+    of ISO8601 icon: YYYY, YYYY-MM, YYYY-MM-DD or
     YYYY-MM-DDThh:mm:ss+zz:zz, e.g. 2018, 1973-06, 1905-08-23,
     2015-02-07T13:28:17-05:00 or 2017-01-01T00:00:00.000Z. If hours and
     minutes are specified, a timezone offset SHALL be populated. Actual
@@ -947,10 +949,9 @@ trust building in data assets used for AI. However, it can also expose
 organizations to security risks, including:
 
 1.  Unauthorized access and data breaches
-    -   Disclosing the metadata location (Unique URL of the current
-        dataset) and making publicly accessible URLs visible may cause
-        an organization to be targeted by unauthorized users attempting
-        to access the dataset's contents.
+    -   Publicly disclosing the metadata location (Unique URL of the
+        current dataset) may cause an organization to be targeted by
+        unauthorized users attempting to access the dataset.
     -   By specifying the confidentiality classification, attackers
         could exploit the declaration to identify and target high-value
         datasets.
@@ -962,13 +963,8 @@ organizations to security risks, including:
         data lineage. This information may provide attackers with
         information on data flows and dependencies, potentially allowing
         them to introduce malicious data into the pipeline.
-3.  Privacy and confidentiality risks
-    -   Organizations may expose sensitive contractual information and
-        legal agreements by publicly listing where the consent for
-        private data collection is stored.
-    -   Indicating the use of Privacy Enhancing Technologies (PETs)
-        might reveal which datasets contain sensitive personal
-        information (PII/SPI), making them targets for privacy attacks.
+3.  Privacy and confidentiality risks -Indicating PI but no usage of
+    PETS may reveal SPI in datasets.
 4.  Compliance and legal risks
     -   Disclosure of geographical data origins and storage locations
         through the “Data Origin Geography” and “Data Storage Geography”
@@ -1003,17 +999,14 @@ organizations to security risks, including:
 
 To mitigate these risks, organizations should:
 
--   Implement robust access controls and authentication mechanisms for
-    metadata and datasets
--   Use Privacy Enhancing Technologies (e.g., encryption) to protect
-    datasets
--   Redact sensitive metadata elements
--   Regularly audit and monitor access to metadata and datasets to
-    detect and respond to unauthorized activities
--   Limit the public disclosure of sensitive information and use
-    anonymization techniques where possible
--   Ensure compliance with relevant data protection laws and regulations
-    by adhering to best data governance and privacy practices.
+-   Invest in and implement robust access controls and authentication
+    mechanisms for datasets.
+-   When PI or sensitive information is present in a dataset invest in
+    Privacy Enhancing Technologies (e.g., encryption) to add additional
+    protection.
+-   Invest in practices to ensure compliance with relevant data
+    protection laws and regulations by adhering to best data governance
+    and privacy practices.
 
 7. Annex
 
@@ -1083,7 +1076,7 @@ The following defined vocabulary are to be used for the "Method".
   user-generated-content-ratings-and-reviews      User generated content Ratings & reviews
   user-generated-content-multimedia               User generated content Multimedia
   user-generated-content-other                    User generated content Other
-  primary-user-source-survey-questionaire         Primary user source Survey/Questionnaire
+  primary-user-source-survey-questionnaire        Primary user source Survey/Questionnaire
   primary-user-source-interview                   Primary user source Interview
   primary-user-source-event                       Primary user source Event
   primary-user-source-biometric                   Primary user source Biometric
@@ -1162,8 +1155,6 @@ Acknowledgements to the Members of the Data & Trust Alliance
 
 AARP
 
--   Amr Khani
-    -   SVP, Data and Analytics
 -   Jaye Campbell
     -   Legal Leader, General Counsel
 
@@ -1171,29 +1162,11 @@ American Express
 
 -   Laurel Shifrin
     -   VP, Enterprise Data Governance
--   Saheel Shah
-    -   Director, Enterprise Data Governance
-
-CVS
-
--   Dave Sturgeon
-    -   Executive Director, Data Governance and Enablement
--   Herb Holmes
-    -   Data Governance & Data Management Leader
 
 Deloitte
 
--   Juan Tello
-    -   U.S. CDO, Strategy & Analytics Principal
--   Leo Cabrera, Rohit Iyer, and Ajay Tripathi
+-   Ajay Tripathi
     -   Office of CDO
-
-GM
-
--   Jon Francis
-    -   Chief Data & Analytics Officer
--   Brian Ames
-    -   Principal Software Engineer
 
 Howso
 
@@ -1219,60 +1192,20 @@ IBM
 -   Orla Flannery
     -   Privacy Program Manager
 
-Kenvue
-
--   Bernardo Tavares
-    -   Chief Technology & Data Officer
--   Ajay Dhaul
-    -   SVP Global Data
--   Kim Viccaro
-    -   Data Strategy & Activation Lead
--   Sudheesh Kamath
-    -   Data & AI Products Leader
-
 Mastercard
 
 -   Travis Carpenter
     -   VP, Data Quality & Sources
--   Ed Dephilippis
-    -   VP, Data Management & Quality
--   Usha Ramalingam
-    -   Director, Data Management
 
 Nielsen
 
 -   Christine Pierce
     -   Chief Data Officer
--   Frank Fasinski
-    -   Director, Data Science
-
-Nike
-
--   Emily White
-    -   Vice President, Enterprise Data & Analytics
 
 Pfizer
 
--   Peter Hunter
-    -   Sr Director, Analytic Tools
--   Gentiana Spahiu
+-   Genta Spahiu
     -   Director, Data Gov. Lead
--   Michael Pagliorola, Sasi Mullangi, Adam Nieto, John Pastor, Drew
-    Palsgrove, and Jay Shetty
-
-Regions
-
--   Dilip Balachandran
-    -   SVP, Enterprise Data Management
-
-Smithsonian
-
--   Alan Hejnal
-    -   Data Quality Manager
--   Derrick Whitney
-    -   Interim CDO
--   Adam Soroka
-    -   Office of Research Computing
 
 Transcarent
 
@@ -1287,19 +1220,3 @@ UPS
     -   VP, Enterprise Data and Analytics
 -   Zeenat Syed
     -   Director of Data Strategy
--   Ricardo Rodriguez
-    -   Sr Manager, Data Science and Machine Learning
-
-Walmart
-
--   Gregory Schaffer
-    -   Chief Counsel, Cyber Security & VP, Digital Trust Compliance
--   Laura Asbury
-    -   Director, Digital Trust Compliance
-
-Warby Parker
-
--   Peter Cross
-    -   Head of Data
--   Chris Bleakley
-    -   Engineering Director

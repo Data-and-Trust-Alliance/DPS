@@ -132,8 +132,8 @@ enhancing the company’s predictive analytics capabilities and maintaining adhe
 and ethical standards. The benefits of having access to the dataset metadata include:
 
 - Better dataset evaluation.
-  -  Title, unique identifier, and details about data origin and collection methods allowed for quick insights into the dataset’s       provenance without having to read through many pages of descriptive text.
-  -  Confidentiality, consent documentation, data processing, and storage geographies provided evidence of the dataset’s compliance with healthcare regulations.
+  - Title, unique identifier, and details about data origin and collection methods allowed for quick insights into the dataset’s       provenance without having to read through many pages of descriptive text.
+  - Confidentiality, consent documentation, data processing, and storage geographies provided evidence of the dataset’s compliance with healthcare regulations.
   - Clarity from the metadata enabled coordination and discussions between the procurement and data teams to assess the dataset’s impact on analytical models, ensuring seamless integration and operational improvement.
 - Increased risk and opportunity balance.
   - Metadata around generation method and permitted use proved critical to the organization’s innovative marketing strategies and improving internal customer trust of the acquired data.
@@ -294,7 +294,7 @@ Specifies the version of the schema or standards used to define the metadata for
 
 - Element-Name: `version`
 - cardinality: 1..1
-- Format: String, Prefer Semantic Versioning (a.k.a., SemVer) format - https://semver.org/
+- Format: String, Prefer Semantic Versioning (a.k.a., SemVer) format - [https://semver.org/](https://semver.org/)
 - Example: `1.1.0`
 
 ### 4.1.2 Dataset title / name
@@ -416,8 +416,8 @@ Describes the nature of the data within the dataset, such as numerical, textual,
 - Element-Name: `format`
 - cardinality: 0..*
 - Format: String
-  - SHALL be mime-type https://www.rfc-editor.org/rfc/rfc6838.html
-  - SHALL be from registered media-types http://www.iana.org/assignments/media-types/ if applicable
+  - SHALL be mime-type [https://www.rfc-editor.org/rfc/rfc6838.html](https://www.rfc-editor.org/rfc/rfc6838.html)
+  - SHALL be from registered media-types [http://www.iana.org/assignments/media-types/](http://www.iana.org/assignments/media-types/) if applicable
 - Example: `application/json`
 
 ## 4.3 Use
@@ -549,7 +549,7 @@ These datatypes are commonly understood.
 - **URI** - A Uniform Resource Identifier Reference [RFC 3986](https://www.rfc-editor.org/rfc/rfc3986). Note: URIs are case sensitive. For UUID (urn:uuid:53fefa32-fcbb-4ff8-8a92-55ee120877b7) use all lowercase
 - **URL** - A Uniform Resource Locator [RFC 1738](https://datatracker.ietf.org/doc/html/rfc1738). Note URLs are accessed directly using the specified protocol. Common URL protocols are http{s}:, ftp:, mailto: and mllp:, though many others are defined
 - **Markdown** - A String that can include markdown. This specification requires and uses the [GFM (Github Flavored Markdown)](https://github.github.com/gfm/) extensions on [CommonMark](http://spec.commonmark.org/0.28/) format, with the exception of support for inline HTML which is not supported.
-- **dateTime**	A date, date-time or partial date (e.g. just year or year + month) as used in human communication. The format is a subset of [ISO8601](https://www.iso.org/iso-8601-date-and-time-format.html) icon: YYYY, YYYY-MM, YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz, e.g. 2018, 1973-06, 1905-08-23, 2015-02-07T13:28:17-05:00 or 2017-01-01T00:00:00.000Z. If hours and minutes are specified, a timezone offset SHALL be populated. Actual timezone codes can be sent using the Timezone Code extension, if desired. Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored at receiver discretion. Milliseconds are optionally allowed. Dates SHALL be valid dates. The time "24:00" is not allowed. Leap Seconds are allowed
+- **dateTime** - A date, date-time or partial date (e.g. just year or year + month) as used in human communication. The format is a subset of [ISO8601](https://www.iso.org/iso-8601-date-and-time-format.html) icon: YYYY, YYYY-MM, YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz, e.g. 2018, 1973-06, 1905-08-23, 2015-02-07T13:28:17-05:00 or 2017-01-01T00:00:00.000Z. If hours and minutes are specified, a timezone offset SHALL be populated. Actual timezone codes can be sent using the Timezone Code extension, if desired. Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored at receiver discretion. Milliseconds are optionally allowed. Dates SHALL be valid dates. The time "24:00" is not allowed. Leap Seconds are allowed
 
 ## 4.5 Complex Datatypes
 
@@ -570,7 +570,7 @@ These are made up of more than one child element as described.
 
 ### 4.5.2 Location
 
-- Country 
+- Country
   - Element-Name: `country`
     - cardinality: 1..1
     - Format: String
@@ -688,9 +688,8 @@ Creating and publicly sharing metadata is crucial for transparency and trust bui
 To mitigate these risks, organizations should:
 
 - Invest in and implement robust access controls and authentication mechanisms for datasets.
-- 	When PI or sensitive information is present in a dataset invest in Privacy Enhancing Technologies (e.g., encryption) to add additional protection.
-- 	 Invest in practices to ensure compliance with relevant data protection laws and regulations by adhering to best data governance and privacy practices.
-
+- When PI or sensitive information is present in a dataset invest in Privacy Enhancing Technologies (e.g., encryption) to add additional protection.
+- Invest in practices to ensure compliance with relevant data protection laws and regulations by adhering to best data governance and privacy practices.
 
 # 7. Annex
 
@@ -856,9 +855,9 @@ Acknowledgements to the [Members of the Data & Trust Alliance](https://dataandtr
 
 **Humana**
 
--  Genevy Dimitrion
-   - VP, Data Strategy & Governance
-   
+- Genevy Dimitrion
+  - VP, Data Strategy & Governance
+
 **IBM**
 
 - Lee Cox
@@ -898,4 +897,3 @@ Acknowledgements to the [Members of the Data & Trust Alliance](https://dataandtr
   - VP, Enterprise Data and Analytics
 - Zeenat Syed
   - Director of Data Strategy
-

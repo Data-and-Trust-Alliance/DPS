@@ -12,7 +12,7 @@ The D&TA Data Provenance Standards define metadata about a dataset, so that the 
 - Kristina Podnar
 - John Moehrke
 
-**Comments** inquiries@dataandtrustalliance.org
+**Comments** [Change Request Form](https://us14.list-manage.com/survey?u=f2c4b0ec47814ddee58d70038&id=0a9e540029)
 
 **License** [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)
 

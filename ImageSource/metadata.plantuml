@@ -1,4 +1,4 @@
-@startuml 
+@startuml metadata
 title Data Provenance
 
 entity Data
@@ -35,7 +35,10 @@ abstract class Provenance {
     generation-period : Period[0..1]
     generation-method : Concept[1..*]
     format : String[0..*]
+    sub-provenance : Provenance[0..*]
 }
+
+Provenance *-down- Provenance
 
 abstract class Use {
     Legal, Use, and Restrictions

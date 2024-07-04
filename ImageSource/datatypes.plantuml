@@ -1,4 +1,4 @@
-@startuml 
+@startuml datatypes
 title Complex DataTypes
 
 abstract class Organization {

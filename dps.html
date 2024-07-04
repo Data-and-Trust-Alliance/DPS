@@ -696,6 +696,14 @@ if applicable</li>
 </ul></li>
 <li>Example: <code>application/json</code></li>
 </ul>
+<h3 id="429-sub-provenance">4.2.9 Sub-Provenance</h3>
+<p>When the dataset is made up of data from other sources, the
+Sub-Provenance describes these other data sources.</p>
+<ul>
+<li>Element-Name: <code>sub-provenance</code></li>
+<li>cardinality: 0..*</li>
+<li>Format: <a href="#42-provenance">Provenance</a></li>
+</ul>
 <h2 id="43-use">4.3 Use</h2>
 <p>This group describes legal, use, and restrictions.</p>
 <ul>
@@ -791,10 +799,12 @@ restrictions</li>
 under which the dataset can be used, including any restrictions or
 obligations, clarifying legal use and distribution rights. License may
 be an End User License Agreement (EULA), subject to Data Use Agreement
-(DUA).</p>
+(DUA). When multiple licenses are listed, they collectively apply to the
+dataset, but individual subsets may be governed by specific licenses or
+none at all.</p>
 <ul>
 <li>Element-Name: <code>license</code></li>
-<li>cardinality: 0..1</li>
+<li>cardinality: 0..*</li>
 <li>Format: String
 <ul>
 <li>Prefer License codes such as CreativeCommons or Apache</li>
@@ -905,6 +915,10 @@ alt="Datatype Structure" /></p>
 <li>Element-Name: <code>address</code></li>
 <li>cardinality: 0..*</li>
 <li>Format: String</li>
+<li>Street name, number, direction, P.O. Box, Suite, State, zip-code,
+etc.</li>
+<li>The order of the elements in which they should appear in an address
+label</li>
 </ul></li>
 </ul>
 <h3 id="452-location">4.5.2 Location</h3>

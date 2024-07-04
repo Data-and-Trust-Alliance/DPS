@@ -420,6 +420,14 @@ Describes the nature of the data within the dataset, such as numerical, textual,
   - SHALL be from registered media-types [http://www.iana.org/assignments/media-types/](http://www.iana.org/assignments/media-types/) if applicable
 - Example: `application/json`
 
+### 4.2.9 Sub-Provenance
+
+When the dataset is made up of data from other sources, the Sub-Provenance describes these other data sources.
+
+- Element-Name: `sub-provenance`
+- cardinality: 0..*
+- Format: [Provenance](#42-provenance)
+
 ## 4.3 Use
 
 This group describes legal, use, and restrictions.
@@ -494,10 +502,10 @@ Specifies where the data may not be stored, crucial for compliance with data sov
 
 ### 4.3.8 License to use
 
-Details the location or point of contact for identifying the terms under which the dataset can be used, including any restrictions or obligations, clarifying legal use and distribution rights. License may be an End User License Agreement (EULA), subject to Data Use Agreement (DUA).
+Details the location or point of contact for identifying the terms under which the dataset can be used, including any restrictions or obligations, clarifying legal use and distribution rights. License may be an End User License Agreement (EULA), subject to Data Use Agreement (DUA). When multiple licenses are listed, they collectively apply to the dataset, but individual subsets may be governed by specific licenses or none at all.
 
 - Element-Name: `license`
-- cardinality: 0..1
+- cardinality: 0..*
 - Format: String
   - Prefer License codes such as CreativeCommons or Apache
   - May be a URL
@@ -567,6 +575,8 @@ These are made up of more than one child element as described.
   - Element-Name: `address`
   - cardinality: 0..*
   - Format: String
+  - Street name, number, direction, P.O. Box, Suite, State, zip-code, etc.
+  - The order of the elements in which they should appear in an address label
 
 ### 4.5.2 Location
 

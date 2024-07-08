@@ -10,7 +10,10 @@ The D&TA Data Provenance Standards define metadata about a dataset, so that the 
 
 - [Data & Trust Alliance](https://dataandtrustalliance.org/)
 - Kristina Podnar
+- Ellyn Heald
 - John Moehrke
+
+**[Acknowledgements to the D&TA Members](https://dataandtrustalliance.org/who-we-are)**
 
 **Comments** [Change Request Form](https://us14.list-manage.com/survey?u=f2c4b0ec47814ddee58d70038&id=0a9e540029)
 
@@ -33,7 +36,6 @@ To realize the value of data and AI requires a reliable cross-industry baseline 
 5. [Technical Encoding](#5-technical-encoding)
 6. [Security Considerations](#6-security-considerations)
 7. [Annex](#7-annex)
-8. [Acknowledgements](#8-acknowledgements)
 
 # 2. Introduction
 
@@ -836,69 +838,3 @@ The following concepts are defined to indicate specific global regulated domains
 | pii  | Personally Identifiable Information (PII)
 | phi  | Personal Health Information (PHI)
 | spi  | Sensitive Personal Information (SPI)
-
-# 8. Acknowledgements
-
-Acknowledgements to the [Members of the Data & Trust Alliance](https://dataandtrustalliance.org/who-we-are)
-
-**AARP**
-
-- Jaye Campbell
-  - Legal Leader, General Counsel
-
-**American Express**
-
-- Laurel Shifrin
-  - VP, Enterprise Data Governance
-
-**Howso**
-
-- Chris Hazard
-  - Chief Technology Officer
-- Michael Meehan
-  - General Counsel
-
-**Humana**
-
-- Genevy Dimitrion
-  - VP, Data Strategy & Governance
-
-**IBM**
-
-- Lee Cox
-  - VP, Integrated Governance & Market Readiness, Office of Privacy and Responsible Tech.
-- Bryan Bortnick
-  - Counsel, Data Governance
-- Bryan Kyle
-  - Sr. Technical Staff Member, Data Eng., Chief Data Office
-- Orla Flannery
-  - Privacy Program Manager
-
-**Mastercard**
-
-- Travis Carpenter
-  - VP, Data Quality & Sources
-
-**Nielsen**
-
-- Christine Pierce
-  - Chief Data Officer
-
-**Pfizer**
-
-- Genta Spahiu 
-  - Director, Data Gov. Lead
-
-**Transcarent**
-
-- Thi Montalvo
-  - VP Reporting and Analytics
-- Thomas Birchfield 
-  - Technical Program Manager
-
-**UPS**
-
-- Mallory Freeman
-  - VP, Enterprise Data and Analytics
-- Zeenat Syed
-  - Director of Data Strategy

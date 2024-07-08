@@ -5,7 +5,7 @@ that the dataset provenance and lineage are understood. This set of
 metadata are necessary to enable proper dataset selection for AI Model
 Training.
 
-Version 1.1.0
+Version 1.0.0
 
 Published Draft
 
@@ -13,7 +13,10 @@ Authors:
 
 -   Data & Trust Alliance
 -   Kristina Podnar
+-   Ellyn Heald
 -   John Moehrke
+
+Acknowledgements to the D&TA Members
 
 Comments Change Request Form
 
@@ -44,7 +47,6 @@ Table of Contents
 5.  Technical Encoding
 6.  Security Considerations
 7.  Annex
-8.  Acknowledgements
 
 2. Introduction
 
@@ -1163,75 +1165,3 @@ domains of relevance.
   pii    Personally Identifiable Information (PII)
   phi    Personal Health Information (PHI)
   spi    Sensitive Personal Information (SPI)
-
-8. Acknowledgements
-
-Acknowledgements to the Members of the Data & Trust Alliance
-
-AARP
-
--   Jaye Campbell
-    -   Legal Leader, General Counsel
-
-American Express
-
--   Laurel Shifrin
-    -   VP, Enterprise Data Governance
-
-Deloitte
-
--   Ajay Tripathi
-    -   Office of CDO
-
-Howso
-
--   Chris Hazard
-    -   Chief Technology Officer
--   Michael Meehan
-    -   General Counsel
-
-Humana
-
--   Genevy Dimitrion
-    -   VP, Data Strategy & Governance
-
-IBM
-
--   Lee Cox
-    -   VP, Integrated Governance & Market Readiness, Office of Privacy
-        and Responsible Tech.
--   Bryan Bortnick
-    -   Counsel, Data Governance
--   Bryan Kyle
-    -   Sr. Technical Staff Member, Data Eng., Chief Data Office
--   Orla Flannery
-    -   Privacy Program Manager
-
-Mastercard
-
--   Travis Carpenter
-    -   VP, Data Quality & Sources
-
-Nielsen
-
--   Christine Pierce
-    -   Chief Data Officer
-
-Pfizer
-
--   Genta Spahiu
-    -   Director, Data Gov. Lead
-
-Transcarent
-
--   Thi Montalvo
-    -   VP Reporting and Analytics
--   Thomas Birchfield
-    -   Technical Program Manager
-
-UPS
-
--   Mallory Freeman
-    -   VP, Enterprise Data and Analytics
--   Zeenat Syed
-    -   Director of Data Strategy

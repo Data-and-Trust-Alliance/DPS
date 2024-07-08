@@ -851,11 +851,6 @@ Acknowledgements to the [Members of the Data & Trust Alliance](https://dataandtr
 - Laurel Shifrin
   - VP, Enterprise Data Governance
 
-**Deloitte**
-
-- Ajay Tripathi
-  - Office of CDO
-
 **Howso**
 
 - Chris Hazard

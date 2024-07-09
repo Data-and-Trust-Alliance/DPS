@@ -45,7 +45,7 @@ abstract class Use {
     ------
     classification : Classification[1..1]
     consents : URL[0..*]
-    privacy-indicators : PrivacyIndicator[0..*]
+    privacy-enhancing : PrivacyEnhancing[0..*]
     processing-included : Location[0..*]
     processing-excluded : Location[0..*]
     storage-allowed : Location[0..*]

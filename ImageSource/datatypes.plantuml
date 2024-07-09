@@ -33,13 +33,15 @@ abstract class Classification {
     -----
     regulation : Concept[1..1]
     evaluated : boolean[1..1]
+    tool : String[0..1]
 }
 
-abstract class PrivacyIndicators {
+abstract class PrivacyEnhancing {
     Indicate the privacy tools used and results obtained
     -----
-    tool : Concept[1..1] - from Privacy Enhancing Tools
-    parameters : String[0..1]
-    result : String[0..1]
+    tool-category : Concept[1..1] - from Privacy Enhancing Tools
+    tool-used : String[0..1]
+    parameters : String[0..*]
+    result : String[0..*]
 }
 @enduml

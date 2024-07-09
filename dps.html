@@ -742,14 +742,15 @@ individual in the dataset with that individual's signature.</p>
 <li>Example:
 <code>https://example.org/dataset/34/consent.pdf</code></li>
 </ul>
-<h3 id="433-privacy-indicators">4.3.3 Privacy indicators</h3>
+<h3 id="433-privacy-enhancing-technologies">4.3.3 Privacy Enhancing
+Technologies</h3>
 <p>Indicates whether techniques were used to protect personally
 identifiable information (PII) or sensitive personal information (SPI),
 highlighting the dataset's privacy considerations.</p>
 <ul>
-<li>Element-Name: <code>privacy-indicators</code></li>
+<li>Element-Name: <code>privacy-enhancing</code></li>
 <li>cardinality: 0..*</li>
-<li>Format: <a href="#433-privacy-indicators">PrivacyIndicator</a></li>
+<li>Format: <a href="#456-privacyenhancing">PrivacyEnhancing</a></li>
 <li>using <a href="#72-privacy-enhancing-tools-codes">Privacy Enhancing
 Tools</a> vocabulary</li>
 </ul>
@@ -982,7 +983,7 @@ subdivisions (e.g., states or provinces) of all countries coded in ISO
 <li>cardinality: 0..1</li>
 <li>Format: String
 <ul>
-<li>Should be from a given vocabulary</li>
+<li>SHOULD be from a given vocabulary</li>
 <li>SHOULD be compute friendly, without spaces</li>
 </ul></li>
 </ul></li>
@@ -1004,6 +1005,8 @@ subdivisions (e.g., states or provinces) of all countries coded in ISO
 </ul></li>
 </ul></li>
 </ul>
+<p>Note: when a non-standard Concept is used, often just the
+<code>description</code> element is populated.</p>
 <h3 id="455-classification">4.5.5 Classification</h3>
 <ul>
 <li>specific global regulation domain
@@ -1013,7 +1016,7 @@ subdivisions (e.g., states or provinces) of all countries coded in ISO
 <li>cardinality: 1..1</li>
 <li>Format: Concept
 <ul>
-<li>Should be from <a href="#74-data-regulation-codes">Data Regulation
+<li>SHOULD be from <a href="#74-data-regulation-codes">Data Regulation
 Codes</a></li>
 </ul></li>
 </ul></li>
@@ -1026,18 +1029,40 @@ Codes</a></li>
 <li>Format: Boolean</li>
 </ul></li>
 </ul></li>
+<li>classification tool used
+<ul>
+<li>Element-Name: <code>tool</code>
+<ul>
+<li>cardinality: 0..1</li>
+<li>Format: String</li>
+</ul></li>
+</ul></li>
 </ul>
-<h3 id="456-privacyindicator">4.5.6 PrivacyIndicator</h3>
+<h3 id="456-privacyenhancing">4.5.6 PrivacyEnhancing</h3>
+<p>Indicates the techniques used to protect personally identifiable
+information (PII) or sensitive personal information (SPI).</p>
 <ul>
 <li>specific global regulation domain
 <ul>
-<li>Element-Name: <code>tool</code>
+<li>Element-Name: <code>tool-category</code>
 <ul>
 <li>cardinality: 1..1</li>
 <li>Format: Concept
 <ul>
-<li>Should be from <a href="#72-privacy-enhancing-tools-codes">Privacy
+<li>SHOULD be from <a href="#72-privacy-enhancing-tools-codes">Privacy
 Enhancing Tools</a> vocabulary</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Specific tool used
+<ul>
+<li>Element-Name: <code>tool-used</code>
+<ul>
+<li>cardinality: 0..1</li>
+<li>Format: String
+<ul>
+<li>May be a URL</li>
+<li>May be an application and version</li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -1045,15 +1070,17 @@ Enhancing Tools</a> vocabulary</li>
 <ul>
 <li>Element-Name: <code>parameters</code>
 <ul>
-<li>cardinality: 0..1</li>
+<li>cardinality: 0..*</li>
 <li>Format: String</li>
+<li>string holds tool specific parameter and value for that parameter
+when the parameter has values.</li>
 </ul></li>
 </ul></li>
 <li>Results of the tool use
 <ul>
 <li>Element-Name: <code>result</code>
 <ul>
-<li>cardinality: 0..1</li>
+<li>cardinality: 0..*</li>
 <li>Format: String</li>
 </ul></li>
 </ul></li>
@@ -1196,32 +1223,24 @@ Codes</h2>
 <td>Web scraping/Crawling News &amp; articles</td>
 </tr>
 <tr class="even">
-<td>web-scraping-crawling-other</td>
-<td>Web scraping/Crawling Other</td>
-</tr>
-<tr class="odd">
 <td>feeds-rss-source</td>
 <td>Feeds RSS source</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>feeds-api-source</td>
 <td>Feeds API source</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>feeds-real-time-database-info</td>
 <td>Feeds Real time database info</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>feeds-interval-timed-database-info</td>
 <td>Feeds Interval timed database info</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>feeds-file-feed-info</td>
 <td>Feeds File feed info</td>
-</tr>
-<tr class="even">
-<td>feeds-other</td>
-<td>Feeds Other</td>
 </tr>
 <tr class="odd">
 <td>syndication-news-feeds</td>
@@ -1240,36 +1259,28 @@ Codes</h2>
 <td>Syndication Product/service catalog</td>
 </tr>
 <tr class="odd">
-<td>syndication-other</td>
-<td>Syndication Other</td>
-</tr>
-<tr class="even">
 <td>data-mining-association-rule</td>
 <td>Data mining Association rule</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>data-mining-classification</td>
 <td>Data mining Classification</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>data-mining-clustering</td>
 <td>Data mining Clustering</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>data-mining-regression</td>
 <td>Data mining Regression</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>data-mining-anomaly-detection</td>
 <td>Data mining Anomaly detection</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>data-mining-sequencing</td>
 <td>Data mining Sequencing</td>
-</tr>
-<tr class="even">
-<td>data-mining-other</td>
-<td>Data mining Other</td>
 </tr>
 <tr class="odd">
 <td>machine-generated-mlops-synthetic</td>
@@ -1296,48 +1307,40 @@ Codes</h2>
 <td>Machine generated/MLOps XR (AR, VR, MR)</td>
 </tr>
 <tr class="odd">
-<td>machine-generated-mlops-other</td>
-<td>Machine generated/MLOps Other</td>
-</tr>
-<tr class="even">
 <td>sensor-and-iot-output-environmental</td>
 <td>Sensor and IoT output Environmental</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>sensor-and-iot-output-motion-location</td>
 <td>Sensor and IoT output Motion &amp; location</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>sensor-and-iot-output-health</td>
 <td>Sensor and IoT output Health</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>sensor-and-iot-output-biometric</td>
 <td>Sensor and IoT output Biometric</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>sensor-and-iot-output-energy-consumption</td>
 <td>Sensor and IoT output Energy consumption</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>sensor-and-iot-output-industrial-sensor</td>
 <td>Sensor and IoT output Industrial sensor</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>soensor-and-iot-output-vehicle-transportation</td>
 <td>Sensor and IoT output Vehicle &amp; transportation</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>sensor-and-iot-output-security-surveillance</td>
 <td>Sensor and IoT output Security &amp; surveillance</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>sensor-and-iot-output-agriculture-environment</td>
 <td>Sensor and IoT output Agriculture &amp; environment</td>
-</tr>
-<tr class="odd">
-<td>sensor-and-iot-output-other</td>
-<td>Sensor and IoT output Other</td>
 </tr>
 <tr class="even">
 <td>social-media-text-based</td>
@@ -1368,32 +1371,24 @@ Codes</h2>
 <td>Social media Creative</td>
 </tr>
 <tr class="odd">
-<td>social-media-other</td>
-<td>Social media Other</td>
-</tr>
-<tr class="even">
 <td>user-generated-content-clickstream</td>
 <td>User generated content Clickstream</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>user-generated-content-social-media</td>
 <td>User generated content Social media</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>user-generated-content-behavior</td>
 <td>User generated content Behavior</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>user-generated-content-ratings-and-reviews</td>
 <td>User generated content Ratings &amp; reviews</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>user-generated-content-multimedia</td>
 <td>User generated content Multimedia</td>
-</tr>
-<tr class="odd">
-<td>user-generated-content-other</td>
-<td>User generated content Other</td>
 </tr>
 <tr class="even">
 <td>primary-user-source-survey-questionnaire</td>
@@ -1416,22 +1411,18 @@ Codes</h2>
 <td>Primary user source Focus Group</td>
 </tr>
 <tr class="odd">
-<td>primary-user-source-other</td>
-<td>Primary user source Other</td>
-</tr>
-<tr class="even">
 <td>data-augmentation-na</td>
 <td>Data augmentation N/A</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>transfer-learning-na</td>
 <td>Transfer learning N/A</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>simulations-na</td>
 <td>Simulations N/A</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>other-na</td>
 <td>Other N/A</td>
 </tr>
@@ -1539,28 +1530,20 @@ uses of the dataset.</p>
 <td>Non-AI Quality assurance</td>
 </tr>
 <tr class="even">
-<td>non-ai-other</td>
-<td>Non-AI Other</td>
-</tr>
-<tr class="odd">
 <td>ai-pre-training</td>
 <td>AI Pre-Training</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>ai-alignment</td>
 <td>AI Alignment</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>ai-evaluation</td>
 <td>AI Evaluation</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>ai-synthetic</td>
 <td>AI Sythentic Data Generation</td>
-</tr>
-<tr class="odd">
-<td>ai-other</td>
-<td>AI Other</td>
 </tr>
 </tbody>
 </table>

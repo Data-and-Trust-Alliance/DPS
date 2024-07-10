@@ -775,7 +775,7 @@ cases. List all that apply from the Data Use codes that apply.
 Additional codes can be included with descriptions.
 
 -   Element-Name: intended-purpose
--   cardinality: 0..*
+-   cardinality: 1..*
 -   Format: Concept
     -   SHALL populate code from Data Use.
     -   SHALL populate description with specific description

@@ -51,7 +51,7 @@ abstract class Use {
     storage-allowed : Location[0..*]
     storage-forbidden : Location[0..*]
     license : String[0..1]
-    intended-purpose : Concept[0..*]
+    intended-purpose : Concept[1..*]
     copyright : String[0..*]
     patent : String[0..*]
     trademark : String[0..*]

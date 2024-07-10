@@ -518,7 +518,7 @@ Details the location or point of contact for identifying the terms under which t
 Describes the purpose for which the dataset was created, guiding users on its intended use and potential applications against identified use cases. List all that apply from the [Data Use](#73-data-use-codes) codes that apply. Additional codes can be included with descriptions.
 
 - Element-Name: `intended-purpose`
-- cardinality: 0..*
+- cardinality: 1..*
 - Format: [Concept](#454-concept)
   - SHALL populate `code` from [Data Use](#73-data-use-codes).
   - SHALL populate `description` with specific description

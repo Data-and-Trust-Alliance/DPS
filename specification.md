@@ -416,7 +416,7 @@ The methodology or procedures used to collect, generate, or compile the data, gi
 Describes the nature of the data within the dataset, such as numerical, textual, or multimedia, helping users understand what kind of information is contained within the file or dataset.
 
 - Element-Name: `format`
-- cardinality: 0..*
+- cardinality: 1..*
 - Format: String
   - SHALL be mime-type [https://www.rfc-editor.org/rfc/rfc6838.html](https://www.rfc-editor.org/rfc/rfc6838.html)
   - SHALL be from registered media-types [http://www.iana.org/assignments/media-types/](http://www.iana.org/assignments/media-types/) if applicable

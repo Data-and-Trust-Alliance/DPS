@@ -457,13 +457,13 @@ Specifies where consent documentation or agreements related to the data can be f
 - Format: URL
 - Example: `https://example.org/dataset/34/consent.pdf`
 
-### 4.3.3 Privacy indicators
+### 4.3.3 Privacy Enhancing Technologies
 
 Indicates whether techniques were used to protect personally identifiable information (PII) or sensitive personal information (SPI), highlighting the dataset's privacy considerations.
 
-- Element-Name: `privacy-indicators`
+- Element-Name: `privacy-enhancing`
 - cardinality: 0..*
-- Format: [PrivacyIndicator](#433-privacy-indicators)
+- Format: [PrivacyEnhancing](#456-privacyenhancing)
 - using [Privacy Enhancing Tools](#72-privacy-enhancing-tools-codes) vocabulary
 
 ### 4.3.4 Data processing geography included
@@ -518,7 +518,7 @@ Details the location or point of contact for identifying the terms under which t
 Describes the purpose for which the dataset was created, guiding users on its intended use and potential applications against identified use cases. List all that apply from the [Data Use](#73-data-use-codes) codes that apply. Additional codes can be included with descriptions.
 
 - Element-Name: `intended-purpose`
-- cardinality: 0..*
+- cardinality: 1..*
 - Format: [Concept](#454-concept)
   - SHALL populate `code` from [Data Use](#73-data-use-codes).
   - SHALL populate `description` with specific description
@@ -612,16 +612,18 @@ These are made up of more than one child element as described.
   - Element-Name: `code`
     - cardinality: 0..1
     - Format: String
-      - Should be from a given vocabulary
+      - SHOULD be from a given vocabulary
       - SHOULD be compute friendly, without spaces
 - source of code
   - Element-Name: `system`
     - cardinality: 0..1
     - Format: URI
-- description of code for human 
+- description of code for human
   - Element-Name: `description`
     - cardinality: 0..1
     - Format: String
+
+Note: when a non-standard Concept is used, often just the `description` element is populated.
 
 ### 4.5.5 Classification
 
@@ -629,26 +631,39 @@ These are made up of more than one child element as described.
   - Element-Name: `regulation`
     - cardinality: 1..1
     - Format: Concept
-      - Should be from [Data Regulation Codes](#74-data-regulation-codes)
+      - SHOULD be from [Data Regulation Codes](#74-data-regulation-codes)
 - Has the dataset been evaluated to the regulation domain?
   - Element-Name: `evaluated`
     - cardinality: 1..1
     - Format: Boolean
-
-### 4.5.6 PrivacyIndicator
-
-- specific global regulation domain
+- classification tool used
   - Element-Name: `tool`
-    - cardinality: 1..1
-    - Format: Concept
-      - Should be from [Privacy Enhancing Tools](#72-privacy-enhancing-tools-codes) vocabulary
-- Parameters used with the tool
-  - Element-Name: `parameters`
     - cardinality: 0..1
     - Format: String
+
+### 4.5.6 PrivacyEnhancing
+
+Indicates the techniques used to protect personally identifiable information (PII) or sensitive personal information (SPI).
+
+- specific global regulation domain
+  - Element-Name: `tool-category`
+    - cardinality: 1..1
+    - Format: Concept
+      - SHOULD be from [Privacy Enhancing Tools](#72-privacy-enhancing-tools-codes) vocabulary
+- Specific tool used
+  - Element-Name: `tool-used`
+    - cardinality: 0..1
+    - Format: String
+      - May be a URL
+      - May be an application and version
+- Parameters used with the tool
+  - Element-Name: `parameters`
+    - cardinality: 0..*
+    - Format: String
+    - string holds tool specific parameter and value for that parameter when the parameter has values.
 - Results of the tool use
   - Element-Name: `result`
-    - cardinality: 0..1
+    - cardinality: 0..*
     - Format: String
 
 # 5. Technical Encoding
@@ -720,32 +735,27 @@ The following defined vocabulary are to be used for the "Method".
 | web-scraping-crawling-metadata | Web scraping/Crawling Metadata
 | web-scraping-crawling-social-media | Web scraping/Crawling Social media
 | web-scraping-crawling-news-articles | Web scraping/Crawling News & articles
-| web-scraping-crawling-other | Web scraping/Crawling Other
 | feeds-rss-source | Feeds RSS source
 | feeds-api-source | Feeds API source
 | feeds-real-time-database-info | Feeds Real time database info
 | feeds-interval-timed-database-info | Feeds Interval timed database info
 | feeds-file-feed-info | Feeds File feed info
-| feeds-other | Feeds Other
 | syndication-news-feeds | Syndication News feeds
 | syndication-financial-feeds | Syndication Financial feeds
 | syndication-social-media | Syndication Social media
 | syndication-product-service-catalog | Syndication Product/service catalog
-| syndication-other | Syndication Other
 | data-mining-association-rule | Data mining Association rule
 | data-mining-classification | Data mining Classification
 | data-mining-clustering | Data mining Clustering
 | data-mining-regression | Data mining Regression
 | data-mining-anomaly-detection | Data mining Anomaly detection
 | data-mining-sequencing | Data mining Sequencing
-| data-mining-other | Data mining Other
 | machine-generated-mlops-synthetic | Machine generated/MLOps Synthetic
 | machine-generated-mlops-generative | Machine generated/MLOps Generative
 | machine-generated-mlops-twin | Machine generated/MLOps Twin
 | machine-generated-mlops-machine-2-machine | Machine generated/MLOps Machine-2-machine (M2M)
 | machine-generated-mlops-ai-inferred | Machine generated/MLOps AI inferred
 | machine-generated-mlops-xr | Machine generated/MLOps XR (AR, VR, MR)
-| machine-generated-mlops-other | Machine generated/MLOps Other
 | sensor-and-iot-output-environmental | Sensor and IoT output Environmental
 | sensor-and-iot-output-motion-location | Sensor and IoT output Motion & location
 | sensor-and-iot-output-health | Sensor and IoT output Health 
@@ -755,7 +765,6 @@ The following defined vocabulary are to be used for the "Method".
 | soensor-and-iot-output-vehicle-transportation | Sensor and IoT output Vehicle & transportation
 | sensor-and-iot-output-security-surveillance | Sensor and IoT output Security & surveillance
 | sensor-and-iot-output-agriculture-environment | Sensor and IoT output Agriculture & environment
-| sensor-and-iot-output-other | Sensor and IoT output Other
 | social-media-text-based | Social media Text based
 | social-media-multimedia | Social media Multimedia
 | social-media-reviews-and-ratings | Social media Reviews and ratings
@@ -763,19 +772,16 @@ The following defined vocabulary are to be used for the "Method".
 | social-media-q-and-a | Social media Q&As
 | social-media-collaborative | Social media Collaborative
 | social-media-creative | Social media Creative
-| social-media-other | Social media Other
 | user-generated-content-clickstream | User generated content Clickstream
 | user-generated-content-social-media | User generated content Social media
 | user-generated-content-behavior | User generated content Behavior
 | user-generated-content-ratings-and-reviews | User generated content Ratings & reviews
 | user-generated-content-multimedia | User generated content Multimedia
-| user-generated-content-other | User generated content Other
 | primary-user-source-survey-questionnaire | Primary user source Survey/Questionnaire
 | primary-user-source-interview | Primary user source Interview
 | primary-user-source-event | Primary user source Event
 | primary-user-source-biometric | Primary user source Biometric
 | primary-user-source-focus-group | Primary user source Focus Group
-| primary-user-source-other | Primary user source Other
 | data-augmentation-na | Data augmentation N/A
 | transfer-learning-na | Transfer learning N/A
 | simulations-na | Simulations N/A
@@ -815,12 +821,10 @@ The following concepts are defined to describe intended and forbidden uses of th
 | non-ai-staging | Non-AI Staging/testing
 | non-ai-production | Non-AI Production
 | non-ai-quality | Non-AI Quality assurance
-| non-ai-other | Non-AI Other
 | ai-pre-training | AI Pre-Training
 | ai-alignment | AI Alignment
 | ai-evaluation | AI Evaluation
 | ai-synthetic | AI Sythentic Data Generation
-| ai-other | AI Other
 
 Where: `non-ai-other`, and `ai-other`
 

@@ -34,7 +34,7 @@ abstract class Provenance {
     previous-date : DateTime[0..1]
     generation-period : Period[0..1]
     generation-method : Concept[1..*]
-    format : String[0..*]
+    format : String[1..*]
     sub-provenance : Provenance[0..*]
 }
 

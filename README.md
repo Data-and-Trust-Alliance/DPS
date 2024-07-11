@@ -24,13 +24,7 @@ These standards are released under Creative Commons CC-BY-SA-4.0 and all code an
 
 Punch List of work to do:
 
-- Security Considerations
-
-Other todo:
-
-- Reference GIThub repo with reference implementation and sample applications
 - Need at least one of the technical formats drafted, and place holder for the other two. 
-  - These can be defined only using the technical formats and given examples.
   - Thus we have three GIThub repos for JSON, XML, and YAML. 
 
 ## Convert to html
